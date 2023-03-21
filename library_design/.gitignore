@@ -1,0 +1,14 @@
+.*
+_*
+!.gitignore
+
+results/*
+!results/mutation_stats.csv
+!results/mutations_to_make.html
+!results/targeted_mutations.csv
+!results/saturated_sites.csv
+!results/mutation_design_classification.csv
+!results/targeted_mutations_w_oligos.csv
+!results/saturated_sites_w_oligos.csv
+!results/oPools.csv
+!results/oPool_stats.csv

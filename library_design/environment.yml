@@ -1,0 +1,22 @@
+name: spike_library_design
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+
+dependencies:
+  - biopython=1.81
+  - entrez-direct=13.9
+  - jupyterlab
+  - jupyter_contrib_nbextensions
+  - mafft=7.515
+  - mamba
+  - pandas=1.5
+  - pip
+  - python=3.10
+  - pyyaml=6.0
+  - requests=2.28
+  - snakemake=7.24
+  - usher=0.6.2
+  - pip:
+    - altair==5.0.0rc1

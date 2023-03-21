@@ -1,0 +1,149 @@
+# Configuration for pipeline
+
+# input files
+extended_gene: data/extended_spike_XBB.1.5.fa
+reference_gene: data/reference_spike.fa
+human_codon_freqs: data/human_codon_freq.csv
+
+# URL of GISAID mutation count data on CoVsurver:
+alignment_count_url: https://mendel.bii.a-star.edu.sg/METHODS/corona/current/MUTATIONS/hCoV-19_Human_2019_WuhanWIV04/hcov19_Spike_mutations_table.html
+
+# URLs of UShER tree, GTF, and reference sequence
+usher_mat: http://hgdownload.soe.ucsc.edu/goldenPath/wuhCor1/UShER_SARS-CoV-2/public-latest.all.masked.pb.gz
+usher_gtf: http://hgdownload.soe.ucsc.edu/goldenPath/wuhCor1/bigZips/genes/ncbiGenes.gtf.gz
+usher_fasta: http://hgdownload.soe.ucsc.edu/goldenPath/wuhCor1/bigZips/wuhCor1.fa.gz
+
+# "recent" Nextstrain clades for analysis on UShER tree
+# Note clade names here have to exactly match how they are defined in the UShER tree;
+# if you are not sure how they are named use
+# "matUtils summary -i results/usher/mat.pb.gz -c clades.tsv"
+# and then look at the clade names in "clades.tsv"
+usher_recent_clades:
+  - 22D (Omicron)  # BA.2.75
+  - 22E (Omicron)  # BQ.1.1
+  - 22F (Omicron)  # XBB
+  - 23A (Omicron)  # XBB.1.5
+
+# Keep mutations with >= this many counts for each threshold.
+mutation_retain_thresholds:
+  GISAID_count: 50
+  UShER_count: 15
+  UShER_recent_count: 2
+
+# Saturating substitution mutagenesis at sites with >= this many total
+# substitution counts:
+site_saturation_threshold:
+  UShER_count: 2500
+  UShER_recent_count: 100
+
+# Regardless of counts, only include deletion mutations in these sites
+# specifically listed under `mutations_to_include`. Specify a list of inclusive
+# site ranges in reference numbering
+sites_to_allow_deletions:
+  - [13, 304]  # NTD as defined at https://www.ncbi.nlm.nih.gov/protein/1796318598
+
+# include these mutations regardless of counts, in reference numbering
+mutations_to_include:
+  # Ryan Hisner says second generation BA.2 variants with deletions at some of these sites,
+  # and others have a decent number of deletions in GISAID data
+  - 342-
+  - 343-
+  - 344-
+  - 345-
+  - 346-
+  - 347-
+  - 348-
+  - 349-
+  - 444-
+  - 445-
+  - 446-
+  - 447-
+  - 448-
+  - 449-
+  - 483-
+  - 484-
+  - 485-
+  - 486-
+
+# do we saturate mutagenesis of substitutions at sites that differ from reference?
+saturate_diffs_from_reference: true
+
+# do we exclude STOP codons
+exclude_STOP: true
+
+# saturating mutagenesis of substitutions at these sites, in reference numbering
+sites_to_saturate:
+  # top sites in escape calculator relative to XBB as of March-12-2023
+  # https://jbloomlab.github.io/SARS2_RBD_Ab_escape_maps/escape-calc/
+  - 346
+  - 347
+  - 348
+  - 352
+  - 356
+  - 357
+  - 383
+  - 385
+  - 444
+  - 447
+  - 449
+  - 450
+  - 452
+  - 455
+  - 456
+  - 462
+  - 468
+  - 472
+  - 473
+  - 475
+  - 484
+  - 490
+  # sites mutated in XBB.1.16 relative to XBB.1.5
+  - 180
+  - 478
+  # additional sites from Cao et al. XBB1.5 epitope mapping
+  - 403
+  - 405
+  - 417
+  - 420
+  - 421
+  - 439
+  - 440
+  - 445
+  - 446
+  - 451
+  - 453
+  - 460
+  - 478
+  - 483
+  - 485
+  - 498
+  - 504
+  - 505
+
+# primer design specifications
+primer_min_tm: 60
+primer_min_length: 25
+primer_max_length: 51
+
+# number of nucleotides in offsets used for primers for targeted mutations
+# and saturated sites
+targeted_mutations_offsets: [0]
+saturated_sites_offsets: [-8, 4]
+
+# Prefix for oPool names
+opool_prefix: SARS2_XBB.1.5_spike_
+
+# output files
+sequential_to_reference: results/sequential_to_reference.csv
+alignment_counts: results/alignment_counts.csv
+usher_mut_counts: results/usher/mut_counts.csv
+usher_recent_mut_counts: results/usher/recent_mut_counts.csv
+mutation_stats: results/mutation_stats.csv
+mutations_to_make_chart: results/mutations_to_make.html
+mutation_design_classification: results/mutation_design_classification.csv
+targeted_mutations: results/targeted_mutations.csv
+saturated_sites: results/saturated_sites.csv
+targeted_mutations_w_oligos: results/targeted_mutations_w_oligos.csv
+saturated_sites_w_oligos: results/saturated_sites_w_oligos.csv
+opools: results/oPools.csv
+opool_stats: results/oPool_stats.csv
