@@ -69,7 +69,7 @@ mutations_to_include:
 saturate_diffs_from_reference: true
 
 # do we exclude STOP codons
-exclude_STOP: true
+include_STOP: false
 
 # saturating mutagenesis of substitutions at these sites, in reference numbering
 sites_to_saturate:
