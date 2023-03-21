@@ -131,7 +131,7 @@ targeted_mutations_offsets: [0]
 saturated_sites_offsets: [-8, 4]
 
 # Prefix for oPool names
-opool_prefix: SARS2_XBB.1.5_spike_
+opool_prefix: spike_SARS2_XBB.1.5_
 
 # output files
 sequential_to_reference: results/sequential_to_reference.csv
