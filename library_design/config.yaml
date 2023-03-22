@@ -68,7 +68,7 @@ mutations_to_include:
 # do we saturate mutagenesis of substitutions at sites that differ from reference?
 saturate_diffs_from_reference: true
 
-# do we exclude STOP codons
+# do we include STOP codons
 include_STOP: false
 
 # saturating mutagenesis of substitutions at these sites, in reference numbering
