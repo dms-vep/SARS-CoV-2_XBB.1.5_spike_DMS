@@ -1,0 +1,3 @@
+{
+    "path": "../notebooks/analyze_pacbio_ccs.ipynb"
+}
