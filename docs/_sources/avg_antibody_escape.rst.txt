@@ -1,6 +1,0 @@
-
-Antibody-escape averaged across replicates
-------------------------------------------
-
-- :doc:`monomeric_ACE2 <avg_antibody_escape_monomeric_ACE2>`
-

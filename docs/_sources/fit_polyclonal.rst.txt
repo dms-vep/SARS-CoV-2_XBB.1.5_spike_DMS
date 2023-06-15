@@ -1,7 +1,0 @@
-
-Fit ``polyclonal`` models
--------------------------
-
-- :doc:`Lib-1_2023-06-15_thaw-1_monomeric_ACE2_1 <fit_polyclonal_Lib-1_2023-06-15_thaw-1_monomeric_ACE2_1>`
-- :doc:`Lib-2_2023-06-15_thaw-1_monomeric_ACE2_1 <fit_polyclonal_Lib-2_2023-06-15_thaw-1_monomeric_ACE2_1>`
-
