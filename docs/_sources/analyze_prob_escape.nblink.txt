@@ -1,3 +1,0 @@
-{
-    "path": "../notebooks/analyze_prob_escape.ipynb"
-}
