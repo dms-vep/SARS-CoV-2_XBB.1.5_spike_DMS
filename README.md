@@ -1,7 +1,7 @@
-# Deep mutational scanning of SARS-CoV-2 XBB.1.5 full spike using a barcoded lentiviral platform
+# Deep mutational scanning of SARS-CoV-2 XBB.1.5 spike 
 Study by Bernadeta Dadonaite and Jesse Bloom.
 
-For documentation of the analysis, see [https://dms-vep.github.io/SARS-CoV-2_XBB.1.5_spike_DMS/](https://dms-vep.github.io/SARS-CoV-2_XBB.1.5_spike_DMS/).
+For documentation of the analysis, see [https://dms-vep.github.io/https://github.com/dms-vep/SARS-CoV-2_XBB.1.5_spike_DMS/](https://dms-vep.github.io/https://github.com/dms-vep/SARS-CoV-2_XBB.1.5_spike_DMS/).
 
 ## Organization of this repo
 
@@ -33,7 +33,7 @@ Input data for the pipeline are in [./data/](data).
 The results of running the pipeline are placed in [./results/](results).
 Only some of these results are tracked to save space (see [.gitignore](.gitignore)).
 
-The pipeline builds HTML documentation for the pipeline in [./docs/](docs), which is rendered via GitHub Pages at [https://dms-vep.github.io/SARS-CoV-2_Omicron_BA.1_spike_DMS/](https://dms-vep.github.io/SARS-CoV-2_Omicron_BA.1_spike_DMS/).
+The pipeline builds HTML documentation for the pipeline in [./docs/](docs), which is rendered via GitHub Pages at [https://dms-vep.github.io/SARS-CoV-2_Omicron_BA.2_spike_DMS/](https://dms-vep.github.io/SARS-CoV-2_Omicron_BA.2_spike_DMS/).
 
 ### Library design
 The design of the mutant library is contained in [./library_design/](library_design).

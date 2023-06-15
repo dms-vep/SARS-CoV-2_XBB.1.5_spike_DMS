@@ -1,0 +1,5 @@
+﻿library,run,fastq
+Lib-1,230613,/fh/fast/bloom_j/computational_notebooks/bdadonai/2023/XBB15_pacbio_files/XBB_Spike_lib1_1.fastq.gz
+Lib-1,230612,/fh/fast/bloom_j/computational_notebooks/bdadonai/2023/XBB15_pacbio_files/XBB_Spike_lib1_2.fastq.gz
+Lib-2,230613,/fh/fast/bloom_j/computational_notebooks/bdadonai/2023/XBB15_pacbio_files/XBB_Spike_lib2_1.fastq.gz
+Lib-2,230612,/fh/fast/bloom_j/computational_notebooks/bdadonai/2023/XBB15_pacbio_files/XBB_Spike_lib2_2.fastq.gz

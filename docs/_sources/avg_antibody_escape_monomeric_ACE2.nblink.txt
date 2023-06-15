@@ -1,0 +1,3 @@
+{
+    "path": "../notebooks/avg_antibody_escape_monomeric_ACE2.ipynb"
+}

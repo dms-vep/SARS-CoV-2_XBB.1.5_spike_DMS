@@ -1,0 +1,186 @@
+# Config for analysis
+
+# ----------------------------------------------------------------------------
+# Relative paths from your top-level Snakefile to where you have the pipeline
+# submodule cloned, and where you build the docs. Typically your top-level
+# Snakefile will be in the root directory and paths will be `dms-vep-pipeline`
+# and `./`, but in this example they are upstream from this subdirectory.
+# ----------------------------------------------------------------------------
+pipeline_path: dms-vep-pipeline
+docs: docs
+
+# ----------------------------------------------------------------------------
+# Details on repo, used for docs. Change this to details for your project.
+# ----------------------------------------------------------------------------
+github_repo: SARS-CoV-2_XBB.1.5_spike_DMS
+github_user: dms-vep
+github_branch: main  # main branch for repo, assume renamed from master -> main
+description: Deep mutational scanning of SARS-CoV-2 XBB.1.5 spike using a barcoded lentiviral platform
+year: 2023
+authors: Bernadeta Dadonaite and Jesse Bloom
+
+# ----------------------------------------------------------------------------
+# Parameters for analysis
+# ----------------------------------------------------------------------------
+# Parameters for building PacBio CCS consensuses
+max_ccs_error_rate: 1.0e-4  # only keep CCS if gene/barcode error rate <= this
+consensus_params:  # parameters for building PacBio consensus sequences
+  max_sub_diffs: null
+  max_indel_diffs: null
+  max_minor_sub_frac: 0.2
+  max_minor_indel_frac: 0.2
+  min_support: 2
+
+# Parameters for processing Illumina barcodes
+illumina_barcode_parser_params:
+  upstream: ACTCCACTAGGAACATTTCTCTCTCGAATCTAGA
+  downstream: ''
+  minq: 20
+  upstream_mismatch: 2
+
+# Require samples to have an average of >= this many counts per variant.
+# Error raised for any sample with < this many counts unless it is specified
+# for `exclude_after_counts` in `barcode_runs`
+min_avg_counts: 20  # consider value more like ~20 for real pipelines
+
+# Parameters for antibody escape-probability calculation.
+# Require neut standard to have at least this many counts
+# and this much fraction of total counts or raise error:
+prob_escape_min_neut_standard_count: 1000
+prob_escape_min_neut_standard_frac: 0.0001
+# Only compute escape probabilities for variants with at least this many
+# counts and this fraction of total counts in no-antibody sample:
+prob_escape_min_no_antibody_counts: 20
+prob_escape_min_no_antibody_frac: 0.000001  # make smaller for large libraries, say 0.1 / (library size)
+prob_escape_min_antibody_counts: 100
+prob_escape_min_antibody_frac: 0.0001 # make smaller for large libraries, say 2 / (library size)
+prob_escape_uncensored_max: 5  # if not set, default to 5
+# when averaging antibody escape values, take the "median" or "mean"?
+escape_avg_method: median
+
+# Parameters for functional scores and global epistasis analysis
+func_scores_pseudocount: 0.5  # pseudocount when computing functional scores
+func_scores_min_wt_count: 1000  # require this many wildtype counts or error
+func_scores_min_wt_frac:  0.001  # require this fraction of all counts for wildtype or error
+# Only fit global epistasis models for variants with at least this many
+# pre-selection counts and this fraction of total pre-selection counts
+func_scores_min_preselection_counts: 20
+func_scores_min_preselection_frac: 0.000001  # make smaller for large libraries, say 0.1 / (library size)
+# when averaging mutation effects on viral entry, take the "median" or "mean"?
+muteffects_avg_method: median
+# keyword arguments to `polyclonal.plot.lineplot_and_heatmap` for plotting functional effects
+muteffects_plot_kwargs:
+  addtl_slider_stats:
+    times_seen: 6
+  heatmap_max_at_least: 1
+  heatmap_min_at_least: -1
+  init_floor_at_zero: False
+  slider_binding_range_kwargs:
+    n_libraries:
+      step: 1
+    times_seen:
+      step: 1
+      min: 1
+      max: 25
+
+# ----------------------------------------------------------------------------
+# Input data to dms-vep-pipeline
+# ----------------------------------------------------------------------------
+# PacBio sequencing
+pacbio_runs: data/PacBio_runs.csv  # PacBio sequencing data
+pacbio_amplicon: data/PacBio_amplicon.gb  # Genbank file with PacBio amplicon
+pacbio_amplicon_specs: data/PacBio_feature_parse_specs.yaml  # alignparse feature parsing
+variant_tags:  # variant tags in PacBio amplicon, or "null" if no tags
+  variant_tag5:
+    variant_1: G
+    variant_2: C
+    wildtype: A
+  variant_tag3:
+    variant_1: G
+    variant_2: C
+    wildtype: A
+
+# Map sequential 1, 2, numbering of gene in PacBio amplicon to the desired
+# final reference numbering scheme. Unlike in the `dms-vep-pipeline`
+# test example, here we create this mapping from the Genbank accession.
+# Add a column called "region" that assigns each site to a
+# region of the protein (eg, domain like RBD or NTD).
+numbering_reference_accession: QHD43416.1  # Wuhan-Hu-1 spike
+# file that maps reference sites (Wuhan-Hu-1) to regions
+reference_site_regions: data/reference_site_to_region.csv
+# generated file by `Snakefile` with reference site numbering
+site_numbering_map: results/site_numbering/site_numbering_map.csv
+
+# Classify mutations into different categories, such as which ones are
+# designed to be in the library.
+mutation_design_classification: library_design/results/aggregated_mutations.csv
+
+# Neutralization standard barcodes
+neut_standard_barcodes: data/neutralization_standard_barcodes.csv
+
+# Illumina barcode sequencing
+barcode_runs: data/barcode_runs.csv
+
+# configuration for polyclonal fitting
+fit_polyclonal_threads: 2  # threads to use bootstrapping polyclonal models
+polyclonal_config: data/polyclonal_config.yaml
+
+#Spike modeled with TM from: https://pubs.acs.org/doi/10.1021/acscentsci.0c01056
+PDB: data/PDBs/aligned_spike_TM.pdb    
+
+# spatial distances between residues
+spatial_distances: results/spatial_distances/spatial_distances.csv
+
+
+# ----------------------------------------------------------------------------
+# Names of output directories / files
+# ----------------------------------------------------------------------------
+# directory with logs from running snakemake steps
+logdir: results/logs
+
+# gene sequence extracted from PacBio amplicon
+gene_sequence_codon: results/gene_sequence/codon.fasta
+gene_sequence_protein: results/gene_sequence/protein.fasta
+
+# processing of PacBio CCSs to create codon-variant table
+process_ccs_dir: results/process_ccs
+aligned_ccs_file: results/process_ccs/CCSs_aligned_to_amplicon.csv
+nt_variants: results/variants/nt_variants.csv
+codon_variants: results/variants/codon_variants.csv
+
+# barcode sequencing
+processed_barcode_runs: results/barcode_runs/processed_barcode_runs.csv
+barcode_counts_dir: results/barcode_runs/counts_by_sample
+barcode_counts_invalid_dir: results/barcode_runs/counts_invalid_by_sample
+barcode_fates_dir: results/barcode_runs/fates_by_sample
+
+# variant counts
+variant_counts_dir: results/variant_counts
+variant_avg_counts_plot: results/variant_counts/avg_counts_per_variant.html
+variant_avg_counts_csv: results/variant_counts/avg_counts_per_variant.csv
+
+# escape probabilities for antibody selections
+prob_escape_dir: results/prob_escape
+antibody_selections: results/prob_escape/antibody_selections.csv
+
+# polyclonal fitting directory
+polyclonal_dir: results/polyclonal_fits
+
+# antibody-escape values
+escape_dir: results/antibody_escape
+
+# functional scores for functional selections
+func_score_dir: results/func_scores
+functional_selections: results/func_scores/functional_selections.csv
+
+# global epistasis fitting directory
+globalepistasis_dir: results/globalepistasis_fits
+
+# mutation effects on function (viral entry) averaged over replicates
+muteffects_observed: results/muteffects_functional/muteffects_observed.csv
+muteffects_latent: results/muteffects_functional/muteffects_latent.csv
+muteffects_observed_heatmap: results/muteffects_functional/muteffects_observed_heatmap.html
+muteffects_latent_heatmap: results/muteffects_functional/muteffects_latent_heatmap.html
+
+# html documentation
+docs_source_dir: results/docs_source
