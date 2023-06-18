@@ -1,7 +1,7 @@
 # Deep mutational scanning of SARS-CoV-2 XBB.1.5 spike 
 Study by Bernadeta Dadonaite and Jesse Bloom.
 
-For documentation of the analysis, see [https://dms-vep.github.io/https://github.com/dms-vep/SARS-CoV-2_XBB.1.5_spike_DMS/](https://dms-vep.github.io/https://github.com/dms-vep/SARS-CoV-2_XBB.1.5_spike_DMS/).
+For documentation of the analysis, see [https://dms-vep.github.io/SARS-CoV-2_XBB.1.5_spike_DMS/](https://dms-vep.github.io/SARS-CoV-2_XBB.1.5_spike_DMS/).
 
 ## Organization of this repo
 
