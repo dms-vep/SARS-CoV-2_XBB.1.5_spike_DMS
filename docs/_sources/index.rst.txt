@@ -21,6 +21,9 @@ details, using dropdowns, etc.
    fit_globalepistasis
    avg_muteffects
    analyze_variant_counts
+   analyze_prob_escape
+   fit_polyclonal
+   avg_antibody_escape
 
 Data files
 ----------
@@ -34,10 +37,19 @@ Data files
 - `mutation effects for each functional selection <https://github.com/dms-vep/SARS-CoV-2_XBB.1.5_spike_DMS/blob/main/./results/globalepistasis_fits>`_
 - `mutation functional effects replicate average (observed phenotype) <https://github.com/dms-vep/SARS-CoV-2_XBB.1.5_spike_DMS/blob/main/./results/muteffects_functional/muteffects_observed.csv>`_
 - `mutation functional effects replicate average (latent phenotype) <https://github.com/dms-vep/SARS-CoV-2_XBB.1.5_spike_DMS/blob/main/./results/muteffects_functional/muteffects_latent.csv>`_
+- `antibody selection experiments <https://github.com/dms-vep/SARS-CoV-2_XBB.1.5_spike_DMS/blob/main/./results/prob_escape/antibody_selections.csv>`_
+- `antibody escape values <https://github.com/dms-vep/SARS-CoV-2_XBB.1.5_spike_DMS/blob/main/./results/antibody_escape>`_
 - `sequential to reference site numbering <https://github.com/dms-vep/SARS-CoV-2_XBB.1.5_spike_DMS/blob/main/./results/site_numbering/site_numbering_map.csv>`_
 
 Interactive plots of mutation functional effects
 ------------------------------------------------
 - `Observed phenotype effects <muteffects_observed_heatmap.html>`_
 - `Latent phenotype effects <muteffects_latent_heatmap.html>`_
+
+Interactive plots of mutation antibody escape
+---------------------------------------------
+- `sera-503C high ACE2 escape plot <sera-503C_high_ACE2_escape_plot.html>`_
+- `sera-503C high ACE2 icXX plot <sera-503C_high_ACE2_icXX_plot.html>`_
+- `sera-503C medium ACE2 escape plot <sera-503C_medium_ACE2_escape_plot.html>`_
+- `sera-503C medium ACE2 icXX plot <sera-503C_medium_ACE2_icXX_plot.html>`_
 
