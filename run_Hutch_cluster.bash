@@ -1,5 +1,5 @@
 #!/bin/bash
 #
-#SBATCH -c 32
+#SBATCH -c 4
 
-snakemake -j 32 --use-conda  --rerun-incomplete
+snakemake -j 4 --use-conda  --rerun-incomplete

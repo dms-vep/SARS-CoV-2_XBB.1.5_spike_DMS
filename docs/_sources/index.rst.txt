@@ -48,8 +48,14 @@ Interactive plots of mutation functional effects
 
 Interactive plots of mutation antibody escape
 ---------------------------------------------
-- `sera-503C high ACE2 escape plot <sera-503C_high_ACE2_escape_plot.html>`_
-- `sera-503C high ACE2 icXX plot <sera-503C_high_ACE2_icXX_plot.html>`_
+- `sera-493C escape plot <sera-493C_escape_plot.html>`_
+- `sera-493C icXX plot <sera-493C_icXX_plot.html>`_
+- `sera-498C escape plot <sera-498C_escape_plot.html>`_
+- `sera-498C icXX plot <sera-498C_icXX_plot.html>`_
+- `sera-500C escape plot <sera-500C_escape_plot.html>`_
+- `sera-500C icXX plot <sera-500C_icXX_plot.html>`_
+- `sera-503C escape plot <sera-503C_escape_plot.html>`_
+- `sera-503C icXX plot <sera-503C_icXX_plot.html>`_
 - `sera-503C medium ACE2 escape plot <sera-503C_medium_ACE2_escape_plot.html>`_
 - `sera-503C medium ACE2 icXX plot <sera-503C_medium_ACE2_icXX_plot.html>`_
 

@@ -55,18 +55,18 @@ sera_default: &sera_default
   
 
 # define configuration for specific monoclonal antibodies, merging above defaults
-monomeric_ACE2:
- <<: *mAb_default
-
-dimeric_ACE2:
- <<: *mAb_default
-
 SC27:
  <<: *mAb_default
  
 # define configuration for specific sera, merging above defaults
-sera-503C_high_ACE2:
- <<: *sera_default
 
 sera-503C_medium_ACE2:
  <<: *sera_default
+sera-493C:
+  <<: *sera_default
+sera-498C:
+  <<: *sera_default
+sera-500C:
+  <<: *sera_default
+sera-503C:
+  <<: *sera_default

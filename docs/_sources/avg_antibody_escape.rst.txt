@@ -2,6 +2,9 @@
 Antibody-escape averaged across replicates
 ------------------------------------------
 
-- :doc:`sera-503C_high_ACE2 <avg_antibody_escape_sera-503C_high_ACE2>`
+- :doc:`sera-503C <avg_antibody_escape_sera-503C>`
 - :doc:`sera-503C_medium_ACE2 <avg_antibody_escape_sera-503C_medium_ACE2>`
+- :doc:`sera-493C <avg_antibody_escape_sera-493C>`
+- :doc:`sera-498C <avg_antibody_escape_sera-498C>`
+- :doc:`sera-500C <avg_antibody_escape_sera-500C>`
 
