@@ -1,0 +1,3 @@
+{
+    "path": "../notebooks/fit_polyclonal_Lib-1_2023-07-20_thaw-3_sera-498C_1.ipynb"
+}
