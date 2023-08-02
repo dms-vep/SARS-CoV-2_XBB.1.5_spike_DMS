@@ -1,3 +1,0 @@
-{
-    "path": "../notebooks/analyze_variant_counts.ipynb"
-}

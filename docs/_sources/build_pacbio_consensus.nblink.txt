@@ -1,3 +1,0 @@
-{
-    "path": "../notebooks/build_pacbio_consensus.ipynb"
-}

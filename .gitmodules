@@ -1,3 +1,6 @@
 [submodule "dms-vep-pipeline"]
 	path = dms-vep-pipeline
 	url = https://github.com/dms-vep/dms-vep-pipeline
+[submodule "dms-vep-pipeline-3"]
+	path = dms-vep-pipeline-3
+	url = https://github.com/dms-vep/dms-vep-pipeline-3

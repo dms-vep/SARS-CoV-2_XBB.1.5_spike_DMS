@@ -1,3 +1,0 @@
-{
-    "path": "../notebooks/fit_globalepistasis_Lib-2_2023-06-14_thaw-1_VSVG_control_1_vs_2023-06-14_thaw-1_no-antibody_control_1.ipynb"
-}

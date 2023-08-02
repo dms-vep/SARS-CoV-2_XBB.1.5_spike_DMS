@@ -1,3 +1,0 @@
-{
-    "path": "../notebooks/avg_muteffects.ipynb"
-}
