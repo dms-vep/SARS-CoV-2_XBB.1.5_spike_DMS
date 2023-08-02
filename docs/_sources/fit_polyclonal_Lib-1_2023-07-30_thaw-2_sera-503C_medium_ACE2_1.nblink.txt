@@ -1,3 +1,0 @@
-{
-    "path": "../notebooks/fit_polyclonal_Lib-1_2023-07-30_thaw-2_sera-503C_medium_ACE2_1.ipynb"
-}
