@@ -61,12 +61,8 @@ escape_plot_kwargs_default: &escape_plot_kwargs_default
   init_floor_at_zero: false
   init_site_statistic: sum
   site_zoom_bar_color_col: region  # supplied in `site_numbering_map`
-  rename_stat_col: ACE2 affinity
-  scale_stat_col: -1
-  sites_to_show: 
-    include_range: 
-      - 331
-      - 531
+  rename_stat_col: site escape_plot_kwargs
+
 
 # Specify any statistics (usually functional effects) for which you want to enable
 # sliders that hide data. Keyed by statistic name, then next dict gives:
@@ -77,7 +73,7 @@ plot_hide_stats_default: &plot_hide_stats_default
   functional effect:
     csv: results/func_effects/averages/293T_high_ACE2_entry_func_effects.csv
     csv_col: effect
-    init: -3
+    init: -2
 
 # define the antibody selections
 
