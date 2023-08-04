@@ -43,7 +43,7 @@ prob_escape_filters_default: &prob_escape_filters_default
 # default parameters for `polyclonal` model fitting
 polyclonal_params_default: &polyclonal_params_default
   n_epitopes: 1  # fit this many epitopes, also fit all numbers less than this and plot
-  spatial_distances: null  # CSV with residue distances for spatial regularization, or null
+  spatial_distances: 'results/spatial_distances/spatial_distances.csv'  # CSV with residue distances for spatial regularization, or null
   fit_kwargs:  # keyword arguments to `Polyclonal.fit`
     reg_escape_weight: 0.1
     reg_spread_weight: 0.25
