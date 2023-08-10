@@ -6,9 +6,9 @@ This file is included by the pipeline ``Snakefile``.
 rule spatial_distances:
     """Get spatial distances from PDB."""
     input: 
-        pdb='data/PDBs/aligned_spike_TM.pdb,'
+        pdb="data/PDBs/aligned_spike_TM.pdb",
     output:
-        csv='results/spatial_distances/spatial_distances.csv'
+        csv="results/spatial_distances/spatial_distances.csv",
     params:
         target_chains=["A", "B", "C"],
     log:
