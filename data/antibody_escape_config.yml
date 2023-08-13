@@ -1,7 +1,9 @@
-# Configurations for determining effects of mutations on antibody/sera escape
+# Configurations for determining effects of mutations on antibody/sera escape,
+# or escape from neutralization by soluble receptor (which can be used to determine
+# receptor affinity).
 
 # --------------------------------------------------------------------------------------
-# Configuration for each antibody selection experiment.
+# Configuration for each antibody or soluble receptor selection experiment.
 # --------------------------------------------------------------------------------------
 
 # `antibody_selections` is keyed by name of each selection experiment, which includes a
@@ -43,7 +45,7 @@ prob_escape_filters_default: &prob_escape_filters_default
 # default parameters for `polyclonal` model fitting
 polyclonal_params_default: &polyclonal_params_default
   n_epitopes: 1  # fit this many epitopes, also fit all numbers less than this and plot
-  spatial_distances: 'results/spatial_distances/spatial_distances.csv'  # CSV with residue distances for spatial regularization, or null
+  spatial_distances: results/spatial_distances/spatial_distances.csv  # CSV with residue distances for spatial regularization, or null
   fit_kwargs:  # keyword arguments to `Polyclonal.fit`
     reg_escape_weight: 0.1
     reg_spread_weight: 0.25
@@ -61,8 +63,6 @@ escape_plot_kwargs_default: &escape_plot_kwargs_default
   init_floor_at_zero: false
   init_site_statistic: sum
   site_zoom_bar_color_col: region  # supplied in `site_numbering_map`
-  rename_stat_col: site escape_plot_kwargs
-
 
 # Specify any statistics (usually functional effects) for which you want to enable
 # sliders that hide data. Keyed by statistic name, then next dict gives:
@@ -76,11 +76,8 @@ plot_hide_stats_default: &plot_hide_stats_default
     init: -2
 
 # define the antibody selections
-
-
 antibody_selections:
-# --------------------------------------------------------------------------------------
-
+  # --------------------------------------------------------------------------------------
   Lib1-230720-sera-493C_highACE2:
     neut_standard_name: neut_standard
     prob_escape_filters: *prob_escape_filters_default
@@ -98,8 +95,6 @@ antibody_selections:
      Lib1-230720-sera-493C_0.16_highACE2:
       concentration: 0.16
       use_in_fit: true
-  
-
   Lib2-230720-sera-493C_highACE2:
     neut_standard_name: neut_standard
     prob_escape_filters: *prob_escape_filters_default
@@ -117,10 +112,7 @@ antibody_selections:
      Lib2-230720-sera-493C_0.16_highACE2:
       concentration: 0.16
       use_in_fit: true
-
-
-# --------------------------------------------------------------------------------------
-
+  # --------------------------------------------------------------------------------------
   Lib1-230720-sera-498C_highACE2:
     neut_standard_name: neut_standard
     prob_escape_filters: *prob_escape_filters_default
@@ -138,8 +130,6 @@ antibody_selections:
      Lib1-230720-sera-498C_0.197_highACE2:
       concentration: 0.197
       use_in_fit: true
-  
-
   Lib2-230720-sera-498C_highACE2:
     neut_standard_name: neut_standard
     prob_escape_filters: *prob_escape_filters_default
@@ -157,9 +147,7 @@ antibody_selections:
      Lib2-230720-sera-498C_0.197_highACE2:
       concentration: 0.197
       use_in_fit: true
-
-# --------------------------------------------------------------------------------------
-
+  # --------------------------------------------------------------------------------------
   Lib1-230720-sera-500C_highACE2:
     neut_standard_name: neut_standard
     prob_escape_filters: *prob_escape_filters_default
@@ -177,8 +165,6 @@ antibody_selections:
      Lib1-230720-sera-500C_0.111_highACE2:
       concentration: 0.111
       use_in_fit: true
-  
-
   Lib2-230720-sera-500C_highACE2:
     neut_standard_name: neut_standard
     prob_escape_filters: *prob_escape_filters_default
@@ -196,9 +182,7 @@ antibody_selections:
      Lib2-230720-sera-500C_0.111_highACE2:
       concentration: 0.111
       use_in_fit: true
-
-# --------------------------------------------------------------------------------------
-
+  # --------------------------------------------------------------------------------------
   Lib1-230729-sera-503C_highACE2:
     neut_standard_name: neut_standard
     prob_escape_filters: *prob_escape_filters_default
@@ -216,8 +200,6 @@ antibody_selections:
      Lib1-230729-sera-503C_0.135728_highACE2:
       concentration: 0.135728
       use_in_fit: true
-  
-
   Lib2-230720-sera-503C_highACE2:
     neut_standard_name: neut_standard
     prob_escape_filters: *prob_escape_filters_default
@@ -235,9 +217,7 @@ antibody_selections:
      Lib2-230720-sera-503C_0.136_highACE2:
       concentration: 0.136
       use_in_fit: true
-
-# --------------------------------------------------------------------------------------
-
+  # --------------------------------------------------------------------------------------
   Lib1-230805-sera-493C_mediumACE2:
     neut_standard_name: neut_standard
     prob_escape_filters: *prob_escape_filters_default
@@ -255,8 +235,6 @@ antibody_selections:
      Lib1-230805-sera-493C_0.16_mediumACE2:
       concentration: 0.16
       use_in_fit: true
-  
-
   Lib2-230805-sera-493C_mediumACE2:
     neut_standard_name: neut_standard
     prob_escape_filters: *prob_escape_filters_default
@@ -274,10 +252,7 @@ antibody_selections:
      Lib2-230805-sera-493C_0.16_mediumACE2:
       concentration: 0.16
       use_in_fit: true
-
-
-# --------------------------------------------------------------------------------------
-
+  # --------------------------------------------------------------------------------------
   Lib1-230805-sera-498C_mediumACE2:
     neut_standard_name: neut_standard
     prob_escape_filters: *prob_escape_filters_default
@@ -295,8 +270,6 @@ antibody_selections:
      Lib1-230805-sera-498C_0.106_mediumACE2:
       concentration: 0.106
       use_in_fit: true
-  
-
   Lib2-230805-sera-498C_mediumACE2:
     neut_standard_name: neut_standard
     prob_escape_filters: *prob_escape_filters_default
@@ -314,9 +287,7 @@ antibody_selections:
      Lib2-230805-sera-498C_0.106_mediumACE2:
       concentration: 0.106
       use_in_fit: true
-
-# --------------------------------------------------------------------------------------
-
+  # --------------------------------------------------------------------------------------
   Lib1-230805-sera-500C_mediumACE2:
     neut_standard_name: neut_standard
     prob_escape_filters: *prob_escape_filters_default
@@ -334,8 +305,6 @@ antibody_selections:
      Lib1-230805-sera-500C_0.028_mediumACE2:
       concentration: 0.028
       use_in_fit: true
-  
-
   Lib2-230805-sera-500C_mediumACE2:
     neut_standard_name: neut_standard
     prob_escape_filters: *prob_escape_filters_default
@@ -353,9 +322,7 @@ antibody_selections:
      Lib2-230805-sera-500C_0.028_mediumACE2:
       concentration: 0.028
       use_in_fit: true
-
-# --------------------------------------------------------------------------------------
-
+  # --------------------------------------------------------------------------------------
   Lib1-230805-sera-501C_mediumACE2:
     neut_standard_name: neut_standard
     prob_escape_filters: *prob_escape_filters_default
@@ -373,8 +340,6 @@ antibody_selections:
      Lib1-230805-sera-501C_0.283_mediumACE2:
       concentration: 0.283
       use_in_fit: true
-  
-
   Lib2-230805-sera-501C_mediumACE2:
     neut_standard_name: neut_standard
     prob_escape_filters: *prob_escape_filters_default
@@ -392,8 +357,7 @@ antibody_selections:
      Lib2-230805-sera-501C_0.283_mediumACE2:
       concentration: 0.283
       use_in_fit: true
-# --------------------------------------------------------------------------------------
-
+  # --------------------------------------------------------------------------------------
   Lib1-230805-sera-503C_mediumACE2:
     neut_standard_name: neut_standard
     prob_escape_filters: *prob_escape_filters_default
@@ -411,8 +375,6 @@ antibody_selections:
      Lib1-230805-sera-503C_0.136_mediumACE2:
       concentration: 0.136
       use_in_fit: true
-  
-
   Lib2-230805-sera-503C_mediumACE2:
     neut_standard_name: neut_standard
     prob_escape_filters: *prob_escape_filters_default
@@ -430,9 +392,75 @@ antibody_selections:
      Lib2-230805-sera-503C_0.136_mediumACE2:
       concentration: 0.136
       use_in_fit: true
-  
+  # --------------------------------------------------------------------------------------
+
+# Note that for soluble receptor affinity selections, you define selection experiments
+# exactly analogously to `antibody_selections` in `receptor_selections`, using `antibody`
+# as a synonym for the soluble receptor.
+
+# Define some defaults slightly different than from antibody selections
+
+# default parameters for `polyclonal` model fitting for receptor affinity
+receptor_polyclonal_params_default: &receptor_polyclonal_params_default
+  n_epitopes: 1
+  spatial_distances: null
+  fit_kwargs:  # keyword arguments to `Polyclonal.fit`
+    reg_escape_weight: 0.1
+    reg_spread_weight: 0
+    reg_activity_weight: 1.0
+    logfreq: 200
+
+# Define the receptor selections
+receptor_selections:
+  Lib1-230614-monomeric_ACE2:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *receptor_polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib1-230614-no-antibody_control_mediumACE2
+    antibody_samples:
+      Lib1-230614-monomeric_ACE2_2.88:
+        concentration: 2.88
+        use_in_fit: true
+      Lib1-230614-monomeric_ACE2_8.63:
+        concentration: 8.63
+        use_in_fit: true
+      Lib1-230614-monomeric_ACE2_25.9:
+        concentration: 25.9
+        use_in_fit: true
+      Lib1-230614-monomeric_ACE2_77.7:
+        concentration: 77.7
+        use_in_fit: true
+      Lib1-230614-monomeric_ACE2_233:
+        concentration: 233
+        use_in_fit: true
+  Lib2-230614-monomeric_ACE2:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *receptor_polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib2-230614-no-antibody_control_mediumACE2
+    antibody_samples:
+      Lib2-230614-monomeric_ACE2_2.88:
+        concentration: 2.88
+        use_in_fit: true
+      Lib2-230614-monomeric_ACE2_8.63:
+        concentration: 8.63
+        use_in_fit: true
+      Lib2-230614-monomeric_ACE2_25.9:
+        concentration: 25.9
+        use_in_fit: true
+      Lib2-230614-monomeric_ACE2_77.7:
+        concentration: 77.7
+        use_in_fit: true
+      Lib2-230614-monomeric_ACE2_233:
+        concentration: 233
+        use_in_fit: true
+
 # --------------------------------------------------------------------------------------
-# Configuration for averaging and plotting selections for the same antibody
+# Configuration for averaging/plotting selections for same antibody or soluble receptor
 # --------------------------------------------------------------------------------------
 
 # Average/plot escape values from different selections with the same antibody/serum using
@@ -444,6 +472,9 @@ antibody_selections:
 #   - `title`: title of plots
 #   - `legend`: legend added to plots
 
+# For soluble receptor experiments used to measure receptor affinity, do exactly the same
+# except under the key `avg_receptor_affinity` rather than `avg_antibody_escape`.
+
 # Define defaults for each antibody/serum, used via the merge (<<) operator
 avg_antibody_escape_default: &avg_antibody_escape_default
   icXX: 90
@@ -453,15 +484,13 @@ avg_antibody_escape_default: &avg_antibody_escape_default
     per_model_tooltip: true
   plot_hide_stats: *plot_hide_stats_default
   legend: |
-    Interactive plot of how mutations affect antibody escape.
-
-    Use the site zoom bar at the top to zoom in on specific sites. The line plot shows a summary statistic indicating escape at each site. The heat map shows escape for individual mutations, with parental amino-acid identities indicated by x and gray indicating non-measured mutations. Mouse over points for details.
+    Use the site zoom bar at the top to zoom in on specific sites. The line plot shows a summary statistic indicating of the mutation effects at each site. The heat map shows effects for individual mutations, with parental amino-acid identities indicated by x and gray indicating non-measured mutations. Mouse over points for details.
 
     Options at the bottom of the plot let you modify the display, such as by selecting how many different variants a mutation must be seen in to be shown (*minimum times_seen*), how many different experimental selections the mutation was measured in (*minimum n_models*), what site summary statistic to show, etc.
 
     You can filter by the functional effects of mutations. Mutations removed by this filter are shown as dark gray squares in the heat map to distinguish unmeasured mutations from ones measured to be deleterious.
 
-    The minimum max of escape at site is useful to select the sites where mutations confer the most escape.
+    The *minimum max* slider is useful to select the sites where mutations have the largest effect.
 
 # Define the antibodies/sera to average
 avg_antibody_escape:
@@ -527,3 +556,16 @@ avg_antibody_escape:
     selections:
       - Lib1-230805-sera-503C_mediumACE2
       - Lib2-230805-sera-503C_mediumACE2
+
+# Define the receptor affinity experiments to average
+avg_receptor_affinity_default: &avg_receptor_affinity_default
+  <<: *avg_antibody_escape_default
+  icXX: 50  # IC50
+
+avg_receptor_affinity:
+  monomeric_ACE2:
+    <<: *avg_receptor_affinity_default
+    title: Affinity for monomeric ACE2
+    selections:
+      - Lib1-230614-monomeric_ACE2
+      - Lib2-230614-monomeric_ACE2
