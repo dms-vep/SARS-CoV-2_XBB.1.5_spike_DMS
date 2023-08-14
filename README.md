@@ -1,7 +1,7 @@
 # Deep mutational scanning of SARS-CoV-2 XBB.1.5 spike 
 Study by Bernadeta Dadonaite and Jesse Bloom.
 
-For documentation of the analysis, see [https://dms-vep.github.io/SARS-CoV-2_XBB.1.5_spike_DMS/](https://dms-vep.github.io/SARS-CoV-2_XBB.1.5_spike_DMS/).
+For documentation of the analysis, see [https://dms-vep.github.io/SARS-CoV-2_XBB.1.5_spike_DMS/](https://dms-vep.github.io/SARS-CoV-2_XBB.1.5_spike_DMS/)
 
 ## Organization of this repo
 
@@ -20,14 +20,15 @@ Note that if you want a specific commit or tag of [dms-vep-pipeline-3](https://g
 and then `cd ../` back to the top-level directory, and add and commit the updated `dms-vep-pipeline-3` submodule.
 You can also make changes to the [dms-vep-pipeline-3](https://github.com/dms-vep/dms-vep-pipeline-3) that you commit back to that repo.
 
-### Code and configuration
-The [snakemake](https://snakemake.readthedocs.io/) pipeline itself is run by the [Snakefile](Snakefile), which includes [dms-vep-pipeline-3](https://github.com/dms-vep/dms-vep-pipeline-3) reads its configuration from [config.yaml](config.yaml).
-The [conda](https://docs.conda.io/) environment used by the pipeline is that specified in the `environment.yml` file in [dms-vep-pipeline-3](dms-vep-pipeline-3).
+### Configuration and running the pipeline
+The configuration for the pipeline is in [config.yaml](config.yaml) and the files in [./data/](data) referenced therein.
+To run the pipeline, do:
 
-Additional scripts and notebooks that are specific to this analysis and not part of [dms-vep-pipeline-3](https://github.com/dms-vep/dms-vep-pipeline-3) are in [./scripts/](scripts) and [./notebooks/](notebooks).
+    snakemake -j 8 --use-conda -s dms-vep-pipeline-3/Snakefile
 
-### Input data
-Input data for the pipeline are in [./data/](data).
+To run on the Hutch cluster via [slurm](https://slurm.schedmd.com/), you can run the file [run_Hutch_cluster.bash](run_Hutch_cluster.bash):
+
+    sbatch -c 8 run_Hutch_cluster.bash
 
 ### Results and documentation
 The results of running the pipeline are placed in [./results/](results).
@@ -38,14 +39,3 @@ The pipeline builds HTML documentation for the pipeline in [./docs/](docs), whic
 ### Library design
 The design of the mutant library is contained in [./library_design/](library_design).
 That design is not part of the pipeline but contains code that must be run separately with its own [conda](https://docs.conda.io/) environment.
-
-## Running the pipeline
-To run the pipeline, build the conda environment `dms-vep-pipeline-3` in the `environment.yml` file of [dms-vep-pipeline-3](https://github.com/dms-vep/dms-vep-pipeline-3), activate it, and run [snakemake](https://snakemake.readthedocs.io/), such as:
-
-    conda activate dms-vep-pipeline-3
-    snakemake -j 16 --use-conda -s dms-vep-pipeline-3/Snakefile
-
-
-To run on the Hutch cluster via [slurm](https://slurm.schedmd.com/), you can run the file [run_Hutch_cluster.bash](run_Hutch_cluster.bash):
-
-    sbatch -c 16 run_Hutch_cluster.bash
