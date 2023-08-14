@@ -74,6 +74,14 @@ plot_hide_stats_default: &plot_hide_stats_default
     csv: results/func_effects/averages/293T_high_ACE2_entry_func_effects.csv
     csv_col: effect
     init: -2
+    min_filters:
+      times_seen: 3
+  ACE2 affinity:
+    csv: results/receptor_affinity/averages/monomeric_ACE2_mut_effect.csv
+    csv_col: affinity_mean
+    init: -3
+    min_filters:
+      times_seen: 3
 
 # define the antibody selections
 antibody_selections:
@@ -88,10 +96,10 @@ antibody_selections:
     antibody_samples:
      Lib1-230720-sera-493C_0.045_highACE2:
       concentration: 0.045
-      use_in_fit: true    
+      use_in_fit: true
      Lib1-230720-sera-493C_0.091_highACE2:
       concentration: 0.091
-      use_in_fit: true     
+      use_in_fit: true
      Lib1-230720-sera-493C_0.16_highACE2:
       concentration: 0.16
       use_in_fit: true
@@ -105,10 +113,10 @@ antibody_selections:
     antibody_samples:
      Lib2-230720-sera-493C_0.045_highACE2:
       concentration: 0.045
-      use_in_fit: true    
+      use_in_fit: true
      Lib2-230720-sera-493C_0.091_highACE2:
       concentration: 0.091
-      use_in_fit: true     
+      use_in_fit: true
      Lib2-230720-sera-493C_0.16_highACE2:
       concentration: 0.16
       use_in_fit: true
@@ -123,10 +131,10 @@ antibody_selections:
     antibody_samples:
      Lib1-230720-sera-498C_0.015_highACE2:
       concentration: 0.015
-      use_in_fit: true    
+      use_in_fit: true
      Lib1-230720-sera-498C_0.058_highACE2:
       concentration: 0.058
-      use_in_fit: true     
+      use_in_fit: true
      Lib1-230720-sera-498C_0.197_highACE2:
       concentration: 0.197
       use_in_fit: true
@@ -140,10 +148,10 @@ antibody_selections:
     antibody_samples:
      Lib2-230720-sera-498C_0.015_highACE2:
       concentration: 0.015
-      use_in_fit: true    
+      use_in_fit: true
      Lib2-230720-sera-498C_0.058_highACE2:
       concentration: 0.058
-      use_in_fit: true     
+      use_in_fit: true
      Lib2-230720-sera-498C_0.197_highACE2:
       concentration: 0.197
       use_in_fit: true
@@ -158,10 +166,10 @@ antibody_selections:
     antibody_samples:
      Lib1-230720-sera-500C_0.01_highACE2:
       concentration: 0.01
-      use_in_fit: true    
+      use_in_fit: true
      Lib1-230720-sera-500C_0.043_highACE2:
       concentration: 0.043
-      use_in_fit: true     
+      use_in_fit: true
      Lib1-230720-sera-500C_0.111_highACE2:
       concentration: 0.111
       use_in_fit: true
@@ -175,10 +183,10 @@ antibody_selections:
     antibody_samples:
      Lib2-230720-sera-500C_0.01_highACE2:
       concentration: 0.01
-      use_in_fit: true    
+      use_in_fit: true
      Lib2-230720-sera-500C_0.043_highACE2:
       concentration: 0.043
-      use_in_fit: true     
+      use_in_fit: true
      Lib2-230720-sera-500C_0.111_highACE2:
       concentration: 0.111
       use_in_fit: true
@@ -210,7 +218,7 @@ antibody_selections:
     antibody_samples:
      Lib2-230720-sera-503C_0.019_highACE2:
       concentration: 0.019
-      use_in_fit: true    
+      use_in_fit: true
      Lib2-230720-sera-503C_0.073_highACE2:
       concentration: 0.073
       use_in_fit: true
@@ -228,10 +236,10 @@ antibody_selections:
     antibody_samples:
      Lib1-230805-sera-493C_0.01_mediumACE2:
       concentration: 0.01
-      use_in_fit: true    
+      use_in_fit: true
      Lib1-230805-sera-493C_0.041_mediumACE2:
       concentration: 0.041
-      use_in_fit: true     
+      use_in_fit: true
      Lib1-230805-sera-493C_0.16_mediumACE2:
       concentration: 0.16
       use_in_fit: true
@@ -245,10 +253,10 @@ antibody_selections:
     antibody_samples:
      Lib2-230805-sera-493C_0.01_mediumACE2:
       concentration: 0.01
-      use_in_fit: true    
+      use_in_fit: true
      Lib2-230805-sera-493C_0.041_mediumACE2:
       concentration: 0.041
-      use_in_fit: true     
+      use_in_fit: true
      Lib2-230805-sera-493C_0.16_mediumACE2:
       concentration: 0.16
       use_in_fit: true
@@ -263,10 +271,10 @@ antibody_selections:
     antibody_samples:
      Lib1-230805-sera-498C_0.007_mediumACE2:
       concentration: 0.007
-      use_in_fit: true    
+      use_in_fit: true
      Lib1-230805-sera-498C_0.027_mediumACE2:
       concentration: 0.027
-      use_in_fit: true     
+      use_in_fit: true
      Lib1-230805-sera-498C_0.106_mediumACE2:
       concentration: 0.106
       use_in_fit: true
@@ -280,10 +288,10 @@ antibody_selections:
     antibody_samples:
      Lib2-230805-sera-498C_0.007_mediumACE2:
       concentration: 0.007
-      use_in_fit: true    
+      use_in_fit: true
      Lib2-230805-sera-498C_0.027_mediumACE2:
       concentration: 0.027
-      use_in_fit: true     
+      use_in_fit: true
      Lib2-230805-sera-498C_0.106_mediumACE2:
       concentration: 0.106
       use_in_fit: true
@@ -298,10 +306,10 @@ antibody_selections:
     antibody_samples:
      Lib1-230805-sera-500C_0.002_mediumACE2:
       concentration: 0.002
-      use_in_fit: true    
+      use_in_fit: true
      Lib1-230805-sera-500C_0.007_mediumACE2:
       concentration: 0.007
-      use_in_fit: true     
+      use_in_fit: true
      Lib1-230805-sera-500C_0.028_mediumACE2:
       concentration: 0.028
       use_in_fit: true
@@ -315,10 +323,10 @@ antibody_selections:
     antibody_samples:
      Lib2-230805-sera-500C_0.002_mediumACE2:
       concentration: 0.002
-      use_in_fit: true    
+      use_in_fit: true
      Lib2-230805-sera-500C_0.007_mediumACE2:
       concentration: 0.007
-      use_in_fit: true     
+      use_in_fit: true
      Lib2-230805-sera-500C_0.028_mediumACE2:
       concentration: 0.028
       use_in_fit: true
@@ -410,6 +418,15 @@ receptor_polyclonal_params_default: &receptor_polyclonal_params_default
     reg_activity_weight: 1.0
     logfreq: 200
 
+# default stats to hide cells on plot of receptor affinity
+receptor_plot_hide_stats_default: &receptor_plot_hide_stats_default
+  functional effect:
+    csv: results/func_effects/averages/293T_high_ACE2_entry_func_effects.csv
+    csv_col: effect
+    init: -2
+    min_filters:
+      times_seen: 3
+
 # Define the receptor selections
 receptor_selections:
   Lib1-230614-monomeric_ACE2:
@@ -417,7 +434,7 @@ receptor_selections:
     prob_escape_filters: *prob_escape_filters_default
     polyclonal_params: *receptor_polyclonal_params_default
     escape_plot_kwargs: *escape_plot_kwargs_default
-    plot_hide_stats: *plot_hide_stats_default
+    plot_hide_stats: *receptor_plot_hide_stats_default
     no_antibody_sample: Lib1-230614-no-antibody_control_mediumACE2
     antibody_samples:
       Lib1-230614-monomeric_ACE2_2.88:
@@ -440,7 +457,7 @@ receptor_selections:
     prob_escape_filters: *prob_escape_filters_default
     polyclonal_params: *receptor_polyclonal_params_default
     escape_plot_kwargs: *escape_plot_kwargs_default
-    plot_hide_stats: *plot_hide_stats_default
+    plot_hide_stats: *receptor_plot_hide_stats_default
     no_antibody_sample: Lib2-230614-no-antibody_control_mediumACE2
     antibody_samples:
       Lib2-230614-monomeric_ACE2_2.88:
@@ -500,7 +517,7 @@ avg_antibody_escape:
     selections:
       - Lib1-230720-sera-493C_highACE2
       - Lib2-230720-sera-493C_highACE2
-  
+
   sera_498C_highACE2:
     <<: *avg_antibody_escape_default
     title: Sera 498C escape in high ACE2 cells
@@ -528,7 +545,7 @@ avg_antibody_escape:
     selections:
       - Lib1-230805-sera-493C_mediumACE2
       - Lib2-230805-sera-493C_mediumACE2
-  
+
   sera_498C_mediumACE2:
     <<: *avg_antibody_escape_default
     title: Sera 498C escape in medium ACE2 cells
@@ -566,6 +583,7 @@ avg_receptor_affinity:
   monomeric_ACE2:
     <<: *avg_receptor_affinity_default
     title: Affinity for monomeric ACE2
+    plot_hide_stats: *receptor_plot_hide_stats_default
     selections:
       - Lib1-230614-monomeric_ACE2
       - Lib2-230614-monomeric_ACE2
