@@ -723,6 +723,10 @@ avg_antibody_escape_default: &avg_antibody_escape_default
 
     The *minimum max* slider is useful to select the sites where mutations have the largest effect.
 
+avg_antibody_escape_not_fully_neutralized: &avg_antibody_escape_not_fully_neutralized
+  <<: *avg_antibody_escape_default
+  icXX: 50  # IC50
+
 # Define the antibodies/sera to average
 avg_antibody_escape:
   sera_493C_highACE2:
@@ -824,7 +828,7 @@ avg_antibody_escape:
       - Lib2-230815-sera-505C_mediumACE2
 
   mAb_2E7_mediumACE2:
-    <<: *avg_antibody_escape_default
+    <<: *avg_antibody_escape_not_fully_neutralized
     title: Antibody 2E7 escape in medium ACE2 cells
     selections:
       - Lib1-230815-mAb-2E7_mediumACE2
