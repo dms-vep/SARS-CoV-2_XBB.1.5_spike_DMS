@@ -577,44 +577,6 @@ antibody_selections:
       concentration: 0.253
       use_in_fit: true
 # --------------------------------------------------------------------------------------
-  Lib1-230815-mAb-2E7_mediumACE2:
-    neut_standard_name: neut_standard
-    prob_escape_filters: *prob_escape_filters_default
-    polyclonal_params: *polyclonal_params_default
-    escape_plot_kwargs: *escape_plot_kwargs_default
-    plot_hide_stats: *plot_hide_stats_default
-    no_antibody_sample: Lib1-230815-no-antibody_control_mediumACE2
-    #concentration in mg/ml
-    antibody_samples:
-     Lib1-230815-mAb-2E7_3.24_mediumACE2:
-      concentration: 0.00324
-      use_in_fit: true
-     Lib1-230815-mAb-2E7_12.96_mediumACE2:
-      concentration: 0.01296
-      use_in_fit: true
-     Lib1-230815-mAb-2E7_51.84_mediumACE2:
-      concentration: 0.05184
-      use_in_fit: false
-  Lib2-230815-mAb-2E7_mediumACE2:
-    neut_standard_name: neut_standard
-    prob_escape_filters: *prob_escape_filters_default
-    polyclonal_params: *polyclonal_params_default
-    escape_plot_kwargs: *escape_plot_kwargs_default
-    plot_hide_stats: *plot_hide_stats_default
-    no_antibody_sample: Lib2-230815-no-antibody_control_mediumACE2
-    #concentration in mg/ml
-    antibody_samples:
-     Lib2-230815-mAb-2E7_3.24_mediumACE2:
-      concentration: 0.00324
-      use_in_fit: true
-     Lib2-230815-mAb-2E7_12.96_mediumACE2:
-      concentration: 0.01296
-      use_in_fit: true
-     Lib2-230815-mAb-2E7_51.84_mediumACE2:
-      concentration: 0.05184
-      use_in_fit: false
-# --------------------------------------------------------------------------------------
-
 
 # Note that for soluble receptor affinity selections, you define selection experiments
 # exactly analogously to `antibody_selections` in `receptor_selections`, using `antibody`
@@ -723,10 +685,6 @@ avg_antibody_escape_default: &avg_antibody_escape_default
 
     The *minimum max* slider is useful to select the sites where mutations have the largest effect.
 
-avg_antibody_escape_not_fully_neutralized: &avg_antibody_escape_not_fully_neutralized
-  <<: *avg_antibody_escape_default
-  icXX: 50  # IC50
-
 # Define the antibodies/sera to average
 avg_antibody_escape:
   sera_493C_highACE2:
@@ -826,13 +784,6 @@ avg_antibody_escape:
     selections:
       - Lib1-230815-sera-505C_mediumACE2
       - Lib2-230815-sera-505C_mediumACE2
-
-  mAb_2E7_mediumACE2:
-    <<: *avg_antibody_escape_not_fully_neutralized
-    title: Antibody 2E7 escape in medium ACE2 cells
-    selections:
-      - Lib1-230815-mAb-2E7_mediumACE2
-      - Lib2-230815-mAb-2E7_mediumACE2
 
 # Define the receptor affinity experiments to average
 avg_receptor_affinity_default: &avg_receptor_affinity_default
