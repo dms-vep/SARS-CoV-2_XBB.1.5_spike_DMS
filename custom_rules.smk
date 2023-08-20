@@ -113,5 +113,8 @@ docs["Integrated summary of results"] = {
         "Chart summarizing results across assays": rules.format_escape_summary_chart.output.html,
         "CSV summarizing results across assays": rules.escape_summary.output.csv,
     },
-    "Reference to sequential site-numbering map": config["site_numbering_map"],
+    "Spike site numbering": {
+        "CSV converting sequential sites in XBB.1.5 spike to Wuhan-Hu-1 reference sites":
+            config["site_numbering_map"],
+    },
 }
