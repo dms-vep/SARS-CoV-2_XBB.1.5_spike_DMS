@@ -231,9 +231,9 @@ avg_func_effect_shifts_default: &avg_func_effect_shifts_default
 
 # Define the functional effect conditions to average
 avg_func_effect_shifts:
-  date_comparison:
+  target_cell_ACE2_expression_comparison:
     <<: *avg_func_effect_shifts_default
-    title: Comparison of functional effects from different dates (just a toy example)
+    title: Comparison of functional effects measured on 293T cells expressing different levels of ACE2
     comparisons:
       - Lib1-230614_ACE2_expression
       - Lib2-230614_ACE2_expression
