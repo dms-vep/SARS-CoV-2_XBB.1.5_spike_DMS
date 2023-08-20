@@ -3,7 +3,7 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>avg_func_effect_shifts_date_comparison</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>avg_func_effect_shifts_target_cell_ACE2_expression_comparison</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -7496,7 +7496,7 @@ The next cell is tagged as <code>parameters</code> to get the passed parameters.
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs celltag_injected-parameters" id="cell-id=ff62a39b">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs celltag_injected-parameters" id="cell-id=acc87eb9">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7521,13 +7521,13 @@ The next cell is tagged as <code>parameters</code> to get the passed parameters.
         <span class="p">},</span>
     <span class="p">},</span>
     <span class="s2">"legend"</span><span class="p">:</span> <span class="s2">"Interactive plot of shifts in effects of mutations. Negative values indicate mutations that</span><span class="se">\n</span><span class="s2">have shifted to become more deleterious; positive values indicate mutations shifted to</span><span class="se">\n</span><span class="s2">be more beneficial.</span><span class="se">\n\n</span><span class="s2">Use the site zoom bar at the top to zoom in on specific sites. The line plot shows a summary</span><span class="se">\n</span><span class="s2">statistic indicating the effects of mutations at each site. The heat map shows the effects of</span><span class="se">\n</span><span class="s2">individual mutations, with parental amino-acid identities indicated by x and gray</span><span class="se">\n</span><span class="s2">indicating non-measured mutations.</span><span class="se">\n\n</span><span class="s2">You can mouse over points to get details about individual measurements, including measurements</span><span class="se">\n</span><span class="s2">in individual comparisons.</span><span class="se">\n\n</span><span class="s2">The options at the bottom of the plot let you modify the display, such as by selecting how</span><span class="se">\n</span><span class="s2"> many different variants a mutation must be seen in to be shown (*minimum times_seen*),</span><span class="se">\n</span><span class="s2"> how many different experimental comparisons the mutation was measured in</span><span class="se">\n</span><span class="s2">(*minimum n_comparisons*), what site summary statistic to show, etc.</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
-    <span class="s2">"title"</span><span class="p">:</span> <span class="s2">"Comparison of functional effects from different dates (just a toy example)"</span><span class="p">,</span>
+    <span class="s2">"title"</span><span class="p">:</span> <span class="s2">"Comparison of functional effects measured on 293T cells expressing different levels of ACE2"</span><span class="p">,</span>
     <span class="s2">"comparisons"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"Lib1-230614_ACE2_expression"</span><span class="p">,</span> <span class="s2">"Lib2-230614_ACE2_expression"</span><span class="p">],</span>
     <span class="s2">"lasso_shift"</span><span class="p">:</span> <span class="mf">0.0001</span><span class="p">,</span>
 <span class="p">}</span>
 <span class="n">site_numbering_map_csv</span> <span class="o">=</span> <span class="s2">"data/site_numbering_map.csv"</span>
-<span class="n">shifts_csv</span> <span class="o">=</span> <span class="s2">"results/func_effect_shifts/averages/date_comparison_shifts.csv"</span>
-<span class="n">shifts_html</span> <span class="o">=</span> <span class="s2">"results/func_effect_shifts/averages/date_comparison_shifts_nolegend.html"</span>
+<span class="n">shifts_csv</span> <span class="o">=</span> <span class="s2">"results/func_effect_shifts/averages/target_cell_ACE2_expression_comparison_shifts.csv"</span>
+<span class="n">shifts_html</span> <span class="o">=</span> <span class="s2">"results/func_effect_shifts/averages/target_cell_ACE2_expression_comparison_shifts_nolegend.html"</span>
 </pre></div>
 </div>
 </div>
@@ -7683,23 +7683,23 @@ In general, you might hope to find a lasso shift that has relatively few non-zer
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
 <pre>/home/jbloom/.local/lib/python3.11/site-packages/seaborn/axisgrid.py:118: UserWarning: The figure layout has changed to tight
   self._figure.tight_layout(*args, **kwargs)
-/loc/scratch/26462810/ipykernel_13827/2343172652.py:20: UserWarning: The figure layout has changed to tight
+/tmp/ipykernel_32548/2343172652.py:20: UserWarning: The figure layout has changed to tight
   grid.fig.tight_layout()
 /home/jbloom/.local/lib/python3.11/site-packages/seaborn/axisgrid.py:118: UserWarning: The figure layout has changed to tight
   self._figure.tight_layout(*args, **kwargs)
-/loc/scratch/26462810/ipykernel_13827/2343172652.py:20: UserWarning: The figure layout has changed to tight
+/tmp/ipykernel_32548/2343172652.py:20: UserWarning: The figure layout has changed to tight
   grid.fig.tight_layout()
 /home/jbloom/.local/lib/python3.11/site-packages/seaborn/axisgrid.py:118: UserWarning: The figure layout has changed to tight
   self._figure.tight_layout(*args, **kwargs)
-/loc/scratch/26462810/ipykernel_13827/2343172652.py:20: UserWarning: The figure layout has changed to tight
+/tmp/ipykernel_32548/2343172652.py:20: UserWarning: The figure layout has changed to tight
   grid.fig.tight_layout()
 /home/jbloom/.local/lib/python3.11/site-packages/seaborn/axisgrid.py:118: UserWarning: The figure layout has changed to tight
   self._figure.tight_layout(*args, **kwargs)
-/loc/scratch/26462810/ipykernel_13827/2343172652.py:20: UserWarning: The figure layout has changed to tight
+/tmp/ipykernel_32548/2343172652.py:20: UserWarning: The figure layout has changed to tight
   grid.fig.tight_layout()
 /home/jbloom/.local/lib/python3.11/site-packages/seaborn/axisgrid.py:118: UserWarning: The figure layout has changed to tight
   self._figure.tight_layout(*args, **kwargs)
-/loc/scratch/26462810/ipykernel_13827/2343172652.py:20: UserWarning: The figure layout has changed to tight
+/tmp/ipykernel_32548/2343172652.py:20: UserWarning: The figure layout has changed to tight
   grid.fig.tight_layout()
 </pre>
 </div>
@@ -7793,7 +7793,7 @@ First, get the data to plot:</p>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Saving shifts to results/func_effect_shifts/averages/date_comparison_shifts.csv
+<pre>Saving shifts to results/func_effect_shifts/averages/target_cell_ACE2_expression_comparison_shifts.csv
 </pre>
 </div>
 </div>
@@ -7887,7 +7887,7 @@ First, get the data to plot:</p>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Saving chart to results/func_effect_shifts/averages/date_comparison_shifts_nolegend.html
+<pre>Saving chart to results/func_effect_shifts/averages/target_cell_ACE2_expression_comparison_shifts_nolegend.html
 </pre>
 </div>
 </div>
@@ -7895,23 +7895,23 @@ First, get the data to plot:</p>
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <style>
-  #altair-viz-5067c560128f418fa52eb82b25b517b3.vega-embed {
+  #altair-viz-0a2523edc2784aa0956f2caf27e55096.vega-embed {
     width: 100%;
     display: flex;
   }
 
-  #altair-viz-5067c560128f418fa52eb82b25b517b3.vega-embed details,
-  #altair-viz-5067c560128f418fa52eb82b25b517b3.vega-embed details summary {
+  #altair-viz-0a2523edc2784aa0956f2caf27e55096.vega-embed details,
+  #altair-viz-0a2523edc2784aa0956f2caf27e55096.vega-embed details summary {
     position: relative;
   }
 </style>
-<div id="altair-viz-5067c560128f418fa52eb82b25b517b3"></div>
+<div id="altair-viz-0a2523edc2784aa0956f2caf27e55096"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-5067c560128f418fa52eb82b25b517b3") {
-      outputDiv = document.getElementById("altair-viz-5067c560128f418fa52eb82b25b517b3");
+    if (outputDiv.id !== "altair-viz-0a2523edc2784aa0956f2caf27e55096") {
+      outputDiv = document.getElementById("altair-viz-0a2523edc2784aa0956f2caf27e55096");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
