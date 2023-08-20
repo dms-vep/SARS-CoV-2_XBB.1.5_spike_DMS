@@ -20,6 +20,7 @@ rule spatial_distances:
     script:
         "scripts/spatial_distances.py"
 
+
 rule escape_summary:
     """Summarize escape across all sera alongside functional effects."""
     input:
@@ -70,8 +71,8 @@ rule format_escape_summary_chart:
         legend=temp("results/summaries/escape_summary.md"),
     params:
         title=(
-            "Summary of serum escape, functional effects and ACE2 affinities for the "
-            "mutations in XBB.1.5 deep mutational scanning libraries"
+            "Summary of serum escape, functional effects and ACE2 affinities for "
+            "XBB.1.5 spike deep mutational scanning"
         ),
         legend=(
             "This is is an interactive chart. Mouseover points on the top line plots "
@@ -104,14 +105,13 @@ rule format_escape_summary_chart:
         """
 
 
-docs["Escape summary"] = {
-    "Notebook summarizing sera escape, functional effects and ACE2 affinities": rules.escape_summary.output.nb,
-    "Chart summarizing sera escape, functional effects and ACE2 affinities": rules.format_escape_summary_chart.output.html,
-    "CSV summarizing sera escape, functional effects and ACE2 affinities": rules.escape_summary.output.csv,
-}
-
 # Files (Jupyter notebooks, HTML plots, or CSVs) that you want included in
 # the HTML docs should be added to the nested dict `docs`:
-docs["Site numbering"] = {
+docs["Integrated summary of results"] = {
+    "Escape summary": {
+        "Notebook building summary across assays": rules.escape_summary.output.nb,
+        "Chart summarizing results across assays": rules.format_escape_summary_chart.output.html,
+        "CSV summarizing results across assays": rules.escape_summary.output.csv,
+    },
     "Reference to sequential site-numbering map": config["site_numbering_map"],
 }
