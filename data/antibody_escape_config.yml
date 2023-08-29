@@ -117,7 +117,7 @@ plot_hide_stats_default: &plot_hide_stats_default
       times_seen: 3
   ACE2 affinity:
     csv: results/receptor_affinity/averages/monomeric_ACE2_mut_effect.csv
-    csv_col: affinity_mean
+    csv_col: receptor affinity_mean
     init: -3
     min_filters:
       times_seen: 3
