@@ -1,4 +1,4 @@
-epitope,site,wildtype,mutant,mutation,affinity_mean,affinity_median,n_models,times_seen,frac_models,Lib1-230614-monomeric_ACE2,Lib2-230614-monomeric_ACE2
+epitope,site,wildtype,mutant,mutation,receptor affinity_mean,receptor affinity_median,n_models,times_seen,frac_models,Lib1-230614-monomeric_ACE2,Lib2-230614-monomeric_ACE2
 1,1,M,I,M1I,1.26,1.26,2,1.5,1,-1.118,3.638
 1,1,M,V,M1V,1.271,1.271,1,1,0.5,1.271,
 1,2,F,C,F2C,0.02151,0.02151,2,14.5,1,0.05629,-0.01328
