@@ -1,6 +1,44 @@
-# Configurations for determining effects of mutations on antibody/sera escape,
-# or escape from neutralization by soluble receptor (which can be used to determine
-# receptor affinity).
+# Configurations for determining effects of mutations on assays such as antibody
+# escape, receptor affinity from soluble receptor neutralization, etc.
+# Note that in the configuration for individual selections, "antibody" is used
+# as a synonym for any treatment (receptor, heat, etc), and "no-antibody" is
+# used as a synonym for the untreated conditions.
+
+# --------------------------------------------------------------------------------------
+# Define the selections
+# --------------------------------------------------------------------------------------
+
+# `assays` is keyed by assay (eg, "antibody_escape", "receptor_affinity", etc). Values are:
+#    - `title`: title used for selection in docs
+#    - `selections`: name of key used to define all selections for this assay
+#    - `averages`: name of key used to define averages across selections for this assay.
+#       Leave out this key if not taking averages.
+#    - `prob_escape_scale`: the scale used for the y-axis when plotting prob escape as
+#      a function of concentration. Typically symlog if all values close to zero, linear
+#      otherwise. Should be in the form of keyword arguments to `altair.Scale`.
+#    - `scale_stat`: scale the statistic being estimated for mutation effects by this
+#      number. Typically is 1 (no scaling) unless you want negative values to indicate a
+#      favorable effect (as for soluble receptor selections), in which case use -1.
+#    - `stat_name`: name assigned to statistic, eg, "escape" or "receptor affinity".
+
+assays:
+  antibody_escape:
+    title: Antibody/serum escape
+    selections: antibody_selections
+    averages: avg_antibody_escape
+    prob_escape_scale:
+      type: symlog
+      constant: 0.04
+    scale_stat: 1
+    stat_name: escape
+  receptor_affinity:
+    title: Receptor affinity
+    selections: receptor_selections
+    averages: avg_receptor_affinity
+    prob_escape_scale:
+      type: linear
+    scale_stat: -1
+    stat_name: receptor affinity
 
 # --------------------------------------------------------------------------------------
 # Configuration for each antibody or soluble receptor selection experiment.
@@ -79,7 +117,7 @@ plot_hide_stats_default: &plot_hide_stats_default
       times_seen: 3
   ACE2 affinity:
     csv: results/receptor_affinity/averages/monomeric_ACE2_mut_effect.csv
-    csv_col: affinity_mean
+    csv_col: receptor affinity_mean
     init: -3
     min_filters:
       times_seen: 3

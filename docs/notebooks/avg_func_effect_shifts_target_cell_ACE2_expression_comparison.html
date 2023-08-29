@@ -7496,7 +7496,7 @@ The next cell is tagged as <code>parameters</code> to get the passed parameters.
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs celltag_injected-parameters" id="cell-id=acc87eb9">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs celltag_injected-parameters" id="cell-id=cda10202">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7683,23 +7683,23 @@ In general, you might hope to find a lasso shift that has relatively few non-zer
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
 <pre>/home/jbloom/.local/lib/python3.11/site-packages/seaborn/axisgrid.py:118: UserWarning: The figure layout has changed to tight
   self._figure.tight_layout(*args, **kwargs)
-/tmp/ipykernel_32548/2343172652.py:20: UserWarning: The figure layout has changed to tight
+/loc/scratch/27221861/ipykernel_2037/2343172652.py:20: UserWarning: The figure layout has changed to tight
   grid.fig.tight_layout()
 /home/jbloom/.local/lib/python3.11/site-packages/seaborn/axisgrid.py:118: UserWarning: The figure layout has changed to tight
   self._figure.tight_layout(*args, **kwargs)
-/tmp/ipykernel_32548/2343172652.py:20: UserWarning: The figure layout has changed to tight
+/loc/scratch/27221861/ipykernel_2037/2343172652.py:20: UserWarning: The figure layout has changed to tight
   grid.fig.tight_layout()
 /home/jbloom/.local/lib/python3.11/site-packages/seaborn/axisgrid.py:118: UserWarning: The figure layout has changed to tight
   self._figure.tight_layout(*args, **kwargs)
-/tmp/ipykernel_32548/2343172652.py:20: UserWarning: The figure layout has changed to tight
+/loc/scratch/27221861/ipykernel_2037/2343172652.py:20: UserWarning: The figure layout has changed to tight
   grid.fig.tight_layout()
 /home/jbloom/.local/lib/python3.11/site-packages/seaborn/axisgrid.py:118: UserWarning: The figure layout has changed to tight
   self._figure.tight_layout(*args, **kwargs)
-/tmp/ipykernel_32548/2343172652.py:20: UserWarning: The figure layout has changed to tight
+/loc/scratch/27221861/ipykernel_2037/2343172652.py:20: UserWarning: The figure layout has changed to tight
   grid.fig.tight_layout()
 /home/jbloom/.local/lib/python3.11/site-packages/seaborn/axisgrid.py:118: UserWarning: The figure layout has changed to tight
   self._figure.tight_layout(*args, **kwargs)
-/tmp/ipykernel_32548/2343172652.py:20: UserWarning: The figure layout has changed to tight
+/loc/scratch/27221861/ipykernel_2037/2343172652.py:20: UserWarning: The figure layout has changed to tight
   grid.fig.tight_layout()
 </pre>
 </div>
@@ -7762,14 +7762,19 @@ First, get the data to plot:</p>
 <span class="k">assert</span> <span class="n">lasso_shift</span> <span class="ow">in</span> <span class="nb">set</span><span class="p">(</span><span class="n">shifts_comparison_pivoted</span><span class="p">[</span><span class="s2">"lasso_shift"</span><span class="p">])</span>
 <span class="k">assert</span> <span class="n">avg_method</span> <span class="ow">in</span> <span class="p">{</span><span class="s2">"mean"</span><span class="p">,</span> <span class="s2">"median"</span><span class="p">},</span> <span class="n">avg_method</span>
 
+<span class="n">site_numbering_map</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">site_numbering_map_csv</span><span class="p">)</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span>
+    <span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">"reference_site"</span><span class="p">:</span> <span class="s2">"site"</span><span class="p">}</span>
+<span class="p">)</span>
+<span class="n">addtl_site_cols</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">site_numbering_map</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="n">c</span> <span class="o">!=</span> <span class="s2">"site"</span> <span class="ow">and</span> <span class="n">c</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">"site"</span><span class="p">)</span>
+<span class="p">]</span>
+
 <span class="c1"># get the data to plot</span>
 <span class="n">df</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n">shifts_comparison_pivoted</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">"lasso_shift == @lasso_shift"</span><span class="p">)</span>
     <span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="s2">"lasso_shift"</span><span class="p">)</span>
     <span class="o">.</span><span class="n">merge</span><span class="p">(</span>
-        <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">site_numbering_map_csv</span><span class="p">)</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">"reference_site"</span><span class="p">:</span> <span class="s2">"site"</span><span class="p">})[</span>
-            <span class="p">[</span><span class="s2">"site"</span><span class="p">,</span> <span class="s2">"sequential_site"</span><span class="p">,</span> <span class="s2">"region"</span><span class="p">]</span>
-        <span class="p">],</span>
+        <span class="n">site_numbering_map</span><span class="p">[[</span><span class="s2">"site"</span><span class="p">,</span> <span class="o">*</span><span class="n">addtl_site_cols</span><span class="p">,</span> <span class="s2">"region"</span><span class="p">]],</span>
         <span class="n">on</span><span class="o">=</span><span class="s2">"site"</span><span class="p">,</span>
         <span class="n">validate</span><span class="o">=</span><span class="s2">"many_to_one"</span><span class="p">,</span>
     <span class="p">)</span>
@@ -7780,7 +7785,9 @@ First, get the data to plot:</p>
 <span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Saving shifts to </span><span class="si">{</span><span class="n">shifts_csv</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-<span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">shifts_csv</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">float_format</span><span class="o">=</span><span class="s2">"</span><span class="si">%.4g</span><span class="s2">"</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">addtl_site_cols</span> <span class="k">if</span> <span class="n">c</span> <span class="o">!=</span> <span class="s2">"sequential_site"</span><span class="p">])</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span>
+    <span class="n">shifts_csv</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">float_format</span><span class="o">=</span><span class="s2">"</span><span class="si">%.4g</span><span class="s2">"</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -7831,6 +7838,9 @@ First, get the data to plot:</p>
 
 <span class="k">if</span> <span class="s2">"addtl_tooltip_stats"</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">plot_kwargs</span><span class="p">:</span>
     <span class="n">plot_kwargs</span><span class="p">[</span><span class="s2">"addtl_tooltip_stats"</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">addtl_site_cols</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">c</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">plot_kwargs</span><span class="p">[</span><span class="s2">"addtl_tooltip_stats"</span><span class="p">]:</span>
+        <span class="n">plot_kwargs</span><span class="p">[</span><span class="s2">"addtl_tooltip_stats"</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
 
 <span class="k">if</span> <span class="nb">any</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">"site"</span><span class="p">]</span> <span class="o">!=</span> <span class="n">df</span><span class="p">[</span><span class="s2">"sequential_site"</span><span class="p">]):</span>
     <span class="k">if</span> <span class="s2">"sequential_site"</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">plot_kwargs</span><span class="p">[</span><span class="s2">"addtl_tooltip_stats"</span><span class="p">]:</span>
@@ -7895,23 +7905,23 @@ First, get the data to plot:</p>
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <style>
-  #altair-viz-0a2523edc2784aa0956f2caf27e55096.vega-embed {
+  #altair-viz-e09ea83002824fc0b40f2d432ded4566.vega-embed {
     width: 100%;
     display: flex;
   }
 
-  #altair-viz-0a2523edc2784aa0956f2caf27e55096.vega-embed details,
-  #altair-viz-0a2523edc2784aa0956f2caf27e55096.vega-embed details summary {
+  #altair-viz-e09ea83002824fc0b40f2d432ded4566.vega-embed details,
+  #altair-viz-e09ea83002824fc0b40f2d432ded4566.vega-embed details summary {
     position: relative;
   }
 </style>
-<div id="altair-viz-0a2523edc2784aa0956f2caf27e55096"></div>
+<div id="altair-viz-e09ea83002824fc0b40f2d432ded4566"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-0a2523edc2784aa0956f2caf27e55096") {
-      outputDiv = document.getElementById("altair-viz-0a2523edc2784aa0956f2caf27e55096");
+    if (outputDiv.id !== "altair-viz-e09ea83002824fc0b40f2d432ded4566") {
+      outputDiv = document.getElementById("altair-viz-e09ea83002824fc0b40f2d432ded4566");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",

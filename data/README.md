@@ -44,3 +44,6 @@ The format is explained within the file.
 This same configuration can also be used to analyze escape from soluble receptor that inhibits entry to estimate how mutations affect receptor affinity.
 The configuration for such receptor-inhibition experiments are also specified in this configuration as conceptually the experiments and analysis are basically the same, with just how the results are plotted and described different.
 The format is explained within the file.
+
+## Configuration for summaries across assays
+[summary_config.yml](summary_config.yml) has the configuration for making summaries across assays.
