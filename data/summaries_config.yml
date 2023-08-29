@@ -48,7 +48,7 @@ summary:
         max_at_least: 1
         min_at_least: 0
         init_min_value: -10  # initial min value in slider
-  title: Effects of mutations to spike of SARS-CoV-2 XBB.1.5 on serum antibody escape, spike-mediated cell entry, and ACE2 affinity as measured in pseudotyped lentiviral deep mutational scanning experiments
+  title: Effects of mutations to spike of SARS-CoV-2 XBB.1.5 on escape from serum antibodies (sera from human XBB breakthrough infections), spike-mediated cell entry, and ACE2 affinity as measured in pseudotyped lentiviral deep mutational scanning experiments
   legend: |
     This is is an interactive chart. Mouseover points for details and measurements, and
     use the top zoom bar to zoom in on specific sites. The options at the bottom let you
