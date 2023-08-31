@@ -24,27 +24,16 @@ rule spatial_distances:
 # input data to the `compare_affinity` rule
 compare_affinity_data = {
     # current study on XBB.1.5 in full spike DMS
-    "xbb_spike_affinity":
-        "results/receptor_affinity/averages/monomeric_ACE2_mut_effect.csv",
-    "xbb_spike_func_effects":
-        "results/func_effects/averages/293T_high_ACE2_entry_func_effects.csv",
-    "xbb_spike_escape":
-        "results/summaries/summary.csv",
+    "xbb_spike_csv": "results/summaries/summary.csv",
     # Tyler Starr yeast display RBD DMS
     "starr_rbd_affinity": 
         "https://media.githubusercontent.com/media/tstarrlab/SARS-CoV-2-RBD_DMS_Omicron-XBB-BQ/main/results/final_variant_scores/final_variant_scores.csv",
     # BA.2 in full spike DMS
-    "ba2_spike_affinity":
-        "https://raw.githubusercontent.com/dms-vep/SARS-CoV-2_Omicron_BA.2_spike_ACE2_affinity/main/results/receptor_affinity/averages/monomeric_ACE2_mut_effect.csv",
-    "ba2_spike_func_effects":
-        "https://raw.githubusercontent.com/dms-vep/SARS-CoV-2_Omicron_BA.2_spike_ACE2_affinity/main/results/func_effects/averages/293T_high_ACE2_entry_func_effects.csv",
+    "ba2_spike_csv":
+        "https://raw.githubusercontent.com/dms-vep/SARS-CoV-2_Omicron_BA.2_spike_ACE2_affinity/main/results/summaries/summary.csv",
     # XBB.1.5 in RBD DMS in lentiviral system
-    "xbb_rbd_affinity_monomeric":
-        "https://raw.githubusercontent.com/dms-vep/SARS-CoV-2_XBB.1.5_RBD_DMS/main/results/receptor_affinity/averages/monomeric_ACE2_mut_effect.csv",
-    "xbb_rbd_affinity_dimeric":
-        "https://raw.githubusercontent.com/dms-vep/SARS-CoV-2_XBB.1.5_RBD_DMS/main/results/receptor_affinity/averages/dimeric_ACE2_mut_effect.csv",
-    "xbb_rbd_func_effects":
-        "https://raw.githubusercontent.com/dms-vep/SARS-CoV-2_XBB.1.5_RBD_DMS/main/results/func_effects/averages/293T_high_ACE2_entry_func_effects.csv",
+    "xbb_rbd_csv":
+        "https://raw.githubusercontent.com/dms-vep/SARS-CoV-2_XBB.1.5_RBD_DMS/main/results/summaries/summary.csv",
 }
 
 # Temporary code just for running on Hutch server that converts URLs to paths. Just
@@ -75,16 +64,21 @@ rule compare_affinity:
                 if csvurl.startswith("http")
             }
             | {key: val for (key, val) in dict(input).items() if key != "nb"}
-            | {"min_times_seen": 3}
         ),
     output:
+        merged_affinity_csv="results/affinity_comparison/merged_affinities.csv",
         nb="results/notebooks/compare_affinity.ipynb",
     log:
         log="results/logs/compare_affinity.txt",
     conda:
         os.path.join(config["pipeline_path"], "environment.yml")
     shell:
-        "papermill {input.nb} {output.nb} -y '{params.yaml}' &> {log}"\
+        """
+        papermill {input.nb} {output.nb} \
+            -y '{params.yaml}' \
+            -p merged_affinity_csv {output.merged_affinity_csv} \
+            &> {log}
+        """
 
 
 # Files (Jupyter notebooks, HTML plots, or CSVs) that you want included in
