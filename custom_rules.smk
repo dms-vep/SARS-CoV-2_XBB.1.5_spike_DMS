@@ -76,9 +76,20 @@ rule compare_affinity:
 
 # Files (Jupyter notebooks, HTML plots, or CSVs) that you want included in
 # the HTML docs should be added to the nested dict `docs`:
-docs["Additional files"] = {
-    "Comparison of ACE2 affinities across experiments": {
-        "Notebook comparing affinities": rules.compare_affinity.output.nb,
+docs["Additional files and charts"] = {
+    "Analysis of ACE2 affinity data and comparison to other experiments": {
+        "Interactive charts": {
+            "Correlations among experiments":
+                rules.compare_affinity.output.affinity_corr,
+            "Distribution of RBD and non-RBD affinities":
+                rules.compare_affinity.output.affinity_dist,
+            "Correlation of affinity to viral entry":
+                rules.compare_affinity.output.affinity_entry_corr,
+            "Correlation of affinity to viral escape":
+                rules.compare_affinity.output.affinity_escape_corr,
+        },
+        "CSV of affinities from different experiments":
+            rules.compare_affinity.output.merged_affinity_csv,
     },
     "Spike site numbering": {
         "CSV converting sequential sites in XBB.1.5 spike to Wuhan-Hu-1 reference sites":
