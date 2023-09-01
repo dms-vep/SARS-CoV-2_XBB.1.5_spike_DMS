@@ -67,3 +67,7 @@ results/receptor_affinity/averages/*
 !results/summaries
 results/summaries/*
 !results/summaries/summary.csv
+
+!results/affinity_comparison
+results/affinity_comparison/*
+!results/affinity_comparison/merged_affinities.csv
