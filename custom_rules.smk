@@ -53,6 +53,10 @@ rule compare_affinity:
     output:
         merged_affinity_csv="results/affinity_comparison/merged_affinities.csv",
         nb="results/notebooks/compare_affinity.ipynb",
+        affinity_corr="results/affinity_comparison/affinity_corr.html",
+        affinity_dist="results/affinity_comparison/affinity_dist.html",
+        affinity_entry_corr="results/affinity_comparison/affinity_entry_corr.html",
+        affinity_escape_corr="results/affinity_comparison/affinity_ecape_corr.html",
     log:
         log="results/logs/compare_affinity.txt",
     conda:
@@ -62,6 +66,10 @@ rule compare_affinity:
         papermill {input.nb} {output.nb} \
             -y '{params.yaml}' \
             -p merged_affinity_csv {output.merged_affinity_csv} \
+            -p affinity_corr_html {output.affinity_corr} \
+            -p affinity_dist_html {output.affinity_dist} \
+            -p affinity_entry_corr_html {output.affinity_entry_corr} \
+            -p affinity_escape_corr_html {output.affinity_escape_corr} \
             &> {log}
         """
 
