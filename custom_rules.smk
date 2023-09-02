@@ -92,6 +92,7 @@ rule compare_high_medium_ace2_escape:
             {
                 "init_min_func_effect": -2,
                 "init_min_times_seen": 3,
+                "init_floor_at_zero": False,
                 "escape_csvs": list(input.escape),
             }
         ),
