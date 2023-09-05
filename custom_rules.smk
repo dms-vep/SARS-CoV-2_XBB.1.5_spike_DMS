@@ -113,6 +113,52 @@ rule compare_high_medium_ace2_escape:
         """
 
 
+rule compare_spike_rbd_escape:
+    """Compare escape from full spike and RBD libraries."""
+    input:
+        spike_escape=expand(
+            rules.avg_escape.output.effect_csv,
+            assay=["antibody_escape"],
+            antibody=avg_assay_config["antibody_escape"],
+        ),
+        site_numbering_map=config["site_numbering_map"],
+        func_effects="results/func_effects/averages/293T_high_ACE2_entry_func_effects.csv",
+        nb="notebooks/compare_spike_rbd_escape.ipynb",
+    output:
+#        chart="results/escape_comparisons/compare_spike_rbd_escape.html",
+        nb="results/notebooks/compare_spike_rbd_escape.ipynb",
+    params:
+        yaml=lambda wc, input: yaml.round_trip_dump(
+            {
+                "init_min_func_effect": -2,
+                "init_min_times_seen": 3,
+                "init_floor_at_zero": False,
+                "init_site_escape_stat": "sum",
+                "spike_escape_csvs": list(input.spike_escape),
+                "rbd_escape_csvs": [
+                    os.path.join(
+                        "https://github.com/dms-vep/SARS-CoV-2_XBB.1.5_RBD_DMS",
+                        "/blob/main/results/antibody_escape/averages",
+                        f"sera_{serum}_mediumACE2_mut_effect.csv",
+                    )
+                    for serum in ["493C", "498C", "500C", "503C", "343C"]
+                ],
+            }
+        ),
+    log:
+        log="results/logs/compare_spike_rbd_escape.txt",
+    conda:
+        os.path.join(config["pipeline_path"], "environment.yml")
+    shell:
+        """
+        papermill {input.nb} {output.nb} \
+            -y '{params.yaml}' \
+            -p site_numbering_map_csv {input.site_numbering_map} \
+            -p func_effects_csv {input.func_effects} \
+            &> {log}
+        """
+
+
 # Files (Jupyter notebooks, HTML plots, or CSVs) that you want included in
 # the HTML docs should be added to the nested dict `docs`:
 docs["Additional files and charts"] = {
@@ -133,6 +179,10 @@ docs["Additional files and charts"] = {
     "Comparison of escape in medium and high ACE2 cells": {
         "Interactive chart comparing escape":
             rules.compare_high_medium_ace2_escape.output.chart,
+    },
+    "Comparison of escape in full-spike and RBD deep mutational scans": {
+        "Interactive chart comparing escape":
+            rules.compare_spike_rbd_escape.output.nb,
     },
     "Spike site numbering": {
         "CSV converting sequential sites in XBB.1.5 spike to Wuhan-Hu-1 reference sites":
