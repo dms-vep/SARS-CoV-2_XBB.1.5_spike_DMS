@@ -125,7 +125,8 @@ rule compare_spike_rbd_escape:
         func_effects="results/func_effects/averages/293T_high_ACE2_entry_func_effects.csv",
         nb="notebooks/compare_spike_rbd_escape.ipynb",
     output:
-#        chart="results/escape_comparisons/compare_spike_rbd_escape.html",
+        corr_chart="results/escape_comparisons/compare_spike_rbd_escape.html",
+        dist_chart="results/escape_comparisons/rbd_vs_non_rbd_escape.html",
         nb="results/notebooks/compare_spike_rbd_escape.ipynb",
     params:
         yaml=lambda wc, input: yaml.round_trip_dump(
@@ -155,6 +156,8 @@ rule compare_spike_rbd_escape:
             -y '{params.yaml}' \
             -p site_numbering_map_csv {input.site_numbering_map} \
             -p func_effects_csv {input.func_effects} \
+            -p corr_chart_html {output.corr_chart} \
+            -p dist_chart_html {output.dist_chart} \
             &> {log}
         """
 
@@ -181,8 +184,10 @@ docs["Additional files and charts"] = {
             rules.compare_high_medium_ace2_escape.output.chart,
     },
     "Comparison of escape in full-spike and RBD deep mutational scans": {
-        "Interactive chart comparing escape":
-            rules.compare_spike_rbd_escape.output.nb,
+        "Interactive chart comparing escape in spike vs RBD scans":
+            rules.compare_spike_rbd_escape.output.corr_chart,
+        "Distributions of escape by RBD and non-RBD mutations in spike scane":
+            rules.compare_spike_rbd_escape.output.dist_chart,
     },
     "Spike site numbering": {
         "CSV converting sequential sites in XBB.1.5 spike to Wuhan-Hu-1 reference sites":
