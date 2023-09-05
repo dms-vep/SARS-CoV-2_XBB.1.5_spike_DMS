@@ -137,8 +137,8 @@ rule compare_spike_rbd_escape:
                 "spike_escape_csvs": list(input.spike_escape),
                 "rbd_escape_csvs": [
                     os.path.join(
-                        "https://github.com/dms-vep/SARS-CoV-2_XBB.1.5_RBD_DMS",
-                        "/blob/main/results/antibody_escape/averages",
+                        "https://raw.githubusercontent.com/dms-vep/SARS-CoV-2_XBB.1.5_RBD_DMS",
+                        "main/results/antibody_escape/averages",
                         f"sera_{serum}_mediumACE2_mut_effect.csv",
                     )
                     for serum in ["493C", "498C", "500C", "503C", "343C"]
