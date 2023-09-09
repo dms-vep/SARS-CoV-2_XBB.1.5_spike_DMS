@@ -162,6 +162,29 @@ rule compare_spike_rbd_escape:
         """
 
 
+rule compare_natural:
+    """Compare DMS measurements to natural sequence evolution."""
+    input:
+        dms_summary_csv="results/summaries/summary.csv",
+        nb="notebooks/compare_natural.ipynb",
+    output:
+        nb="results/notebooks/compare_natural.ipynb",
+    params:
+        pango_consensus_seqs_json="https://raw.githubusercontent.com/corneliusroemer/pango-sequences/8ace8d5d180fedabff488b5fa9d40d01433e8404/data/pango-consensus-sequences_summary.json",
+        fitness_csv="https://raw.githubusercontent.com/jbloomlab/SARS2-mut-fitness/main/results_public_2023-06-21/aa_fitness/aa_fitness.csv",
+        starting_clade="XBB",
+        dms_clade = "XBB.1.5",
+    log:
+        log="results/logs/compare_natural.txt",
+    conda:
+        os.path.join(config["pipeline_path"], "environment.yml")
+    shell:
+        """
+        papermill {input.nb} {output.nb} \
+            &> {log}
+        """
+
+
 # Files (Jupyter notebooks, HTML plots, or CSVs) that you want included in
 # the HTML docs should be added to the nested dict `docs`:
 docs["Additional files and charts"] = {
