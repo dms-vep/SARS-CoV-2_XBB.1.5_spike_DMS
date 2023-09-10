@@ -169,9 +169,9 @@ rule compare_natural:
         nb="notebooks/compare_natural.ipynb",
     output:
         nb="results/notebooks/compare_natural.ipynb",
+        pango_consensus_seqs_json="results/compare_natural/pango-consensus-sequences_summary.json",
     params:
         pango_consensus_seqs_json="https://raw.githubusercontent.com/corneliusroemer/pango-sequences/8ace8d5d180fedabff488b5fa9d40d01433e8404/data/pango-consensus-sequences_summary.json",
-        fitness_csv="https://raw.githubusercontent.com/jbloomlab/SARS2-mut-fitness/main/results_public_2023-06-21/aa_fitness/aa_fitness.csv",
         starting_clade="XBB",
         dms_clade = "XBB.1.5",
     log:
@@ -180,8 +180,9 @@ rule compare_natural:
         os.path.join(config["pipeline_path"], "environment.yml")
     shell:
         """
+        curl {params.pango_consensus_seqs_json} -o {output.pango_consensus_seqs_json} &> {log}
         papermill {input.nb} {output.nb} \
-            &> {log}
+            &>> {log}
         """
 
 
