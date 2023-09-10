@@ -186,7 +186,7 @@ rule compare_natural:
                 "pango_randomized_dms_phenotypes_csv": output.pango_randomized_dms_phenotypes_csv,
                 "pango_by_date_html": output.pango_by_date_html,
                 "pango_affinity_vs_escape_html": output.pango_affinity_vs_escape_html,
-                "n_random": 10,
+                "n_random": 100,
                 "exclude_clades": ["HK.3.1"],  # https://github.com/corneliusroemer/pango-sequences/issues/6
             }
         ),
