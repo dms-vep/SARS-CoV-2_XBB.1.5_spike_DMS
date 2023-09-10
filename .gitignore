@@ -71,3 +71,7 @@ results/summaries/*
 !results/affinity_comparison
 results/affinity_comparison/*
 !results/affinity_comparison/merged_affinities.csv
+
+!results/compare_natural
+results/compare_natural/*
+!results/compare_natural/pango_dms_phenotypes.csv

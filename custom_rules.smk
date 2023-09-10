@@ -162,6 +162,45 @@ rule compare_spike_rbd_escape:
         """
 
 
+rule compare_natural:
+    """Compare DMS measurements to natural sequence evolution."""
+    input:
+        dms_summary_csv="results/summaries/summary.csv",
+        nb="notebooks/compare_natural.ipynb",
+    output:
+        nb="results/notebooks/compare_natural.ipynb",
+        pango_consensus_seqs_json="results/compare_natural/pango-consensus-sequences_summary.json",
+        pango_dms_phenotypes_csv="results/compare_natural/pango_dms_phenotypes.csv",
+        pango_randomized_dms_phenotypes_csv="results/compare_natural/pango_randomized_dms_phenotypes.csv",
+        pango_by_date_html="results/compare_natural/pango_dms_phenotypes_by_date.html",
+        pango_affinity_vs_escape_html="results/compare_natural/pango_affinity_vs_escape.html",
+    params:
+        pango_consensus_seqs_json="https://raw.githubusercontent.com/corneliusroemer/pango-sequences/8ace8d5d180fedabff488b5fa9d40d01433e8404/data/pango-consensus-sequences_summary.json",
+        yaml=lambda _, input, output: yaml.round_trip_dump(
+            {
+                "starting_clade": "XBB",
+                "dms_clade": "XBB.1.5",
+                "dms_summary_csv": input.dms_summary_csv,
+                "pango_consensus_seqs_json": output.pango_consensus_seqs_json,
+                "pango_dms_phenotypes_csv": output.pango_dms_phenotypes_csv,
+                "pango_randomized_dms_phenotypes_csv": output.pango_randomized_dms_phenotypes_csv,
+                "pango_by_date_html": output.pango_by_date_html,
+                "pango_affinity_vs_escape_html": output.pango_affinity_vs_escape_html,
+                "n_random": 10,
+                "exclude_clades": ["HK.3.1"],  # https://github.com/corneliusroemer/pango-sequences/issues/6
+            }
+        ),
+    log:
+        log="results/logs/compare_natural.txt",
+    conda:
+        os.path.join(config["pipeline_path"], "environment.yml")
+    shell:
+        """
+        curl {params.pango_consensus_seqs_json} -o {output.pango_consensus_seqs_json} &> {log}
+        papermill {input.nb} {output.nb} -y '{params.yaml}' &>> {log}
+        """
+
+
 # Files (Jupyter notebooks, HTML plots, or CSVs) that you want included in
 # the HTML docs should be added to the nested dict `docs`:
 docs["Additional files and charts"] = {
@@ -188,6 +227,14 @@ docs["Additional files and charts"] = {
             rules.compare_spike_rbd_escape.output.corr_chart,
         "Distributions of escape by RBD and non-RBD mutations in spike scane":
             rules.compare_spike_rbd_escape.output.dist_chart,
+    },
+    "DMS phenotypes of natural Pango clades": {
+        "Interactive chart of phenotypes vs clade designation date":
+            rules.compare_natural.output.pango_by_date_html,
+        "Interactive chart of affinity vs escape":
+            rules.compare_natural.output.pango_affinity_vs_escape_html,
+        "CSV with DMS phenotypes of the Pango clades":
+            rules.compare_natural.output.pango_dms_phenotypes_csv,
     },
     "Spike site numbering": {
         "CSV converting sequential sites in XBB.1.5 spike to Wuhan-Hu-1 reference sites":
