@@ -47,3 +47,6 @@ The format is explained within the file.
 
 ## Configuration for summaries across assays
 [summary_config.yml](summary_config.yml) has the configuration for making summaries across assays.
+
+## Growth estimates from Ben Murrell
+[2023-09-18_Murrell_growth_estimates.csv](2023-09-18_Murrell_growth_estimates.csv) has clade growth estimates from Ben Murrell.

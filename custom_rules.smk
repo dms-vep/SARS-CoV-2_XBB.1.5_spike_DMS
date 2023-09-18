@@ -167,6 +167,7 @@ rule compare_natural:
     input:
         dms_summary_csv="results/summaries/summary.csv",
         nb="notebooks/compare_natural.ipynb",
+        growth_rates_csv="data/2023-09-18_Murrell_growth_estimates.csv",
     output:
         nb="results/notebooks/compare_natural.ipynb",
         pango_consensus_seqs_json="results/compare_natural/pango-consensus-sequences_summary.json",
@@ -181,6 +182,7 @@ rule compare_natural:
                 "starting_clade": "XBB",
                 "dms_clade": "XBB.1.5",
                 "dms_summary_csv": input.dms_summary_csv,
+                "growth_rates_csv": input.growth_rates_csv,
                 "pango_consensus_seqs_json": output.pango_consensus_seqs_json,
                 "pango_dms_phenotypes_csv": output.pango_dms_phenotypes_csv,
                 "pango_randomized_dms_phenotypes_csv": output.pango_randomized_dms_phenotypes_csv,
