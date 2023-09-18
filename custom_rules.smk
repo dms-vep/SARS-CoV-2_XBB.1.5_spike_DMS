@@ -175,7 +175,7 @@ rule compare_natural:
         pango_by_date_html="results/compare_natural/pango_dms_phenotypes_by_date.html",
         pango_affinity_vs_escape_html="results/compare_natural/pango_affinity_vs_escape.html",
     params:
-        pango_consensus_seqs_json="https://raw.githubusercontent.com/corneliusroemer/pango-sequences/8ace8d5d180fedabff488b5fa9d40d01433e8404/data/pango-consensus-sequences_summary.json",
+        pango_consensus_seqs_json="https://raw.githubusercontent.com/corneliusroemer/pango-sequences/67b13630832e163b9c0486dcce861d0106eaf07a/data/pango-consensus-sequences_summary.json",
         yaml=lambda _, input, output: yaml.round_trip_dump(
             {
                 "starting_clade": "XBB",
@@ -187,7 +187,7 @@ rule compare_natural:
                 "pango_by_date_html": output.pango_by_date_html,
                 "pango_affinity_vs_escape_html": output.pango_affinity_vs_escape_html,
                 "n_random": 100,
-                "exclude_clades": ["HK.3.1"],  # https://github.com/corneliusroemer/pango-sequences/issues/6
+                "exclude_clades": [],
             }
         ),
     log:
