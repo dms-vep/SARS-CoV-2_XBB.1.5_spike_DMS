@@ -233,8 +233,10 @@ docs["Additional files and charts"] = {
             rules.compare_spike_rbd_escape.output.dist_chart,
     },
     "DMS phenotypes of natural Pango clades": {
-        "Interactive chart of DMS phenotypes versus clade growth":
+        "Interactive chart of full-spike DMS phenotypes versus clade growth":
             rules.compare_natural.output.pango_dms_vs_growth_html,
+        "Interactive chart of RBD and non-RBD DMS phenotypes versus clade growth":
+            rules.compare_natural.output.pango_dms_vs_growth_by_domain_html,
         "Interactive chart of phenotypes vs clade designation date":
             rules.compare_natural.output.pango_by_date_html,
         "Interactive chart of affinity vs escape":
