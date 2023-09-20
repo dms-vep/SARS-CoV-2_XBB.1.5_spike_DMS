@@ -174,8 +174,10 @@ rule compare_natural:
         pango_dms_phenotypes_csv="results/compare_natural/pango_dms_phenotypes.csv",
         pango_by_date_html="results/compare_natural/pango_dms_phenotypes_by_date.html",
         pango_affinity_vs_escape_html="results/compare_natural/pango_affinity_vs_escape.html",
-        pango_dms_vs_growth_html="results/compare_natural/pango_dms_vs_growth.html",
-        pango_dms_vs_growth_by_domain_html="results/compare_natural/pango_dms_vs_growth_by_domain.html",
+        pango_dms_vs_growth_regression_html="results/compare_natural/pango_dms_vs_growth_regression.html",
+        pango_dms_vs_growth_regression_by_domain_html="results/compare_natural/pango_dms_vs_growth_regression_by_domain.html",
+        pango_dms_vs_growth_corr_html="results/compare_natural/pango_dms_vs_growth_corr.html",
+        pango_dms_vs_growth_corr_by_domain_html="results/compare_natural/pango_dms_vs_growth_corr_by_domain.html",
     params:
         pango_consensus_seqs_json="https://raw.githubusercontent.com/corneliusroemer/pango-sequences/67b13630832e163b9c0486dcce861d0106eaf07a/data/pango-consensus-sequences_summary.json",
         yaml=lambda _, input, output: yaml.round_trip_dump(
@@ -188,10 +190,13 @@ rule compare_natural:
                 "pango_dms_phenotypes_csv": output.pango_dms_phenotypes_csv,
                 "pango_by_date_html": output.pango_by_date_html,
                 "pango_affinity_vs_escape_html": output.pango_affinity_vs_escape_html,
-                "pango_dms_vs_growth_html": output.pango_dms_vs_growth_html,
-                "pango_dms_vs_growth_by_domain_html": output.pango_dms_vs_growth_by_domain_html,
+                "pango_dms_vs_growth_regression_html": output.pango_dms_vs_growth_regression_html,
+                "pango_dms_vs_growth_regression_by_domain_html": output.pango_dms_vs_growth_regression_by_domain_html,
+                "pango_dms_vs_growth_corr_html": output.pango_dms_vs_growth_corr_html,
+                "pango_dms_vs_growth_corr_by_domain_html": output.pango_dms_vs_growth_corr_by_domain_html,
                 "n_random": 200,
                 "exclude_clades": [],
+                "exclude_clades_with_muts": [],
             }
         ),
     log:
@@ -233,14 +238,14 @@ docs["Additional files and charts"] = {
             rules.compare_spike_rbd_escape.output.dist_chart,
     },
     "DMS phenotypes of natural Pango clades": {
-        "Interactive chart of full-spike DMS phenotypes versus clade growth":
-            rules.compare_natural.output.pango_dms_vs_growth_html,
-        "Interactive chart of RBD and non-RBD DMS phenotypes versus clade growth":
-            rules.compare_natural.output.pango_dms_vs_growth_by_domain_html,
-        "Interactive chart of phenotypes vs clade designation date":
-            rules.compare_natural.output.pango_by_date_html,
-        "Interactive chart of affinity vs escape":
-            rules.compare_natural.output.pango_affinity_vs_escape_html,
+        "Interactive chart of simple correlation of full-spike DMS phenotypes versus clade growth":
+            rules.compare_natural.output.pango_dms_vs_growth_corr_html,
+        "Interactive chart of linear regression of full-spike DMS phenotypes versus clade growth":
+            rules.compare_natural.output.pango_dms_vs_growth_regression_html,
+        "Interactive chart of simple correlation of RBD and non-RBD DMS phenotypes versus clade growth":
+            rules.compare_natural.output.pango_dms_vs_growth_corr_by_domain_html,
+        "Interactive chart of linear regression of RBD and non-RBD DMS phenotypes versus clade growth":
+            rules.compare_natural.output.pango_dms_vs_growth_regression_by_domain_html,
         "Notebook analyzing DMS of natural Pango clades":
             rules.compare_natural.output.nb,
         "CSV with DMS phenotypes of the Pango clades":
