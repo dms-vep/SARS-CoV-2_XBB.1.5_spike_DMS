@@ -180,7 +180,7 @@ rule compare_natural:
         pango_consensus_seqs_json="https://raw.githubusercontent.com/corneliusroemer/pango-sequences/67b13630832e163b9c0486dcce861d0106eaf07a/data/pango-consensus-sequences_summary.json",
         yaml=lambda _, input, output: yaml.round_trip_dump(
             {
-                "starting_clades": ["XBB"],
+                "starting_clades": ["BA.2", "BA.5", "XBB"],
                 "dms_clade": "XBB.1.5",
                 "dms_summary_csv": input.dms_summary_csv,
                 "growth_rates_csv": input.growth_rates_csv,
