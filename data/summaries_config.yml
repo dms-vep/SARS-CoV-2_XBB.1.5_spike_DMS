@@ -37,7 +37,7 @@ summary:
       negative_color: "#F0E442"  # yellow
       max_at_least: 1
       min_at_least: 0
-      init_min_value: -3  # initial min value in slider
+      init_min_value: -1.5  # initial min value in slider
   other_assays:  # other assays that we show, empty dict if no assays being shown
     receptor_affinity:  # assay type
       ACE2 affinity:  # name of particular assay condition
@@ -47,7 +47,7 @@ summary:
         negative_color: "#D55E00"  # red
         max_at_least: 1
         min_at_least: 0
-        init_min_value: -10  # initial min value in slider
+        init_min_value: -1.5  # initial min value in slider
   title: Effects of mutations to spike of SARS-CoV-2 XBB.1.5 on escape from serum antibodies (sera from human XBB breakthrough infections), spike-mediated cell entry, and ACE2 affinity as measured in pseudotyped lentiviral deep mutational scanning experiments
   legend: |
     This is is an interactive chart. Mouseover points for details and measurements, and

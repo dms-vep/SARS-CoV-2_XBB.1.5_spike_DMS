@@ -112,13 +112,13 @@ plot_hide_stats_default: &plot_hide_stats_default
   functional effect:
     csv: results/func_effects/averages/293T_high_ACE2_entry_func_effects.csv
     csv_col: effect
-    init: -2
+    init: -1.5
     min_filters:
       times_seen: 3
   ACE2 affinity:
     csv: results/receptor_affinity/averages/monomeric_ACE2_mut_effect.csv
     csv_col: receptor affinity_mean
-    init: -3
+    init: -1.5
     min_filters:
       times_seen: 3
 
@@ -637,7 +637,7 @@ receptor_plot_hide_stats_default: &receptor_plot_hide_stats_default
   functional effect:
     csv: results/func_effects/averages/293T_high_ACE2_entry_func_effects.csv
     csv_col: effect
-    init: -2
+    init: -1.5
     min_filters:
       times_seen: 3
 
