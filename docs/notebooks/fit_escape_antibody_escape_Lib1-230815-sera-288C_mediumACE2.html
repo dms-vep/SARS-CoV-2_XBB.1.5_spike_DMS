@@ -7331,7 +7331,8 @@ a.anchor-link {
     if (!diagrams.length) {
       return;
     }
-    const mermaid = (await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.2.3/mermaid.esm.min.mjs")).default;
+    const mermaid = (await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.3.1/mermaid.esm.min.mjs")).default;
+    const parser = new DOMParser();
 
     mermaid.initialize({
       maxTextSize: 100000,
@@ -7347,39 +7348,52 @@ a.anchor-link {
     let _nextMermaidId = 0;
 
     function makeMermaidImage(svg) {
-      const img = document.createElement('img');
-      const maxWidth = svg.match(/max-width: (\d+)/);
-      if (maxWidth && maxWidth[1]) {
-        const width = parseInt(maxWidth[1]);
-        if (width && !Number.isNaN(width) && Number.isFinite(width)) {
-          img.width = width;
-        }
+      const img = document.createElement("img");
+      const doc = parser.parseFromString(svg, "image/svg+xml");
+      const svgEl = doc.querySelector("svg");
+      const { maxWidth } = svgEl?.style || {};
+      const firstTitle = doc.querySelector("title");
+      const firstDesc = doc.querySelector("desc");
+
+      img.setAttribute("src", `data:image/svg+xml,${encodeURIComponent(svg)}`);
+      if (maxWidth) {
+        img.width = parseInt(maxWidth);
       }
-      img.setAttribute('src', `data:image/svg+xml,${encodeURIComponent(svg)}`);
-      return img;
+      if (firstTitle) {
+        img.setAttribute("alt", firstTitle.textContent);
+      }
+      if (firstDesc) {
+        const caption = document.createElement("figcaption");
+        caption.className = "sr-only";
+        caption.textContent = firstDesc.textContent;
+        return [img, caption];
+      }
+      return [img];
     }
 
     async function makeMermaidError(text) {
-      let errorMessage = '';
+      let errorMessage = "";
       try {
         await mermaid.parse(text);
       } catch (err) {
         errorMessage = `${err}`;
       }
 
-      const result = document.createElement('details');
-      const summary = document.createElement('summary');
-      const pre = document.createElement('pre');
-      const code = document.createElement('code');
+      const result = document.createElement("details");
+      result.className = 'jp-RenderedMermaid-Details';
+      const summary = document.createElement("summary");
+      summary.className = 'jp-RenderedMermaid-Summary';
+      const pre = document.createElement("pre");
+      const code = document.createElement("code");
       code.innerText = text;
       pre.appendChild(code);
       summary.appendChild(pre);
       result.appendChild(summary);
 
-      const warning = document.createElement('pre');
+      const warning = document.createElement("pre");
       warning.innerText = errorMessage;
       result.appendChild(warning);
-      return result;
+      return [result];
     }
 
     async function renderOneMarmaid(src) {
@@ -7389,30 +7403,41 @@ a.anchor-link {
       const el = document.createElement("div");
       el.style.visibility = "hidden";
       document.body.appendChild(el);
-      let result = null;
+      let results = null;
+      let output = null;
       try {
         const { svg } = await mermaid.render(id, raw, el);
-        result = makeMermaidImage(svg);
+        results = makeMermaidImage(svg);
+        output = document.createElement("figure");
+        results.map(output.appendChild, output);
       } catch (err) {
         parent.classList.add("jp-mod-warning");
-        result = await makeMermaidError(raw);
+        results = await makeMermaidError(raw);
+        output = results[0];
       } finally {
         el.remove();
       }
       parent.classList.add("jp-RenderedMermaid");
-      parent.appendChild(result);
+      parent.appendChild(output);
     }
 
     void Promise.all([...diagrams].map(renderOneMarmaid));
   });
 </script>
 <style>
-  .jp-RenderedMarkdown .jp-Mermaid:not(.jp-RenderedMermaid) {
+  .jp-Mermaid:not(.jp-RenderedMermaid) {
     display: none;
   }
-  .jp-RenderedMarkdown .jp-RenderedMermaid.jp-mod-warning {
+
+  .jp-RenderedMermaid {
+    overflow: auto;
+    display: flex;
+  }
+
+  .jp-RenderedMermaid.jp-mod-warning {
     width: auto;
-    padding: 10px;
+    padding: 0.5em;
+    margin-top: 0.5em;
     border: var(--jp-border-width) solid var(--jp-warn-color2);
     border-radius: var(--jp-border-radius);
     color: var(--jp-ui-font-color1);
@@ -7420,17 +7445,32 @@ a.anchor-link {
     white-space: pre-wrap;
     word-wrap: break-word;
   }
-  .jp-RenderedMarkdown .jp-RenderedMermaid.jp-mod-warning details > pre {
+
+  .jp-RenderedMermaid figure {
+    margin: 0;
+    overflow: auto;
+    max-width: 100%;
+  }
+
+  .jp-RenderedMermaid img {
+    max-width: 100%;
+  }
+
+  .jp-RenderedMermaid-Details > pre {
     margin-top: 1em;
   }
-  .jp-RenderedMarkdown .jp-RenderedMermaid.jp-mod-warning summary {
+
+  .jp-RenderedMermaid-Summary {
     color: var(--jp-warn-color2);
   }
-  .jp-RenderedMarkdown .jp-RenderedMermaid.jp-mod-warning summary > pre {
-    display: inline-block;
-  }
-  .jp-RenderedMermaid > .mermaid {
+
+  .jp-RenderedMermaid:not(.jp-mod-warning) pre {
     display: none;
+  }
+
+  .jp-RenderedMermaid-Summary > pre {
+    display: inline-block;
+    white-space: normal;
   }
 </style>
 <!-- End of mermaid configuration --></head>
@@ -7503,7 +7543,7 @@ The next cell is tagged as <code>parameters</code> to get the passed parameters.
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs celltag_injected-parameters" id="cell-id=b4ed3a15">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs celltag_injected-parameters" id="cell-id=f616ad95">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7836,23 +7876,23 @@ The next cell is tagged as <code>parameters</code> to get the passed parameters.
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <style>
-  #altair-viz-21049ca5eb8a4f2ea192828846998fd3.vega-embed {
+  #altair-viz-f749e186e114493886f21847e04c162e.vega-embed {
     width: 100%;
     display: flex;
   }
 
-  #altair-viz-21049ca5eb8a4f2ea192828846998fd3.vega-embed details,
-  #altair-viz-21049ca5eb8a4f2ea192828846998fd3.vega-embed details summary {
+  #altair-viz-f749e186e114493886f21847e04c162e.vega-embed details,
+  #altair-viz-f749e186e114493886f21847e04c162e.vega-embed details summary {
     position: relative;
   }
 </style>
-<div id="altair-viz-21049ca5eb8a4f2ea192828846998fd3"></div>
+<div id="altair-viz-f749e186e114493886f21847e04c162e"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-21049ca5eb8a4f2ea192828846998fd3") {
-      outputDiv = document.getElementById("altair-viz-21049ca5eb8a4f2ea192828846998fd3");
+    if (outputDiv.id !== "altair-viz-f749e186e114493886f21847e04c162e") {
+      outputDiv = document.getElementById("altair-viz-f749e186e114493886f21847e04c162e");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
@@ -8153,23 +8193,23 @@ Recall we keep variants that meet <strong>either</strong> threshold, and in an i
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <style>
-  #altair-viz-e86b94aec9574b879579438b73b0b02d.vega-embed {
+  #altair-viz-f8cb46c23525419293eb42f83a348857.vega-embed {
     width: 100%;
     display: flex;
   }
 
-  #altair-viz-e86b94aec9574b879579438b73b0b02d.vega-embed details,
-  #altair-viz-e86b94aec9574b879579438b73b0b02d.vega-embed details summary {
+  #altair-viz-f8cb46c23525419293eb42f83a348857.vega-embed details,
+  #altair-viz-f8cb46c23525419293eb42f83a348857.vega-embed details summary {
     position: relative;
   }
 </style>
-<div id="altair-viz-e86b94aec9574b879579438b73b0b02d"></div>
+<div id="altair-viz-f8cb46c23525419293eb42f83a348857"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-e86b94aec9574b879579438b73b0b02d") {
-      outputDiv = document.getElementById("altair-viz-e86b94aec9574b879579438b73b0b02d");
+    if (outputDiv.id !== "altair-viz-f8cb46c23525419293eb42f83a348857") {
+      outputDiv = document.getElementById("altair-viz-f8cb46c23525419293eb42f83a348857");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
@@ -8344,23 +8384,23 @@ We typically retain a higher fraction of barcode counts than variants, since the
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[14]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <style>
-  #altair-viz-0a48161d173e41faab7fcbee6a69011d.vega-embed {
+  #altair-viz-3bd8a9f6c32b4a4eaec13dbd819d436d.vega-embed {
     width: 100%;
     display: flex;
   }
 
-  #altair-viz-0a48161d173e41faab7fcbee6a69011d.vega-embed details,
-  #altair-viz-0a48161d173e41faab7fcbee6a69011d.vega-embed details summary {
+  #altair-viz-3bd8a9f6c32b4a4eaec13dbd819d436d.vega-embed details,
+  #altair-viz-3bd8a9f6c32b4a4eaec13dbd819d436d.vega-embed details summary {
     position: relative;
   }
 </style>
-<div id="altair-viz-0a48161d173e41faab7fcbee6a69011d"></div>
+<div id="altair-viz-3bd8a9f6c32b4a4eaec13dbd819d436d"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-0a48161d173e41faab7fcbee6a69011d") {
-      outputDiv = document.getElementById("altair-viz-0a48161d173e41faab7fcbee6a69011d");
+    if (outputDiv.id !== "altair-viz-3bd8a9f6c32b4a4eaec13dbd819d436d") {
+      outputDiv = document.getElementById("altair-viz-3bd8a9f6c32b4a4eaec13dbd819d436d");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
@@ -8614,23 +8654,23 @@ Mouseover points for details.</p>
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[16]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <style>
-  #altair-viz-a4697877f65f4b0cbe7ce126a0d3e580.vega-embed {
+  #altair-viz-c15a92df106f4f71b0a1973236f1b374.vega-embed {
     width: 100%;
     display: flex;
   }
 
-  #altair-viz-a4697877f65f4b0cbe7ce126a0d3e580.vega-embed details,
-  #altair-viz-a4697877f65f4b0cbe7ce126a0d3e580.vega-embed details summary {
+  #altair-viz-c15a92df106f4f71b0a1973236f1b374.vega-embed details,
+  #altair-viz-c15a92df106f4f71b0a1973236f1b374.vega-embed details summary {
     position: relative;
   }
 </style>
-<div id="altair-viz-a4697877f65f4b0cbe7ce126a0d3e580"></div>
+<div id="altair-viz-c15a92df106f4f71b0a1973236f1b374"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-a4697877f65f4b0cbe7ce126a0d3e580") {
-      outputDiv = document.getElementById("altair-viz-a4697877f65f4b0cbe7ce126a0d3e580");
+    if (outputDiv.id !== "altair-viz-c15a92df106f4f71b0a1973236f1b374") {
+      outputDiv = document.getElementById("altair-viz-c15a92df106f4f71b0a1973236f1b374");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
@@ -8800,26 +8840,26 @@ Read spatial distances for 741153 residue pairs
 Fitting a model for 1 epitopes
 #
 # Fitting site-level fixed Hill coefficient and non-neutralized frac model.
-# Starting optimization of 1244 parameters at Wed Sep 20 17:18:19 2023.
+# Starting optimization of 1244 parameters at Fri Sep 22 15:49:08 2023.
         step    time_sec        loss    fit_loss  reg_escape  reg_spread reg_spatial reg_uniqueness reg_uniqueness2 reg_activity reg_hill_coefficient reg_non_neutralized_frac
-           0     0.11724       45083       45064           0           0           0              0               0       18.838                    0                        0
-          84      10.691       12896       12810      7.2067           0      77.236              0               0       2.2336                    0                        0
-# Successfully finished at Wed Sep 20 17:18:29 2023.
+           0     0.10629       45083       45064           0           0           0              0               0       18.838                    0                        0
+          84      10.422       12896       12810      7.2067           0      77.236              0               0       2.2336                    0                        0
+# Successfully finished at Fri Sep 22 15:49:19 2023.
 #
 # Fitting fixed Hill coefficient and non-neutralized frac model.
-# Starting optimization of 7517 parameters at Wed Sep 20 17:18:30 2023.
+# Starting optimization of 7517 parameters at Fri Sep 22 15:49:19 2023.
         step    time_sec        loss    fit_loss  reg_escape  reg_spread reg_spatial reg_uniqueness reg_uniqueness2 reg_activity reg_hill_coefficient reg_non_neutralized_frac
-           0     0.21124       22566       22436       50.82  4.5366e-32      77.236              0               0       2.2336                    0                        0
-         200      43.331       21830       21566      85.764      11.039      164.08              0               0        3.324                    0                        0
-         218      47.262       21830       21565      86.123      11.208      164.79              0               0       3.3194                    0                        0
-# Successfully finished at Wed Sep 20 17:19:17 2023.
+           0     0.21014       22566       22436       50.82  4.5366e-32      77.236              0               0       2.2336                    0                        0
+         200      45.538       21830       21566      85.764      11.039      164.08              0               0        3.324                    0                        0
+         218      49.598       21830       21565      86.123      11.208      164.79              0               0       3.3194                    0                        0
+# Successfully finished at Fri Sep 22 15:50:08 2023.
 #
 # Fitting model.
-# Starting optimization of 7519 parameters at Wed Sep 20 17:19:17 2023.
+# Starting optimization of 7519 parameters at Fri Sep 22 15:50:08 2023.
         step    time_sec        loss    fit_loss  reg_escape  reg_spread reg_spatial reg_uniqueness reg_uniqueness2 reg_activity reg_hill_coefficient reg_non_neutralized_frac
-           0      0.1841       21827       21565      86.123      11.208      164.79              0               0      0.33194                    0                        0
-           8      1.6916       21694       21431      86.125      11.208      164.82              0               0      0.27105               0.6753                        0
-# Successfully finished at Wed Sep 20 17:19:18 2023.
+           0     0.19694       21827       21565      86.123      11.208      164.79              0               0      0.33194                    0                        0
+           8       1.797       21694       21431      86.125      11.208      164.82              0               0      0.27105               0.6753                        0
+# Successfully finished at Fri Sep 22 15:50:10 2023.
 Here is the neutralization curve:
 </pre>
 </div>
@@ -8828,23 +8868,23 @@ Here is the neutralization curve:
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
 <style>
-  #altair-viz-f20c8db1582b4bd4af726db1a723631c.vega-embed {
+  #altair-viz-30309f66467a4b88b226d52ee62c6c9e.vega-embed {
     width: 100%;
     display: flex;
   }
 
-  #altair-viz-f20c8db1582b4bd4af726db1a723631c.vega-embed details,
-  #altair-viz-f20c8db1582b4bd4af726db1a723631c.vega-embed details summary {
+  #altair-viz-30309f66467a4b88b226d52ee62c6c9e.vega-embed details,
+  #altair-viz-30309f66467a4b88b226d52ee62c6c9e.vega-embed details summary {
     position: relative;
   }
 </style>
-<div id="altair-viz-f20c8db1582b4bd4af726db1a723631c"></div>
+<div id="altair-viz-30309f66467a4b88b226d52ee62c6c9e"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-f20c8db1582b4bd4af726db1a723631c") {
-      outputDiv = document.getElementById("altair-viz-f20c8db1582b4bd4af726db1a723631c");
+    if (outputDiv.id !== "altair-viz-30309f66467a4b88b226d52ee62c6c9e") {
+      outputDiv = document.getElementById("altair-viz-30309f66467a4b88b226d52ee62c6c9e");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
@@ -8905,23 +8945,23 @@ Here is the neutralization curve:
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
 <style>
-  #altair-viz-8d9b9aaa84af4ed8acff73730c3886f9.vega-embed {
+  #altair-viz-7144d093dfe94d6592a50c06d731249a.vega-embed {
     width: 100%;
     display: flex;
   }
 
-  #altair-viz-8d9b9aaa84af4ed8acff73730c3886f9.vega-embed details,
-  #altair-viz-8d9b9aaa84af4ed8acff73730c3886f9.vega-embed details summary {
+  #altair-viz-7144d093dfe94d6592a50c06d731249a.vega-embed details,
+  #altair-viz-7144d093dfe94d6592a50c06d731249a.vega-embed details summary {
     position: relative;
   }
 </style>
-<div id="altair-viz-8d9b9aaa84af4ed8acff73730c3886f9"></div>
+<div id="altair-viz-7144d093dfe94d6592a50c06d731249a"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-8d9b9aaa84af4ed8acff73730c3886f9") {
-      outputDiv = document.getElementById("altair-viz-8d9b9aaa84af4ed8acff73730c3886f9");
+    if (outputDiv.id !== "altair-viz-7144d093dfe94d6592a50c06d731249a") {
+      outputDiv = document.getElementById("altair-viz-7144d093dfe94d6592a50c06d731249a");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
