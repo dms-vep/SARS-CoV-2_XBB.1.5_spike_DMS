@@ -32,7 +32,7 @@ rule compare_affinity:
                 # ----------------------------------------
                 # parameters for plots
                 # ----------------------------------------
-                "init_min_func_effect": -2,
+                "init_min_func_effect": -1.5,
                 "clip_affinity_upper": 2,
                 "clip_affinity_lower": -4,
                 # ----------------------------------------
