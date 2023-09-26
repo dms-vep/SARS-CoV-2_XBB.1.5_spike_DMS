@@ -33,8 +33,8 @@ rule compare_affinity:
                 # parameters for plots
                 # ----------------------------------------
                 "init_min_func_effect": -1.5,
-                "clip_affinity_upper": 2,
-                "clip_affinity_lower": -4,
+                "clip_affinity_upper": 4,
+                "clip_affinity_lower": -6,
                 # ----------------------------------------
                 # Other deep mutational scanning datasets
                 # ----------------------------------------
