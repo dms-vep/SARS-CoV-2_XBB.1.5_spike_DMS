@@ -209,6 +209,21 @@ rule compare_natural:
         papermill {input.nb} {output.nb} -y '{params.yaml}' &>> {log}
         """
 
+rule non_rbd_affinity_natural:
+    """Look at non-RBD mutation affects on ACE2 affinity in natural viruses."""
+    input:
+        dms_summary_csv="results/summaries/summary.csv",
+        pango_consensus_seqs_json=rules.compare_natural.output.pango_consensus_seqs_json,
+        nb="notebooks/non_rbd_affinity_natural.ipynb",
+    output:
+        nb="results/notebooks/non_rbd_affinity_natural.ipynb",
+    log:
+        log="results/logs/non_rbd_affinity_natural.txt",
+    conda:
+        os.path.join(config["pipeline_path"], "environment.yml")
+    shell:
+        "papermill {input.nb} {output.nb} &>> {log}"
+
 
 # Files (Jupyter notebooks, HTML plots, or CSVs) that you want included in
 # the HTML docs should be added to the nested dict `docs`:
@@ -250,6 +265,10 @@ docs["Additional files and charts"] = {
             rules.compare_natural.output.nb,
         "CSV with DMS phenotypes of the Pango clades":
             rules.compare_natural.output.pango_dms_phenotypes_csv,
+    },
+    "ACE2 affinity effects of non-RBD mutations in natural sequences": {
+        "Notebook analyzing affinity effects of non-RBD mutations versus natural sequences":
+            rules.non_rbd_affinity_natural.output.nb,
     },
     "Spike site numbering": {
         "CSV converting sequential sites in XBB.1.5 spike to Wuhan-Hu-1 reference sites":
