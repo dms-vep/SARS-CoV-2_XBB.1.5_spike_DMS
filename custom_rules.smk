@@ -217,12 +217,21 @@ rule non_rbd_affinity_natural:
         nb="notebooks/non_rbd_affinity_natural.ipynb",
     output:
         nb="results/notebooks/non_rbd_affinity_natural.ipynb",
+    params:
+        yaml=lambda wc, input: yaml.round_trip_dump(
+            {
+                "pango_consensus_seqs_json": input.pango_consensus_seqs_json,
+                "xbb15_dms_csv": input.dms_summary_csv,
+                "ba2_dms_csv":
+                    "https://raw.githubusercontent.com/dms-vep/SARS-CoV-2_Omicron_BA.2_spike_ACE2_affinity/main/results/summaries/summary.csv",
+            }
+        ),
     log:
         log="results/logs/non_rbd_affinity_natural.txt",
     conda:
         os.path.join(config["pipeline_path"], "environment.yml")
     shell:
-        "papermill {input.nb} {output.nb} &>> {log}"
+        "papermill {input.nb} {output.nb} -y '{params.yaml}' &>> {log}"
 
 
 # Files (Jupyter notebooks, HTML plots, or CSVs) that you want included in
@@ -267,7 +276,7 @@ docs["Additional files and charts"] = {
             rules.compare_natural.output.pango_dms_phenotypes_csv,
     },
     "ACE2 affinity effects of non-RBD mutations in natural sequences": {
-        "Notebook analyzing affinity effects of non-RBD mutations versus natural sequences":
+        "Notebook analyzing affinity effects of non-RBD mutations in natural sequences":
             rules.non_rbd_affinity_natural.output.nb,
     },
     "Spike site numbering": {
