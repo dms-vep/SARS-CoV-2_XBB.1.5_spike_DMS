@@ -92,7 +92,7 @@ rule compare_high_medium_ace2_escape:
         yaml=lambda wc, input: yaml.round_trip_dump(
             {
                 "init_min_func_effect": -2,
-                "init_min_times_seen": 3,
+                "init_min_times_seen": 4,
                 "init_floor_at_zero": False,
                 "init_site_escape_stat": "sum",
                 "escape_csvs": list(input.escape),
@@ -131,8 +131,8 @@ rule compare_spike_rbd_escape:
     params:
         yaml=lambda wc, input: yaml.round_trip_dump(
             {
-                "init_min_func_effect": -2,
-                "init_min_times_seen": 3,
+                "init_min_func_effect": -1.5,
+                "init_min_times_seen": 4,
                 "init_floor_at_zero": False,
                 "init_site_escape_stat": "sum",
                 "spike_escape_csvs": list(input.spike_escape),
