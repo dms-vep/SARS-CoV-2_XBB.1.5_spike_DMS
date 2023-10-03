@@ -249,6 +249,8 @@ rule func_effects_dist:
                 "ba2_func_effects_csv":
                     "https://raw.githubusercontent.com/dms-vep/SARS-CoV-2_Omicron_BA.2_spike_ACE2_affinity/main/results/func_effects/averages/293T_high_ACE2_entry_func_effects.csv",
                 "site_numbering_map_csv": input.site_numbering_map_csv,
+                "init_min_times_seen": 3,
+                "init_min_n_libraries": 2,
             }
         ),
     log:
@@ -298,7 +300,7 @@ docs["Additional files and charts"] = {
         "CSV with DMS phenotypes of the Pango clades":
             rules.compare_natural.output.pango_dms_phenotypes_csv,
     },
-    "Distribution of functional effects": {
+    "Distribution of mutatiion functional effects": {
         "Notebook analyzing distribution of functional effects": rules.func_effects_dist.output.nb,
     },
     "ACE2 affinity effects of non-RBD mutations in natural sequences": {
