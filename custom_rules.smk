@@ -234,6 +234,29 @@ rule non_rbd_affinity_natural:
         "papermill {input.nb} {output.nb} -y '{params.yaml}' &>> {log}"
 
 
+rule func_effects_dist:
+    """Distribution of functional effects."""
+    input:
+        xbb15_func_effects_csv="results/func_effects/averages/293T_high_ACE2_entry_func_effects.csv",
+        site_numbering_map_csv=config["site_numbering_map"],
+        nb="notebooks/func_effects_dist.ipynb",
+    output:
+        nb="results/notebooks/func_effects_dist.ipynb",
+    params:
+        yaml=lambda _, input: yaml.round_trip_dump(
+            {
+                "xbb15_func_effects_csv": input.xbb15_func_effects_csv,
+                "ba2_func_effects_csv":
+                    "https://raw.githubusercontent.com/dms-vep/SARS-CoV-2_Omicron_BA.2_spike_ACE2_affinity/main/results/func_effects/averages/293T_high_ACE2_entry_func_effects.csv",
+                "site_numbering_map_csv": input.site_numbering_map_csv,
+            }
+        ),
+    log:
+        "results/logs/func_effects_dist.txt",
+    shell:
+        "papermill {input.nb} {output.nb} &>> {log}"
+
+
 # Files (Jupyter notebooks, HTML plots, or CSVs) that you want included in
 # the HTML docs should be added to the nested dict `docs`:
 docs["Additional files and charts"] = {
@@ -274,6 +297,9 @@ docs["Additional files and charts"] = {
             rules.compare_natural.output.nb,
         "CSV with DMS phenotypes of the Pango clades":
             rules.compare_natural.output.pango_dms_phenotypes_csv,
+    },
+    "Distribution of functional effects": {
+        "Notebook analyzing distribution of functional effects": rules.func_effects_dist.output.nb,
     },
     "ACE2 affinity effects of non-RBD mutations in natural sequences": {
         "Notebook analyzing affinity effects of non-RBD mutations in natural sequences":
