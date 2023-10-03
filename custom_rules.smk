@@ -256,7 +256,7 @@ rule func_effects_dist:
     log:
         "results/logs/func_effects_dist.txt",
     shell:
-        "papermill {input.nb} {output.nb} &>> {log}"
+        "papermill {input.nb} {output.nb} -y '{params.yaml}' &>> {log}"
 
 
 # Files (Jupyter notebooks, HTML plots, or CSVs) that you want included in
