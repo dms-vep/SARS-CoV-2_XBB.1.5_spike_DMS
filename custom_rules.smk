@@ -235,22 +235,30 @@ rule non_rbd_affinity_natural:
 
 
 rule func_effects_dist:
-    """Distribution of functional effects."""
+    """Distribution of functional effects and correlation with natural sequences."""
     input:
         xbb15_func_effects_csv="results/func_effects/averages/293T_high_ACE2_entry_func_effects.csv",
         site_numbering_map_csv=config["site_numbering_map"],
         nb="notebooks/func_effects_dist.ipynb",
     output:
+        strain_corr="results/func_effects_analyses/strain_corr.html",
+        natural_corr="results/func_effects_analyses/natural_corr.html",
+        effects_boxplot="results/func_effects_analyses/effects_boxplot.html",
         nb="results/notebooks/func_effects_dist.ipynb",
     params:
-        yaml=lambda _, input: yaml.round_trip_dump(
+        yaml=lambda _, input, output: yaml.round_trip_dump(
             {
+                "fitness_csv": "https://raw.githubusercontent.com/jbloomlab/SARS2-mut-fitness/main/results_public_2023-10-01/aa_fitness/aa_fitness.csv",
                 "xbb15_func_effects_csv": input.xbb15_func_effects_csv,
                 "ba2_func_effects_csv":
                     "https://raw.githubusercontent.com/dms-vep/SARS-CoV-2_Omicron_BA.2_spike_ACE2_affinity/main/results/func_effects/averages/293T_high_ACE2_entry_func_effects.csv",
                 "site_numbering_map_csv": input.site_numbering_map_csv,
                 "init_min_times_seen": 3,
                 "init_min_n_libraries": 2,
+                "init_expected_count": 20,
+                "strain_corr_html": output.strain_corr,
+                "natural_corr_html": output.natural_corr,
+                "effects_boxplot_html": output.effects_boxplot,
             }
         ),
     log:
@@ -300,8 +308,11 @@ docs["Additional files and charts"] = {
         "CSV with DMS phenotypes of the Pango clades":
             rules.compare_natural.output.pango_dms_phenotypes_csv,
     },
-    "Distribution of mutatiion functional effects": {
-        "Notebook analyzing distribution of functional effects": rules.func_effects_dist.output.nb,
+    "Analysis of mutational effects on cell entry": {
+        "Correlation of cell entry effects among strains": rules.func_effects_dist.output.strain_corr,
+        "Correlation with fitness effects estimated from natural sequences":
+            rules.func_effects_dist.output.natural_corr,
+        "Distribution of cell entry effects": rules.func_effects_dist.output.effects_boxplot,
     },
     "ACE2 affinity effects of non-RBD mutations in natural sequences": {
         "Notebook analyzing affinity effects of non-RBD mutations in natural sequences":
