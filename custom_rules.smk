@@ -244,6 +244,7 @@ rule func_effects_dist:
         strain_corr="results/func_effects_analyses/strain_corr.html",
         natural_corr="results/func_effects_analyses/natural_corr.html",
         effects_boxplot="results/func_effects_analyses/effects_boxplot.html",
+        key_muts_plot="results/func_effects_analyses/key_mutations.html",
         nb="results/notebooks/func_effects_dist.ipynb",
     params:
         yaml=lambda _, input, output: yaml.round_trip_dump(
@@ -256,9 +257,11 @@ rule func_effects_dist:
                 "init_min_times_seen": 3,
                 "init_min_n_libraries": 2,
                 "init_expected_count": 20,
+                "key_mutations": ["P1143L", "F456L", "V483-"],
                 "strain_corr_html": output.strain_corr,
                 "natural_corr_html": output.natural_corr,
                 "effects_boxplot_html": output.effects_boxplot,
+                "key_muts_html": output.key_muts_plot,
             }
         ),
     log:
@@ -291,7 +294,7 @@ docs["Additional files and charts"] = {
     "Comparison of escape in full-spike and RBD deep mutational scans": {
         "Interactive chart comparing escape in spike vs RBD scans":
             rules.compare_spike_rbd_escape.output.corr_chart,
-        "Distributions of escape by RBD and non-RBD mutations in spike scane":
+        "Distributions of escape by RBD and non-RBD mutations in spike scan":
             rules.compare_spike_rbd_escape.output.dist_chart,
     },
     "DMS phenotypes of natural Pango clades": {
@@ -313,6 +316,7 @@ docs["Additional files and charts"] = {
         "Correlation with fitness effects estimated from natural sequences":
             rules.func_effects_dist.output.natural_corr,
         "Distribution of cell entry effects": rules.func_effects_dist.output.effects_boxplot,
+        "Effects of key mutations on cell entry": rules.func_effects_dist.output.key_muts_plot,
     },
     "ACE2 affinity effects of non-RBD mutations in natural sequences": {
         "Notebook analyzing affinity effects of non-RBD mutations in natural sequences":
