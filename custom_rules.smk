@@ -167,7 +167,7 @@ rule compare_natural:
     input:
         dms_summary_csv="results/summaries/summary.csv",
         nb="notebooks/compare_natural.ipynb",
-        growth_rates_csv="data/2023-09-18_Murrell_growth_estimates.csv",
+        growth_rates_csv="MultinomialLogisticGrowth/model_fits/rates.csv",
     output:
         nb="results/notebooks/compare_natural.ipynb",
         pango_consensus_seqs_json="results/compare_natural/pango-consensus-sequences_summary.json",
@@ -179,7 +179,7 @@ rule compare_natural:
         pango_dms_vs_growth_corr_html="results/compare_natural/pango_dms_vs_growth_corr.html",
         pango_dms_vs_growth_corr_by_domain_html="results/compare_natural/pango_dms_vs_growth_corr_by_domain.html",
     params:
-        pango_consensus_seqs_json="https://raw.githubusercontent.com/corneliusroemer/pango-sequences/67b13630832e163b9c0486dcce861d0106eaf07a/data/pango-consensus-sequences_summary.json",
+        pango_consensus_seqs_json="https://raw.githubusercontent.com/corneliusroemer/pango-sequences/c64ef05e53debaa9cc65dd56d6eb83e31517179c/data/pango-consensus-sequences_summary.json",
         yaml=lambda _, input, output: yaml.round_trip_dump(
             {
                 "starting_clades": ["BA.2", "BA.5", "XBB"],

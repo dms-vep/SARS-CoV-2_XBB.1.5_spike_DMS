@@ -20,6 +20,12 @@ Note that if you want a specific commit or tag of [dms-vep-pipeline-3](https://g
 and then `cd ../` back to the top-level directory, and add and commit the updated `dms-vep-pipeline-3` submodule.
 You can also make changes to the [dms-vep-pipeline-3](https://github.com/dms-vep/dms-vep-pipeline-3) that you commit back to that repo.
 
+### Additional steps specific to this pipeline
+In addition to the main [dms-vep-pipeline-3](https://github.com/dms-vep/dms-vep-pipeline-3), there are some custom `snakemake` rules in [custom_rules.smk](custom_rules.smk) and the associated notebooks in [./notebooks/](notebooks) that run some rules and analyses specific to this repo.
+
+### Multinomial logistic clade growth data
+An analysis by Ben Murrell of SARS-CoV-2 clade growth using multinomial logistic models in the repo at [https://github.com/MurrellGroup/MultinomialLogisticGrowth](https://github.com/MurrellGroup/MultinomialLogisticGrowth) is added as a submodule in this repo, and is used in some of the analyses.
+
 ### Configuration and running the pipeline
 The configuration for the pipeline is in [config.yaml](config.yaml) and the files in [./data/](data) referenced therein.
 To run the pipeline, do:
