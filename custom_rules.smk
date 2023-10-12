@@ -170,33 +170,20 @@ rule compare_natural:
         growth_rates_csv="MultinomialLogisticGrowth/model_fits/rates.csv",
     output:
         nb="results/notebooks/compare_natural.ipynb",
-        pango_consensus_seqs_json="results/compare_natural/pango-consensus-sequences_summary.json",
-        pango_dms_phenotypes_csv="results/compare_natural/pango_dms_phenotypes.csv",
-        pango_by_date_html="results/compare_natural/pango_dms_phenotypes_by_date.html",
-        pango_affinity_vs_escape_html="results/compare_natural/pango_affinity_vs_escape.html",
-        pango_dms_vs_growth_regression_html="results/compare_natural/pango_dms_vs_growth_regression.html",
-        pango_dms_vs_growth_regression_by_domain_html="results/compare_natural/pango_dms_vs_growth_regression_by_domain.html",
-        pango_dms_vs_growth_corr_html="results/compare_natural/pango_dms_vs_growth_corr.html",
-        pango_dms_vs_growth_corr_by_domain_html="results/compare_natural/pango_dms_vs_growth_corr_by_domain.html",
+        pango_consensus_seqs_json="results/compare_natural/pango-consensus-seuqences_summary.json",
+        growth_dms_csv="results/compare_natural/growth_dms.csv",
     params:
         pango_consensus_seqs_json="https://raw.githubusercontent.com/corneliusroemer/pango-sequences/c64ef05e53debaa9cc65dd56d6eb83e31517179c/data/pango-consensus-sequences_summary.json",
         yaml=lambda _, input, output: yaml.round_trip_dump(
             {
-                "starting_clades": ["BA.2", "BA.5", "XBB"],
-                "dms_clade": "XBB.1.5",
-                "dms_summary_csv": input.dms_summary_csv,
-                "growth_rates_csv": input.growth_rates_csv,
-                "pango_consensus_seqs_json": output.pango_consensus_seqs_json,
-                "pango_dms_phenotypes_csv": output.pango_dms_phenotypes_csv,
-                "pango_by_date_html": output.pango_by_date_html,
-                "pango_affinity_vs_escape_html": output.pango_affinity_vs_escape_html,
-                "pango_dms_vs_growth_regression_html": output.pango_dms_vs_growth_regression_html,
-                "pango_dms_vs_growth_regression_by_domain_html": output.pango_dms_vs_growth_regression_by_domain_html,
-                "pango_dms_vs_growth_corr_html": output.pango_dms_vs_growth_corr_html,
-                "pango_dms_vs_growth_corr_by_domain_html": output.pango_dms_vs_growth_corr_by_domain_html,
-                "n_random": 200,
+                "starting_clades": ["XBB"],
+                "muts_to_toggle": {"L455F": True},  # epistasis in affinity for L455F in FLiP
+                "min_sequences": 400,  # require this many sequences per clade to use
                 "exclude_clades": [],
-                "exclude_clades_with_muts": [],
+                "growth_rates_csv": input.growth_rates_csv,
+                "dms_summary_csv": input.dms_summary_csv,
+                "pango_consensus_seqs_json": output.pango_consensus_seqs_json,
+                "growth_dms_csv": output.growth_dms_csv,
             }
         ),
     log:
@@ -297,19 +284,11 @@ docs["Additional files and charts"] = {
         "Distributions of escape by RBD and non-RBD mutations in spike scan":
             rules.compare_spike_rbd_escape.output.dist_chart,
     },
-    "DMS phenotypes of natural Pango clades": {
-        "Interactive chart of simple correlation of full-spike DMS phenotypes versus clade growth":
-            rules.compare_natural.output.pango_dms_vs_growth_corr_html,
-        "Interactive chart of linear regression of full-spike DMS phenotypes versus clade growth":
-            rules.compare_natural.output.pango_dms_vs_growth_regression_html,
-        "Interactive chart of simple correlation of RBD and non-RBD DMS phenotypes versus clade growth":
-            rules.compare_natural.output.pango_dms_vs_growth_corr_by_domain_html,
-        "Interactive chart of linear regression of RBD and non-RBD DMS phenotypes versus clade growth":
-            rules.compare_natural.output.pango_dms_vs_growth_regression_by_domain_html,
-        "Notebook analyzing DMS of natural Pango clades":
+    "DMS measurements versus clade growth": {
+        "Notebook comparing change in clade growth to change in DMS phenotype":
             rules.compare_natural.output.nb,
-        "CSV with DMS phenotypes of the Pango clades":
-            rules.compare_natural.output.pango_dms_phenotypes_csv,
+        "CSV with data for comparison of clade growth to change in DMS phenotype":
+            rules.compare_natural.output.growth_dms_csv,
     },
     "Analysis of mutational effects on cell entry": {
         "Correlation of cell entry effects among strains": rules.func_effects_dist.output.strain_corr,
