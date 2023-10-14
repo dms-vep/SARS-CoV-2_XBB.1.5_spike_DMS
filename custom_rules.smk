@@ -170,20 +170,26 @@ rule compare_natural:
         growth_rates_csv="MultinomialLogisticGrowth/model_fits/rates.csv",
     output:
         nb="results/notebooks/compare_natural.ipynb",
-        pango_consensus_seqs_json="results/compare_natural/pango-consensus-seuqences_summary.json",
-        growth_dms_csv="results/compare_natural/growth_dms.csv",
+        pango_consensus_seqs_json="results/compare_natural/pango-consensus-sequences_summary.json",
+        pair_growth_dms_csv="results/compare_natural/clade_pair_growth_dms.csv",
+        clade_growth_dms_csv="results/compare_natural/clade_growth_dms.csv",
     params:
         pango_consensus_seqs_json="https://raw.githubusercontent.com/corneliusroemer/pango-sequences/c64ef05e53debaa9cc65dd56d6eb83e31517179c/data/pango-consensus-sequences_summary.json",
         yaml=lambda _, input, output: yaml.round_trip_dump(
             {
-                "starting_clades": ["XBB"],
-                "muts_to_toggle": {"L455F": True},  # epistasis in affinity for L455F in FLiP
+                "starting_clades": ["XBB"],  # clades descended from this
+                "muts_to_toggle": {"L455F": False},  # epistasis in affinity for L455F in FLiP
                 "min_sequences": 400,  # require this many sequences per clade to use
+                "split_by_rbd": False,  # whether to treat RBD and non-RBD mutations separately
+                "dms_clade": "XBB.1.5",  # clade used for DMS
+                "pair_min_spike_muts": 1,  # require clade pairs to have >= this many spike mutations
+                "pair_max_spike_muts": None,  # require clade pairs to have <= this many spike mutations
                 "exclude_clades": [],
                 "growth_rates_csv": input.growth_rates_csv,
                 "dms_summary_csv": input.dms_summary_csv,
                 "pango_consensus_seqs_json": output.pango_consensus_seqs_json,
-                "growth_dms_csv": output.growth_dms_csv,
+                "pair_growth_dms_csv": output.pair_growth_dms_csv,
+                "clade_growth_dms_csv": output.clade_growth_dms_csv,
             }
         ),
     log:
@@ -287,8 +293,10 @@ docs["Additional files and charts"] = {
     "DMS measurements versus clade growth": {
         "Notebook comparing change in clade growth to change in DMS phenotype":
             rules.compare_natural.output.nb,
-        "CSV with data for comparison of clade growth to change in DMS phenotype":
-            rules.compare_natural.output.growth_dms_csv,
+        "CSV with data for comparison of changes in growth vs DMS phenotype for clade pairs":
+            rules.compare_natural.output.pair_growth_dms_csv,
+        "CSV with DMS phenotypes and growth for all individual clades":
+            rules.compare_natural.output.clade_growth_dms_csv,
     },
     "Analysis of mutational effects on cell entry": {
         "Correlation of cell entry effects among strains": rules.func_effects_dist.output.strain_corr,

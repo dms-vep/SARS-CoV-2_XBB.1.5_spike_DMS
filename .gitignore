@@ -74,4 +74,5 @@ results/affinity_comparison/*
 
 !results/compare_natural
 results/compare_natural/*
-!results/compare_natural/growth_dms.csv
+!results/compare_natural/clade_pair_growth_dms.csv
+!results/compare_natural/clade_growth_dms.csv
