@@ -178,7 +178,7 @@ rule compare_natural:
         yaml=lambda _, input, output: yaml.round_trip_dump(
             {
                 "starting_clades": ["XBB"],  # clades descended from this
-                "muts_to_toggle": {"L455F": True},  # epistasis in affinity for L455F in FLiP
+                "muts_to_toggle": {"L455F": False},  # epistasis in affinity for L455F in FLiP
                 "min_sequences": 400,  # require this many sequences per clade to use
                 "split_by_rbd": False,  # whether to treat RBD and non-RBD mutations separately
                 "dms_clade": "XBB.1.5",  # clade used for DMS
