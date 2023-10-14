@@ -170,7 +170,7 @@ rule compare_natural:
         growth_rates_csv="MultinomialLogisticGrowth/model_fits/rates.csv",
     output:
         nb="results/notebooks/compare_natural.ipynb",
-        pango_consensus_seqs_json="results/compare_natural/pango-consensus-seuqences_summary.json",
+        pango_consensus_seqs_json="results/compare_natural/pango-consensus-sequences_summary.json",
         pair_growth_dms_csv="results/compare_natural/clade_pair_growth_dms.csv",
         clade_growth_dms_csv="results/compare_natural/clade_growth_dms.csv",
     params:
@@ -182,6 +182,8 @@ rule compare_natural:
                 "min_sequences": 400,  # require this many sequences per clade to use
                 "split_by_rbd": False,  # whether to treat RBD and non-RBD mutations separately
                 "dms_clade": "XBB.1.5",  # clade used for DMS
+                "pair_min_spike_muts": 1,  # require clade pairs to have >= this many spike mutations
+                "pair_max_spike_muts": None,  # require clade pairs to have <= this many spike mutations
                 "exclude_clades": [],
                 "growth_rates_csv": input.growth_rates_csv,
                 "dms_summary_csv": input.dms_summary_csv,
