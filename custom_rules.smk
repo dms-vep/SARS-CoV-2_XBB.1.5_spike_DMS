@@ -178,12 +178,20 @@ rule compare_natural:
         yaml=lambda _, input, output: yaml.round_trip_dump(
             {
                 "starting_clades": ["XBB"],  # clades descended from this
-                "muts_to_toggle": {"L455F": False},  # epistasis in affinity for L455F in FLiP
+                "muts_to_toggle": ["L455F"],  # epistasis in affinity for L455F in FLiP
                 "min_sequences": 400,  # require this many sequences per clade to use
                 "split_by_rbd": False,  # whether to treat RBD and non-RBD mutations separately
                 "dms_clade": "XBB.1.5",  # clade used for DMS
                 "pair_min_spike_muts": 1,  # require clade pairs to have >= this many spike mutations
                 "pair_max_spike_muts": None,  # require clade pairs to have <= this many spike mutations
+                "n_random": 100,  # compute P values with this many randomizations of DMS data
+                "phenotype_basic_colors": {
+                    # define phenotypes and their colors. "basic" means not split by RBD, which is done
+                    # later in code if `split_by_rbd`
+                    "sera escape": "red",
+                    "ACE2 affinity": "blue",
+                    "cell entry": "purple",
+                },
                 "exclude_clades": [],
                 "growth_rates_csv": input.growth_rates_csv,
                 "dms_summary_csv": input.dms_summary_csv,
