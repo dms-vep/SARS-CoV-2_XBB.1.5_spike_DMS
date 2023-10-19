@@ -21,6 +21,28 @@ rule spatial_distances:
         "scripts/spatial_distances.py"
 
 
+rule escape_at_key_sites:
+    """Analyze and make logo plots of escape at key sites."""
+    input:
+        dms_csv="results/summaries/summary.csv",
+        nb="notebooks/escape_at_key_sites.ipynb",
+    output:
+        nb="results/notebooks/escape_at_key_sites.ipynb",
+    params:
+        yaml=lambda _, input: yaml.round_trip_dump(
+            {
+                "pango_consensus_seqs_json": "https://raw.githubusercontent.com/corneliusroemer/pango-sequences/c64ef05e53debaa9cc65dd56d6eb83e31517179c/data/pango-consensus-sequences_summary.json",
+                "dms_csv": input.dms_csv,
+            }
+        ),
+    log:
+        log="results/logs/escape_at_key_sites.txt",
+    conda:
+        os.path.join(config["pipeline_path"], "environment.yml")
+    shell:
+        "papermill {input.nb} {output.nb} -y '{params.yaml}' &>> {log}"
+
+
 rule compare_binding:
     """Compare ACE2 binding across datasets."""
     input:
@@ -277,6 +299,9 @@ rule func_effects_dist:
 # Files (Jupyter notebooks, HTML plots, or CSVs) that you want included in
 # the HTML docs should be added to the nested dict `docs`:
 docs["Additional files and charts"] = {
+    "Analysis of escape and other properties at key sites": {
+        "Notebook performing analysis and making logo plots": rules.escape_at_key_sites.output.nb,
+    },
     "Analysis of ACE2 binding data and comparison to other experiments": {
         "Interactive charts": {
             "Correlations among experiments":
