@@ -44,7 +44,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 9,P,P,0,0,0,9,other
 10,L,I,-0.04071,0.1139,0.2056,10,other
 10,L,M,-0.1686,0.05055,0.06116,10,other
-10,L,P,0.1235,-1.961,0.02956,10,other
+10,L,P,0.1536,-1.961,0.02956,10,other
 10,L,V,-0.04121,0.09857,0.04159,10,other
 10,L,L,0,0,0,10,other
 10,L,Q,,0.04041,,10,other
@@ -239,7 +239,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 35,G,V,-0.005204,-0.359,-0.6483,32,NTD
 35,G,G,0,0,0,32,NTD
 35,G,-,,-2.795,,32,NTD
-35,G,W,,-2.631,,32,NTD
 36,V,A,0.0439,0.01216,-0.1679,33,NTD
 36,V,F,-0.1572,-0.3579,0.2065,33,NTD
 36,V,I,0.1844,0.04569,-0.3473,33,NTD
@@ -250,7 +249,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 37,Y,Y,0,0,0,34,NTD
 37,Y,-,,-5.459,1.394,34,NTD
 37,Y,F,,-1.071,,34,NTD
-37,Y,K,,-3.159,,34,NTD
 37,Y,N,,-1.762,,34,NTD
 38,Y,F,0.1076,0.04629,0.1105,35,NTD
 38,Y,H,0.1229,-0.5382,-1.3,35,NTD
@@ -279,7 +277,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 43,F,F,0,0,0,40,NTD
 43,F,-,,-5.149,,40,NTD
 43,F,L,,-2.012,,40,NTD
-43,F,S,,-1.237,,40,NTD
 44,R,K,0.3085,-0.2852,-0.779,41,NTD
 44,R,R,0,0,0,41,NTD
 44,R,-,,-3.562,,41,NTD
@@ -340,7 +337,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 53,D,N,0.1553,-0.000315,-0.1787,50,NTD
 53,D,Y,-0.1695,-3.825,0.9343,50,NTD
 53,D,D,0,0,0,50,NTD
-53,D,-,,-2.831,,50,NTD
 54,L,P,-0.1914,-1.894,0.5977,51,NTD
 54,L,L,0,0,0,51,NTD
 54,L,-,,-5.069,,51,NTD
@@ -353,7 +349,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 56,L,V,0.05786,-0.01608,-0.1665,53,NTD
 56,L,L,0,0,0,53,NTD
 57,P,S,-0.04578,-0.6794,0.1831,54,NTD
-57,P,T,-0.008753,-1.823,1.865,54,NTD
+57,P,T,-0.008753,,1.865,54,NTD
 57,P,P,0,0,0,54,NTD
 57,P,-,,-6.44,,54,NTD
 57,P,L,,-6.443,,54,NTD
@@ -364,7 +360,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 58,F,-,,-6.564,,55,NTD
 58,F,C,,-2.747,-0.6831,55,NTD
 58,F,S,,-0.4764,-0.7024,55,NTD
-58,F,V,,-1.101,,55,NTD
 59,F,L,0.09106,-0.4292,0.1224,56,NTD
 59,F,S,0.1967,0.07401,-0.5331,56,NTD
 59,F,Y,0.0318,-0.02012,-0.07711,56,NTD
@@ -419,7 +414,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 64,W,W,0,0,0,61,NTD
 65,F,-,0.007167,-0.07662,0.0744,62,NTD
 65,F,L,0.02095,-0.145,-0.1115,62,NTD
-65,F,S,0.01164,-1.325,0.8909,62,NTD
+65,F,S,0.01164,,0.8909,62,NTD
 65,F,Y,0.08727,0.006149,-0.1792,62,NTD
 65,F,F,0,0,0,62,NTD
 66,H,-,-0.006064,0.03785,-0.1357,63,NTD
@@ -474,7 +469,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 69,H,Y,-0.1119,0.04333,-0.1391,66,NTD
 69,H,H,0,0,0,66,NTD
 69,H,D,,-0.2478,-0.07228,66,NTD
-70,V,-,0.1098,-0.3083,0.5105,67,NTD
+70,V,-,0.1956,-0.3083,0.5105,67,NTD
 70,V,A,-0.08537,-0.1542,-0.04227,67,NTD
 70,V,F,0.02965,0.01377,-0.02112,67,NTD
 70,V,G,-0.1605,-0.1456,-0.03994,67,NTD
@@ -814,8 +809,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 107,G,G,0,0,0,104,NTD
 107,G,C,,-6.392,,104,NTD
 107,G,D,,-4.048,,104,NTD
-107,G,S,,-2.59,,104,NTD
-107,G,V,,-6.534,1.043,104,NTD
+107,G,V,,-6.534,,104,NTD
 108,T,-,-0.2496,-3.378,-0.05642,105,NTD
 108,T,A,0.2861,-0.2686,-0.2948,105,NTD
 108,T,C,-0.03602,-1.395,0.1105,105,NTD
@@ -1607,7 +1601,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 191,E,G,,-6.216,,187,NTD
 191,E,I,,-5.226,,187,NTD
 191,E,K,,-0.4006,,187,NTD
-191,E,N,,-2.498,,187,NTD
 191,E,S,,-0.3107,,187,NTD
 192,F,I,0.05644,-0.2329,-0.1545,188,NTD
 192,F,L,-0.06524,-0.05965,-0.2867,188,NTD
@@ -2145,7 +2138,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 251,P,V,,-0.1159,-0.3517,247,NTD
 252,V,-,0.1414,-0.1253,0.1321,248,NTD
 252,V,A,-0.1115,0.02049,-0.07961,248,NTD
-252,V,C,-0.3505,-0.0927,0.02067,248,NTD
+252,V,C,-0.2913,-0.0927,0.02067,248,NTD
 252,V,D,0.01224,0.01631,0.3489,248,NTD
 252,V,E,0.1271,0.09248,0.1079,248,NTD
 252,V,F,0.07964,0.09279,-0.2367,248,NTD
@@ -2299,7 +2292,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 266,Y,L,-0.04933,0.03807,0.2939,262,NTD
 266,Y,Q,-0.1906,-0.08241,0.2866,262,NTD
 266,Y,Y,0,0,0,262,NTD
-266,Y,-,,-1.554,,262,NTD
 267,V,L,-0.1747,-0.1176,0.334,263,NTD
 267,V,M,-0.1116,-0.0245,0.1749,263,NTD
 267,V,V,0,0,0,263,NTD
@@ -2419,7 +2411,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 282,N,V,,-0.5844,-0.2949,278,NTD
 283,G,S,-0.1916,-1.317,0.7472,279,NTD
 283,G,G,0,0,0,279,NTD
-283,G,-,,-1.785,,279,NTD
 283,G,C,,-2.789,,279,NTD
 283,G,D,,-4.933,,279,NTD
 283,G,L,,-6.566,,279,NTD
@@ -2437,7 +2428,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 285,I,I,0,0,0,281,NTD
 285,I,-,,-6.286,,281,NTD
 285,I,F,,-5.33,,281,NTD
-285,I,H,,-3.082,,281,NTD
 285,I,T,,-0.2559,,281,NTD
 286,T,A,0.2548,-0.3159,-0.3779,282,NTD
 286,T,I,-0.0912,-0.04018,0.06336,282,NTD
@@ -2477,12 +2467,10 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 289,V,V,0,0,0,285,NTD
 289,V,M,,-4.195,,285,NTD
 289,V,R,,-5.791,,285,NTD
-289,V,Y,,-3.26,,285,NTD
 290,D,E,-0.1563,-6.309,,286,NTD
 290,D,N,-0.08469,-5.518,,286,NTD
 290,D,D,0,0,0,286,NTD
 290,D,-,,-4.374,,286,NTD
-290,D,C,,-3.058,,286,NTD
 290,D,R,,-5.527,,286,NTD
 290,D,S,,-5.76,,286,NTD
 291,C,-,-0.04427,-6.604,,287,NTD
@@ -2559,7 +2547,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 304,K,E,0.1159,0.1493,-0.5409,300,NTD
 304,K,I,0.04692,-0.5118,-0.5425,300,NTD
 304,K,N,-0.03204,-0.09076,-0.3787,300,NTD
-304,K,Q,-0.01765,-1.094,-0.049,300,NTD
+304,K,Q,-0.01765,,-0.049,300,NTD
 304,K,R,-0.009938,-0.2915,-0.4212,300,NTD
 304,K,K,0,0,0,300,NTD
 304,K,-,,-5.144,0.2464,300,NTD
@@ -2653,10 +2641,9 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 319,R,K,-0.2985,-3.938,0.7405,315,other
 319,R,R,0,0,0,315,other
 319,R,E,,-6.473,,315,other
-319,R,L,,-5.251,2.061,315,other
+319,R,L,,-5.251,,315,other
 319,R,M,,-1.653,,315,other
 319,R,S,,-4.526,,315,other
-319,R,T,,-3.232,,315,other
 320,V,A,-0.1399,-0.5486,-0.05682,316,other
 320,V,F,-0.06755,-1.159,-0.5888,316,other
 320,V,I,-0.1713,-0.5395,-0.2987,316,other
@@ -2735,7 +2722,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 330,P,S,-0.162,-0.2066,0.2282,326,other
 330,P,T,-0.007021,-0.2681,-0.1902,326,other
 330,P,P,0,0,0,326,other
-330,P,F,,-1.086,-1.251,326,other
+330,P,F,,,-1.251,326,other
 331,N,D,0.1423,-0.1408,-0.7174,327,RBD
 331,N,E,-0.1202,-0.5264,0.1703,327,RBD
 331,N,H,0.005491,-0.1416,-0.009524,327,RBD
@@ -2866,7 +2853,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 347,F,P,-0.174,-1.18,0.1536,343,RBD
 347,F,S,0.102,-1.079,0.2847,343,RBD
 347,F,T,0.07495,-1.19,0.157,343,RBD
-347,F,V,-0.05759,-0.673,0.5027,343,RBD
+347,F,V,0.000359,-0.673,0.5027,343,RBD
 347,F,W,0.1602,0.04362,-0.05104,343,RBD
 347,F,Y,0.1102,-0.04308,0.09892,343,RBD
 347,F,F,0,0,0,343,RBD
@@ -2948,7 +2935,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 355,R,R,0,0,0,351,RBD
 355,R,G,,-6.379,,351,RBD
 355,R,K,,-0.5252,,351,RBD
-355,R,N,,-2.884,,351,RBD
 356,K,C,0.02921,-0.1727,-0.02827,352,RBD
 356,K,D,-0.03347,-0.5243,-0.07356,352,RBD
 356,K,E,0.01141,-0.05334,0.2513,352,RBD
@@ -2977,7 +2963,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 357,R,L,0.3708,0.04549,-0.4377,353,RBD
 357,R,M,0.5659,0.03384,-0.8414,353,RBD
 357,R,N,0.4477,-0.529,-0.225,353,RBD
-357,R,P,0.7067,-0.05469,-0.8022,353,RBD
+357,R,P,0.6804,-0.05469,-0.8022,353,RBD
 357,R,Q,0.3926,-0.1519,-0.7932,353,RBD
 357,R,S,0.2863,-0.2156,-0.8718,353,RBD
 357,R,T,0.3948,-0.7528,-0.5162,353,RBD
@@ -3191,7 +3177,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 381,G,E,,-0.5486,1.684,377,RBD
 382,V,L,0.09566,-0.07882,0.07999,378,RBD
 382,V,V,0,0,0,378,RBD
-382,V,M,,-1.88,0.5038,378,RBD
+382,V,M,,,0.5038,378,RBD
 383,S,A,-0.5698,-0.5368,1.033,379,RBD
 383,S,C,-0.5834,-4.973,0.1165,379,RBD
 383,S,D,-0.3724,-6.21,,379,RBD
@@ -3296,8 +3282,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 399,S,L,,-1.071,-0.573,395,RBD
 400,F,L,-0.03975,-1.897,0.1015,396,RBD
 400,F,F,0,0,0,396,RBD
-400,F,A,,-2.99,,396,RBD
-400,F,T,,-3.157,,396,RBD
 401,V,I,0.02685,-0.01748,-0.1188,397,RBD
 401,V,L,0.005728,-0.5822,-0.3268,397,RBD
 401,V,V,0,0,0,397,RBD
@@ -3386,7 +3370,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 410,I,S,-0.3315,-6.425,2.5,406,RBD
 410,I,V,-0.08488,-0.07955,0.2584,406,RBD
 410,I,I,0,0,0,406,RBD
-410,I,A,,-3.047,,406,RBD
 410,I,T,,-6.483,,406,RBD
 411,A,C,-0.1723,-0.3133,-0.05535,407,RBD
 411,A,G,-0.1332,-0.09525,0.3026,407,RBD
@@ -3531,7 +3514,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 433,V,M,0.02881,-0.2505,-0.2549,429,RBD
 433,V,V,0,0,0,429,RBD
 433,V,A,,-0.2866,,429,RBD
-433,V,L,,-1.255,,429,RBD
 434,I,L,-0.06474,-0.108,0.2313,430,RBD
 434,I,M,-0.1936,-0.2862,0.5954,430,RBD
 434,I,V,0.01305,-0.001205,-0.03506,430,RBD
@@ -3543,7 +3525,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 435,A,V,0.09252,-0.06037,0.08305,431,RBD
 435,A,A,0,0,0,431,RBD
 435,A,L,,-0.642,,431,RBD
-436,W,L,-0.1223,-1.095,0.7996,432,RBD
+436,W,L,-0.1223,,0.7996,432,RBD
 436,W,R,-0.6312,-0.8756,1.518,432,RBD
 436,W,W,0,0,0,432,RBD
 436,W,Y,,0.03635,,432,RBD
@@ -3560,7 +3542,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 439,N,T,-0.5828,-1.426,0.01298,435,RBD
 439,N,Y,0.1239,-0.1585,-0.7491,435,RBD
 439,N,N,0,0,0,435,RBD
-439,N,G,,-1.318,,435,RBD
 439,N,K,,-3.746,,435,RBD
 439,N,L,,-0.1432,-0.4116,435,RBD
 439,N,P,,-2.053,-2.692,435,RBD
@@ -3593,7 +3574,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 443,S,G,0.04426,-0.3334,-0.04105,439,RBD
 443,S,N,0.05399,-0.0741,-1.21,439,RBD
 443,S,S,0,0,0,439,RBD
-443,S,F,,-1.173,,439,RBD
 444,K,-,0.3289,-0.7108,-2.005,440,RBD
 444,K,A,0.1421,0.01101,-1.114,440,RBD
 444,K,C,0.06873,0.03239,-0.1109,440,RBD
@@ -3788,7 +3768,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 454,R,K,0.01646,-0.1668,-0.4371,450,RBD
 454,R,R,0,0,0,450,RBD
 454,R,E,,-5.17,,450,RBD
-454,R,G,,-2.918,,450,RBD
 455,L,A,0.07743,0.07153,-0.6639,451,RBD
 455,L,E,0.3028,0.1441,-1,451,RBD
 455,L,F,0.1516,0.1212,-0.9594,451,RBD
@@ -3796,7 +3775,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 455,L,I,-0.01922,-0.00944,-0.3309,451,RBD
 455,L,M,-0.01984,0.07385,-0.3246,451,RBD
 455,L,N,0.4376,-0.04425,-1.265,451,RBD
-455,L,P,0.6255,-0.0333,-1.033,451,RBD
+455,L,P,0.5365,-0.0333,-1.033,451,RBD
 455,L,Q,0.3166,-0.08477,-0.7768,451,RBD
 455,L,R,0.3198,0.06163,-0.3818,451,RBD
 455,L,S,0.3167,0.06068,-0.6246,451,RBD
@@ -3814,7 +3793,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 456,F,H,0.2537,0.05081,-0.9693,452,RBD
 456,F,I,0.1619,-0.03174,-1.234,452,RBD
 456,F,L,0.2001,-0.02328,-0.3013,452,RBD
-456,F,N,0.3094,-0.2327,-0.8558,452,RBD
+456,F,N,0.253,-0.2327,-0.8558,452,RBD
 456,F,R,0.6926,0.05425,0.06597,452,RBD
 456,F,S,0.7081,-0.2781,-0.6061,452,RBD
 456,F,T,0.4824,-0.2327,-1.006,452,RBD
@@ -3900,7 +3879,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 465,E,A,,-0.13,-0.5964,461,RBD
 466,R,I,-0.06308,-0.6316,0.2284,462,RBD
 466,R,K,-0.2343,-0.6143,0.4932,462,RBD
-466,R,M,-0.1678,-1.413,,462,RBD
+466,R,M,-0.1678,,,462,RBD
 466,R,R,0,0,0,462,RBD
 466,R,G,,-1.525,0.3765,462,RBD
 468,I,A,-0.2292,-0.003135,0.161,464,RBD
@@ -4152,7 +4131,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 488,C,C,0,0,0,484,RBD
 488,C,I,,-6.032,,484,RBD
 488,C,R,,-0.683,,484,RBD
-488,C,Y,,-1.53,,484,RBD
 489,Y,H,0.2628,-0.06787,-1.021,485,RBD
 489,Y,L,0.01988,-0.1257,-0.8099,485,RBD
 489,Y,W,-0.04492,-0.1649,-1.332,485,RBD
@@ -4207,7 +4185,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 495,Y,H,0.02156,-1.736,-0.706,491,RBD
 495,Y,I,-0.03902,-1.607,0.02327,491,RBD
 495,Y,Y,0,0,0,491,RBD
-495,Y,C,,-2.106,,491,RBD
 495,Y,W,,-0.4921,-0.6706,491,RBD
 496,G,A,-0.002799,0.1018,-0.07891,492,RBD
 496,G,C,0.0494,-0.4511,-1.881,492,RBD
@@ -4230,7 +4207,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 498,R,R,0,0,0,494,RBD
 498,R,C,,-2.121,,494,RBD
 498,R,E,,-1.259,,494,RBD
-498,R,P,,-1.978,,494,RBD
 498,R,Q,,-0.1731,,494,RBD
 498,R,T,,0.01737,-1.558,494,RBD
 499,P,H,0.02737,-0.2136,-0.4336,495,RBD
@@ -4423,7 +4399,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 539,V,I,-0.004814,-0.1405,-0.04088,535,other
 539,V,V,0,0,0,535,other
 539,V,C,,-1.584,0.6717,535,other
-539,V,M,,-3.144,,535,other
 540,N,D,-0.1393,-0.3222,0.487,536,other
 540,N,H,0.04096,0.04556,-0.2675,536,other
 540,N,K,0.1052,0.1055,-0.4313,536,other
@@ -4448,7 +4423,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 547,T,R,-0.1921,0.06322,-0.2021,543,other
 547,T,S,0.2312,-0.1764,-0.2939,543,other
 547,T,T,0,0,0,543,other
-547,T,D,,-2.582,,543,other
 547,T,E,,-0.2563,,543,other
 547,T,G,,-0.2396,0.7679,543,other
 547,T,H,,-0.8633,,543,other
@@ -4506,14 +4480,12 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 561,P,T,,-0.04047,-0.01709,557,other
 564,Q,L,-0.2329,-0.3267,0.751,560,other
 564,Q,Q,0,0,0,560,other
-564,Q,E,,-1.316,,560,other
 564,Q,H,,-0.1057,-0.6589,560,other
 564,Q,R,,-1.109,,560,other
 565,F,I,0.1536,0.08676,-0.1785,561,other
 565,F,L,-0.05006,-0.1395,0.3927,561,other
 565,F,Y,-0.1551,0.05768,0.2211,561,other
 565,F,F,0,0,0,561,other
-565,F,S,,-1.308,,561,other
 565,F,V,,0.0376,-0.2412,561,other
 566,G,S,-0.086,-0.498,0.1156,562,other
 566,G,G,0,0,0,562,other
@@ -4587,7 +4559,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 576,V,M,,-0.5253,-0.4974,572,other
 577,R,K,0.07025,-0.03123,-0.07109,573,other
 577,R,R,0,0,0,573,other
-577,R,C,,-1.871,,573,other
 577,R,G,,-6.519,,573,other
 577,R,L,,-1.435,-0.2228,573,other
 577,R,M,,-1.453,,573,other
@@ -4620,7 +4591,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 583,E,N,,-1.031,0.2766,579,other
 583,E,P,,-3.894,,579,other
 583,E,T,,-1.547,0.07413,579,other
-583,E,W,,-3.272,,579,other
 583,E,Y,,-6.121,,579,other
 585,L,F,-0.1173,-0.3009,0.4303,581,other
 585,L,I,0.06302,-0.2168,-0.807,581,other
@@ -4665,11 +4635,9 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 596,S,N,-0.02879,-0.3695,0.02428,592,other
 596,S,S,0,0,0,592,other
 596,S,I,,-2.908,,592,other
-596,S,P,,-1.605,,592,other
 596,S,T,,-4.261,,592,other
 597,V,I,-0.006402,-0.3278,0.3428,593,other
 597,V,V,0,0,0,593,other
-597,V,M,,-3.06,,593,other
 598,I,V,-0.02319,-0.1142,-0.02968,594,other
 598,I,I,0,0,0,594,other
 598,I,L,,-1.752,0.1177,594,other
@@ -4756,7 +4724,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 615,V,L,-0.155,-0.2617,0.856,611,other
 615,V,M,0.02294,-0.1689,0.0001619,611,other
 615,V,V,0,0,0,611,other
-615,V,A,,-1.306,,611,other
 616,N,D,-0.01428,-0.3028,-0.07601,612,other
 616,N,K,-0.09678,-0.2064,0.2464,612,other
 616,N,S,-0.07066,-0.03703,0.1246,612,other
@@ -4780,7 +4747,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 620,V,F,,-3.882,,616,other
 620,V,M,,-1.734,-0.2282,616,other
 621,P,A,0.008285,0.01383,-0.1076,617,other
-621,P,C,-0.2967,-1.506,-0.2355,617,other
+621,P,C,-0.1557,-1.506,-0.2355,617,other
 621,P,E,-0.024,0.1331,-0.1379,617,other
 621,P,F,0.2195,-0.5554,-0.4033,617,other
 621,P,H,-0.04965,-0.236,-0.09363,617,other
@@ -4801,7 +4768,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 621,P,Y,,-0.4444,-0.2452,617,other
 622,V,A,-0.1621,0.01533,-0.05864,618,other
 622,V,F,-0.000523,-0.05998,0.08223,618,other
-622,V,G,0.4079,0.1012,-0.5276,618,other
+622,V,G,0.4279,0.1012,-0.5276,618,other
 622,V,I,0.1317,0.03163,0.03887,618,other
 622,V,L,-0.1084,-0.0152,-0.008797,618,other
 622,V,M,-0.0264,0.117,-0.02744,618,other
@@ -4944,7 +4911,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 648,G,D,-0.03101,-6.554,-0.04137,644,other
 648,G,G,0,0,0,644,other
 648,G,P,,-2.49,,644,other
-648,G,S,,-2.371,,644,other
 651,I,M,0.00992,-1.638,-0.1514,647,other
 651,I,V,-0.01113,-0.04797,0.01686,647,other
 651,I,I,0,0,0,647,other
@@ -4979,10 +4945,10 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 655,Y,E,,-6.518,,651,other
 655,Y,G,,-6.184,,651,other
 655,Y,N,,-4.721,0.9605,651,other
-655,Y,Q,,-1.698,-0.08269,651,other
 655,Y,S,,-5.824,1.829,651,other
 655,Y,T,,-4.351,-0.1623,651,other
 655,Y,V,,-0.6089,-0.01274,651,other
+655,Y,Q,,,-0.08269,651,other
 656,V,A,-0.008991,-0.9461,0.3203,652,other
 656,V,I,-0.026,-0.4526,0.4122,652,other
 656,V,M,-0.04802,-0.7362,-0.08342,652,other
@@ -5112,7 +5078,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 681,H,A,0.118,-0.02983,0.1507,677,other
 681,H,C,-0.04623,-0.1413,-0.0007606,677,other
 681,H,D,-0.1272,0.07287,0.1026,677,other
-681,H,E,-0.1114,-0.06825,-0.04108,677,other
+681,H,E,-0.08602,-0.06825,-0.04108,677,other
 681,H,F,0.02341,-0.05795,-0.02156,677,other
 681,H,G,-0.01436,-0.02246,-0.04635,677,other
 681,H,I,-0.001052,0.03451,-0.06969,677,other
@@ -5218,7 +5184,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 694,A,T,-0.03863,-1.881,0.3692,690,S2
 694,A,V,0.0152,-0.08702,-0.3396,690,S2
 694,A,A,0,0,0,690,S2
-694,A,S,,-1.085,-0.004551,690,S2
+694,A,S,,,-0.004551,690,S2
 696,T,I,0.01755,-0.1241,0.1557,692,S2
 696,T,N,0.009599,-0.5596,-0.3202,692,S2
 696,T,T,0,0,0,692,S2
@@ -5298,7 +5264,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 709,N,Y,-0.03799,-0.5319,0.2628,705,S2
 709,N,N,0,0,0,705,S2
 709,N,T,,-5.46,,705,S2
-709,N,V,,-3.292,,705,S2
 710,N,D,0.02435,-0.1189,0.1529,706,S2
 710,N,K,-0.02461,-0.3782,-0.1871,706,S2
 710,N,S,0.002096,-0.3155,-0.1038,706,S2
@@ -5344,7 +5309,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 717,N,L,,-3.034,,713,S2
 718,F,I,0.0004547,-5.849,,714,S2
 718,F,F,0,0,0,714,S2
-718,F,L,,-2.844,,714,S2
 719,T,I,-0.02127,-1.408,0.05939,715,S2
 719,T,N,-0.00778,-0.899,0.01672,715,S2
 719,T,S,-0.01412,0.02973,0.01288,715,S2
@@ -5406,7 +5370,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 736,V,L,-0.08915,-0.3018,0.7617,732,S2
 736,V,V,0,0,0,732,S2
 736,V,G,,-5.741,,732,S2
-736,V,M,,-1.746,,732,S2
 736,V,Y,,-6.155,1.954,732,S2
 737,D,E,-0.06319,-0.3969,0.08464,733,S2
 737,D,Y,-0.02002,-0.4224,-0.1535,733,S2
@@ -5577,7 +5540,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 771,A,T,-0.08627,-2.433,0.6765,767,S2
 771,A,A,0,0,0,767,S2
 771,A,D,,-5.463,,767,S2
-771,A,L,,-3.163,,767,S2
 771,A,V,,-6.56,1.24,767,S2
 772,V,F,-0.01776,-0.4437,-0.04625,768,S2
 772,V,L,-0.1258,0.03304,0.2971,768,S2
@@ -5588,7 +5550,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 772,V,I,,-0.1788,0.2729,768,S2
 773,E,D,0.002642,-0.1521,0.1754,769,S2
 773,E,E,0,0,0,769,S2
-773,E,G,,-2.511,,769,S2
 773,E,K,,-6.441,,769,S2
 773,E,N,,-5.668,,769,S2
 776,K,Q,-0.04184,-0.1378,-0.001574,772,S2
@@ -5607,7 +5568,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 778,T,N,-0.05012,-0.1382,0.05131,774,S2
 778,T,S,0.00349,-0.1732,0.09989,774,S2
 778,T,T,0,0,0,774,S2
-778,T,P,,-3.048,1.531,774,S2
+778,T,P,,,1.531,774,S2
 779,Q,H,-0.01485,-0.0336,-0.1374,775,S2
 779,Q,K,-0.06278,-0.02923,-0.1039,775,S2
 779,Q,R,0.01201,-0.09644,-0.1464,775,S2
@@ -5667,7 +5628,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 789,Y,Y,0,0,0,785,S2
 789,Y,C,,-2.984,,785,S2
 789,Y,N,,-5.797,,785,S2
-789,Y,Q,,-3.193,,785,S2
 789,Y,T,,-2.938,1.722,785,S2
 790,K,E,-0.05051,-0.8328,-0.2319,786,S2
 790,K,I,0.02512,-0.1421,0.08949,786,S2
@@ -5762,7 +5722,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 806,L,V,-0.008123,-0.2315,-0.234,802,S2
 806,L,L,0,0,0,802,S2
 806,L,P,,-4.821,,802,S2
-806,L,Q,,-2.832,,802,S2
 806,L,Y,,-0.4816,,802,S2
 807,P,L,-0.002582,-0.6058,0.03072,803,S2
 807,P,Q,0.0481,-0.1697,0.05341,803,S2
@@ -5858,7 +5817,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 825,K,R,-0.02605,-0.0384,-0.01794,821,S2
 825,K,T,-0.01731,-0.5766,-0.09411,821,S2
 825,K,K,0,0,0,821,S2
-825,K,N,,-2.662,,821,S2
 826,V,I,-0.07509,-0.01333,0.2015,822,S2
 826,V,L,-0.08693,-0.0344,0.8565,822,S2
 826,V,M,-0.2277,-0.2519,0.7136,822,S2
@@ -5979,7 +5937,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 847,R,T,-0.0135,-4.903,-0.07706,843,S2
 847,R,R,0,0,0,843,S2
 847,R,G,,-2.183,1.265,843,S2
-847,R,S,,-1.792,,843,S2
 848,D,N,-0.01483,-6.618,-0.05868,844,S2
 848,D,P,-0.04499,-6.565,0.3686,844,S2
 848,D,D,0,0,0,844,S2
@@ -6153,7 +6110,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 883,T,K,,-6.617,,879,S2
 883,T,Q,,-2.765,,879,S2
 883,T,R,,-6.334,,879,S2
-883,T,W,,-6.464,1.026,879,S2
+883,T,W,,-6.464,,879,S2
 884,S,A,-0.06661,0.01464,0.01087,880,S2
 884,S,C,-0.05431,-0.05246,0.2246,880,S2
 884,S,F,-0.08333,-1.044,0.5431,880,S2
@@ -6176,8 +6133,8 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 888,F,I,0.02775,-0.1292,-0.01854,884,S2
 888,F,L,-0.03032,-0.4062,-0.3196,884,S2
 888,F,F,0,0,0,884,S2
-888,F,-,,-2.955,0.5041,884,S2
 888,F,S,,-0.8376,,884,S2
+888,F,-,,,0.5041,884,S2
 889,G,R,-0.00278,-5.951,1.005,885,S2
 889,G,S,-0.01568,-0.1649,-0.146,885,S2
 889,G,W,-0.01211,-1.677,-0.03105,885,S2
@@ -6185,7 +6142,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 889,G,-,,-1.821,0.05354,885,S2
 889,G,E,,-3.673,,885,S2
 889,G,L,,-6.563,,885,S2
-889,G,V,,-2.132,,885,S2
 890,A,L,-0.03504,0.04529,0.07932,886,S2
 890,A,S,-0.01534,-0.8453,0.4587,886,S2
 890,A,T,-0.002197,0.03717,-0.1655,886,S2
@@ -6376,7 +6332,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 939,S,T,-0.01349,-0.0966,0.006813,935,S2
 939,S,Y,0.0311,-0.1342,0.09386,935,S2
 939,S,S,0,0,0,935,S2
-939,S,P,,-2.272,,935,S2
 940,S,A,0.01075,-0.3275,-0.07724,936,S2
 940,S,F,-0.06502,-0.02676,0.3922,936,S2
 940,S,L,0.04801,-0.1732,-0.03552,936,S2
@@ -6431,7 +6386,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 948,L,I,-0.0006335,-0.01063,0.4375,944,S2
 948,L,P,-0.02288,-5.7,,944,S2
 948,L,L,0,0,0,944,S2
-948,L,F,,-3.298,,944,S2
 949,Q,K,-0.08704,-0.2858,1.058,945,S2
 949,Q,R,-0.1287,-1.26,1.704,945,S2
 949,Q,Q,0,0,0,945,S2
@@ -6536,10 +6490,10 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 968,S,G,,-1.151,,964,S2
 968,S,P,,-5.822,,964,S2
 969,K,C,-0.5353,-0.9115,0.9001,965,S2
-969,K,L,-0.5751,-6.617,0.49,965,S2
-969,K,M,-0.2945,-6.61,0.469,965,S2
+969,K,L,-0.5751,-6.617,,965,S2
+969,K,M,-0.2202,-6.61,0.469,965,S2
 969,K,N,-0.5564,-0.5724,1.236,965,S2
-969,K,Q,-0.1073,-5.188,1.5,965,S2
+969,K,Q,-0.09768,-5.188,1.5,965,S2
 969,K,R,0.1076,0.02624,-0.2123,965,S2
 969,K,S,0.01359,-0.2085,0.3626,965,S2
 969,K,T,-0.2213,-0.1906,0.01741,965,S2
@@ -6562,7 +6516,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 971,G,R,,-4.769,,967,S2
 975,S,N,0.2064,0.05551,-0.5216,971,S2
 975,S,S,0,0,0,971,S2
-975,S,F,,-1.788,,971,S2
 975,S,M,,-6.611,,971,S2
 975,S,P,,-0.838,,971,S2
 976,V,A,0.4773,0.08891,-0.3908,972,S2
@@ -6644,7 +6597,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 998,T,I,-0.1159,-0.2599,0.4768,994,S2
 998,T,S,0.04218,0.08593,-0.7604,994,S2
 998,T,T,0,0,0,994,S2
-998,T,K,,-2.704,,994,S2
 999,G,S,-0.03482,-6.089,0.8043,995,S2
 999,G,G,0,0,0,995,S2
 999,G,D,,-6.617,,995,S2
@@ -6726,7 +6678,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 1015,A,T,-0.01327,-1.493,1.243,1011,S2
 1015,A,V,-0.01714,-6.476,1.969,1011,S2
 1015,A,A,0,0,0,1011,S2
-1015,A,D,,-1.494,,1011,S2
 1016,A,L,-0.02617,-0.03114,0.02198,1012,S2
 1016,A,Q,-0.0537,0.1029,-0.2927,1012,S2
 1016,A,S,-0.06821,-0.0202,0.1227,1012,S2
@@ -6758,7 +6709,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 1020,A,T,-0.0184,-0.04186,-0.1009,1016,S2
 1020,A,V,-0.05144,-0.06389,-0.1818,1016,S2
 1020,A,A,0,0,0,1016,S2
-1020,A,L,,-1.358,,1016,S2
 1021,S,A,-0.05998,-0.4483,0.01211,1017,S2
 1021,S,F,-0.02413,-0.5562,0.3862,1017,S2
 1021,S,L,0.01429,-0.5461,-0.02942,1017,S2
@@ -6766,7 +6716,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 1021,S,Y,-0.09539,-0.1541,0.209,1017,S2
 1021,S,S,0,0,0,1017,S2
 1022,A,E,-0.04684,-5.956,0.7584,1018,S2
-1022,A,L,-0.05733,-2.745,,1018,S2
+1022,A,L,-0.05733,,,1018,S2
 1022,A,S,-0.002136,-0.09323,0.1065,1018,S2
 1022,A,T,-0.03009,-6.466,0.4103,1018,S2
 1022,A,A,0,0,0,1018,S2
@@ -6788,10 +6738,9 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 1025,A,G,0.002223,-0.5983,0.07923,1021,S2
 1025,A,T,-0.02586,-5.309,2.236,1021,S2
 1025,A,A,0,0,0,1021,S2
-1025,A,D,,-2.91,,1021,S2
 1025,A,L,,-5.027,,1021,S2
 1025,A,V,,-6.553,,1021,S2
-1026,A,I,-0.07107,-5.471,1.513,1022,S2
+1026,A,I,-0.07107,-5.471,,1022,S2
 1026,A,S,-0.01386,-0.1272,0.3722,1022,S2
 1026,A,T,-0.1039,-0.7943,0.1994,1022,S2
 1026,A,V,-0.03093,-3.55,1.083,1022,S2
@@ -6810,7 +6759,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 1029,M,C,,-6.415,1.76,1025,S2
 1030,S,A,0.04933,-0.00593,-0.3477,1026,S2
 1030,S,S,0,0,0,1026,S2
-1030,S,G,,-3.206,,1026,S2
 1030,S,L,,-6.569,,1026,S2
 1030,S,N,,-2.12,,1026,S2
 1030,S,Q,,-5.884,2.49,1026,S2
@@ -6854,8 +6802,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 1043,C,V,-0.01176,-6.461,,1039,S2
 1043,C,C,0,0,0,1039,S2
 1043,C,L,,-6.116,4.013,1039,S2
-1043,C,R,,-2.909,,1039,S2
-1043,C,Y,,-3.254,,1039,S2
 1044,G,W,-0.02107,-6.377,,1040,S2
 1044,G,G,0,0,0,1040,S2
 1044,G,D,,-6.534,,1040,S2
@@ -6885,7 +6831,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 1050,M,L,0.03737,-0.209,-0.03407,1046,S2
 1050,M,V,-0.01602,-1.06,0.014,1046,S2
 1050,M,M,0,0,0,1046,S2
-1050,M,T,,-2.53,2.528,1046,S2
+1050,M,T,,-2.53,,1046,S2
 1050,M,Y,,-6.583,,1046,S2
 1052,F,I,-0.02907,-4.195,-0.3814,1048,S2
 1052,F,L,-0.0004897,-0.5386,-0.1575,1048,S2
@@ -7014,7 +6960,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 1076,T,S,-0.02208,-0.1382,-0.02232,1072,S2
 1076,T,T,0,0,0,1072,S2
 1077,T,A,0.01017,-0.04003,0.2249,1073,S2
-1077,T,I,-0.006799,-6.188,-2.186,1073,S2
+1077,T,I,-0.006799,-6.188,,1073,S2
 1077,T,N,0.01026,-0.8473,0.5318,1073,S2
 1077,T,S,0.007622,-0.1955,-0.08519,1073,S2
 1077,T,T,0,0,0,1073,S2
@@ -7025,7 +6971,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 1078,A,V,0.004252,-1.06,-0.09816,1074,S2
 1078,A,A,0,0,0,1074,S2
 1078,A,D,,-2.813,,1074,S2
-1078,A,K,,-3.228,,1074,S2
 1079,P,S,-0.01549,-0.1264,0.03804,1075,S2
 1079,P,T,-0.006302,0.06266,-0.04835,1075,S2
 1079,P,P,0,0,0,1075,S2
@@ -7073,7 +7018,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 1087,A,T,-0.01045,-0.5958,0.05005,1083,S2
 1087,A,V,-0.006193,-0.9992,-0.008607,1083,S2
 1087,A,A,0,0,0,1083,S2
-1087,A,D,,-1.974,,1083,S2
 1088,H,R,0.003985,-0.2608,0.2625,1084,S2
 1088,H,Y,0.006318,-0.04585,-0.06916,1084,S2
 1088,H,H,0,0,0,1084,S2
@@ -7081,7 +7025,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 1088,H,T,,-0.3294,-0.0948,1084,S2
 1089,F,Y,-0.0005332,-0.04412,0.135,1085,S2
 1089,F,F,0,0,0,1085,S2
-1089,F,I,,-1.892,,1085,S2
 1089,F,L,,-3.3,,1085,S2
 1090,P,L,-0.0141,-0.7388,0.2987,1086,S2
 1090,P,S,-0.001148,0.00326,-0.05028,1086,S2
@@ -7408,7 +7351,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 1147,S,L,-0.01108,0.01477,-0.1833,1143,S2
 1147,S,T,-0.009482,-0.1116,0.05879,1143,S2
 1147,S,S,0,0,0,1143,S2
-1147,S,P,,-3.129,,1143,S2
 1147,S,Y,,-0.1051,,1143,S2
 1148,F,I,0.001457,-0.1141,-0.1348,1144,S2
 1148,F,L,-0.01859,0.07029,-0.1409,1144,S2
@@ -7781,7 +7723,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 1213,P,P,0,0,0,1209,other
 1213,P,L,,-2.858,,1209,other
 1213,P,Q,,-0.7105,0.106,1209,other
-1213,P,T,,-1.151,,1209,other
 1214,W,F,-0.007928,-0.5432,0.1946,1210,other
 1214,W,W,0,0,0,1210,other
 1214,W,G,,-1.037,0.9861,1210,other
@@ -8043,15 +7984,12 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 336,C,C,0,0,0,332,RBD
 361,C,G,,-4.746,,357,RBD
 361,C,I,,-5.646,,357,RBD
-361,C,K,,-2.302,,357,RBD
 361,C,R,,-6.131,,357,RBD
 361,C,T,,-6.056,,357,RBD
 361,C,V,,-6.191,,357,RBD
 361,C,Y,,-3.933,,357,RBD
 361,C,C,0,0,0,357,RBD
-379,C,G,,-3.106,,375,RBD
 379,C,K,,-6.256,,375,RBD
-379,C,T,,-1.701,,375,RBD
 379,C,Y,,-6.172,,375,RBD
 379,C,C,0,0,0,375,RBD
 391,C,I,,-6.109,,387,RBD
@@ -8063,7 +8001,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 398,D,P,,-6.272,,394,RBD
 398,D,D,0,0,0,394,RBD
 412,P,H,,-0.6509,,408,RBD
-412,P,L,,-2.923,2.167,408,RBD
+412,P,L,,-2.923,,408,RBD
 412,P,N,,-3.659,,408,RBD
 412,P,Q,,-4.58,,408,RBD
 412,P,T,,-2.643,,408,RBD
@@ -8077,15 +8015,11 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 437,N,E,,0.05607,,433,RBD
 437,N,N,0,0,0,433,RBD
 442,D,G,,-2.802,,438,RBD
-442,D,N,,-1.57,,438,RBD
 442,D,V,,-1.842,-0.5168,438,RBD
 442,D,D,0,0,0,438,RBD
-467,D,G,,-1.558,,463,RBD
 467,D,N,,-3.052,,463,RBD
 467,D,Y,,-2.913,,463,RBD
 467,D,D,0,0,0,463,RBD
-480,C,Y,,-1.665,,476,RBD
-480,C,C,0,0,0,476,RBD
 497,F,L,,-1.799,,493,RBD
 497,F,S,,-2.915,,493,RBD
 497,F,F,0,0,0,493,RBD
@@ -8095,7 +8029,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 507,P,S,,-0.7506,,503,RBD
 507,P,P,0,0,0,503,RBD
 509,R,G,,-6.242,,505,RBD
-509,R,M,,-2.966,,505,RBD
 509,R,W,,-1.381,,505,RBD
 509,R,R,0,0,0,505,RBD
 512,V,A,,0.05122,1.592,508,RBD
@@ -8113,7 +8046,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 526,G,G,0,0,0,522,RBD
 533,L,F,,-5.55,,529,other
 533,L,M,,-0.3939,0.2949,529,other
-533,L,P,,-3.037,,529,other
 533,L,L,0,0,0,529,other
 538,C,M,,-5.905,,534,other
 538,C,Y,,-6.193,,534,other
@@ -8124,7 +8056,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 542,N,D,,-2.288,,538,other
 542,N,K,,-5.897,,538,other
 542,N,N,0,0,0,538,other
-544,N,D,,-2.481,,540,other
 544,N,S,,0.1177,,540,other
 544,N,N,0,0,0,540,other
 545,G,E,,-6.136,,541,other
@@ -8135,7 +8066,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 548,G,R,,-4.299,,544,other
 548,G,S,,-5.401,,544,other
 548,G,G,0,0,0,544,other
-550,G,E,,-2.943,,546,other
 550,G,R,,-3.626,,546,other
 550,G,V,,-3.565,,546,other
 550,G,G,0,0,0,546,other
@@ -8146,16 +8076,12 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 557,K,R,,-0.2173,,553,other
 557,K,K,0,0,0,553,other
 559,F,I,,-6.247,,555,other
-559,F,L,,-1.212,,555,other
 559,F,V,,-1.454,,555,other
 559,F,F,0,0,0,555,other
 562,F,S,,-2.123,,558,other
 562,F,F,0,0,0,558,other
 578,D,N,,-6.411,,574,other
 578,D,D,0,0,0,574,other
-579,P,S,,-1.958,,575,other
-579,P,T,,-3.051,,575,other
-579,P,P,0,0,0,575,other
 584,I,M,,-5.726,,580,other
 584,I,T,,-1.07,0.8951,580,other
 584,I,V,,0.06,-0.6751,580,other
@@ -8181,7 +8107,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 601,G,G,0,0,0,597,other
 602,T,A,,-0.1181,,598,other
 602,T,I,,-3.48,,598,other
-602,T,L,,-2.917,,598,other
 602,T,T,0,0,0,598,other
 609,A,L,,-3.015,,605,other
 609,A,S,,-4.964,,605,other
@@ -8194,14 +8119,11 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 649,C,G,,-5.802,,645,other
 649,C,L,,-6.062,,645,other
 649,C,R,,-1.955,,645,other
-649,C,Y,,-2.804,,645,other
 649,C,C,0,0,0,645,other
 650,L,C,,-6.55,,646,other
-650,L,F,,-2.796,,646,other
 650,L,N,,-5.825,,646,other
 650,L,P,,-4.006,,646,other
 650,L,L,0,0,0,646,other
-652,G,A,,-3.254,,648,other
 652,G,E,,-2.696,,648,other
 652,G,R,,-6.59,,648,other
 652,G,S,,-4.356,,648,other
@@ -8216,7 +8138,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 664,I,K,,-6.547,,660,other
 664,I,V,,-2.249,0.161,660,other
 664,I,I,0,0,0,660,other
-665,P,L,,-3.149,,661,other
 665,P,S,,-3.993,,661,other
 665,P,P,0,0,0,661,other
 666,I,C,,-1.181,,662,other
@@ -8255,32 +8176,24 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 743,C,R,,-6.194,,739,S2
 743,C,Y,,-3.41,,739,S2
 743,C,C,0,0,0,739,S2
-749,C,Y,,-3.127,,745,S2
-749,C,C,0,0,0,745,S2
 756,Y,A,,-5.754,0.2439,752,S2
 756,Y,H,,-5.303,-1.693,752,S2
 756,Y,I,,-6.519,,752,S2
 756,Y,L,,-1.35,,752,S2
 756,Y,M,,-6.104,0.2997,752,S2
 756,Y,Y,0,0,0,752,S2
-760,C,R,,-2.381,,756,S2
 760,C,Y,,-6.422,,756,S2
 760,C,C,0,0,0,756,S2
-767,L,P,,-3.162,,763,S2
-767,L,V,,-1.968,1.697,763,S2
-767,L,L,0,0,0,763,S2
 774,Q,K,,-6.324,,770,S2
 774,Q,R,,-4.75,,770,S2
 774,Q,Q,0,0,0,770,S2
 775,D,E,,-2.705,,771,S2
-775,D,G,,-2.522,,771,S2
 775,D,N,,-5.793,,771,S2
 775,D,T,,-6.418,,771,S2
 775,D,D,0,0,0,771,S2
 781,V,D,,-5.2,,777,S2
 781,V,F,,-3.408,,777,S2
 781,V,I,,-1.245,,777,S2
-781,V,M,,-2.603,,777,S2
 781,V,S,,-3.486,,777,S2
 781,V,V,0,0,0,777,S2
 800,F,L,,-4.733,1.785,796,S2
@@ -8291,11 +8204,9 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 816,S,S,0,0,0,812,S2
 819,E,D,,-4.706,,815,S2
 819,E,G,,-4.78,,815,S2
-819,E,K,,-3.027,,815,S2
 819,E,E,0,0,0,815,S2
 840,C,A,,-5.543,,836,S2
 840,C,S,,-6.248,,836,S2
-840,C,Y,,-2.906,,836,S2
 840,C,C,0,0,0,836,S2
 851,C,Y,,-5.867,,847,S2
 851,C,C,0,0,0,847,S2
@@ -8312,7 +8223,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 864,L,Q,,0.07665,,860,S2
 864,L,L,0,0,0,860,S2
 880,G,D,,-6.489,,876,S2
-880,G,S,,-3.204,,876,S2
 880,G,G,0,0,0,876,S2
 891,G,D,,-6.539,,887,S2
 891,G,E,,-5.838,,887,S2
@@ -8324,7 +8234,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 894,L,V,,-4.714,,890,S2
 894,L,L,0,0,0,890,S2
 897,P,L,,-6.495,3.451,893,S2
-897,P,Q,,-3.015,,893,S2
 897,P,P,0,0,0,893,S2
 898,F,I,,-2.766,,894,S2
 898,F,L,,-5.528,,894,S2
@@ -8352,9 +8261,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 931,I,I,0,0,0,927,S2
 959,L,P,,-6.439,,955,S2
 959,L,L,0,0,0,955,S2
-962,L,M,,-2.395,,958,S2
 962,L,P,,-6.497,,958,S2
-962,L,Q,,-2.849,,958,S2
 962,L,L,0,0,0,958,S2
 966,L,F,,-5.902,,962,S2
 966,L,L,0,0,0,962,S2
@@ -8370,7 +8277,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 980,I,L,,-0.2311,1.726,976,S2
 980,I,V,,-4.149,1.337,976,S2
 980,I,I,0,0,0,976,S2
-992,Q,K,,-6.615,1.596,988,S2
+992,Q,K,,-6.615,,988,S2
 992,Q,R,,-6.046,1.798,988,S2
 992,Q,Q,0,0,0,988,S2
 994,D,E,,-2.604,,990,S2
@@ -8378,7 +8285,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 994,D,N,,-0.6723,-1.567,990,S2
 994,D,D,0,0,0,990,S2
 996,L,Q,,-5.414,,992,S2
-996,L,R,,-6.599,0.4698,992,S2
+996,L,R,,-6.599,,992,S2
 996,L,L,0,0,0,992,S2
 1028,K,L,,-6.581,,1024,S2
 1028,K,N,,-6.079,,1024,S2
@@ -8388,7 +8295,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 1032,C,Y,,-3.622,,1028,S2
 1032,C,C,0,0,0,1028,S2
 1033,V,A,,-1.13,0.345,1029,S2
-1033,V,E,,-1.28,,1029,S2
 1033,V,I,,-1.33,0.4824,1029,S2
 1033,V,M,,-5.22,,1029,S2
 1033,V,T,,-0.31,,1029,S2
@@ -8408,13 +8314,11 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 1039,R,K,,-6.572,1.645,1035,S2
 1039,R,R,0,0,0,1035,S2
 1048,H,S,,-5.389,,1044,S2
-1048,H,Y,,-2.97,,1044,S2
 1048,H,H,0,0,0,1044,S2
 1051,S,L,,-5.289,,1047,S2
 1051,S,N,,-5.006,,1047,S2
 1051,S,V,,-6.595,2.356,1047,S2
 1051,S,S,0,0,0,1047,S2
-1053,P,L,,-1.387,,1049,S2
 1053,P,S,,-3.756,,1049,S2
 1053,P,P,0,0,0,1049,S2
 1054,Q,E,,-6.54,0.6994,1050,S2
@@ -8443,3 +8347,5 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequen
 1211,K,K,0,0,0,1207,S2
 1212,W,R,,-2.377,-0.2105,1208,other
 1212,W,W,0,0,0,1208,other
+767,L,L,0,0,0,763,S2
+767,L,V,,,1.697,763,S2
