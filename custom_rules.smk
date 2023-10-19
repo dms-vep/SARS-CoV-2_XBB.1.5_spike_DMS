@@ -21,11 +21,11 @@ rule spatial_distances:
         "scripts/spatial_distances.py"
 
 
-rule compare_affinity:
-    """Compare ACE2 affinity across datasets."""
+rule compare_binding:
+    """Compare ACE2 binding across datasets."""
     input:
         xbb_spike_csv="results/summaries/summary.csv",
-        nb="notebooks/compare_affinity.ipynb",
+        nb="notebooks/compare_binding.ipynb",
     params:
         yaml=lambda wc, input: yaml.round_trip_dump(
             {
@@ -33,8 +33,8 @@ rule compare_affinity:
                 # parameters for plots
                 # ----------------------------------------
                 "init_min_func_effect": -1.5,
-                "clip_affinity_upper": 4,
-                "clip_affinity_lower": -6,
+                "clip_binding_upper": 4,
+                "clip_binding_lower": -6,
                 # ----------------------------------------
                 # Other deep mutational scanning datasets
                 # ----------------------------------------
@@ -51,25 +51,25 @@ rule compare_affinity:
             | {key: val for (key, val) in dict(input).items() if key != "nb"}
         ),
     output:
-        merged_affinity_csv="results/affinity_comparison/merged_affinities.csv",
-        nb="results/notebooks/compare_affinity.ipynb",
-        affinity_corr="results/affinity_comparison/affinity_corr.html",
-        affinity_dist="results/affinity_comparison/affinity_dist.html",
-        affinity_entry_corr="results/affinity_comparison/affinity_entry_corr.html",
-        affinity_escape_corr="results/affinity_comparison/affinity_ecape_corr.html",
+        merged_binding_csv="results/binding_comparison/merged_binding.csv",
+        nb="results/notebooks/compare_binding.ipynb",
+        binding_corr="results/binding_comparison/binding_corr.html",
+        binding_dist="results/binding_comparison/binding_dist.html",
+        binding_entry_corr="results/binding_comparison/binding_entry_corr.html",
+        binding_escape_corr="results/binding_comparison/binding_ecape_corr.html",
     log:
-        log="results/logs/compare_affinity.txt",
+        log="results/logs/compare_binding.txt",
     conda:
         os.path.join(config["pipeline_path"], "environment.yml")
     shell:
         """
         papermill {input.nb} {output.nb} \
             -y '{params.yaml}' \
-            -p merged_affinity_csv {output.merged_affinity_csv} \
-            -p affinity_corr_html {output.affinity_corr} \
-            -p affinity_dist_html {output.affinity_dist} \
-            -p affinity_entry_corr_html {output.affinity_entry_corr} \
-            -p affinity_escape_corr_html {output.affinity_escape_corr} \
+            -p merged_binding_csv {output.merged_binding_csv} \
+            -p binding_corr_html {output.binding_corr} \
+            -p binding_dist_html {output.binding_dist} \
+            -p binding_entry_corr_html {output.binding_entry_corr} \
+            -p binding_escape_corr_html {output.binding_escape_corr} \
             &> {log}
         """
 
@@ -189,7 +189,7 @@ rule compare_natural:
                     # define phenotypes and their colors. "basic" means not split by RBD, which is done
                     # later in code if `split_by_rbd`
                     "sera escape": "red",
-                    "ACE2 affinity": "blue",
+                    "ACE2 binding": "blue",
                     "cell entry": "purple",
                 },
                 "exclude_clades": [],
@@ -210,14 +210,14 @@ rule compare_natural:
         papermill {input.nb} {output.nb} -y '{params.yaml}' &>> {log}
         """
 
-rule non_rbd_affinity_natural:
-    """Look at non-RBD mutation affects on ACE2 affinity in natural viruses."""
+rule non_rbd_binding_natural:
+    """Look at non-RBD mutation affects on ACE2 binding in natural viruses."""
     input:
         dms_summary_csv="results/summaries/summary.csv",
         pango_consensus_seqs_json=rules.compare_natural.output.pango_consensus_seqs_json,
-        nb="notebooks/non_rbd_affinity_natural.ipynb",
+        nb="notebooks/non_rbd_binding_natural.ipynb",
     output:
-        nb="results/notebooks/non_rbd_affinity_natural.ipynb",
+        nb="results/notebooks/non_rbd_binding_natural.ipynb",
     params:
         yaml=lambda wc, input: yaml.round_trip_dump(
             {
@@ -228,7 +228,7 @@ rule non_rbd_affinity_natural:
             }
         ),
     log:
-        log="results/logs/non_rbd_affinity_natural.txt",
+        log="results/logs/non_rbd_binding_natural.txt",
     conda:
         os.path.join(config["pipeline_path"], "environment.yml")
     shell:
@@ -274,19 +274,19 @@ rule func_effects_dist:
 # Files (Jupyter notebooks, HTML plots, or CSVs) that you want included in
 # the HTML docs should be added to the nested dict `docs`:
 docs["Additional files and charts"] = {
-    "Analysis of ACE2 affinity data and comparison to other experiments": {
+    "Analysis of ACE2 binding data and comparison to other experiments": {
         "Interactive charts": {
             "Correlations among experiments":
-                rules.compare_affinity.output.affinity_corr,
-            "Distribution of RBD and non-RBD affinities":
-                rules.compare_affinity.output.affinity_dist,
-            "Correlation of affinity to viral entry":
-                rules.compare_affinity.output.affinity_entry_corr,
-            "Correlation of affinity to viral escape":
-                rules.compare_affinity.output.affinity_escape_corr,
+                rules.compare_binding.output.binding_corr,
+            "Distribution of RBD and non-RBD ACE2 binding":
+                rules.compare_binding.output.binding_dist,
+            "Correlation of ACE2 binding to viral entry":
+                rules.compare_binding.output.binding_entry_corr,
+            "Correlation of ACE2 binding to viral escape":
+                rules.compare_binding.output.binding_escape_corr,
         },
-        "CSV of affinities from different experiments":
-            rules.compare_affinity.output.merged_affinity_csv,
+        "CSV of ACE2 binding from different experiments":
+            rules.compare_binding.output.merged_binding_csv,
     },
     "Comparison of escape in medium and high ACE2 cells": {
         "Interactive chart comparing escape":
@@ -313,9 +313,9 @@ docs["Additional files and charts"] = {
         "Distribution of cell entry effects": rules.func_effects_dist.output.effects_boxplot,
         "Effects of key mutations on cell entry": rules.func_effects_dist.output.key_muts_plot,
     },
-    "ACE2 affinity effects of non-RBD mutations in natural sequences": {
-        "Notebook analyzing affinity effects of non-RBD mutations in natural sequences":
-            rules.non_rbd_affinity_natural.output.nb,
+    "ACE2 binding effects of non-RBD mutations in natural sequences": {
+        "Notebook analyzing ACE2 binding effects of non-RBD mutations in natural sequences":
+            rules.non_rbd_binding_natural.output.nb,
     },
     "Spike site numbering": {
         "CSV converting sequential sites in XBB.1.5 spike to Wuhan-Hu-1 reference sites":

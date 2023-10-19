@@ -1,4 +1,4 @@
-site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 affinity,sequential_site,region
+site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,sequential_site,region
 2,F,C,0.01114,0.101,0.02151,2,other
 2,F,L,0.01876,0.09432,-0.2698,2,other
 2,F,S,0.03169,0.05844,-0.05642,2,other

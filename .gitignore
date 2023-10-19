@@ -54,23 +54,23 @@ results/antibody_escape/averages/*
 !results/antibody_escape/averages/*_mut_effect.csv
 !results/antibody_escape/averages/*_mut_icXX.csv
 
-!results/receptor_affinity
-results/receptor_affinity/*
-!results/receptor_affinity/by_selection
-results/receptor_affinity/by_selection/*.pickle
-results/receptor_affinity/by_selection/*.csv
-!results/receptor_affinity/averages
-results/receptor_affinity/averages/*
-!results/receptor_affinity/averages/*_mut_effect.csv
-!results/receptor_affinity/averages/*_mut_icXX.csv
+!results/ACE2_binding
+results/ACE2_binding/*
+!results/ACE2_binding/by_selection
+results/ACE2_binding/by_selection/*.pickle
+results/ACE2_binding/by_selection/*.csv
+!results/ACE2_binding/averages
+results/ACE2_binding/averages/*
+!results/ACE2_binding/averages/*_mut_effect.csv
+!results/ACE2_binding/averages/*_mut_icXX.csv
 
 !results/summaries
 results/summaries/*
 !results/summaries/summary.csv
 
-!results/affinity_comparison
-results/affinity_comparison/*
-!results/affinity_comparison/merged_affinities.csv
+!results/binding_comparison
+results/binding_comparison/*
+!results/binding_comparison/merged_binding.csv
 
 !results/compare_natural
 results/compare_natural/*

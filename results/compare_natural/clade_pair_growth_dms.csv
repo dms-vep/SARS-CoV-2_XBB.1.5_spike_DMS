@@ -1,4 +1,4 @@
-clade,parent,date,n_new_spike_muts,spike_new_muts,nonspike_new_muts,only_new_muts_are_spike,has_L455F,growth_rate,n_sequences,parent_growth_rate,parent_n_sequences,change_in_growth_rate,sera escape,ACE2 affinity,cell entry
+clade,parent,date,n_new_spike_muts,spike_new_muts,nonspike_new_muts,only_new_muts_are_spike,has_L455F,growth_rate,n_sequences,parent_growth_rate,parent_n_sequences,change_in_growth_rate,sera escape,ACE2 binding,cell entry
 XBB.1,XBB,2022-10-03,1,G252V,,True,False,1.2048,17510,-0.93671,1650,2.1415,-0.0716,0.02517,-0.03082
 XBB.2,XBB,2022-10-15,1,D253G,,True,False,0.2068,1353,-0.93671,1650,1.1435,-0.2303,-0.1234,-0.1294
 XBB.4,XBB,2022-10-20,1,K444R,ORF1a:G82D,False,False,-0.43899,245,-0.93671,1650,0.49772,-0.02104,0.04488,-0.05194
