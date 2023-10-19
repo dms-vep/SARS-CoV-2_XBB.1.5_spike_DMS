@@ -67,6 +67,7 @@ results/ACE2_binding/averages/*
 !results/summaries
 results/summaries/*
 !results/summaries/summary.csv
+!results/summaries/per_antibody_escape.csv
 
 !results/binding_comparison
 results/binding_comparison/*
