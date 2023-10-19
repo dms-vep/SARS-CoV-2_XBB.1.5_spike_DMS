@@ -712,6 +712,10 @@ avg_antibody_escape_default: &avg_antibody_escape_default
   escape_plot_kwargs:
     <<: *escape_plot_kwargs_default
     avg_type: median
+    addtl_slider_stats:
+      times_seen: 3
+      escape_std: 1.5
+    addtl_slider_stats_as_max: [escape_std]
     per_model_tooltip: true
   plot_hide_stats: *plot_hide_stats_default
   legend: |
@@ -826,6 +830,14 @@ avg_antibody_escape:
 # Define the receptor affinity experiments to average
 avg_receptor_affinity_default: &avg_receptor_affinity_default
   <<: *avg_antibody_escape_default
+  escape_plot_kwargs:
+    <<: *escape_plot_kwargs_default
+    avg_type: median
+    addtl_slider_stats:
+      times_seen: 3
+      escape_std: 3
+    addtl_slider_stats_as_max: [escape_std]
+    per_model_tooltip: true
   icXX: 50  # IC50
 
 avg_receptor_affinity:
