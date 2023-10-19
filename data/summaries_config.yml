@@ -53,7 +53,7 @@ summary:
         min_at_least: 0
         fixed_max: 2
         fixed_min: -3
-        init_min_value: -1.5  # initial min value in slider
+        init_min_value: -2  # initial min value in slider
         le_filters:
           ACE2 binding_std: 3.0
   title: Effects of mutations to spike of SARS-CoV-2 XBB.1.5 on escape from serum antibodies (sera from human XBB breakthrough infections), spike-mediated cell entry, and ACE2 binding as measured in pseudotyped lentiviral deep mutational scanning experiments
