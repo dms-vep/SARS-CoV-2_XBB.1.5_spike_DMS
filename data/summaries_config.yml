@@ -18,6 +18,8 @@ summary:
       negative_color: "#E69F00"  # orange, negative heatmap color
       max_at_least: 1  # make heatmap max at least
       min_at_least: -1  # make heatmap min at least this
+      le_filters:
+        escape_std: 1.5
       antibody_list:  # antibodies to include: keys name used for `avg_escape`, values name for plot
         sera_493C_mediumACE2: serum 493C
         sera_498C_mediumACE2: serum 498C
@@ -37,7 +39,9 @@ summary:
       negative_color: "#F0E442"  # yellow
       max_at_least: 1
       min_at_least: 0
-      init_min_value: -1.5  # initial min value in slider
+      init_min_value: -2.0  # initial min value in slider
+      le_filters:
+        effect_std: 1.6
   other_assays:  # other assays that we show, empty dict if no assays being shown
     receptor_affinity:  # assay type
       ACE2 affinity:  # name of particular assay condition
@@ -50,6 +54,8 @@ summary:
         fixed_max: 2
         fixed_min: -3
         init_min_value: -1.5  # initial min value in slider
+        le_filters:
+          receptor affinity_std: 3.0
   title: Effects of mutations to spike of SARS-CoV-2 XBB.1.5 on escape from serum antibodies (sera from human XBB breakthrough infections), spike-mediated cell entry, and ACE2 affinity as measured in pseudotyped lentiviral deep mutational scanning experiments
   legend: |
     This is is an interactive chart. Mouseover points for details and measurements, and

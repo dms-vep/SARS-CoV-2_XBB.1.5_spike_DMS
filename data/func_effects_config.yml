@@ -71,6 +71,7 @@ func_scores:
 # Each key is a condition which has the following values:
 #  - `selections`: list of selections for which we average mutation functional effects
 #  - `avg_method`: how to average across the selections, options are "median" and "mean"
+#  - `floor_for_effect_std`: floor values at this before computing standard deviation.
 #  - `per_selection_tooltips`: whether to show per-selection effects via tooltips
 #  - `plot_kwargs`: keyword arguments passed to `polyclonal.plot.lineplot_and_heatmap`
 #  - `title`: title of plot. Will be suffixed with "(latent phenotype)" or ("functional score)"
@@ -79,12 +80,16 @@ func_scores:
 # Define some defaults for each condition, used via the merge (<<) operator.
 avg_func_effects_default: &avg_func_effects_default
   avg_method: median
+  floor_for_effect_std: -2.5
   per_selection_tooltips: true
   plot_kwargs:
     addtl_slider_stats:
       times_seen: 3
+      effect_std: 1.6
+    addtl_slider_stats_as_max: [effect_std]
     heatmap_max_at_least: 1
     heatmap_min_at_least: -1
+    heatmap_min_fixed: -2.5
     init_floor_at_zero: false
     init_site_statistic: mean
     site_zoom_bar_color_col: region  # supplied in the `site_numbering_map`
