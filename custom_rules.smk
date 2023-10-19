@@ -43,7 +43,7 @@ rule compare_binding:
                     "https://media.githubusercontent.com/media/tstarrlab/SARS-CoV-2-RBD_DMS_Omicron-XBB-BQ/main/results/final_variant_scores/final_variant_scores.csv",
                 # BA.2 in full spike DMS
                 "ba2_spike_csv":
-                    "https://raw.githubusercontent.com/dms-vep/SARS-CoV-2_Omicron_BA.2_spike_ACE2_affinity/main/results/summaries/summary.csv",
+                    "https://raw.githubusercontent.com/dms-vep/SARS-CoV-2_Omicron_BA.2_spike_ACE2_binding/main/results/summaries/summary.csv",
                 # XBB.1.5 in RBD DMS in lentiviral system
                 "xbb_rbd_csv":
                     "https://raw.githubusercontent.com/dms-vep/SARS-CoV-2_XBB.1.5_RBD_DMS/main/results/summaries/summary.csv",
@@ -92,6 +92,7 @@ rule compare_high_medium_ace2_escape:
         yaml=lambda wc, input: yaml.round_trip_dump(
             {
                 "init_min_func_effect": -2,
+                "max_effect_std": 1.6,
                 "init_min_times_seen": 4,
                 "init_floor_at_zero": False,
                 "init_site_escape_stat": "sum",
@@ -132,6 +133,7 @@ rule compare_spike_rbd_escape:
         yaml=lambda wc, input: yaml.round_trip_dump(
             {
                 "init_min_func_effect": -1.5,
+                "max_effect_std": 1.6,
                 "init_min_times_seen": 4,
                 "init_floor_at_zero": False,
                 "init_site_escape_stat": "sum",
@@ -211,7 +213,7 @@ rule compare_natural:
         """
 
 rule non_rbd_binding_natural:
-    """Look at non-RBD mutation affects on ACE2 binding in natural viruses."""
+    """Look at non-RBD mutation effects on ACE2 binding in natural viruses."""
     input:
         dms_summary_csv="results/summaries/summary.csv",
         pango_consensus_seqs_json=rules.compare_natural.output.pango_consensus_seqs_json,
@@ -224,7 +226,7 @@ rule non_rbd_binding_natural:
                 "pango_consensus_seqs_json": input.pango_consensus_seqs_json,
                 "xbb15_dms_csv": input.dms_summary_csv,
                 "ba2_dms_csv":
-                    "https://raw.githubusercontent.com/dms-vep/SARS-CoV-2_Omicron_BA.2_spike_ACE2_affinity/main/results/summaries/summary.csv",
+                    "https://raw.githubusercontent.com/dms-vep/SARS-CoV-2_Omicron_BA.2_spike_ACE2_binding/main/results/summaries/summary.csv",
             }
         ),
     log:
@@ -253,11 +255,12 @@ rule func_effects_dist:
                 "fitness_csv": "https://raw.githubusercontent.com/jbloomlab/SARS2-mut-fitness/main/results_public_2023-10-01/aa_fitness/aa_fitness.csv",
                 "xbb15_func_effects_csv": input.xbb15_func_effects_csv,
                 "ba2_func_effects_csv":
-                    "https://raw.githubusercontent.com/dms-vep/SARS-CoV-2_Omicron_BA.2_spike_ACE2_affinity/main/results/func_effects/averages/293T_high_ACE2_entry_func_effects.csv",
+                    "https://raw.githubusercontent.com/dms-vep/SARS-CoV-2_Omicron_BA.2_spike_ACE2_binding/main/results/func_effects/averages/293T_high_ACE2_entry_func_effects.csv",
                 "site_numbering_map_csv": input.site_numbering_map_csv,
                 "init_min_times_seen": 3,
                 "init_min_n_libraries": 2,
                 "init_expected_count": 20,
+                "max_effect_std": 1.6,
                 "key_mutations": ["P1143L", "F456L", "V483-"],
                 "strain_corr_html": output.strain_corr,
                 "natural_corr_html": output.natural_corr,

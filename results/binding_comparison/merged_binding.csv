@@ -8607,7 +8607,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 30,N,N,,0.0000,0.0000,NTD,BA.2 full spike lentivirus,monomeric
 31,S,F,,-3.1370,0.4207,NTD,BA.2 full spike lentivirus,monomeric
 31,S,I,,-1.3700,0.7693,NTD,BA.2 full spike lentivirus,monomeric
-31,S,L,,-2.6310,,NTD,BA.2 full spike lentivirus,monomeric
 31,S,S,,0.0000,0.0000,NTD,BA.2 full spike lentivirus,monomeric
 32,F,L,,-0.2758,0.3932,NTD,BA.2 full spike lentivirus,monomeric
 32,F,S,,0.1247,-0.5166,NTD,BA.2 full spike lentivirus,monomeric
@@ -8621,13 +8620,12 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 33,T,R,,0.1545,0.6882,NTD,BA.2 full spike lentivirus,monomeric
 33,T,S,,-0.5131,0.3651,NTD,BA.2 full spike lentivirus,monomeric
 33,T,T,,0.0000,0.0000,NTD,BA.2 full spike lentivirus,monomeric
-34,R,C,,-5.3130,0.5563,NTD,BA.2 full spike lentivirus,monomeric
+34,R,C,,-5.3130,,NTD,BA.2 full spike lentivirus,monomeric
 34,R,G,,-4.7530,,NTD,BA.2 full spike lentivirus,monomeric
 34,R,H,,-2.1130,0.0904,NTD,BA.2 full spike lentivirus,monomeric
 34,R,K,,-2.4170,,NTD,BA.2 full spike lentivirus,monomeric
 34,R,L,,-4.2380,1.0730,NTD,BA.2 full spike lentivirus,monomeric
 34,R,P,,-4.8770,-0.2423,NTD,BA.2 full spike lentivirus,monomeric
-34,R,T,,-1.4870,3.6950,NTD,BA.2 full spike lentivirus,monomeric
 34,R,R,,0.0000,0.0000,NTD,BA.2 full spike lentivirus,monomeric
 35,G,C,,-3.4520,0.6098,NTD,BA.2 full spike lentivirus,monomeric
 35,G,L,,-4.0740,,NTD,BA.2 full spike lentivirus,monomeric
@@ -8639,20 +8637,19 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 36,V,A,,-1.9560,0.1416,NTD,BA.2 full spike lentivirus,monomeric
 36,V,F,,-0.8973,0.6289,NTD,BA.2 full spike lentivirus,monomeric
 36,V,I,,0.0037,-0.4053,NTD,BA.2 full spike lentivirus,monomeric
-36,V,L,,-2.0940,1.2220,NTD,BA.2 full spike lentivirus,monomeric
 36,V,T,,-0.3987,-0.0295,NTD,BA.2 full spike lentivirus,monomeric
 36,V,V,,0.0000,0.0000,NTD,BA.2 full spike lentivirus,monomeric
+36,V,L,,,1.2220,NTD,BA.2 full spike lentivirus,monomeric
 37,Y,C,,-1.9810,,NTD,BA.2 full spike lentivirus,monomeric
 37,Y,D,,-2.0250,0.1041,NTD,BA.2 full spike lentivirus,monomeric
 37,Y,H,,-3.0260,0.9799,NTD,BA.2 full spike lentivirus,monomeric
 37,Y,Y,,0.0000,0.0000,NTD,BA.2 full spike lentivirus,monomeric
-38,Y,C,,-3.0740,,NTD,BA.2 full spike lentivirus,monomeric
 38,Y,F,,-1.0350,,NTD,BA.2 full spike lentivirus,monomeric
 38,Y,H,,-2.2790,-0.4850,NTD,BA.2 full spike lentivirus,monomeric
 38,Y,I,,-5.3130,,NTD,BA.2 full spike lentivirus,monomeric
-38,Y,L,,-3.2060,1.7260,NTD,BA.2 full spike lentivirus,monomeric
 38,Y,S,,-2.9440,1.2600,NTD,BA.2 full spike lentivirus,monomeric
 38,Y,Y,,0.0000,0.0000,NTD,BA.2 full spike lentivirus,monomeric
+38,Y,L,,,1.7260,NTD,BA.2 full spike lentivirus,monomeric
 39,P,H,,-3.5180,,NTD,BA.2 full spike lentivirus,monomeric
 39,P,L,,-5.4800,,NTD,BA.2 full spike lentivirus,monomeric
 39,P,S,,-2.0620,0.2765,NTD,BA.2 full spike lentivirus,monomeric
@@ -8674,7 +8671,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 42,V,Q,,-1.7440,-0.2104,NTD,BA.2 full spike lentivirus,monomeric
 42,V,S,,-0.6590,1.1280,NTD,BA.2 full spike lentivirus,monomeric
 42,V,V,,0.0000,0.0000,NTD,BA.2 full spike lentivirus,monomeric
-43,F,S,,-2.2370,,NTD,BA.2 full spike lentivirus,monomeric
 43,F,Y,,0.0500,0.2427,NTD,BA.2 full spike lentivirus,monomeric
 43,F,F,,0.0000,0.0000,NTD,BA.2 full spike lentivirus,monomeric
 44,R,G,,-6.7680,1.1280,NTD,BA.2 full spike lentivirus,monomeric
@@ -8720,11 +8716,11 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 50,S,C,,-0.7543,0.0396,NTD,BA.2 full spike lentivirus,monomeric
 50,S,F,,-0.2722,-0.1339,NTD,BA.2 full spike lentivirus,monomeric
 50,S,G,,-0.7421,0.6023,NTD,BA.2 full spike lentivirus,monomeric
-50,S,L,,-2.3870,2.4180,NTD,BA.2 full spike lentivirus,monomeric
 50,S,N,,-0.1664,0.2970,NTD,BA.2 full spike lentivirus,monomeric
 50,S,P,,-0.0058,0.3143,NTD,BA.2 full spike lentivirus,monomeric
 50,S,T,,0.2979,0.8307,NTD,BA.2 full spike lentivirus,monomeric
 50,S,S,,0.0000,0.0000,NTD,BA.2 full spike lentivirus,monomeric
+50,S,L,,,2.4180,NTD,BA.2 full spike lentivirus,monomeric
 51,T,A,,0.0810,-0.6706,NTD,BA.2 full spike lentivirus,monomeric
 51,T,I,,-0.0820,0.4680,NTD,BA.2 full spike lentivirus,monomeric
 51,T,N,,-2.4070,-0.6282,NTD,BA.2 full spike lentivirus,monomeric
@@ -9082,9 +9078,9 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 86,F,-,,-6.1880,2.8540,NTD,BA.2 full spike lentivirus,monomeric
 86,F,I,,-6.4500,2.3350,NTD,BA.2 full spike lentivirus,monomeric
 86,F,L,,-5.7780,0.9395,NTD,BA.2 full spike lentivirus,monomeric
-86,F,V,,-2.7670,0.8335,NTD,BA.2 full spike lentivirus,monomeric
 86,F,Y,,-0.7874,0.4822,NTD,BA.2 full spike lentivirus,monomeric
 86,F,F,,0.0000,0.0000,NTD,BA.2 full spike lentivirus,monomeric
+86,F,V,,,0.8335,NTD,BA.2 full spike lentivirus,monomeric
 87,N,-,,-5.1340,-0.1714,NTD,BA.2 full spike lentivirus,monomeric
 87,N,C,,-0.0120,-0.3747,NTD,BA.2 full spike lentivirus,monomeric
 87,N,D,,-0.3319,0.0710,NTD,BA.2 full spike lentivirus,monomeric
@@ -9135,7 +9131,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 93,A,D,,-0.4192,,NTD,BA.2 full spike lentivirus,monomeric
 93,A,I,,-6.7370,0.8586,NTD,BA.2 full spike lentivirus,monomeric
 93,A,L,,-6.7070,1.2870,NTD,BA.2 full spike lentivirus,monomeric
-93,A,P,,-2.8780,,NTD,BA.2 full spike lentivirus,monomeric
 93,A,S,,-0.3896,0.3701,NTD,BA.2 full spike lentivirus,monomeric
 93,A,T,,-4.9290,0.1189,NTD,BA.2 full spike lentivirus,monomeric
 93,A,V,,-5.8400,1.8690,NTD,BA.2 full spike lentivirus,monomeric
@@ -9383,11 +9378,11 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 122,N,N,,0.0000,0.0000,NTD,BA.2 full spike lentivirus,monomeric
 123,A,-,,-6.6370,,NTD,BA.2 full spike lentivirus,monomeric
 123,A,L,,-0.1066,,NTD,BA.2 full spike lentivirus,monomeric
-123,A,P,,-1.4940,0.2268,NTD,BA.2 full spike lentivirus,monomeric
 123,A,S,,-0.0163,-0.0128,NTD,BA.2 full spike lentivirus,monomeric
 123,A,T,,-0.7507,0.1569,NTD,BA.2 full spike lentivirus,monomeric
 123,A,V,,-0.2937,-0.2409,NTD,BA.2 full spike lentivirus,monomeric
 123,A,A,,0.0000,0.0000,NTD,BA.2 full spike lentivirus,monomeric
+123,A,P,,,0.2268,NTD,BA.2 full spike lentivirus,monomeric
 124,T,-,,-6.6170,,NTD,BA.2 full spike lentivirus,monomeric
 124,T,A,,-0.2032,-0.0799,NTD,BA.2 full spike lentivirus,monomeric
 124,T,I,,-0.7218,0.1252,NTD,BA.2 full spike lentivirus,monomeric
@@ -10076,8 +10071,8 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 202,K,N,,-0.4837,-0.0148,NTD,BA.2 full spike lentivirus,monomeric
 202,K,R,,-0.1391,-0.8355,NTD,BA.2 full spike lentivirus,monomeric
 202,K,S,,-0.5805,0.3603,NTD,BA.2 full spike lentivirus,monomeric
-202,K,T,,-0.8416,1.4920,NTD,BA.2 full spike lentivirus,monomeric
 202,K,K,,0.0000,0.0000,NTD,BA.2 full spike lentivirus,monomeric
+202,K,T,,,1.4920,NTD,BA.2 full spike lentivirus,monomeric
 203,I,A,,-1.4350,,NTD,BA.2 full spike lentivirus,monomeric
 203,I,K,,-5.9980,1.4290,NTD,BA.2 full spike lentivirus,monomeric
 203,I,L,,-1.4230,,NTD,BA.2 full spike lentivirus,monomeric
@@ -10277,7 +10272,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 222,A,A,,0.0000,0.0000,NTD,BA.2 full spike lentivirus,monomeric
 223,L,E,,-3.9610,,NTD,BA.2 full spike lentivirus,monomeric
 223,L,F,,-6.7130,1.9130,NTD,BA.2 full spike lentivirus,monomeric
-223,L,I,,-1.2990,,NTD,BA.2 full spike lentivirus,monomeric
 223,L,S,,-6.2820,2.4370,NTD,BA.2 full spike lentivirus,monomeric
 223,L,V,,-3.2510,0.9707,NTD,BA.2 full spike lentivirus,monomeric
 223,L,L,,0.0000,0.0000,NTD,BA.2 full spike lentivirus,monomeric
@@ -10742,7 +10736,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 274,T,P,,-3.2760,,NTD,BA.2 full spike lentivirus,monomeric
 274,T,S,,-0.1579,-0.4937,NTD,BA.2 full spike lentivirus,monomeric
 274,T,T,,0.0000,0.0000,NTD,BA.2 full spike lentivirus,monomeric
-275,F,C,,-3.3190,,NTD,BA.2 full spike lentivirus,monomeric
 275,F,I,,-1.9150,0.7876,NTD,BA.2 full spike lentivirus,monomeric
 275,F,L,,-0.6774,-0.0930,NTD,BA.2 full spike lentivirus,monomeric
 275,F,M,,0.1416,,NTD,BA.2 full spike lentivirus,monomeric
@@ -10773,10 +10766,8 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 279,Y,I,,-4.8770,,NTD,BA.2 full spike lentivirus,monomeric
 279,Y,L,,-3.8730,,NTD,BA.2 full spike lentivirus,monomeric
 279,Y,N,,-6.0250,2.9740,NTD,BA.2 full spike lentivirus,monomeric
-279,Y,W,,-3.0780,,NTD,BA.2 full spike lentivirus,monomeric
 279,Y,Y,,0.0000,0.0000,NTD,BA.2 full spike lentivirus,monomeric
 280,N,D,,0.1143,-0.2810,NTD,BA.2 full spike lentivirus,monomeric
-280,N,F,,-3.1010,,NTD,BA.2 full spike lentivirus,monomeric
 280,N,M,,-3.2640,0.7588,NTD,BA.2 full spike lentivirus,monomeric
 280,N,S,,-0.0149,0.5454,NTD,BA.2 full spike lentivirus,monomeric
 280,N,T,,-1.4650,0.4377,NTD,BA.2 full spike lentivirus,monomeric
@@ -10849,7 +10840,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 290,D,E,,-6.5290,0.4689,NTD,BA.2 full spike lentivirus,monomeric
 290,D,H,,-4.7690,1.8040,NTD,BA.2 full spike lentivirus,monomeric
 290,D,N,,-4.0790,1.7910,NTD,BA.2 full spike lentivirus,monomeric
-290,D,R,,-2.9580,,NTD,BA.2 full spike lentivirus,monomeric
 290,D,S,,-6.1030,,NTD,BA.2 full spike lentivirus,monomeric
 290,D,D,,0.0000,0.0000,NTD,BA.2 full spike lentivirus,monomeric
 291,C,L,,-6.8190,3.5630,NTD,BA.2 full spike lentivirus,monomeric
@@ -10872,8 +10862,8 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 293,L,I,,-2.9820,2.7100,NTD,BA.2 full spike lentivirus,monomeric
 293,L,M,,-0.1807,0.2687,NTD,BA.2 full spike lentivirus,monomeric
 293,L,P,,-6.6260,2.0400,NTD,BA.2 full spike lentivirus,monomeric
-293,L,T,,-1.3660,0.4481,NTD,BA.2 full spike lentivirus,monomeric
 293,L,L,,0.0000,0.0000,NTD,BA.2 full spike lentivirus,monomeric
+293,L,T,,,0.4481,NTD,BA.2 full spike lentivirus,monomeric
 294,D,C,,-1.5460,-0.2160,NTD,BA.2 full spike lentivirus,monomeric
 294,D,E,,-5.2630,,NTD,BA.2 full spike lentivirus,monomeric
 294,D,G,,-1.5640,-0.4976,NTD,BA.2 full spike lentivirus,monomeric
@@ -10921,7 +10911,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 303,L,I,,-0.0114,0.0870,NTD,BA.2 full spike lentivirus,monomeric
 303,L,M,,-0.9121,0.4460,NTD,BA.2 full spike lentivirus,monomeric
 303,L,P,,-6.7490,0.5940,NTD,BA.2 full spike lentivirus,monomeric
-303,L,R,,-1.8090,,NTD,BA.2 full spike lentivirus,monomeric
 303,L,V,,-0.6515,,NTD,BA.2 full spike lentivirus,monomeric
 303,L,L,,0.0000,0.0000,NTD,BA.2 full spike lentivirus,monomeric
 304,K,E,,-1.1680,-0.1674,NTD,BA.2 full spike lentivirus,monomeric
@@ -10934,7 +10923,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 305,S,P,,-5.6830,,NTD,BA.2 full spike lentivirus,monomeric
 305,S,T,,-0.5776,1.0030,NTD,BA.2 full spike lentivirus,monomeric
 305,S,S,,0.0000,0.0000,NTD,BA.2 full spike lentivirus,monomeric
-306,F,I,,-1.5370,,other,BA.2 full spike lentivirus,monomeric
 306,F,L,,-0.0717,0.4476,other,BA.2 full spike lentivirus,monomeric
 306,F,S,,-5.9600,1.3770,other,BA.2 full spike lentivirus,monomeric
 306,F,F,,0.0000,0.0000,other,BA.2 full spike lentivirus,monomeric
@@ -10958,12 +10946,12 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 307,T,W,,-0.5141,0.7361,other,BA.2 full spike lentivirus,monomeric
 307,T,Y,,-0.5552,-0.4075,other,BA.2 full spike lentivirus,monomeric
 307,T,T,,0.0000,0.0000,other,BA.2 full spike lentivirus,monomeric
-308,V,A,,-1.5850,1.1030,other,BA.2 full spike lentivirus,monomeric
 308,V,C,,-2.8470,,other,BA.2 full spike lentivirus,monomeric
 308,V,I,,-0.0895,0.4199,other,BA.2 full spike lentivirus,monomeric
 308,V,L,,-0.2772,0.2936,other,BA.2 full spike lentivirus,monomeric
 308,V,M,,-4.8450,,other,BA.2 full spike lentivirus,monomeric
 308,V,V,,0.0000,0.0000,other,BA.2 full spike lentivirus,monomeric
+308,V,A,,,1.1030,other,BA.2 full spike lentivirus,monomeric
 309,E,A,,-0.4880,-0.6401,other,BA.2 full spike lentivirus,monomeric
 309,E,D,,-0.2847,-0.1639,other,BA.2 full spike lentivirus,monomeric
 309,E,G,,-0.1325,1.0520,other,BA.2 full spike lentivirus,monomeric
@@ -10986,7 +10974,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 312,I,S,,-5.7010,1.7480,other,BA.2 full spike lentivirus,monomeric
 312,I,V,,-0.5962,-0.7634,other,BA.2 full spike lentivirus,monomeric
 312,I,I,,0.0000,0.0000,other,BA.2 full spike lentivirus,monomeric
-313,Y,C,,-1.7100,,other,BA.2 full spike lentivirus,monomeric
 313,Y,H,,-1.7430,1.7380,other,BA.2 full spike lentivirus,monomeric
 313,Y,I,,-6.1000,2.2210,other,BA.2 full spike lentivirus,monomeric
 313,Y,R,,-3.3430,,other,BA.2 full spike lentivirus,monomeric
@@ -10995,15 +10982,14 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 314,Q,H,,-0.1396,0.2208,other,BA.2 full spike lentivirus,monomeric
 314,Q,K,,-1.9360,1.2810,other,BA.2 full spike lentivirus,monomeric
 314,Q,L,,-2.0030,0.6832,other,BA.2 full spike lentivirus,monomeric
-314,Q,N,,-1.8310,,other,BA.2 full spike lentivirus,monomeric
 314,Q,R,,-0.5094,0.9809,other,BA.2 full spike lentivirus,monomeric
 314,Q,T,,-1.2770,-0.0110,other,BA.2 full spike lentivirus,monomeric
 314,Q,Q,,0.0000,0.0000,other,BA.2 full spike lentivirus,monomeric
 315,T,I,,-0.6286,0.3242,other,BA.2 full spike lentivirus,monomeric
 315,T,L,,-1.4580,-0.8794,other,BA.2 full spike lentivirus,monomeric
-315,T,N,,-1.7050,-0.0209,other,BA.2 full spike lentivirus,monomeric
 315,T,S,,-6.0270,0.0995,other,BA.2 full spike lentivirus,monomeric
 315,T,T,,0.0000,0.0000,other,BA.2 full spike lentivirus,monomeric
+315,T,N,,,-0.0209,other,BA.2 full spike lentivirus,monomeric
 316,S,A,,-0.8658,,other,BA.2 full spike lentivirus,monomeric
 316,S,F,,-1.4780,-0.8385,other,BA.2 full spike lentivirus,monomeric
 316,S,G,,-1.0410,1.1770,other,BA.2 full spike lentivirus,monomeric
@@ -11025,7 +11011,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 319,R,E,,-6.6810,2.9800,other,BA.2 full spike lentivirus,monomeric
 319,R,G,,-6.7870,-0.0021,other,BA.2 full spike lentivirus,monomeric
 319,R,K,,-6.5260,,other,BA.2 full spike lentivirus,monomeric
-319,R,L,,-2.8680,,other,BA.2 full spike lentivirus,monomeric
 319,R,M,,-4.9630,1.4770,other,BA.2 full spike lentivirus,monomeric
 319,R,T,,-5.9140,,other,BA.2 full spike lentivirus,monomeric
 319,R,R,,0.0000,0.0000,other,BA.2 full spike lentivirus,monomeric
@@ -11107,12 +11092,11 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 333,T,A,,-0.8379,0.5482,RBD,BA.2 full spike lentivirus,monomeric
 333,T,F,,-2.5270,,RBD,BA.2 full spike lentivirus,monomeric
 333,T,I,,-1.7700,0.4618,RBD,BA.2 full spike lentivirus,monomeric
-333,T,K,,-1.5950,0.4154,RBD,BA.2 full spike lentivirus,monomeric
 333,T,L,,-1.6400,0.4646,RBD,BA.2 full spike lentivirus,monomeric
 333,T,P,,-1.4750,0.1466,RBD,BA.2 full spike lentivirus,monomeric
 333,T,S,,-0.3127,-0.5631,RBD,BA.2 full spike lentivirus,monomeric
-333,T,Y,,-1.9020,,RBD,BA.2 full spike lentivirus,monomeric
 333,T,T,,0.0000,0.0000,RBD,BA.2 full spike lentivirus,monomeric
+333,T,K,,,0.4154,RBD,BA.2 full spike lentivirus,monomeric
 334,N,K,,0.0848,-0.4279,RBD,BA.2 full spike lentivirus,monomeric
 334,N,S,,-0.0704,-0.6079,RBD,BA.2 full spike lentivirus,monomeric
 334,N,Y,,-1.7040,,RBD,BA.2 full spike lentivirus,monomeric
@@ -11172,7 +11156,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 342,F,Y,,-6.1780,2.8260,RBD,BA.2 full spike lentivirus,monomeric
 342,F,F,,0.0000,0.0000,RBD,BA.2 full spike lentivirus,monomeric
 343,N,D,,-4.2020,,RBD,BA.2 full spike lentivirus,monomeric
-343,N,K,,-1.0980,,RBD,BA.2 full spike lentivirus,monomeric
 343,N,S,,-0.6461,0.2959,RBD,BA.2 full spike lentivirus,monomeric
 343,N,N,,0.0000,0.0000,RBD,BA.2 full spike lentivirus,monomeric
 344,A,D,,-3.0830,,RBD,BA.2 full spike lentivirus,monomeric
@@ -11216,14 +11199,13 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 351,Y,H,,-0.6077,-0.4332,RBD,BA.2 full spike lentivirus,monomeric
 351,Y,L,,-5.4960,,RBD,BA.2 full spike lentivirus,monomeric
 351,Y,Y,,0.0000,0.0000,RBD,BA.2 full spike lentivirus,monomeric
-352,A,C,,-1.6560,0.7200,RBD,BA.2 full spike lentivirus,monomeric
 352,A,D,,-1.2890,1.3310,RBD,BA.2 full spike lentivirus,monomeric
 352,A,S,,-0.2787,-0.6334,RBD,BA.2 full spike lentivirus,monomeric
 352,A,T,,-1.9380,0.1091,RBD,BA.2 full spike lentivirus,monomeric
 352,A,V,,-5.6230,1.3190,RBD,BA.2 full spike lentivirus,monomeric
 352,A,A,,0.0000,0.0000,RBD,BA.2 full spike lentivirus,monomeric
+352,A,C,,,0.7200,RBD,BA.2 full spike lentivirus,monomeric
 353,W,F,,-1.8060,-0.8447,RBD,BA.2 full spike lentivirus,monomeric
-353,W,L,,-1.5630,,RBD,BA.2 full spike lentivirus,monomeric
 353,W,R,,-6.8350,1.6810,RBD,BA.2 full spike lentivirus,monomeric
 353,W,W,,0.0000,0.0000,RBD,BA.2 full spike lentivirus,monomeric
 354,N,D,,0.0078,0.5632,RBD,BA.2 full spike lentivirus,monomeric
@@ -11234,7 +11216,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 354,N,Y,,-3.6550,,RBD,BA.2 full spike lentivirus,monomeric
 354,N,N,,0.0000,0.0000,RBD,BA.2 full spike lentivirus,monomeric
 355,R,G,,-6.8090,2.1040,RBD,BA.2 full spike lentivirus,monomeric
-355,R,K,,-3.1140,,RBD,BA.2 full spike lentivirus,monomeric
 355,R,R,,0.0000,0.0000,RBD,BA.2 full spike lentivirus,monomeric
 356,K,E,,-2.6860,1.0010,RBD,BA.2 full spike lentivirus,monomeric
 356,K,M,,-0.0677,-0.5240,RBD,BA.2 full spike lentivirus,monomeric
@@ -11272,10 +11253,10 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 361,C,Y,,-6.2580,,RBD,BA.2 full spike lentivirus,monomeric
 361,C,C,,0.0000,0.0000,RBD,BA.2 full spike lentivirus,monomeric
 362,V,F,,-2.8770,0.4979,RBD,BA.2 full spike lentivirus,monomeric
-362,V,I,,-1.5040,-1.1800,RBD,BA.2 full spike lentivirus,monomeric
 362,V,L,,-0.6525,0.8393,RBD,BA.2 full spike lentivirus,monomeric
 362,V,M,,-1.2560,0.2193,RBD,BA.2 full spike lentivirus,monomeric
 362,V,V,,0.0000,0.0000,RBD,BA.2 full spike lentivirus,monomeric
+362,V,I,,,-1.1800,RBD,BA.2 full spike lentivirus,monomeric
 363,A,L,,-0.3009,0.5621,RBD,BA.2 full spike lentivirus,monomeric
 363,A,S,,-0.4538,-0.2102,RBD,BA.2 full spike lentivirus,monomeric
 363,A,T,,-2.2910,0.7673,RBD,BA.2 full spike lentivirus,monomeric
@@ -11289,8 +11270,8 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 365,Y,Y,,0.0000,0.0000,RBD,BA.2 full spike lentivirus,monomeric
 366,S,A,,-0.0557,0.2969,RBD,BA.2 full spike lentivirus,monomeric
 366,S,F,,-4.2830,,RBD,BA.2 full spike lentivirus,monomeric
-366,S,I,,-3.1100,1.7240,RBD,BA.2 full spike lentivirus,monomeric
 366,S,S,,0.0000,0.0000,RBD,BA.2 full spike lentivirus,monomeric
+366,S,I,,,1.7240,RBD,BA.2 full spike lentivirus,monomeric
 367,V,A,,0.0574,0.4645,RBD,BA.2 full spike lentivirus,monomeric
 367,V,F,,-0.6223,0.7709,RBD,BA.2 full spike lentivirus,monomeric
 367,V,I,,-0.2082,0.1377,RBD,BA.2 full spike lentivirus,monomeric
@@ -11508,8 +11489,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 398,D,D,,0.0000,0.0000,RBD,BA.2 full spike lentivirus,monomeric
 399,S,L,,-5.2080,,RBD,BA.2 full spike lentivirus,monomeric
 399,S,S,,0.0000,0.0000,RBD,BA.2 full spike lentivirus,monomeric
-400,F,A,,-2.0880,,RBD,BA.2 full spike lentivirus,monomeric
-400,F,E,,-1.3870,,RBD,BA.2 full spike lentivirus,monomeric
 400,F,L,,-6.7080,2.5970,RBD,BA.2 full spike lentivirus,monomeric
 400,F,S,,-2.4550,,RBD,BA.2 full spike lentivirus,monomeric
 400,F,F,,0.0000,0.0000,RBD,BA.2 full spike lentivirus,monomeric
@@ -11655,7 +11634,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 419,A,T,,-6.8450,2.6470,RBD,BA.2 full spike lentivirus,monomeric
 419,A,V,,-5.8250,0.7284,RBD,BA.2 full spike lentivirus,monomeric
 419,A,A,,0.0000,0.0000,RBD,BA.2 full spike lentivirus,monomeric
-420,D,E,,-1.2500,,RBD,BA.2 full spike lentivirus,monomeric
 420,D,I,,-3.6460,,RBD,BA.2 full spike lentivirus,monomeric
 420,D,N,,0.0271,0.0151,RBD,BA.2 full spike lentivirus,monomeric
 420,D,R,,-1.3310,0.2598,RBD,BA.2 full spike lentivirus,monomeric
@@ -11734,7 +11712,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 439,N,K,,-1.8400,1.3220,RBD,BA.2 full spike lentivirus,monomeric
 439,N,L,,-2.9460,,RBD,BA.2 full spike lentivirus,monomeric
 439,N,P,,-6.1440,,RBD,BA.2 full spike lentivirus,monomeric
-439,N,R,,-2.9680,,RBD,BA.2 full spike lentivirus,monomeric
 439,N,S,,-1.8970,-1.0860,RBD,BA.2 full spike lentivirus,monomeric
 439,N,T,,-2.0700,-0.5314,RBD,BA.2 full spike lentivirus,monomeric
 439,N,V,,-2.1800,0.1273,RBD,BA.2 full spike lentivirus,monomeric
@@ -11765,12 +11742,10 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 441,L,P,,-6.2370,2.0890,RBD,BA.2 full spike lentivirus,monomeric
 441,L,R,,-0.8095,0.2215,RBD,BA.2 full spike lentivirus,monomeric
 441,L,L,,0.0000,0.0000,RBD,BA.2 full spike lentivirus,monomeric
-442,D,G,,-3.4600,,RBD,BA.2 full spike lentivirus,monomeric
 442,D,V,,-4.6430,,RBD,BA.2 full spike lentivirus,monomeric
 442,D,Y,,-4.2180,,RBD,BA.2 full spike lentivirus,monomeric
 442,D,D,,0.0000,0.0000,RBD,BA.2 full spike lentivirus,monomeric
 443,S,A,,-0.0442,1.0560,RBD,BA.2 full spike lentivirus,monomeric
-443,S,F,,-2.4580,,RBD,BA.2 full spike lentivirus,monomeric
 443,S,N,,-3.0520,-0.6266,RBD,BA.2 full spike lentivirus,monomeric
 443,S,S,,0.0000,0.0000,RBD,BA.2 full spike lentivirus,monomeric
 444,K,E,,-0.1511,-0.6330,RBD,BA.2 full spike lentivirus,monomeric
@@ -11826,7 +11801,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 450,N,D,,0.0895,0.1491,RBD,BA.2 full spike lentivirus,monomeric
 450,N,K,,0.0398,0.3435,RBD,BA.2 full spike lentivirus,monomeric
 450,N,S,,-1.4240,,RBD,BA.2 full spike lentivirus,monomeric
-450,N,T,,-1.5050,-0.5362,RBD,BA.2 full spike lentivirus,monomeric
+450,N,T,,-1.5050,,RBD,BA.2 full spike lentivirus,monomeric
 450,N,N,,0.0000,0.0000,RBD,BA.2 full spike lentivirus,monomeric
 451,Y,H,,-0.8452,0.1294,RBD,BA.2 full spike lentivirus,monomeric
 451,Y,L,,-0.2214,-0.6548,RBD,BA.2 full spike lentivirus,monomeric
@@ -11855,7 +11830,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 453,Y,H,,-0.9623,0.5855,RBD,BA.2 full spike lentivirus,monomeric
 453,Y,R,,-0.2142,-1.9500,RBD,BA.2 full spike lentivirus,monomeric
 453,Y,Y,,0.0000,0.0000,RBD,BA.2 full spike lentivirus,monomeric
-454,R,G,,-6.5100,-0.7110,RBD,BA.2 full spike lentivirus,monomeric
+454,R,G,,-6.5100,,RBD,BA.2 full spike lentivirus,monomeric
 454,R,R,,0.0000,0.0000,RBD,BA.2 full spike lentivirus,monomeric
 455,L,F,,0.0101,0.1691,RBD,BA.2 full spike lentivirus,monomeric
 455,L,I,,0.1240,-0.9433,RBD,BA.2 full spike lentivirus,monomeric
@@ -11870,7 +11845,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 457,R,K,,-5.8690,1.6770,RBD,BA.2 full spike lentivirus,monomeric
 457,R,M,,-4.6010,,RBD,BA.2 full spike lentivirus,monomeric
 457,R,Q,,-3.8440,,RBD,BA.2 full spike lentivirus,monomeric
-457,R,S,,-3.1480,,RBD,BA.2 full spike lentivirus,monomeric
 457,R,R,,0.0000,0.0000,RBD,BA.2 full spike lentivirus,monomeric
 458,K,E,,0.1154,-0.7069,RBD,BA.2 full spike lentivirus,monomeric
 458,K,L,,-2.2460,,RBD,BA.2 full spike lentivirus,monomeric
@@ -11917,7 +11891,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 466,R,K,,-0.9630,0.8933,RBD,BA.2 full spike lentivirus,monomeric
 466,R,M,,-3.0360,-0.3587,RBD,BA.2 full spike lentivirus,monomeric
 466,R,R,,0.0000,0.0000,RBD,BA.2 full spike lentivirus,monomeric
-467,D,E,,-3.1040,,RBD,BA.2 full spike lentivirus,monomeric
 467,D,G,,-4.1490,,RBD,BA.2 full spike lentivirus,monomeric
 467,D,N,,-5.8200,1.1940,RBD,BA.2 full spike lentivirus,monomeric
 467,D,Y,,-6.4200,,RBD,BA.2 full spike lentivirus,monomeric
@@ -12035,7 +12008,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 483,V,L,,-0.2036,-0.1077,RBD,BA.2 full spike lentivirus,monomeric
 483,V,M,,-0.0663,0.0880,RBD,BA.2 full spike lentivirus,monomeric
 483,V,V,,0.0000,0.0000,RBD,BA.2 full spike lentivirus,monomeric
-484,A,C,,-5.3950,-1.4340,RBD,BA.2 full spike lentivirus,monomeric
+484,A,C,,-5.3950,,RBD,BA.2 full spike lentivirus,monomeric
 484,A,D,,-0.2904,-0.6803,RBD,BA.2 full spike lentivirus,monomeric
 484,A,E,,0.0528,0.1013,RBD,BA.2 full spike lentivirus,monomeric
 484,A,F,,-1.7160,-1.4610,RBD,BA.2 full spike lentivirus,monomeric
@@ -12070,11 +12043,9 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 487,N,K,,-0.4645,-2.2910,RBD,BA.2 full spike lentivirus,monomeric
 487,N,N,,0.0000,0.0000,RBD,BA.2 full spike lentivirus,monomeric
 488,C,R,,-6.6980,,RBD,BA.2 full spike lentivirus,monomeric
-488,C,V,,-3.0840,,RBD,BA.2 full spike lentivirus,monomeric
 488,C,W,,-5.9050,,RBD,BA.2 full spike lentivirus,monomeric
 488,C,Y,,-3.8270,,RBD,BA.2 full spike lentivirus,monomeric
 488,C,C,,0.0000,0.0000,RBD,BA.2 full spike lentivirus,monomeric
-489,Y,C,,-3.0960,,RBD,BA.2 full spike lentivirus,monomeric
 489,Y,H,,-0.4248,-0.2168,RBD,BA.2 full spike lentivirus,monomeric
 489,Y,L,,-1.0430,,RBD,BA.2 full spike lentivirus,monomeric
 489,Y,W,,-0.6484,-0.1980,RBD,BA.2 full spike lentivirus,monomeric
@@ -12089,7 +12060,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 491,P,L,,-6.6920,1.2440,RBD,BA.2 full spike lentivirus,monomeric
 491,P,S,,-6.1560,1.8650,RBD,BA.2 full spike lentivirus,monomeric
 491,P,P,,0.0000,0.0000,RBD,BA.2 full spike lentivirus,monomeric
-492,L,F,,-2.0410,,RBD,BA.2 full spike lentivirus,monomeric
 492,L,P,,-4.4410,,RBD,BA.2 full spike lentivirus,monomeric
 492,L,T,,-4.4660,1.8880,RBD,BA.2 full spike lentivirus,monomeric
 492,L,V,,-5.7670,,RBD,BA.2 full spike lentivirus,monomeric
@@ -12131,7 +12101,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 496,G,F,,-1.6980,0.7320,RBD,BA.2 full spike lentivirus,monomeric
 496,G,H,,-0.3576,-0.6524,RBD,BA.2 full spike lentivirus,monomeric
 496,G,I,,-1.1050,-0.6320,RBD,BA.2 full spike lentivirus,monomeric
-496,G,K,,-0.4800,3.7380,RBD,BA.2 full spike lentivirus,monomeric
+496,G,K,,-0.4800,,RBD,BA.2 full spike lentivirus,monomeric
 496,G,L,,-1.0210,0.0398,RBD,BA.2 full spike lentivirus,monomeric
 496,G,M,,-0.5614,-0.9747,RBD,BA.2 full spike lentivirus,monomeric
 496,G,N,,-0.1912,-0.9775,RBD,BA.2 full spike lentivirus,monomeric
@@ -12146,21 +12116,19 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 496,G,G,,0.0000,0.0000,RBD,BA.2 full spike lentivirus,monomeric
 497,F,H,,-6.5540,,RBD,BA.2 full spike lentivirus,monomeric
 497,F,S,,-5.5060,,RBD,BA.2 full spike lentivirus,monomeric
-497,F,W,,-3.0420,,RBD,BA.2 full spike lentivirus,monomeric
 497,F,F,,0.0000,0.0000,RBD,BA.2 full spike lentivirus,monomeric
 498,R,A,,-0.2320,-2.2680,RBD,BA.2 full spike lentivirus,monomeric
 498,R,C,,-4.7150,,RBD,BA.2 full spike lentivirus,monomeric
 498,R,D,,-5.8410,,RBD,BA.2 full spike lentivirus,monomeric
 498,R,E,,-0.2779,-5.5440,RBD,BA.2 full spike lentivirus,monomeric
 498,R,F,,-1.2810,-3.4960,RBD,BA.2 full spike lentivirus,monomeric
-498,R,G,,-4.3730,-1.9930,RBD,BA.2 full spike lentivirus,monomeric
+498,R,G,,-4.3730,,RBD,BA.2 full spike lentivirus,monomeric
 498,R,H,,-0.3845,-1.3890,RBD,BA.2 full spike lentivirus,monomeric
 498,R,I,,-1.3280,-4.0160,RBD,BA.2 full spike lentivirus,monomeric
 498,R,K,,-0.1160,-3.4810,RBD,BA.2 full spike lentivirus,monomeric
 498,R,L,,-1.5300,-1.5800,RBD,BA.2 full spike lentivirus,monomeric
 498,R,M,,-0.4165,,RBD,BA.2 full spike lentivirus,monomeric
 498,R,N,,-0.0766,-3.5250,RBD,BA.2 full spike lentivirus,monomeric
-498,R,P,,-2.8180,1.2620,RBD,BA.2 full spike lentivirus,monomeric
 498,R,Q,,-0.2391,-1.3500,RBD,BA.2 full spike lentivirus,monomeric
 498,R,S,,-0.1691,-4.1840,RBD,BA.2 full spike lentivirus,monomeric
 498,R,T,,-0.4968,-2.3600,RBD,BA.2 full spike lentivirus,monomeric
@@ -12168,6 +12136,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 498,R,W,,-1.4390,-1.3910,RBD,BA.2 full spike lentivirus,monomeric
 498,R,Y,,-0.4717,-2.1100,RBD,BA.2 full spike lentivirus,monomeric
 498,R,R,,0.0000,0.0000,RBD,BA.2 full spike lentivirus,monomeric
+498,R,P,,,1.2620,RBD,BA.2 full spike lentivirus,monomeric
 499,P,H,,-1.0460,0.0267,RBD,BA.2 full spike lentivirus,monomeric
 499,P,L,,-6.7010,-1.4320,RBD,BA.2 full spike lentivirus,monomeric
 499,P,Q,,-1.6100,-0.7960,RBD,BA.2 full spike lentivirus,monomeric
@@ -12206,7 +12175,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 502,G,G,,0.0000,0.0000,RBD,BA.2 full spike lentivirus,monomeric
 503,V,A,,-0.5951,-0.1789,RBD,BA.2 full spike lentivirus,monomeric
 503,V,F,,-0.2789,-0.2675,RBD,BA.2 full spike lentivirus,monomeric
-503,V,G,,-1.0920,,RBD,BA.2 full spike lentivirus,monomeric
 503,V,I,,0.1169,0.2851,RBD,BA.2 full spike lentivirus,monomeric
 503,V,L,,0.2816,0.0818,RBD,BA.2 full spike lentivirus,monomeric
 503,V,M,,-0.1857,0.3337,RBD,BA.2 full spike lentivirus,monomeric
@@ -12239,7 +12207,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 507,P,A,,-2.0670,,RBD,BA.2 full spike lentivirus,monomeric
 507,P,L,,-6.2470,,RBD,BA.2 full spike lentivirus,monomeric
 507,P,Q,,-3.5500,,RBD,BA.2 full spike lentivirus,monomeric
-507,P,S,,-6.3210,-0.9299,RBD,BA.2 full spike lentivirus,monomeric
+507,P,S,,-6.3210,,RBD,BA.2 full spike lentivirus,monomeric
 507,P,P,,0.0000,0.0000,RBD,BA.2 full spike lentivirus,monomeric
 508,Y,C,,-1.1950,1.5520,RBD,BA.2 full spike lentivirus,monomeric
 508,Y,H,,-0.4780,0.2608,RBD,BA.2 full spike lentivirus,monomeric
@@ -12247,8 +12215,8 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 509,R,G,,-6.6410,,RBD,BA.2 full spike lentivirus,monomeric
 509,R,K,,-4.0070,,RBD,BA.2 full spike lentivirus,monomeric
 509,R,M,,-6.7600,1.2690,RBD,BA.2 full spike lentivirus,monomeric
-509,R,S,,-2.9900,0.3692,RBD,BA.2 full spike lentivirus,monomeric
 509,R,R,,0.0000,0.0000,RBD,BA.2 full spike lentivirus,monomeric
+509,R,S,,,0.3692,RBD,BA.2 full spike lentivirus,monomeric
 510,V,I,,-0.6764,,RBD,BA.2 full spike lentivirus,monomeric
 510,V,L,,-6.4580,1.1630,RBD,BA.2 full spike lentivirus,monomeric
 510,V,M,,-4.2210,,RBD,BA.2 full spike lentivirus,monomeric
@@ -12282,9 +12250,9 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 517,L,F,,-0.1113,-0.5157,RBD,BA.2 full spike lentivirus,monomeric
 517,L,I,,-0.1138,-0.2223,RBD,BA.2 full spike lentivirus,monomeric
 517,L,P,,-3.4090,,RBD,BA.2 full spike lentivirus,monomeric
-517,L,T,,-1.8530,1.9990,RBD,BA.2 full spike lentivirus,monomeric
 517,L,V,,-0.5781,0.1827,RBD,BA.2 full spike lentivirus,monomeric
 517,L,L,,0.0000,0.0000,RBD,BA.2 full spike lentivirus,monomeric
+517,L,T,,,1.9990,RBD,BA.2 full spike lentivirus,monomeric
 518,L,F,,-0.4814,-0.7993,RBD,BA.2 full spike lentivirus,monomeric
 518,L,I,,-0.4044,-0.1523,RBD,BA.2 full spike lentivirus,monomeric
 518,L,P,,-1.1770,-1.8090,RBD,BA.2 full spike lentivirus,monomeric
@@ -12375,7 +12343,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 532,N,Y,,-0.0179,-0.2099,other,BA.2 full spike lentivirus,monomeric
 532,N,N,,0.0000,0.0000,other,BA.2 full spike lentivirus,monomeric
 533,L,F,,-1.2650,,other,BA.2 full spike lentivirus,monomeric
-533,L,M,,-1.7840,,other,BA.2 full spike lentivirus,monomeric
 533,L,P,,-5.7610,,other,BA.2 full spike lentivirus,monomeric
 533,L,L,,0.0000,0.0000,other,BA.2 full spike lentivirus,monomeric
 534,V,A,,-2.6380,0.7198,other,BA.2 full spike lentivirus,monomeric
@@ -12406,7 +12373,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 538,C,Y,,-5.0390,,other,BA.2 full spike lentivirus,monomeric
 538,C,C,,0.0000,0.0000,other,BA.2 full spike lentivirus,monomeric
 539,V,I,,-0.0645,-0.1351,other,BA.2 full spike lentivirus,monomeric
-539,V,L,,-1.9080,,other,BA.2 full spike lentivirus,monomeric
 539,V,M,,-3.4450,1.2900,other,BA.2 full spike lentivirus,monomeric
 539,V,V,,0.0000,0.0000,other,BA.2 full spike lentivirus,monomeric
 540,N,D,,-0.0950,0.5833,other,BA.2 full spike lentivirus,monomeric
@@ -12430,9 +12396,9 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 543,F,V,,-0.0454,-0.2613,other,BA.2 full spike lentivirus,monomeric
 543,F,F,,0.0000,0.0000,other,BA.2 full spike lentivirus,monomeric
 544,N,D,,-3.8460,,other,BA.2 full spike lentivirus,monomeric
-544,N,M,,-1.7850,-0.1951,other,BA.2 full spike lentivirus,monomeric
 544,N,S,,-0.4670,-0.4515,other,BA.2 full spike lentivirus,monomeric
 544,N,N,,0.0000,0.0000,other,BA.2 full spike lentivirus,monomeric
+544,N,M,,,-0.1951,other,BA.2 full spike lentivirus,monomeric
 545,G,E,,0.0828,,other,BA.2 full spike lentivirus,monomeric
 545,G,R,,-4.2180,1.7330,other,BA.2 full spike lentivirus,monomeric
 545,G,G,,0.0000,0.0000,other,BA.2 full spike lentivirus,monomeric
@@ -12471,7 +12437,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 549,T,T,,0.0000,0.0000,other,BA.2 full spike lentivirus,monomeric
 550,G,E,,-1.3180,,other,BA.2 full spike lentivirus,monomeric
 550,G,R,,-3.0510,0.9553,other,BA.2 full spike lentivirus,monomeric
-550,G,V,,-1.8570,,other,BA.2 full spike lentivirus,monomeric
 550,G,G,,0.0000,0.0000,other,BA.2 full spike lentivirus,monomeric
 551,V,F,,-2.1180,1.8940,other,BA.2 full spike lentivirus,monomeric
 551,V,I,,0.1309,-1.0530,other,BA.2 full spike lentivirus,monomeric
@@ -12545,8 +12510,8 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 564,Q,H,,0.0377,0.0540,other,BA.2 full spike lentivirus,monomeric
 564,Q,K,,0.2361,,other,BA.2 full spike lentivirus,monomeric
 564,Q,L,,-0.8767,0.3178,other,BA.2 full spike lentivirus,monomeric
-564,Q,R,,-1.5970,-0.3115,other,BA.2 full spike lentivirus,monomeric
 564,Q,Q,,0.0000,0.0000,other,BA.2 full spike lentivirus,monomeric
+564,Q,R,,,-0.3115,other,BA.2 full spike lentivirus,monomeric
 565,F,I,,-0.2766,,other,BA.2 full spike lentivirus,monomeric
 565,F,L,,-0.4533,0.2588,other,BA.2 full spike lentivirus,monomeric
 565,F,S,,-5.4910,,other,BA.2 full spike lentivirus,monomeric
@@ -12654,7 +12619,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 580,Q,M,,0.1529,0.3566,other,BA.2 full spike lentivirus,monomeric
 580,Q,R,,-0.3418,-0.9871,other,BA.2 full spike lentivirus,monomeric
 580,Q,Q,,0.0000,0.0000,other,BA.2 full spike lentivirus,monomeric
-581,T,I,,-3.0380,,other,BA.2 full spike lentivirus,monomeric
 581,T,S,,-1.0220,0.4452,other,BA.2 full spike lentivirus,monomeric
 581,T,T,,0.0000,0.0000,other,BA.2 full spike lentivirus,monomeric
 582,L,F,,-0.1740,-0.2836,other,BA.2 full spike lentivirus,monomeric
@@ -12677,7 +12641,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 585,L,K,,-2.8710,,other,BA.2 full spike lentivirus,monomeric
 585,L,M,,-0.9205,,other,BA.2 full spike lentivirus,monomeric
 585,L,P,,-5.2950,,other,BA.2 full spike lentivirus,monomeric
-585,L,Q,,-1.9520,,other,BA.2 full spike lentivirus,monomeric
 585,L,L,,0.0000,0.0000,other,BA.2 full spike lentivirus,monomeric
 586,D,E,,-2.3620,,other,BA.2 full spike lentivirus,monomeric
 586,D,G,,-2.6680,,other,BA.2 full spike lentivirus,monomeric
@@ -12749,13 +12712,11 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 599,T,I,,-5.9560,1.2640,other,BA.2 full spike lentivirus,monomeric
 599,T,T,,0.0000,0.0000,other,BA.2 full spike lentivirus,monomeric
 600,P,L,,-6.2900,-0.8412,other,BA.2 full spike lentivirus,monomeric
-600,P,S,,-3.2000,,other,BA.2 full spike lentivirus,monomeric
 600,P,P,,0.0000,0.0000,other,BA.2 full spike lentivirus,monomeric
 601,G,D,,-5.8680,1.2970,other,BA.2 full spike lentivirus,monomeric
 601,G,H,,-5.8410,,other,BA.2 full spike lentivirus,monomeric
 601,G,S,,-6.2960,,other,BA.2 full spike lentivirus,monomeric
 601,G,G,,0.0000,0.0000,other,BA.2 full spike lentivirus,monomeric
-602,T,A,,-2.0510,,other,BA.2 full spike lentivirus,monomeric
 602,T,I,,-6.2300,,other,BA.2 full spike lentivirus,monomeric
 602,T,L,,-2.7770,,other,BA.2 full spike lentivirus,monomeric
 602,T,T,,0.0000,0.0000,other,BA.2 full spike lentivirus,monomeric
@@ -12965,10 +12926,8 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 637,S,A,,-0.2828,,other,BA.2 full spike lentivirus,monomeric
 637,S,C,,-0.6573,-0.1586,other,BA.2 full spike lentivirus,monomeric
 637,S,F,,-3.8810,1.8420,other,BA.2 full spike lentivirus,monomeric
-637,S,G,,-1.3770,,other,BA.2 full spike lentivirus,monomeric
 637,S,N,,-6.3480,1.9800,other,BA.2 full spike lentivirus,monomeric
 637,S,S,,0.0000,0.0000,other,BA.2 full spike lentivirus,monomeric
-638,T,A,,-1.3120,,other,BA.2 full spike lentivirus,monomeric
 638,T,I,,-0.7008,0.6420,other,BA.2 full spike lentivirus,monomeric
 638,T,K,,-0.0888,0.4259,other,BA.2 full spike lentivirus,monomeric
 638,T,R,,-1.0460,1.1120,other,BA.2 full spike lentivirus,monomeric
@@ -13153,7 +13112,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 663,D,R,,-5.4210,,other,BA.2 full spike lentivirus,monomeric
 663,D,D,,0.0000,0.0000,other,BA.2 full spike lentivirus,monomeric
 664,I,F,,-4.3920,,other,BA.2 full spike lentivirus,monomeric
-664,I,K,,-3.5450,,other,BA.2 full spike lentivirus,monomeric
 664,I,L,,-4.3410,,other,BA.2 full spike lentivirus,monomeric
 664,I,V,,-2.5720,,other,BA.2 full spike lentivirus,monomeric
 664,I,I,,0.0000,0.0000,other,BA.2 full spike lentivirus,monomeric
@@ -13277,7 +13235,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 679,K,K,,0.0000,0.0000,other,BA.2 full spike lentivirus,monomeric
 680,S,A,,0.0462,0.0998,other,BA.2 full spike lentivirus,monomeric
 680,S,F,,-0.3997,0.3532,other,BA.2 full spike lentivirus,monomeric
-680,S,G,,-0.9567,0.2378,other,BA.2 full spike lentivirus,monomeric
 680,S,H,,0.0056,1.2770,other,BA.2 full spike lentivirus,monomeric
 680,S,N,,0.0296,-0.1419,other,BA.2 full spike lentivirus,monomeric
 680,S,P,,-0.9002,0.4574,other,BA.2 full spike lentivirus,monomeric
@@ -13286,6 +13243,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 680,S,W,,-0.1860,0.2842,other,BA.2 full spike lentivirus,monomeric
 680,S,Y,,0.1247,0.1465,other,BA.2 full spike lentivirus,monomeric
 680,S,S,,0.0000,0.0000,other,BA.2 full spike lentivirus,monomeric
+680,S,G,,,0.2378,other,BA.2 full spike lentivirus,monomeric
 681,H,A,,0.2197,0.3269,other,BA.2 full spike lentivirus,monomeric
 681,H,C,,-0.3587,0.1422,other,BA.2 full spike lentivirus,monomeric
 681,H,D,,0.1407,0.1631,other,BA.2 full spike lentivirus,monomeric
@@ -13393,7 +13351,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 694,A,T,,-4.1730,1.9720,S2,BA.2 full spike lentivirus,monomeric
 694,A,V,,0.0392,0.0335,S2,BA.2 full spike lentivirus,monomeric
 694,A,A,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
-695,Y,C,,-1.2920,,S2,BA.2 full spike lentivirus,monomeric
 695,Y,H,,-6.3270,,S2,BA.2 full spike lentivirus,monomeric
 695,Y,Y,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
 696,T,I,,-0.3785,-0.1603,S2,BA.2 full spike lentivirus,monomeric
@@ -13537,15 +13494,14 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 716,T,S,,-0.6939,0.2253,S2,BA.2 full spike lentivirus,monomeric
 716,T,V,,-6.0140,3.3730,S2,BA.2 full spike lentivirus,monomeric
 716,T,W,,-4.2450,,S2,BA.2 full spike lentivirus,monomeric
-716,T,Y,,-1.7540,0.4389,S2,BA.2 full spike lentivirus,monomeric
 716,T,T,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
+716,T,Y,,,0.4389,S2,BA.2 full spike lentivirus,monomeric
 717,N,D,,-3.3160,,S2,BA.2 full spike lentivirus,monomeric
 717,N,K,,-2.2520,1.1710,S2,BA.2 full spike lentivirus,monomeric
 717,N,S,,-0.8071,0.2670,S2,BA.2 full spike lentivirus,monomeric
 717,N,T,,-4.1220,,S2,BA.2 full spike lentivirus,monomeric
 717,N,N,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
 718,F,I,,-6.4650,0.6458,S2,BA.2 full spike lentivirus,monomeric
-718,F,L,,-2.7710,,S2,BA.2 full spike lentivirus,monomeric
 718,F,Y,,-3.5300,,S2,BA.2 full spike lentivirus,monomeric
 718,F,F,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
 719,T,A,,-6.4200,1.0090,S2,BA.2 full spike lentivirus,monomeric
@@ -13554,14 +13510,13 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 719,T,S,,0.0364,-0.2457,S2,BA.2 full spike lentivirus,monomeric
 719,T,T,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
 721,S,F,,-1.3020,-0.2232,S2,BA.2 full spike lentivirus,monomeric
-721,S,P,,-3.4590,,S2,BA.2 full spike lentivirus,monomeric
 721,S,Y,,-1.3380,,S2,BA.2 full spike lentivirus,monomeric
 721,S,S,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
 722,V,A,,-1.1000,,S2,BA.2 full spike lentivirus,monomeric
 722,V,D,,-3.3690,,S2,BA.2 full spike lentivirus,monomeric
 722,V,I,,-0.2379,-0.3016,S2,BA.2 full spike lentivirus,monomeric
-722,V,M,,-1.7580,-0.1414,S2,BA.2 full spike lentivirus,monomeric
 722,V,V,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
+722,V,M,,,-0.1414,S2,BA.2 full spike lentivirus,monomeric
 723,T,A,,0.0529,-0.0561,S2,BA.2 full spike lentivirus,monomeric
 723,T,I,,-1.8060,0.2568,S2,BA.2 full spike lentivirus,monomeric
 723,T,N,,0.0306,-2.0380,S2,BA.2 full spike lentivirus,monomeric
@@ -13585,7 +13540,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 728,P,S,,-0.6586,0.3973,S2,BA.2 full spike lentivirus,monomeric
 728,P,P,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
 729,V,L,,-4.1250,1.5220,S2,BA.2 full spike lentivirus,monomeric
-729,V,M,,-2.9350,,S2,BA.2 full spike lentivirus,monomeric
 729,V,V,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
 730,S,F,,-0.5920,-0.4818,S2,BA.2 full spike lentivirus,monomeric
 730,S,G,,-6.4170,0.5974,S2,BA.2 full spike lentivirus,monomeric
@@ -13594,7 +13548,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 730,S,S,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
 731,M,I,,-1.2480,1.2140,S2,BA.2 full spike lentivirus,monomeric
 731,M,L,,-0.0658,0.9901,S2,BA.2 full spike lentivirus,monomeric
-731,M,T,,-1.5730,,S2,BA.2 full spike lentivirus,monomeric
 731,M,V,,-2.4710,-0.0399,S2,BA.2 full spike lentivirus,monomeric
 731,M,M,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
 732,T,A,,-0.1910,0.1964,S2,BA.2 full spike lentivirus,monomeric
@@ -13630,7 +13583,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 737,D,Y,,-0.6497,-0.1610,S2,BA.2 full spike lentivirus,monomeric
 737,D,D,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
 738,C,R,,-4.9490,1.5620,S2,BA.2 full spike lentivirus,monomeric
-738,C,W,,-2.6810,,S2,BA.2 full spike lentivirus,monomeric
 738,C,Y,,-6.5920,1.4150,S2,BA.2 full spike lentivirus,monomeric
 738,C,C,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
 739,T,A,,-0.0508,0.8436,S2,BA.2 full spike lentivirus,monomeric
@@ -13647,14 +13599,12 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 740,M,M,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
 741,Y,F,,-0.5218,1.8700,S2,BA.2 full spike lentivirus,monomeric
 741,Y,H,,-6.6930,2.2720,S2,BA.2 full spike lentivirus,monomeric
-741,Y,V,,-3.0100,,S2,BA.2 full spike lentivirus,monomeric
 741,Y,Y,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
 742,I,L,,-1.6680,,S2,BA.2 full spike lentivirus,monomeric
 742,I,R,,-6.1860,,S2,BA.2 full spike lentivirus,monomeric
-742,I,V,,-1.7620,-0.2152,S2,BA.2 full spike lentivirus,monomeric
 742,I,I,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
+742,I,V,,,-0.2152,S2,BA.2 full spike lentivirus,monomeric
 743,C,R,,-5.9420,1.4770,S2,BA.2 full spike lentivirus,monomeric
-743,C,Y,,-3.1060,,S2,BA.2 full spike lentivirus,monomeric
 743,C,C,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
 744,G,D,,-0.7702,1.0260,S2,BA.2 full spike lentivirus,monomeric
 744,G,E,,-0.9011,1.1830,S2,BA.2 full spike lentivirus,monomeric
@@ -13667,9 +13617,9 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 745,D,N,,-6.1400,,S2,BA.2 full spike lentivirus,monomeric
 745,D,D,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
 746,S,G,,-2.2080,,S2,BA.2 full spike lentivirus,monomeric
-746,S,I,,-1.4900,-0.0110,S2,BA.2 full spike lentivirus,monomeric
 746,S,N,,-0.4473,0.0487,S2,BA.2 full spike lentivirus,monomeric
 746,S,S,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
+746,S,I,,,-0.0110,S2,BA.2 full spike lentivirus,monomeric
 747,T,A,,0.0444,-0.0781,S2,BA.2 full spike lentivirus,monomeric
 747,T,I,,0.0416,0.1948,S2,BA.2 full spike lentivirus,monomeric
 747,T,N,,0.1386,0.6520,S2,BA.2 full spike lentivirus,monomeric
@@ -13723,10 +13673,9 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 755,Q,Q,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
 756,Y,A,,-1.9380,,S2,BA.2 full spike lentivirus,monomeric
 756,Y,C,,-6.5620,,S2,BA.2 full spike lentivirus,monomeric
-756,Y,H,,-2.8210,,S2,BA.2 full spike lentivirus,monomeric
 756,Y,I,,-2.9660,,S2,BA.2 full spike lentivirus,monomeric
-756,Y,M,,-2.6860,0.1099,S2,BA.2 full spike lentivirus,monomeric
 756,Y,Y,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
+756,Y,M,,,0.1099,S2,BA.2 full spike lentivirus,monomeric
 757,G,A,,-1.3810,-0.1029,S2,BA.2 full spike lentivirus,monomeric
 757,G,D,,-0.2145,-0.2943,S2,BA.2 full spike lentivirus,monomeric
 757,G,N,,-1.5220,-0.3018,S2,BA.2 full spike lentivirus,monomeric
@@ -13744,7 +13693,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 759,F,S,,-0.2454,0.0983,S2,BA.2 full spike lentivirus,monomeric
 759,F,Y,,-0.4809,0.6468,S2,BA.2 full spike lentivirus,monomeric
 759,F,F,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
-760,C,R,,-2.5000,,S2,BA.2 full spike lentivirus,monomeric
 760,C,Y,,-6.7390,1.8660,S2,BA.2 full spike lentivirus,monomeric
 760,C,C,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
 761,T,A,,0.0562,-0.0449,S2,BA.2 full spike lentivirus,monomeric
@@ -13860,7 +13808,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 772,V,V,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
 773,E,D,,-0.5341,-0.2084,S2,BA.2 full spike lentivirus,monomeric
 773,E,K,,-6.4410,1.6430,S2,BA.2 full spike lentivirus,monomeric
-773,E,N,,-2.9390,,S2,BA.2 full spike lentivirus,monomeric
 773,E,E,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
 774,Q,H,,-6.0240,,S2,BA.2 full spike lentivirus,monomeric
 774,Q,K,,-6.1890,-0.0024,S2,BA.2 full spike lentivirus,monomeric
@@ -13871,7 +13818,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 775,D,N,,-6.5600,1.3520,S2,BA.2 full spike lentivirus,monomeric
 775,D,R,,-5.5300,0.6299,S2,BA.2 full spike lentivirus,monomeric
 775,D,D,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
-776,K,N,,-2.0170,,S2,BA.2 full spike lentivirus,monomeric
 776,K,Q,,-0.1840,0.0927,S2,BA.2 full spike lentivirus,monomeric
 776,K,R,,0.1947,0.1474,S2,BA.2 full spike lentivirus,monomeric
 776,K,K,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
@@ -13949,7 +13895,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 788,I,T,,-5.3270,1.9140,S2,BA.2 full spike lentivirus,monomeric
 788,I,V,,-0.7797,2.6190,S2,BA.2 full spike lentivirus,monomeric
 788,I,I,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
-789,Y,C,,-5.3430,-0.1068,S2,BA.2 full spike lentivirus,monomeric
+789,Y,C,,-5.3430,,S2,BA.2 full spike lentivirus,monomeric
 789,Y,H,,-0.1156,-0.1010,S2,BA.2 full spike lentivirus,monomeric
 789,Y,Q,,-6.3480,,S2,BA.2 full spike lentivirus,monomeric
 789,Y,T,,-2.0500,2.9640,S2,BA.2 full spike lentivirus,monomeric
@@ -13971,10 +13917,10 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 792,P,H,,-0.7296,-0.3777,S2,BA.2 full spike lentivirus,monomeric
 792,P,L,,-0.8735,-0.3570,S2,BA.2 full spike lentivirus,monomeric
 792,P,Q,,-0.6660,,S2,BA.2 full spike lentivirus,monomeric
-792,P,R,,-1.5560,0.1209,S2,BA.2 full spike lentivirus,monomeric
 792,P,S,,-0.5118,0.3341,S2,BA.2 full spike lentivirus,monomeric
 792,P,T,,-0.7728,0.4225,S2,BA.2 full spike lentivirus,monomeric
 792,P,P,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
+792,P,R,,,0.1209,S2,BA.2 full spike lentivirus,monomeric
 793,P,L,,-0.1985,-0.2990,S2,BA.2 full spike lentivirus,monomeric
 793,P,N,,0.0556,-0.3717,S2,BA.2 full spike lentivirus,monomeric
 793,P,Q,,0.0355,0.1134,S2,BA.2 full spike lentivirus,monomeric
@@ -13995,7 +13941,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 796,Y,A,,-0.7398,-0.1569,S2,BA.2 full spike lentivirus,monomeric
 796,Y,C,,-0.4345,0.6913,S2,BA.2 full spike lentivirus,monomeric
 796,Y,D,,0.2196,0.2091,S2,BA.2 full spike lentivirus,monomeric
-796,Y,E,,-1.9700,,S2,BA.2 full spike lentivirus,monomeric
 796,Y,F,,-0.0400,0.3051,S2,BA.2 full spike lentivirus,monomeric
 796,Y,G,,-0.1600,0.2593,S2,BA.2 full spike lentivirus,monomeric
 796,Y,H,,-0.2086,0.2969,S2,BA.2 full spike lentivirus,monomeric
@@ -14030,13 +13975,12 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 800,F,I,,-5.0100,,S2,BA.2 full spike lentivirus,monomeric
 800,F,L,,-6.5370,1.4880,S2,BA.2 full spike lentivirus,monomeric
 800,F,S,,-6.3280,,S2,BA.2 full spike lentivirus,monomeric
-800,F,V,,-1.9660,1.2170,S2,BA.2 full spike lentivirus,monomeric
 800,F,F,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
+800,F,V,,,1.2170,S2,BA.2 full spike lentivirus,monomeric
 801,N,D,,-0.2384,-0.5035,S2,BA.2 full spike lentivirus,monomeric
 801,N,I,,-4.3170,1.2700,S2,BA.2 full spike lentivirus,monomeric
 801,N,N,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
 802,F,L,,-2.7690,,S2,BA.2 full spike lentivirus,monomeric
-802,F,S,,-3.0910,,S2,BA.2 full spike lentivirus,monomeric
 802,F,F,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
 803,S,A,,-0.5061,-0.1113,S2,BA.2 full spike lentivirus,monomeric
 803,S,F,,-2.9280,0.0903,S2,BA.2 full spike lentivirus,monomeric
@@ -14056,11 +14000,9 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 805,I,L,,0.0851,0.5646,S2,BA.2 full spike lentivirus,monomeric
 805,I,M,,-0.1281,0.6904,S2,BA.2 full spike lentivirus,monomeric
 805,I,N,,-5.5040,,S2,BA.2 full spike lentivirus,monomeric
-805,I,V,,-1.3050,,S2,BA.2 full spike lentivirus,monomeric
 805,I,I,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
 806,L,I,,0.1226,,S2,BA.2 full spike lentivirus,monomeric
 806,L,M,,-0.3098,,S2,BA.2 full spike lentivirus,monomeric
-806,L,P,,-2.7230,,S2,BA.2 full spike lentivirus,monomeric
 806,L,V,,0.1591,,S2,BA.2 full spike lentivirus,monomeric
 806,L,Y,,-2.1270,,S2,BA.2 full spike lentivirus,monomeric
 806,L,L,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
@@ -14141,8 +14083,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 815,R,M,,-0.2898,-0.2835,S2,BA.2 full spike lentivirus,monomeric
 815,R,S,,-4.9500,,S2,BA.2 full spike lentivirus,monomeric
 815,R,R,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
-816,S,H,,-1.5690,,S2,BA.2 full spike lentivirus,monomeric
-816,S,S,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
 817,F,L,,0.0484,-0.0242,S2,BA.2 full spike lentivirus,monomeric
 817,F,S,,0.3102,-0.6626,S2,BA.2 full spike lentivirus,monomeric
 817,F,F,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
@@ -14167,10 +14107,10 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 822,L,P,,-4.3400,,S2,BA.2 full spike lentivirus,monomeric
 822,L,V,,-0.2472,,S2,BA.2 full spike lentivirus,monomeric
 822,L,L,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
-823,F,L,,-2.6140,1.4870,S2,BA.2 full spike lentivirus,monomeric
 823,F,S,,-4.6490,0.2199,S2,BA.2 full spike lentivirus,monomeric
 823,F,Y,,-0.0826,0.0399,S2,BA.2 full spike lentivirus,monomeric
 823,F,F,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
+823,F,L,,,1.4870,S2,BA.2 full spike lentivirus,monomeric
 824,N,D,,-0.1069,-0.2308,S2,BA.2 full spike lentivirus,monomeric
 824,N,K,,-0.8898,,S2,BA.2 full spike lentivirus,monomeric
 824,N,S,,-0.1133,-0.9550,S2,BA.2 full spike lentivirus,monomeric
@@ -14205,11 +14145,11 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 829,A,A,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
 830,D,E,,-0.5411,0.4454,S2,BA.2 full spike lentivirus,monomeric
 830,D,G,,-0.3639,0.3920,S2,BA.2 full spike lentivirus,monomeric
-830,D,H,,-2.3370,0.5899,S2,BA.2 full spike lentivirus,monomeric
 830,D,N,,-0.0459,0.4917,S2,BA.2 full spike lentivirus,monomeric
 830,D,T,,-0.5168,0.4221,S2,BA.2 full spike lentivirus,monomeric
 830,D,Y,,-0.4234,0.6675,S2,BA.2 full spike lentivirus,monomeric
 830,D,D,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
+830,D,H,,,0.5899,S2,BA.2 full spike lentivirus,monomeric
 831,A,D,,0.2329,-0.3860,S2,BA.2 full spike lentivirus,monomeric
 831,A,G,,0.2374,0.0097,S2,BA.2 full spike lentivirus,monomeric
 831,A,S,,0.1635,-0.1721,S2,BA.2 full spike lentivirus,monomeric
@@ -14315,7 +14255,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 845,A,W,,-2.0370,0.6667,S2,BA.2 full spike lentivirus,monomeric
 845,A,Y,,-0.9729,0.6363,S2,BA.2 full spike lentivirus,monomeric
 845,A,A,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
-846,A,C,,-5.9090,4.1780,S2,BA.2 full spike lentivirus,monomeric
+846,A,C,,-5.9090,,S2,BA.2 full spike lentivirus,monomeric
 846,A,D,,-4.6970,0.6284,S2,BA.2 full spike lentivirus,monomeric
 846,A,E,,-4.4310,1.0540,S2,BA.2 full spike lentivirus,monomeric
 846,A,F,,-0.4235,0.4612,S2,BA.2 full spike lentivirus,monomeric
@@ -14339,9 +14279,9 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 847,R,I,,-3.1630,1.0140,S2,BA.2 full spike lentivirus,monomeric
 847,R,K,,-0.0279,0.3370,S2,BA.2 full spike lentivirus,monomeric
 847,R,L,,-0.8593,0.9420,S2,BA.2 full spike lentivirus,monomeric
-847,R,S,,-1.5400,-0.3641,S2,BA.2 full spike lentivirus,monomeric
 847,R,T,,-2.4730,0.3212,S2,BA.2 full spike lentivirus,monomeric
 847,R,R,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
+847,R,S,,,-0.3641,S2,BA.2 full spike lentivirus,monomeric
 848,D,E,,-2.3330,0.3781,S2,BA.2 full spike lentivirus,monomeric
 848,D,N,,-5.9540,-0.0731,S2,BA.2 full spike lentivirus,monomeric
 848,D,P,,-4.3220,0.5877,S2,BA.2 full spike lentivirus,monomeric
@@ -14382,9 +14322,9 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 854,K,K,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
 855,F,L,,-0.0215,0.4582,S2,BA.2 full spike lentivirus,monomeric
 855,F,S,,-0.7404,0.2367,S2,BA.2 full spike lentivirus,monomeric
-855,F,V,,-2.4280,1.2480,S2,BA.2 full spike lentivirus,monomeric
 855,F,Y,,-2.2500,1.6810,S2,BA.2 full spike lentivirus,monomeric
 855,F,F,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
+855,F,V,,,1.2480,S2,BA.2 full spike lentivirus,monomeric
 856,N,A,,0.0317,-0.3018,S2,BA.2 full spike lentivirus,monomeric
 856,N,C,,-0.6328,0.2791,S2,BA.2 full spike lentivirus,monomeric
 856,N,D,,-3.1630,2.4370,S2,BA.2 full spike lentivirus,monomeric
@@ -14513,10 +14453,10 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 872,Q,L,,0.0427,0.4694,S2,BA.2 full spike lentivirus,monomeric
 872,Q,R,,-4.7200,-0.2802,S2,BA.2 full spike lentivirus,monomeric
 872,Q,Q,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
-873,Y,C,,-1.5260,0.7362,S2,BA.2 full spike lentivirus,monomeric
 873,Y,H,,-4.0870,,S2,BA.2 full spike lentivirus,monomeric
 873,Y,L,,-3.6060,0.6713,S2,BA.2 full spike lentivirus,monomeric
 873,Y,Y,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
+873,Y,C,,,0.7362,S2,BA.2 full spike lentivirus,monomeric
 874,T,I,,-0.0754,0.0743,S2,BA.2 full spike lentivirus,monomeric
 874,T,L,,-6.2620,,S2,BA.2 full spike lentivirus,monomeric
 874,T,N,,-3.5470,0.9047,S2,BA.2 full spike lentivirus,monomeric
@@ -14530,7 +14470,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 875,S,Q,,-4.3580,1.4620,S2,BA.2 full spike lentivirus,monomeric
 875,S,T,,-2.4660,0.3265,S2,BA.2 full spike lentivirus,monomeric
 875,S,S,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
-876,A,C,,-1.3560,,S2,BA.2 full spike lentivirus,monomeric
 876,A,L,,-4.9470,,S2,BA.2 full spike lentivirus,monomeric
 876,A,S,,0.0782,-0.8832,S2,BA.2 full spike lentivirus,monomeric
 876,A,T,,-1.9280,1.0530,S2,BA.2 full spike lentivirus,monomeric
@@ -14587,23 +14526,22 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 886,W,R,,-5.7250,0.0424,S2,BA.2 full spike lentivirus,monomeric
 886,W,Y,,-0.3277,0.0457,S2,BA.2 full spike lentivirus,monomeric
 886,W,W,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
-887,T,-,,-1.1590,0.5061,S2,BA.2 full spike lentivirus,monomeric
 887,T,A,,-2.1700,1.1400,S2,BA.2 full spike lentivirus,monomeric
 887,T,I,,-3.1190,0.0732,S2,BA.2 full spike lentivirus,monomeric
 887,T,N,,-6.5180,0.7712,S2,BA.2 full spike lentivirus,monomeric
 887,T,T,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
+887,T,-,,,0.5061,S2,BA.2 full spike lentivirus,monomeric
 888,F,-,,-0.7075,-0.0538,S2,BA.2 full spike lentivirus,monomeric
 888,F,I,,0.0791,-0.0830,S2,BA.2 full spike lentivirus,monomeric
 888,F,L,,-0.3794,0.3094,S2,BA.2 full spike lentivirus,monomeric
 888,F,Y,,0.2638,0.4705,S2,BA.2 full spike lentivirus,monomeric
 888,F,F,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
 889,G,-,,-0.8629,-0.1848,S2,BA.2 full spike lentivirus,monomeric
-889,G,E,,-2.6150,,S2,BA.2 full spike lentivirus,monomeric
 889,G,L,,-5.3960,,S2,BA.2 full spike lentivirus,monomeric
 889,G,R,,-6.0180,0.0103,S2,BA.2 full spike lentivirus,monomeric
-889,G,V,,-1.8410,0.2345,S2,BA.2 full spike lentivirus,monomeric
 889,G,W,,-3.7890,0.2501,S2,BA.2 full spike lentivirus,monomeric
 889,G,G,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
+889,G,V,,,0.2345,S2,BA.2 full spike lentivirus,monomeric
 890,A,C,,-1.7310,0.0842,S2,BA.2 full spike lentivirus,monomeric
 890,A,L,,0.0883,-0.1158,S2,BA.2 full spike lentivirus,monomeric
 890,A,S,,-0.6136,-0.0586,S2,BA.2 full spike lentivirus,monomeric
@@ -14682,7 +14620,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 906,F,S,,-3.6000,,S2,BA.2 full spike lentivirus,monomeric
 906,F,Y,,-6.8190,2.6840,S2,BA.2 full spike lentivirus,monomeric
 906,F,F,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
-907,N,D,,-1.3730,,S2,BA.2 full spike lentivirus,monomeric
 907,N,S,,0.2147,0.2358,S2,BA.2 full spike lentivirus,monomeric
 907,N,T,,0.0092,0.2756,S2,BA.2 full spike lentivirus,monomeric
 907,N,N,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
@@ -14739,7 +14676,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 920,Q,K,,-6.7440,3.3960,S2,BA.2 full spike lentivirus,monomeric
 920,Q,L,,-0.7367,-0.1019,S2,BA.2 full spike lentivirus,monomeric
 920,Q,P,,-5.9120,,S2,BA.2 full spike lentivirus,monomeric
-920,Q,R,,-2.6670,,S2,BA.2 full spike lentivirus,monomeric
 920,Q,Q,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
 921,K,E,,0.2770,-0.0078,S2,BA.2 full spike lentivirus,monomeric
 921,K,I,,-0.1182,0.2536,S2,BA.2 full spike lentivirus,monomeric
@@ -15100,7 +15036,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 970,F,L,,-3.2420,,S2,BA.2 full spike lentivirus,monomeric
 970,F,F,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
 971,G,E,,-6.0820,1.6140,S2,BA.2 full spike lentivirus,monomeric
-971,G,K,,-2.1870,,S2,BA.2 full spike lentivirus,monomeric
 971,G,Q,,-4.8710,,S2,BA.2 full spike lentivirus,monomeric
 971,G,R,,-3.6110,0.9351,S2,BA.2 full spike lentivirus,monomeric
 971,G,V,,-5.7990,2.8120,S2,BA.2 full spike lentivirus,monomeric
@@ -15133,7 +15068,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 978,N,S,,-0.1816,0.3652,S2,BA.2 full spike lentivirus,monomeric
 978,N,N,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
 979,D,E,,0.2297,-0.7647,S2,BA.2 full spike lentivirus,monomeric
-979,D,G,,-6.1200,-0.0676,S2,BA.2 full spike lentivirus,monomeric
+979,D,G,,-6.1200,,S2,BA.2 full spike lentivirus,monomeric
 979,D,H,,-3.1410,2.1290,S2,BA.2 full spike lentivirus,monomeric
 979,D,N,,-4.3700,,S2,BA.2 full spike lentivirus,monomeric
 979,D,V,,-0.4892,-0.2229,S2,BA.2 full spike lentivirus,monomeric
@@ -15221,10 +15156,10 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 993,I,S,,-6.6300,,S2,BA.2 full spike lentivirus,monomeric
 993,I,V,,-0.1600,1.2280,S2,BA.2 full spike lentivirus,monomeric
 993,I,I,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
-994,D,E,,-3.1220,-0.9591,S2,BA.2 full spike lentivirus,monomeric
 994,D,G,,-4.2590,-0.3249,S2,BA.2 full spike lentivirus,monomeric
 994,D,N,,-5.9390,-1.8070,S2,BA.2 full spike lentivirus,monomeric
 994,D,D,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
+994,D,E,,,-0.9591,S2,BA.2 full spike lentivirus,monomeric
 995,R,G,,-6.5240,2.7550,S2,BA.2 full spike lentivirus,monomeric
 995,R,H,,-5.1070,-0.4334,S2,BA.2 full spike lentivirus,monomeric
 995,R,K,,-4.1150,-0.8098,S2,BA.2 full spike lentivirus,monomeric
@@ -15277,7 +15212,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 1006,T,S,,-0.0301,-0.6649,S2,BA.2 full spike lentivirus,monomeric
 1006,T,V,,-0.6885,0.0965,S2,BA.2 full spike lentivirus,monomeric
 1006,T,T,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
-1007,Y,C,,-5.1450,-1.6220,S2,BA.2 full spike lentivirus,monomeric
+1007,Y,C,,-5.1450,,S2,BA.2 full spike lentivirus,monomeric
 1007,Y,H,,-6.0540,3.7720,S2,BA.2 full spike lentivirus,monomeric
 1007,Y,Y,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
 1008,V,A,,-0.9387,-0.0112,S2,BA.2 full spike lentivirus,monomeric
@@ -15327,7 +15262,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 1016,A,V,,-0.1851,-0.1959,S2,BA.2 full spike lentivirus,monomeric
 1016,A,A,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
 1017,E,D,,0.1301,-0.1515,S2,BA.2 full spike lentivirus,monomeric
-1017,E,G,,-0.1725,2.8710,S2,BA.2 full spike lentivirus,monomeric
+1017,E,G,,-0.1725,,S2,BA.2 full spike lentivirus,monomeric
 1017,E,K,,-0.1480,0.0848,S2,BA.2 full spike lentivirus,monomeric
 1017,E,E,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
 1018,I,F,,-2.8480,1.2400,S2,BA.2 full spike lentivirus,monomeric
@@ -15459,7 +15394,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 1035,G,D,,-6.3270,3.2700,S2,BA.2 full spike lentivirus,monomeric
 1035,G,E,,-4.9640,,S2,BA.2 full spike lentivirus,monomeric
 1035,G,R,,-6.8540,3.1000,S2,BA.2 full spike lentivirus,monomeric
-1035,G,V,,-6.6330,4.2000,S2,BA.2 full spike lentivirus,monomeric
+1035,G,V,,-6.6330,,S2,BA.2 full spike lentivirus,monomeric
 1035,G,W,,-6.1570,,S2,BA.2 full spike lentivirus,monomeric
 1035,G,G,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
 1036,Q,N,,-5.0650,1.6540,S2,BA.2 full spike lentivirus,monomeric
@@ -15505,7 +15440,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 1043,C,C,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
 1044,G,D,,-6.5020,0.4447,S2,BA.2 full spike lentivirus,monomeric
 1044,G,E,,-6.5640,1.5420,S2,BA.2 full spike lentivirus,monomeric
-1044,G,S,,-2.5810,,S2,BA.2 full spike lentivirus,monomeric
 1044,G,W,,-6.6020,1.4880,S2,BA.2 full spike lentivirus,monomeric
 1044,G,G,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
 1045,K,E,,-0.8397,0.6963,S2,BA.2 full spike lentivirus,monomeric
@@ -15527,9 +15461,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 1048,H,S,,-6.7050,1.1410,S2,BA.2 full spike lentivirus,monomeric
 1048,H,Y,,-6.7710,0.2758,S2,BA.2 full spike lentivirus,monomeric
 1048,H,H,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
-1049,L,F,,-3.3480,,S2,BA.2 full spike lentivirus,monomeric
 1049,L,I,,-1.2030,0.1291,S2,BA.2 full spike lentivirus,monomeric
-1049,L,M,,-2.9830,,S2,BA.2 full spike lentivirus,monomeric
 1049,L,P,,-5.8280,2.1190,S2,BA.2 full spike lentivirus,monomeric
 1049,L,S,,-5.5110,1.5930,S2,BA.2 full spike lentivirus,monomeric
 1049,L,V,,-6.7280,1.2370,S2,BA.2 full spike lentivirus,monomeric
@@ -15580,9 +15512,9 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 1058,H,H,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
 1059,G,E,,-6.3760,0.3385,S2,BA.2 full spike lentivirus,monomeric
 1059,G,L,,-6.0760,2.3590,S2,BA.2 full spike lentivirus,monomeric
-1059,G,R,,-3.3740,-1.7660,S2,BA.2 full spike lentivirus,monomeric
 1059,G,W,,-6.7670,4.3810,S2,BA.2 full spike lentivirus,monomeric
 1059,G,G,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
+1059,G,R,,,-1.7660,S2,BA.2 full spike lentivirus,monomeric
 1060,V,A,,-0.8251,0.1278,S2,BA.2 full spike lentivirus,monomeric
 1060,V,C,,-0.3768,-0.0181,S2,BA.2 full spike lentivirus,monomeric
 1060,V,I,,-0.2109,0.1823,S2,BA.2 full spike lentivirus,monomeric
@@ -15970,7 +15902,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 1118,D,A,,-0.1129,0.2860,S2,BA.2 full spike lentivirus,monomeric
 1118,D,C,,-1.0340,0.5138,S2,BA.2 full spike lentivirus,monomeric
 1118,D,E,,0.1284,0.0727,S2,BA.2 full spike lentivirus,monomeric
-1118,D,F,,-2.4410,0.9267,S2,BA.2 full spike lentivirus,monomeric
 1118,D,G,,0.0457,0.1627,S2,BA.2 full spike lentivirus,monomeric
 1118,D,H,,0.0137,0.0609,S2,BA.2 full spike lentivirus,monomeric
 1118,D,I,,-0.1897,0.2054,S2,BA.2 full spike lentivirus,monomeric
@@ -15987,6 +15918,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 1118,D,W,,-0.2381,0.5276,S2,BA.2 full spike lentivirus,monomeric
 1118,D,Y,,0.0245,0.1450,S2,BA.2 full spike lentivirus,monomeric
 1118,D,D,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
+1118,D,F,,,0.9267,S2,BA.2 full spike lentivirus,monomeric
 1119,N,D,,-1.1620,,S2,BA.2 full spike lentivirus,monomeric
 1119,N,I,,-1.8720,,S2,BA.2 full spike lentivirus,monomeric
 1119,N,K,,-0.5343,,S2,BA.2 full spike lentivirus,monomeric
@@ -15998,7 +15930,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 1120,T,T,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
 1121,F,I,,-2.5390,,S2,BA.2 full spike lentivirus,monomeric
 1121,F,L,,-1.2130,1.3130,S2,BA.2 full spike lentivirus,monomeric
-1121,F,V,,-1.1890,,S2,BA.2 full spike lentivirus,monomeric
 1121,F,Y,,0.2164,,S2,BA.2 full spike lentivirus,monomeric
 1121,F,F,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
 1122,V,L,,-0.4973,0.1950,S2,BA.2 full spike lentivirus,monomeric
@@ -16006,7 +15937,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 1122,V,V,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
 1123,S,A,,0.1920,0.1451,S2,BA.2 full spike lentivirus,monomeric
 1123,S,F,,-3.4470,,S2,BA.2 full spike lentivirus,monomeric
-1123,S,Y,,-4.6720,-0.0856,S2,BA.2 full spike lentivirus,monomeric
+1123,S,Y,,-4.6720,,S2,BA.2 full spike lentivirus,monomeric
 1123,S,S,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
 1124,G,A,,-0.5605,0.9033,S2,BA.2 full spike lentivirus,monomeric
 1124,G,C,,-1.4500,0.7537,S2,BA.2 full spike lentivirus,monomeric
@@ -16051,10 +15982,10 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 1130,I,I,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
 1131,G,A,,-1.7070,0.2244,S2,BA.2 full spike lentivirus,monomeric
 1131,G,D,,-0.5850,0.4322,S2,BA.2 full spike lentivirus,monomeric
-1131,G,E,,-1.2320,-0.0452,S2,BA.2 full spike lentivirus,monomeric
 1131,G,R,,-4.3750,,S2,BA.2 full spike lentivirus,monomeric
 1131,G,S,,-1.1900,0.1557,S2,BA.2 full spike lentivirus,monomeric
 1131,G,G,,0.0000,0.0000,S2,BA.2 full spike lentivirus,monomeric
+1131,G,E,,,-0.0452,S2,BA.2 full spike lentivirus,monomeric
 1132,I,L,,-1.9300,0.2948,S2,BA.2 full spike lentivirus,monomeric
 1132,I,N,,-3.4120,,S2,BA.2 full spike lentivirus,monomeric
 1132,I,T,,-1.7060,0.3957,S2,BA.2 full spike lentivirus,monomeric
@@ -16554,7 +16485,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 1211,K,R,,-0.0261,,other,BA.2 full spike lentivirus,monomeric
 1211,K,K,,0.0000,0.0000,other,BA.2 full spike lentivirus,monomeric
 1212,W,C,,-3.9860,0.8990,other,BA.2 full spike lentivirus,monomeric
-1212,W,R,,-1.2400,,other,BA.2 full spike lentivirus,monomeric
 1212,W,W,,0.0000,0.0000,other,BA.2 full spike lentivirus,monomeric
 1213,P,L,,-4.5960,,other,BA.2 full spike lentivirus,monomeric
 1213,P,Q,,-2.2920,-0.8141,other,BA.2 full spike lentivirus,monomeric
@@ -16940,7 +16870,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 336,C,H,,-7.3360,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 336,C,I,,-6.5460,3.4680,RBD,XBB.1.5 RBD pseudovirus,monomeric
 336,C,K,,-6.8860,1.6120,RBD,XBB.1.5 RBD pseudovirus,monomeric
-336,C,L,,-3.4760,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 336,C,M,,-7.0280,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 336,C,N,,-6.9680,4.7770,RBD,XBB.1.5 RBD pseudovirus,monomeric
 336,C,P,,-4.3190,,RBD,XBB.1.5 RBD pseudovirus,monomeric
@@ -16986,8 +16915,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 338,F,N,,-6.5830,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 338,F,P,,-3.8880,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 338,F,Q,,-6.3650,,RBD,XBB.1.5 RBD pseudovirus,monomeric
-338,F,R,,-3.5320,,RBD,XBB.1.5 RBD pseudovirus,monomeric
-338,F,S,,-2.5170,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 338,F,T,,-0.7985,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 339,H,A,,0.0071,0.1184,RBD,XBB.1.5 RBD pseudovirus,monomeric
 339,H,C,,-0.2793,0.2394,RBD,XBB.1.5 RBD pseudovirus,monomeric
@@ -17060,7 +16987,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 342,F,Y,,-1.0460,0.0918,RBD,XBB.1.5 RBD pseudovirus,monomeric
 342,F,F,,0.0000,0.0000,RBD,XBB.1.5 RBD pseudovirus,monomeric
 342,F,-,,-7.0100,3.2360,RBD,XBB.1.5 RBD pseudovirus,monomeric
-342,F,D,,-1.8730,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 342,F,E,,-4.5790,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 342,F,G,,-2.6890,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 342,F,K,,-6.1030,,RBD,XBB.1.5 RBD pseudovirus,monomeric
@@ -17207,7 +17133,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 349,S,Q,,-0.4118,0.8087,RBD,XBB.1.5 RBD pseudovirus,monomeric
 349,S,R,,-1.5400,-0.3559,RBD,XBB.1.5 RBD pseudovirus,monomeric
 349,S,T,,-0.7675,0.3535,RBD,XBB.1.5 RBD pseudovirus,monomeric
-349,S,V,,-4.1850,0.6226,RBD,XBB.1.5 RBD pseudovirus,monomeric
+349,S,V,,-4.1850,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 349,S,Y,,-5.9730,2.4960,RBD,XBB.1.5 RBD pseudovirus,monomeric
 349,S,S,,0.0000,0.0000,RBD,XBB.1.5 RBD pseudovirus,monomeric
 349,S,K,,-1.9630,0.6563,RBD,XBB.1.5 RBD pseudovirus,monomeric
@@ -17278,7 +17204,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 353,W,A,,-1.8900,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 353,W,C,,-6.5390,3.1980,RBD,XBB.1.5 RBD pseudovirus,monomeric
 353,W,E,,-5.8160,,RBD,XBB.1.5 RBD pseudovirus,monomeric
-353,W,G,,-2.4690,2.3220,RBD,XBB.1.5 RBD pseudovirus,monomeric
 353,W,I,,-5.6220,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 353,W,K,,-7.3370,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 353,W,L,,-6.7840,2.4870,RBD,XBB.1.5 RBD pseudovirus,monomeric
@@ -17289,6 +17214,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 353,W,S,,-5.4280,1.3860,RBD,XBB.1.5 RBD pseudovirus,monomeric
 353,W,T,,-6.3390,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 353,W,V,,-5.5530,,RBD,XBB.1.5 RBD pseudovirus,monomeric
+353,W,G,,,2.3220,RBD,XBB.1.5 RBD pseudovirus,monomeric
 354,N,A,,-0.0210,-0.2530,RBD,XBB.1.5 RBD pseudovirus,monomeric
 354,N,C,,-0.3167,0.1434,RBD,XBB.1.5 RBD pseudovirus,monomeric
 354,N,D,,0.0044,0.0834,RBD,XBB.1.5 RBD pseudovirus,monomeric
@@ -17347,7 +17273,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 356,K,K,,0.0000,0.0000,RBD,XBB.1.5 RBD pseudovirus,monomeric
 356,K,G,,-0.1692,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 356,K,H,,-0.0025,-1.3560,RBD,XBB.1.5 RBD pseudovirus,monomeric
-356,K,P,,-2.5820,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 357,R,C,,-0.0597,-0.1351,RBD,XBB.1.5 RBD pseudovirus,monomeric
 357,R,D,,-0.3584,-0.5164,RBD,XBB.1.5 RBD pseudovirus,monomeric
 357,R,E,,-0.0974,-0.6741,RBD,XBB.1.5 RBD pseudovirus,monomeric
@@ -17433,7 +17358,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 361,C,W,,-6.4160,2.4550,RBD,XBB.1.5 RBD pseudovirus,monomeric
 361,C,Y,,-7.2820,3.8090,RBD,XBB.1.5 RBD pseudovirus,monomeric
 361,C,C,,0.0000,0.0000,RBD,XBB.1.5 RBD pseudovirus,monomeric
-361,C,A,,-2.6520,2.5030,RBD,XBB.1.5 RBD pseudovirus,monomeric
 361,C,D,,-7.3510,3.1580,RBD,XBB.1.5 RBD pseudovirus,monomeric
 361,C,E,,-7.2570,2.8910,RBD,XBB.1.5 RBD pseudovirus,monomeric
 361,C,F,,-6.9170,2.4580,RBD,XBB.1.5 RBD pseudovirus,monomeric
@@ -17448,6 +17372,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 361,C,R,,-7.0790,1.3100,RBD,XBB.1.5 RBD pseudovirus,monomeric
 361,C,S,,-7.0930,1.5040,RBD,XBB.1.5 RBD pseudovirus,monomeric
 361,C,V,,-7.2230,3.1560,RBD,XBB.1.5 RBD pseudovirus,monomeric
+361,C,A,,,2.5030,RBD,XBB.1.5 RBD pseudovirus,monomeric
 362,V,A,,-0.7228,1.1380,RBD,XBB.1.5 RBD pseudovirus,monomeric
 362,V,C,,-0.5896,0.8895,RBD,XBB.1.5 RBD pseudovirus,monomeric
 362,V,E,,-0.6661,1.4670,RBD,XBB.1.5 RBD pseudovirus,monomeric
@@ -18013,7 +17938,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 390,L,L,,0.0000,0.0000,RBD,XBB.1.5 RBD pseudovirus,monomeric
 390,L,A,,-5.9180,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 390,L,D,,-6.6720,,RBD,XBB.1.5 RBD pseudovirus,monomeric
-390,L,E,,-5.4360,4.5790,RBD,XBB.1.5 RBD pseudovirus,monomeric
+390,L,E,,-5.4360,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 390,L,F,,-4.5540,1.3730,RBD,XBB.1.5 RBD pseudovirus,monomeric
 390,L,G,,-2.7180,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 390,L,H,,-2.8370,2.0040,RBD,XBB.1.5 RBD pseudovirus,monomeric
@@ -18254,7 +18179,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 402,I,D,,-2.7670,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 402,I,E,,-7.0780,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 402,I,F,,-6.9490,2.8230,RBD,XBB.1.5 RBD pseudovirus,monomeric
-402,I,G,,-2.3990,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 402,I,H,,-3.6530,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 402,I,K,,-7.2580,3.3330,RBD,XBB.1.5 RBD pseudovirus,monomeric
 402,I,N,,-7.1170,4.8770,RBD,XBB.1.5 RBD pseudovirus,monomeric
@@ -18459,10 +18383,8 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 412,P,I,,-2.0820,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 412,P,K,,-2.0870,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 412,P,M,,-3.4400,1.2840,RBD,XBB.1.5 RBD pseudovirus,monomeric
-412,P,N,,-3.5750,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 412,P,S,,-2.9970,1.6630,RBD,XBB.1.5 RBD pseudovirus,monomeric
 412,P,W,,-6.8160,,RBD,XBB.1.5 RBD pseudovirus,monomeric
-412,P,Y,,-3.0650,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 413,G,A,,-0.0480,0.0738,RBD,XBB.1.5 RBD pseudovirus,monomeric
 413,G,C,,-0.1190,0.3467,RBD,XBB.1.5 RBD pseudovirus,monomeric
 413,G,D,,-0.1572,0.0728,RBD,XBB.1.5 RBD pseudovirus,monomeric
@@ -18842,7 +18764,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 432,C,L,,-3.3940,2.4960,RBD,XBB.1.5 RBD pseudovirus,monomeric
 432,C,C,,0.0000,0.0000,RBD,XBB.1.5 RBD pseudovirus,monomeric
 432,C,A,,-4.1880,,RBD,XBB.1.5 RBD pseudovirus,monomeric
-432,C,D,,-2.1880,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 432,C,F,,-6.3610,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 432,C,G,,-5.8960,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 432,C,H,,-5.4780,,RBD,XBB.1.5 RBD pseudovirus,monomeric
@@ -18850,7 +18771,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 432,C,P,,-5.7740,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 432,C,Q,,-0.4766,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 432,C,R,,-7.1790,,RBD,XBB.1.5 RBD pseudovirus,monomeric
-432,C,S,,-3.5120,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 432,C,V,,-2.1880,3.1470,RBD,XBB.1.5 RBD pseudovirus,monomeric
 432,C,W,,-5.7120,1.9980,RBD,XBB.1.5 RBD pseudovirus,monomeric
 432,C,Y,,-6.3370,,RBD,XBB.1.5 RBD pseudovirus,monomeric
@@ -18913,7 +18833,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 436,W,Y,,-0.0444,0.3141,RBD,XBB.1.5 RBD pseudovirus,monomeric
 436,W,W,,0.0000,0.0000,RBD,XBB.1.5 RBD pseudovirus,monomeric
 436,W,-,,0.0108,,RBD,XBB.1.5 RBD pseudovirus,monomeric
-436,W,D,,-3.0620,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 436,W,E,,-3.2590,2.5960,RBD,XBB.1.5 RBD pseudovirus,monomeric
 436,W,G,,-0.7798,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 436,W,H,,-0.5724,1.3700,RBD,XBB.1.5 RBD pseudovirus,monomeric
@@ -19023,7 +18942,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 442,D,K,,-4.2200,3.1980,RBD,XBB.1.5 RBD pseudovirus,monomeric
 442,D,N,,-2.1790,-0.4246,RBD,XBB.1.5 RBD pseudovirus,monomeric
 442,D,S,,-3.5520,-0.9556,RBD,XBB.1.5 RBD pseudovirus,monomeric
-442,D,T,,-2.5040,3.7930,RBD,XBB.1.5 RBD pseudovirus,monomeric
+442,D,T,,-2.5040,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 442,D,V,,-2.4840,0.0947,RBD,XBB.1.5 RBD pseudovirus,monomeric
 442,D,Y,,-2.4070,8.2370,RBD,XBB.1.5 RBD pseudovirus,monomeric
 442,D,D,,0.0000,0.0000,RBD,XBB.1.5 RBD pseudovirus,monomeric
@@ -19405,7 +19324,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 461,L,L,,0.0000,0.0000,RBD,XBB.1.5 RBD pseudovirus,monomeric
 461,L,A,,-1.6670,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 461,L,C,,-3.0680,-0.4056,RBD,XBB.1.5 RBD pseudovirus,monomeric
-461,L,D,,-3.6500,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 461,L,E,,-6.3640,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 461,L,G,,-0.7443,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 461,L,K,,-6.9620,3.0500,RBD,XBB.1.5 RBD pseudovirus,monomeric
@@ -19850,7 +19768,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 484,A,-,,0.0021,-0.1572,RBD,XBB.1.5 RBD pseudovirus,monomeric
 484,A,C,,-0.3972,-0.1365,RBD,XBB.1.5 RBD pseudovirus,monomeric
 484,A,D,,-0.0244,-0.4874,RBD,XBB.1.5 RBD pseudovirus,monomeric
-484,A,E,,-1.2140,0.8476,RBD,XBB.1.5 RBD pseudovirus,monomeric
+484,A,E,,,0.8476,RBD,XBB.1.5 RBD pseudovirus,monomeric
 484,A,F,,-0.0763,-0.7535,RBD,XBB.1.5 RBD pseudovirus,monomeric
 484,A,G,,-0.0532,-0.2049,RBD,XBB.1.5 RBD pseudovirus,monomeric
 484,A,H,,-0.0308,-0.5820,RBD,XBB.1.5 RBD pseudovirus,monomeric
@@ -19967,9 +19885,9 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 489,Y,C,,-5.9150,3.3880,RBD,XBB.1.5 RBD pseudovirus,monomeric
 489,Y,G,,-1.6470,1.8330,RBD,XBB.1.5 RBD pseudovirus,monomeric
 489,Y,K,,-1.2330,2.0040,RBD,XBB.1.5 RBD pseudovirus,monomeric
-489,Y,R,,-1.2780,2.1110,RBD,XBB.1.5 RBD pseudovirus,monomeric
 489,Y,S,,-7.3010,3.4630,RBD,XBB.1.5 RBD pseudovirus,monomeric
 489,Y,T,,-7.1140,3.2310,RBD,XBB.1.5 RBD pseudovirus,monomeric
+489,Y,R,,,2.1110,RBD,XBB.1.5 RBD pseudovirus,monomeric
 490,F,A,,0.0020,0.1957,RBD,XBB.1.5 RBD pseudovirus,monomeric
 490,F,C,,-0.1655,-0.0210,RBD,XBB.1.5 RBD pseudovirus,monomeric
 490,F,D,,-0.0790,-0.1100,RBD,XBB.1.5 RBD pseudovirus,monomeric
@@ -20007,7 +19925,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 491,P,T,,-0.1182,-1.2160,RBD,XBB.1.5 RBD pseudovirus,monomeric
 491,P,V,,-0.8218,-0.3745,RBD,XBB.1.5 RBD pseudovirus,monomeric
 491,P,W,,-1.2880,-0.0998,RBD,XBB.1.5 RBD pseudovirus,monomeric
-491,P,Y,,-1.2800,1.7670,RBD,XBB.1.5 RBD pseudovirus,monomeric
+491,P,Y,,-1.2800,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 491,P,P,,0.0000,0.0000,RBD,XBB.1.5 RBD pseudovirus,monomeric
 491,P,C,,-2.6350,0.3283,RBD,XBB.1.5 RBD pseudovirus,monomeric
 492,L,C,,-2.7400,1.3640,RBD,XBB.1.5 RBD pseudovirus,monomeric
@@ -20108,7 +20026,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 496,G,W,,-0.1174,-1.5500,RBD,XBB.1.5 RBD pseudovirus,monomeric
 496,G,Y,,-0.0241,-1.5150,RBD,XBB.1.5 RBD pseudovirus,monomeric
 496,G,G,,0.0000,0.0000,RBD,XBB.1.5 RBD pseudovirus,monomeric
-497,F,I,,-4.0320,4.8870,RBD,XBB.1.5 RBD pseudovirus,monomeric
+497,F,I,,-4.0320,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 497,F,M,,-2.0740,3.4010,RBD,XBB.1.5 RBD pseudovirus,monomeric
 497,F,W,,-0.2668,-0.1726,RBD,XBB.1.5 RBD pseudovirus,monomeric
 497,F,Y,,-0.8871,0.0720,RBD,XBB.1.5 RBD pseudovirus,monomeric
@@ -20117,7 +20035,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 497,F,C,,-6.5720,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 497,F,D,,-6.1940,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 497,F,E,,-6.4580,,RBD,XBB.1.5 RBD pseudovirus,monomeric
-497,F,G,,-1.8670,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 497,F,H,,-0.9160,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 497,F,K,,-6.9690,2.8200,RBD,XBB.1.5 RBD pseudovirus,monomeric
 497,F,L,,-3.1430,,RBD,XBB.1.5 RBD pseudovirus,monomeric
@@ -20303,10 +20220,8 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 507,P,A,,-0.0589,-0.5935,RBD,XBB.1.5 RBD pseudovirus,monomeric
 507,P,P,,0.0000,0.0000,RBD,XBB.1.5 RBD pseudovirus,monomeric
 507,P,C,,-1.0320,,RBD,XBB.1.5 RBD pseudovirus,monomeric
-507,P,D,,-3.3140,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 507,P,E,,-6.2550,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 507,P,F,,-5.5770,,RBD,XBB.1.5 RBD pseudovirus,monomeric
-507,P,G,,-2.9970,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 507,P,H,,-7.1560,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 507,P,I,,-2.4000,1.5580,RBD,XBB.1.5 RBD pseudovirus,monomeric
 507,P,K,,-7.2000,,RBD,XBB.1.5 RBD pseudovirus,monomeric
@@ -20332,7 +20247,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 509,R,A,,-3.4790,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 509,R,C,,-3.3570,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 509,R,D,,-6.8620,,RBD,XBB.1.5 RBD pseudovirus,monomeric
-509,R,E,,-3.5670,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 509,R,F,,-2.1150,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 509,R,G,,-6.6450,2.6230,RBD,XBB.1.5 RBD pseudovirus,monomeric
 509,R,I,,-5.6450,,RBD,XBB.1.5 RBD pseudovirus,monomeric
@@ -20344,6 +20258,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 509,R,V,,-7.1520,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 509,R,W,,-6.9600,1.7210,RBD,XBB.1.5 RBD pseudovirus,monomeric
 509,R,Y,,-6.7900,,RBD,XBB.1.5 RBD pseudovirus,monomeric
+509,R,E,,,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 510,V,A,,-0.7327,2.4260,RBD,XBB.1.5 RBD pseudovirus,monomeric
 510,V,C,,-0.1460,0.3348,RBD,XBB.1.5 RBD pseudovirus,monomeric
 510,V,E,,-6.9920,4.6670,RBD,XBB.1.5 RBD pseudovirus,monomeric
@@ -20356,7 +20271,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 510,V,D,,-6.3830,3.0130,RBD,XBB.1.5 RBD pseudovirus,monomeric
 510,V,G,,-7.1310,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 510,V,K,,-5.7620,3.8380,RBD,XBB.1.5 RBD pseudovirus,monomeric
-510,V,N,,-2.7510,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 510,V,P,,-6.8790,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 510,V,Q,,-7.4270,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 510,V,R,,-5.8590,1.2360,RBD,XBB.1.5 RBD pseudovirus,monomeric
@@ -20391,11 +20305,9 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 512,V,E,,-7.1240,1.7320,RBD,XBB.1.5 RBD pseudovirus,monomeric
 512,V,F,,-5.2530,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 512,V,G,,-6.6280,,RBD,XBB.1.5 RBD pseudovirus,monomeric
-512,V,H,,-3.3110,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 512,V,K,,-6.5930,3.1790,RBD,XBB.1.5 RBD pseudovirus,monomeric
 512,V,L,,-5.7090,1.6630,RBD,XBB.1.5 RBD pseudovirus,monomeric
 512,V,M,,-7.0310,3.0890,RBD,XBB.1.5 RBD pseudovirus,monomeric
-512,V,N,,-3.1560,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 512,V,Q,,-6.5960,3.1800,RBD,XBB.1.5 RBD pseudovirus,monomeric
 512,V,R,,-5.5340,3.3170,RBD,XBB.1.5 RBD pseudovirus,monomeric
 512,V,W,,-7.1010,4.3400,RBD,XBB.1.5 RBD pseudovirus,monomeric
@@ -20414,13 +20326,13 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 513,L,Y,,-1.7500,1.8710,RBD,XBB.1.5 RBD pseudovirus,monomeric
 513,L,L,,0.0000,0.0000,RBD,XBB.1.5 RBD pseudovirus,monomeric
 513,L,-,,-6.2180,,RBD,XBB.1.5 RBD pseudovirus,monomeric
-513,L,A,,-1.3030,0.2103,RBD,XBB.1.5 RBD pseudovirus,monomeric
 513,L,D,,-5.5290,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 513,L,E,,-7.2620,2.9390,RBD,XBB.1.5 RBD pseudovirus,monomeric
 513,L,G,,-7.4150,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 513,L,H,,-5.0070,1.8590,RBD,XBB.1.5 RBD pseudovirus,monomeric
 513,L,N,,-5.0270,1.6710,RBD,XBB.1.5 RBD pseudovirus,monomeric
 513,L,T,,-1.1310,,RBD,XBB.1.5 RBD pseudovirus,monomeric
+513,L,A,,,0.2103,RBD,XBB.1.5 RBD pseudovirus,monomeric
 514,S,A,,-0.0706,-0.4868,RBD,XBB.1.5 RBD pseudovirus,monomeric
 514,S,C,,-0.1965,0.1084,RBD,XBB.1.5 RBD pseudovirus,monomeric
 514,S,D,,-0.2220,-0.1315,RBD,XBB.1.5 RBD pseudovirus,monomeric
@@ -20626,7 +20538,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 524,V,M,,-2.1470,2.5930,RBD,XBB.1.5 RBD pseudovirus,monomeric
 524,V,V,,0.0000,0.0000,RBD,XBB.1.5 RBD pseudovirus,monomeric
 524,V,A,,-1.1130,,RBD,XBB.1.5 RBD pseudovirus,monomeric
-524,V,C,,-1.4730,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 524,V,D,,-6.7040,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 524,V,G,,-4.5300,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 524,V,H,,-4.0350,,RBD,XBB.1.5 RBD pseudovirus,monomeric
@@ -20641,7 +20552,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 525,C,W,,-6.6460,2.8360,RBD,XBB.1.5 RBD pseudovirus,monomeric
 525,C,Y,,-7.1070,4.9430,RBD,XBB.1.5 RBD pseudovirus,monomeric
 525,C,C,,0.0000,0.0000,RBD,XBB.1.5 RBD pseudovirus,monomeric
-525,C,A,,-3.8150,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 525,C,D,,-7.3410,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 525,C,E,,-6.9310,,RBD,XBB.1.5 RBD pseudovirus,monomeric
 525,C,G,,-6.0650,,RBD,XBB.1.5 RBD pseudovirus,monomeric
@@ -20884,7 +20794,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 336,C,H,,-7.3360,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 336,C,I,,-6.5460,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 336,C,K,,-6.8860,,RBD,XBB.1.5 RBD pseudovirus,dimeric
-336,C,L,,-3.4760,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 336,C,M,,-7.0280,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 336,C,N,,-6.9680,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 336,C,P,,-4.3190,,RBD,XBB.1.5 RBD pseudovirus,dimeric
@@ -20909,7 +20818,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 337,P,R,,-0.1012,0.0028,RBD,XBB.1.5 RBD pseudovirus,dimeric
 337,P,S,,-0.0501,-0.6924,RBD,XBB.1.5 RBD pseudovirus,dimeric
 337,P,T,,-0.1191,-0.9704,RBD,XBB.1.5 RBD pseudovirus,dimeric
-337,P,Y,,-0.6349,3.8410,RBD,XBB.1.5 RBD pseudovirus,dimeric
+337,P,Y,,-0.6349,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 337,P,P,,0.0000,0.0000,RBD,XBB.1.5 RBD pseudovirus,dimeric
 337,P,G,,-0.0169,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 337,P,V,,-0.2759,,RBD,XBB.1.5 RBD pseudovirus,dimeric
@@ -20930,8 +20839,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 338,F,N,,-6.5830,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 338,F,P,,-3.8880,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 338,F,Q,,-6.3650,,RBD,XBB.1.5 RBD pseudovirus,dimeric
-338,F,R,,-3.5320,,RBD,XBB.1.5 RBD pseudovirus,dimeric
-338,F,S,,-2.5170,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 338,F,T,,-0.7985,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 339,H,A,,0.0071,0.0423,RBD,XBB.1.5 RBD pseudovirus,dimeric
 339,H,C,,-0.2793,0.0227,RBD,XBB.1.5 RBD pseudovirus,dimeric
@@ -21004,7 +20911,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 342,F,Y,,-1.0460,0.0602,RBD,XBB.1.5 RBD pseudovirus,dimeric
 342,F,F,,0.0000,0.0000,RBD,XBB.1.5 RBD pseudovirus,dimeric
 342,F,-,,-7.0100,,RBD,XBB.1.5 RBD pseudovirus,dimeric
-342,F,D,,-1.8730,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 342,F,E,,-4.5790,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 342,F,G,,-2.6890,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 342,F,K,,-6.1030,,RBD,XBB.1.5 RBD pseudovirus,dimeric
@@ -21175,7 +21081,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 350,V,Q,,-6.8210,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 350,V,R,,-6.8000,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 350,V,W,,-7.0490,,RBD,XBB.1.5 RBD pseudovirus,dimeric
-350,V,Y,,-6.9890,4.1950,RBD,XBB.1.5 RBD pseudovirus,dimeric
+350,V,Y,,-6.9890,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 351,Y,A,,-0.5317,-0.1578,RBD,XBB.1.5 RBD pseudovirus,dimeric
 351,Y,C,,-0.7828,0.0241,RBD,XBB.1.5 RBD pseudovirus,dimeric
 351,Y,F,,-0.0302,0.0578,RBD,XBB.1.5 RBD pseudovirus,dimeric
@@ -21222,7 +21128,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 353,W,A,,-1.8900,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 353,W,C,,-6.5390,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 353,W,E,,-5.8160,,RBD,XBB.1.5 RBD pseudovirus,dimeric
-353,W,G,,-2.4690,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 353,W,I,,-5.6220,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 353,W,K,,-7.3370,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 353,W,L,,-6.7840,0.6841,RBD,XBB.1.5 RBD pseudovirus,dimeric
@@ -21233,6 +21138,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 353,W,S,,-5.4280,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 353,W,T,,-6.3390,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 353,W,V,,-5.5530,,RBD,XBB.1.5 RBD pseudovirus,dimeric
+353,W,G,,,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 354,N,A,,-0.0210,-0.0319,RBD,XBB.1.5 RBD pseudovirus,dimeric
 354,N,C,,-0.3167,-0.2599,RBD,XBB.1.5 RBD pseudovirus,dimeric
 354,N,D,,0.0044,-0.2104,RBD,XBB.1.5 RBD pseudovirus,dimeric
@@ -21291,7 +21197,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 356,K,K,,0.0000,0.0000,RBD,XBB.1.5 RBD pseudovirus,dimeric
 356,K,G,,-0.1692,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 356,K,H,,-0.0025,-0.7971,RBD,XBB.1.5 RBD pseudovirus,dimeric
-356,K,P,,-2.5820,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 357,R,C,,-0.0597,0.0434,RBD,XBB.1.5 RBD pseudovirus,dimeric
 357,R,D,,-0.3584,-0.7956,RBD,XBB.1.5 RBD pseudovirus,dimeric
 357,R,E,,-0.0974,-0.9053,RBD,XBB.1.5 RBD pseudovirus,dimeric
@@ -21377,7 +21282,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 361,C,W,,-6.4160,0.2560,RBD,XBB.1.5 RBD pseudovirus,dimeric
 361,C,Y,,-7.2820,2.3360,RBD,XBB.1.5 RBD pseudovirus,dimeric
 361,C,C,,0.0000,0.0000,RBD,XBB.1.5 RBD pseudovirus,dimeric
-361,C,A,,-2.6520,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 361,C,D,,-7.3510,1.8520,RBD,XBB.1.5 RBD pseudovirus,dimeric
 361,C,E,,-7.2570,-1.6450,RBD,XBB.1.5 RBD pseudovirus,dimeric
 361,C,F,,-6.9170,4.8630,RBD,XBB.1.5 RBD pseudovirus,dimeric
@@ -21392,6 +21296,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 361,C,R,,-7.0790,0.7447,RBD,XBB.1.5 RBD pseudovirus,dimeric
 361,C,S,,-7.0930,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 361,C,V,,-7.2230,,RBD,XBB.1.5 RBD pseudovirus,dimeric
+361,C,A,,,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 362,V,A,,-0.7228,1.0020,RBD,XBB.1.5 RBD pseudovirus,dimeric
 362,V,C,,-0.5896,0.3706,RBD,XBB.1.5 RBD pseudovirus,dimeric
 362,V,E,,-0.6661,0.7116,RBD,XBB.1.5 RBD pseudovirus,dimeric
@@ -21819,7 +21724,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 383,S,S,,0.0000,0.0000,RBD,XBB.1.5 RBD pseudovirus,dimeric
 383,S,D,,-5.6110,2.6270,RBD,XBB.1.5 RBD pseudovirus,dimeric
 383,S,E,,-3.4900,,RBD,XBB.1.5 RBD pseudovirus,dimeric
-383,S,F,,-6.1440,4.8880,RBD,XBB.1.5 RBD pseudovirus,dimeric
+383,S,F,,-6.1440,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 383,S,I,,-6.6570,5.2260,RBD,XBB.1.5 RBD pseudovirus,dimeric
 383,S,L,,-6.8760,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 383,S,M,,-5.4740,4.2230,RBD,XBB.1.5 RBD pseudovirus,dimeric
@@ -22198,7 +22103,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 402,I,D,,-2.7670,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 402,I,E,,-7.0780,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 402,I,F,,-6.9490,,RBD,XBB.1.5 RBD pseudovirus,dimeric
-402,I,G,,-2.3990,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 402,I,H,,-3.6530,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 402,I,K,,-7.2580,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 402,I,N,,-7.1170,0.9836,RBD,XBB.1.5 RBD pseudovirus,dimeric
@@ -22295,7 +22199,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 407,V,G,,-4.5190,1.1510,RBD,XBB.1.5 RBD pseudovirus,dimeric
 407,V,H,,-1.6320,-0.2218,RBD,XBB.1.5 RBD pseudovirus,dimeric
 407,V,I,,-0.0123,-0.2315,RBD,XBB.1.5 RBD pseudovirus,dimeric
-407,V,K,,-4.1680,4.3940,RBD,XBB.1.5 RBD pseudovirus,dimeric
+407,V,K,,-4.1680,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 407,V,L,,-0.0155,-0.3568,RBD,XBB.1.5 RBD pseudovirus,dimeric
 407,V,M,,-0.0733,-0.0229,RBD,XBB.1.5 RBD pseudovirus,dimeric
 407,V,N,,-3.9470,2.4320,RBD,XBB.1.5 RBD pseudovirus,dimeric
@@ -22361,7 +22265,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 410,I,A,,-5.3550,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 410,I,E,,-6.4500,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 410,I,G,,-4.0370,,RBD,XBB.1.5 RBD pseudovirus,dimeric
-410,I,H,,-7.0560,0.5986,RBD,XBB.1.5 RBD pseudovirus,dimeric
+410,I,H,,-7.0560,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 410,I,K,,-6.2900,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 410,I,P,,-6.8960,2.0250,RBD,XBB.1.5 RBD pseudovirus,dimeric
 410,I,Q,,-6.2830,,RBD,XBB.1.5 RBD pseudovirus,dimeric
@@ -22403,10 +22307,8 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 412,P,I,,-2.0820,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 412,P,K,,-2.0870,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 412,P,M,,-3.4400,-0.0358,RBD,XBB.1.5 RBD pseudovirus,dimeric
-412,P,N,,-3.5750,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 412,P,S,,-2.9970,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 412,P,W,,-6.8160,,RBD,XBB.1.5 RBD pseudovirus,dimeric
-412,P,Y,,-3.0650,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 413,G,A,,-0.0480,-0.0277,RBD,XBB.1.5 RBD pseudovirus,dimeric
 413,G,C,,-0.1190,0.4258,RBD,XBB.1.5 RBD pseudovirus,dimeric
 413,G,D,,-0.1572,-0.0259,RBD,XBB.1.5 RBD pseudovirus,dimeric
@@ -22786,7 +22688,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 432,C,L,,-3.3940,2.5420,RBD,XBB.1.5 RBD pseudovirus,dimeric
 432,C,C,,0.0000,0.0000,RBD,XBB.1.5 RBD pseudovirus,dimeric
 432,C,A,,-4.1880,,RBD,XBB.1.5 RBD pseudovirus,dimeric
-432,C,D,,-2.1880,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 432,C,F,,-6.3610,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 432,C,G,,-5.8960,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 432,C,H,,-5.4780,,RBD,XBB.1.5 RBD pseudovirus,dimeric
@@ -22794,7 +22695,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 432,C,P,,-5.7740,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 432,C,Q,,-0.4766,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 432,C,R,,-7.1790,,RBD,XBB.1.5 RBD pseudovirus,dimeric
-432,C,S,,-3.5120,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 432,C,V,,-2.1880,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 432,C,W,,-5.7120,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 432,C,Y,,-6.3370,,RBD,XBB.1.5 RBD pseudovirus,dimeric
@@ -22857,7 +22757,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 436,W,Y,,-0.0444,0.1469,RBD,XBB.1.5 RBD pseudovirus,dimeric
 436,W,W,,0.0000,0.0000,RBD,XBB.1.5 RBD pseudovirus,dimeric
 436,W,-,,0.0108,,RBD,XBB.1.5 RBD pseudovirus,dimeric
-436,W,D,,-3.0620,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 436,W,E,,-3.2590,2.7360,RBD,XBB.1.5 RBD pseudovirus,dimeric
 436,W,G,,-0.7798,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 436,W,H,,-0.5724,0.5342,RBD,XBB.1.5 RBD pseudovirus,dimeric
@@ -22971,7 +22870,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 442,D,V,,-2.4840,-0.1776,RBD,XBB.1.5 RBD pseudovirus,dimeric
 442,D,Y,,-2.4070,-1.3270,RBD,XBB.1.5 RBD pseudovirus,dimeric
 442,D,D,,0.0000,0.0000,RBD,XBB.1.5 RBD pseudovirus,dimeric
-442,D,C,,-7.1700,-0.1354,RBD,XBB.1.5 RBD pseudovirus,dimeric
+442,D,C,,-7.1700,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 442,D,G,,-2.2700,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 442,D,L,,-0.9477,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 442,D,M,,-1.9290,,RBD,XBB.1.5 RBD pseudovirus,dimeric
@@ -22986,7 +22885,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 443,S,H,,-0.8581,-1.5980,RBD,XBB.1.5 RBD pseudovirus,dimeric
 443,S,I,,-0.4983,-1.8960,RBD,XBB.1.5 RBD pseudovirus,dimeric
 443,S,N,,-0.1789,-2.7630,RBD,XBB.1.5 RBD pseudovirus,dimeric
-443,S,P,,-1.7030,4.5430,RBD,XBB.1.5 RBD pseudovirus,dimeric
+443,S,P,,-1.7030,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 443,S,Q,,-0.7008,-1.1210,RBD,XBB.1.5 RBD pseudovirus,dimeric
 443,S,R,,-1.5580,-2.0100,RBD,XBB.1.5 RBD pseudovirus,dimeric
 443,S,T,,-0.1180,-1.3660,RBD,XBB.1.5 RBD pseudovirus,dimeric
@@ -23349,7 +23248,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 461,L,L,,0.0000,0.0000,RBD,XBB.1.5 RBD pseudovirus,dimeric
 461,L,A,,-1.6670,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 461,L,C,,-3.0680,,RBD,XBB.1.5 RBD pseudovirus,dimeric
-461,L,D,,-3.6500,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 461,L,E,,-6.3640,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 461,L,G,,-0.7443,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 461,L,K,,-6.9620,2.5520,RBD,XBB.1.5 RBD pseudovirus,dimeric
@@ -23487,7 +23385,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 468,I,K,,-0.1242,0.1241,RBD,XBB.1.5 RBD pseudovirus,dimeric
 468,I,L,,-0.0023,0.2104,RBD,XBB.1.5 RBD pseudovirus,dimeric
 468,I,M,,-0.0091,0.2331,RBD,XBB.1.5 RBD pseudovirus,dimeric
-468,I,N,,-6.6330,4.2900,RBD,XBB.1.5 RBD pseudovirus,dimeric
+468,I,N,,-6.6330,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 468,I,P,,-0.0764,0.2221,RBD,XBB.1.5 RBD pseudovirus,dimeric
 468,I,Q,,-0.1533,0.1071,RBD,XBB.1.5 RBD pseudovirus,dimeric
 468,I,R,,-0.1044,-0.4627,RBD,XBB.1.5 RBD pseudovirus,dimeric
@@ -23516,7 +23414,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 469,S,W,,-0.1002,0.1172,RBD,XBB.1.5 RBD pseudovirus,dimeric
 469,S,Y,,-0.3544,0.0974,RBD,XBB.1.5 RBD pseudovirus,dimeric
 469,S,S,,0.0000,0.0000,RBD,XBB.1.5 RBD pseudovirus,dimeric
-469,S,L,,-0.2652,4.1080,RBD,XBB.1.5 RBD pseudovirus,dimeric
+469,S,L,,-0.2652,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 470,T,A,,-0.0223,-0.2835,RBD,XBB.1.5 RBD pseudovirus,dimeric
 470,T,C,,-0.2485,-0.2324,RBD,XBB.1.5 RBD pseudovirus,dimeric
 470,T,D,,-0.0172,0.1903,RBD,XBB.1.5 RBD pseudovirus,dimeric
@@ -23719,7 +23617,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 480,C,A,,-2.7450,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 480,C,D,,-3.8050,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 480,C,E,,-4.5050,,RBD,XBB.1.5 RBD pseudovirus,dimeric
-480,C,F,,-5.6990,0.7436,RBD,XBB.1.5 RBD pseudovirus,dimeric
+480,C,F,,-5.6990,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 480,C,G,,-2.6560,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 480,C,I,,-5.7780,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 480,C,K,,-3.1920,,RBD,XBB.1.5 RBD pseudovirus,dimeric
@@ -23794,7 +23692,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 484,A,-,,0.0021,-0.1792,RBD,XBB.1.5 RBD pseudovirus,dimeric
 484,A,C,,-0.3972,-0.2600,RBD,XBB.1.5 RBD pseudovirus,dimeric
 484,A,D,,-0.0244,-0.2281,RBD,XBB.1.5 RBD pseudovirus,dimeric
-484,A,E,,-1.2140,-0.2694,RBD,XBB.1.5 RBD pseudovirus,dimeric
+484,A,E,,,-0.2694,RBD,XBB.1.5 RBD pseudovirus,dimeric
 484,A,F,,-0.0763,-0.7412,RBD,XBB.1.5 RBD pseudovirus,dimeric
 484,A,G,,-0.0532,-0.1653,RBD,XBB.1.5 RBD pseudovirus,dimeric
 484,A,H,,-0.0308,-0.1032,RBD,XBB.1.5 RBD pseudovirus,dimeric
@@ -23911,9 +23809,9 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 489,Y,C,,-5.9150,2.0450,RBD,XBB.1.5 RBD pseudovirus,dimeric
 489,Y,G,,-1.6470,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 489,Y,K,,-1.2330,1.3380,RBD,XBB.1.5 RBD pseudovirus,dimeric
-489,Y,R,,-1.2780,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 489,Y,S,,-7.3010,1.3210,RBD,XBB.1.5 RBD pseudovirus,dimeric
 489,Y,T,,-7.1140,1.2210,RBD,XBB.1.5 RBD pseudovirus,dimeric
+489,Y,R,,,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 490,F,A,,0.0020,-0.1316,RBD,XBB.1.5 RBD pseudovirus,dimeric
 490,F,C,,-0.1655,-0.0357,RBD,XBB.1.5 RBD pseudovirus,dimeric
 490,F,D,,-0.0790,0.1632,RBD,XBB.1.5 RBD pseudovirus,dimeric
@@ -24027,7 +23925,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 495,Y,Y,,0.0000,0.0000,RBD,XBB.1.5 RBD pseudovirus,dimeric
 495,Y,A,,-1.9520,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 495,Y,C,,-6.2800,,RBD,XBB.1.5 RBD pseudovirus,dimeric
-495,Y,D,,-3.7080,-0.1370,RBD,XBB.1.5 RBD pseudovirus,dimeric
+495,Y,D,,-3.7080,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 495,Y,G,,-3.5540,1.1440,RBD,XBB.1.5 RBD pseudovirus,dimeric
 495,Y,K,,-4.9280,-0.5695,RBD,XBB.1.5 RBD pseudovirus,dimeric
 495,Y,Q,,-2.8620,-1.5000,RBD,XBB.1.5 RBD pseudovirus,dimeric
@@ -24061,7 +23959,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 497,F,C,,-6.5720,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 497,F,D,,-6.1940,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 497,F,E,,-6.4580,,RBD,XBB.1.5 RBD pseudovirus,dimeric
-497,F,G,,-1.8670,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 497,F,H,,-0.9160,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 497,F,K,,-6.9690,0.7387,RBD,XBB.1.5 RBD pseudovirus,dimeric
 497,F,L,,-3.1430,,RBD,XBB.1.5 RBD pseudovirus,dimeric
@@ -24247,10 +24144,8 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 507,P,A,,-0.0589,-0.3433,RBD,XBB.1.5 RBD pseudovirus,dimeric
 507,P,P,,0.0000,0.0000,RBD,XBB.1.5 RBD pseudovirus,dimeric
 507,P,C,,-1.0320,,RBD,XBB.1.5 RBD pseudovirus,dimeric
-507,P,D,,-3.3140,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 507,P,E,,-6.2550,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 507,P,F,,-5.5770,,RBD,XBB.1.5 RBD pseudovirus,dimeric
-507,P,G,,-2.9970,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 507,P,H,,-7.1560,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 507,P,I,,-2.4000,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 507,P,K,,-7.2000,,RBD,XBB.1.5 RBD pseudovirus,dimeric
@@ -24276,7 +24171,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 509,R,A,,-3.4790,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 509,R,C,,-3.3570,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 509,R,D,,-6.8620,,RBD,XBB.1.5 RBD pseudovirus,dimeric
-509,R,E,,-3.5670,1.5050,RBD,XBB.1.5 RBD pseudovirus,dimeric
 509,R,F,,-2.1150,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 509,R,G,,-6.6450,1.5130,RBD,XBB.1.5 RBD pseudovirus,dimeric
 509,R,I,,-5.6450,,RBD,XBB.1.5 RBD pseudovirus,dimeric
@@ -24288,6 +24182,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 509,R,V,,-7.1520,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 509,R,W,,-6.9600,-0.8241,RBD,XBB.1.5 RBD pseudovirus,dimeric
 509,R,Y,,-6.7900,,RBD,XBB.1.5 RBD pseudovirus,dimeric
+509,R,E,,,1.5050,RBD,XBB.1.5 RBD pseudovirus,dimeric
 510,V,A,,-0.7327,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 510,V,C,,-0.1460,-0.1729,RBD,XBB.1.5 RBD pseudovirus,dimeric
 510,V,E,,-6.9920,3.5250,RBD,XBB.1.5 RBD pseudovirus,dimeric
@@ -24300,7 +24195,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 510,V,D,,-6.3830,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 510,V,G,,-7.1310,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 510,V,K,,-5.7620,2.2190,RBD,XBB.1.5 RBD pseudovirus,dimeric
-510,V,N,,-2.7510,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 510,V,P,,-6.8790,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 510,V,Q,,-7.4270,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 510,V,R,,-5.8590,,RBD,XBB.1.5 RBD pseudovirus,dimeric
@@ -24319,7 +24213,7 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 511,V,T,,-0.1311,0.1271,RBD,XBB.1.5 RBD pseudovirus,dimeric
 511,V,W,,-6.3510,1.3140,RBD,XBB.1.5 RBD pseudovirus,dimeric
 511,V,V,,0.0000,0.0000,RBD,XBB.1.5 RBD pseudovirus,dimeric
-511,V,D,,-6.9210,-0.4524,RBD,XBB.1.5 RBD pseudovirus,dimeric
+511,V,D,,-6.9210,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 511,V,F,,-1.3760,1.5340,RBD,XBB.1.5 RBD pseudovirus,dimeric
 511,V,G,,-4.9410,1.1130,RBD,XBB.1.5 RBD pseudovirus,dimeric
 511,V,K,,-7.1660,,RBD,XBB.1.5 RBD pseudovirus,dimeric
@@ -24335,11 +24229,9 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 512,V,E,,-7.1240,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 512,V,F,,-5.2530,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 512,V,G,,-6.6280,,RBD,XBB.1.5 RBD pseudovirus,dimeric
-512,V,H,,-3.3110,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 512,V,K,,-6.5930,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 512,V,L,,-5.7090,2.0800,RBD,XBB.1.5 RBD pseudovirus,dimeric
 512,V,M,,-7.0310,,RBD,XBB.1.5 RBD pseudovirus,dimeric
-512,V,N,,-3.1560,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 512,V,Q,,-6.5960,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 512,V,R,,-5.5340,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 512,V,W,,-7.1010,2.9960,RBD,XBB.1.5 RBD pseudovirus,dimeric
@@ -24358,13 +24250,13 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 513,L,Y,,-1.7500,-0.0551,RBD,XBB.1.5 RBD pseudovirus,dimeric
 513,L,L,,0.0000,0.0000,RBD,XBB.1.5 RBD pseudovirus,dimeric
 513,L,-,,-6.2180,,RBD,XBB.1.5 RBD pseudovirus,dimeric
-513,L,A,,-1.3030,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 513,L,D,,-5.5290,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 513,L,E,,-7.2620,1.4850,RBD,XBB.1.5 RBD pseudovirus,dimeric
 513,L,G,,-7.4150,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 513,L,H,,-5.0070,0.7071,RBD,XBB.1.5 RBD pseudovirus,dimeric
 513,L,N,,-5.0270,1.6010,RBD,XBB.1.5 RBD pseudovirus,dimeric
 513,L,T,,-1.1310,,RBD,XBB.1.5 RBD pseudovirus,dimeric
+513,L,A,,,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 514,S,A,,-0.0706,-0.3376,RBD,XBB.1.5 RBD pseudovirus,dimeric
 514,S,C,,-0.1965,0.0539,RBD,XBB.1.5 RBD pseudovirus,dimeric
 514,S,D,,-0.2220,-0.2710,RBD,XBB.1.5 RBD pseudovirus,dimeric
@@ -24570,7 +24462,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 524,V,M,,-2.1470,1.5760,RBD,XBB.1.5 RBD pseudovirus,dimeric
 524,V,V,,0.0000,0.0000,RBD,XBB.1.5 RBD pseudovirus,dimeric
 524,V,A,,-1.1130,,RBD,XBB.1.5 RBD pseudovirus,dimeric
-524,V,C,,-1.4730,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 524,V,D,,-6.7040,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 524,V,G,,-4.5300,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 524,V,H,,-4.0350,,RBD,XBB.1.5 RBD pseudovirus,dimeric
@@ -24585,7 +24476,6 @@ site,wildtype,mutant,human sera escape,spike mediated entry,ACE2 binding,region,
 525,C,W,,-6.6460,1.6180,RBD,XBB.1.5 RBD pseudovirus,dimeric
 525,C,Y,,-7.1070,-0.1504,RBD,XBB.1.5 RBD pseudovirus,dimeric
 525,C,C,,0.0000,0.0000,RBD,XBB.1.5 RBD pseudovirus,dimeric
-525,C,A,,-3.8150,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 525,C,D,,-7.3410,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 525,C,E,,-6.9310,,RBD,XBB.1.5 RBD pseudovirus,dimeric
 525,C,G,,-6.0650,,RBD,XBB.1.5 RBD pseudovirus,dimeric
