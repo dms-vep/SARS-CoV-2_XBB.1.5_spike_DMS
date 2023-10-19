@@ -31,14 +31,14 @@ assays:
       constant: 0.04
     scale_stat: 1
     stat_name: escape
-  receptor_affinity:
-    title: Receptor affinity
-    selections: receptor_selections
-    averages: avg_receptor_affinity
+  ACE2_binding:
+    title: ACE2 binding
+    selections: ACE2_binding_selections
+    averages: avg_ACE2_binding
     prob_escape_scale:
       type: linear
     scale_stat: -1
-    stat_name: receptor affinity
+    stat_name: ACE2 binding
 
 # --------------------------------------------------------------------------------------
 # Configuration for each antibody or soluble receptor selection experiment.
@@ -115,9 +115,9 @@ plot_hide_stats_default: &plot_hide_stats_default
     init: -1.5
     min_filters:
       times_seen: 3
-  ACE2 affinity:
-    csv: results/receptor_affinity/averages/monomeric_ACE2_mut_effect.csv
-    csv_col: receptor affinity_mean
+  ACE2 binding:
+    csv: results/ACE2_binding/averages/monomeric_ACE2_mut_effect.csv
+    csv_col: ACE2 binding_mean
     init: -1.5
     min_filters:
       times_seen: 3
@@ -623,7 +623,7 @@ antibody_selections:
 # Define some defaults slightly different than from antibody selections
 
 # default parameters for `polyclonal` model fitting for receptor affinity
-receptor_polyclonal_params_default: &receptor_polyclonal_params_default
+ACE2_binding_polyclonal_params_default: &ACE2_binding_polyclonal_params_default
   n_epitopes: 1
   spatial_distances: null
   fit_kwargs:  # keyword arguments to `Polyclonal.fit`
@@ -633,7 +633,7 @@ receptor_polyclonal_params_default: &receptor_polyclonal_params_default
     logfreq: 200
 
 # default stats to hide cells on plot of receptor affinity
-receptor_plot_hide_stats_default: &receptor_plot_hide_stats_default
+ACE2_binding_plot_hide_stats_default: &ACE2_binding_plot_hide_stats_default
   functional effect:
     csv: results/func_effects/averages/293T_high_ACE2_entry_func_effects.csv
     csv_col: effect
@@ -642,13 +642,13 @@ receptor_plot_hide_stats_default: &receptor_plot_hide_stats_default
       times_seen: 3
 
 # Define the receptor selections
-receptor_selections:
+ACE2_binding_selections:
   Lib1-230614-monomeric_ACE2:
     neut_standard_name: neut_standard
     prob_escape_filters: *prob_escape_filters_default
-    polyclonal_params: *receptor_polyclonal_params_default
+    polyclonal_params: *ACE2_binding_polyclonal_params_default
     escape_plot_kwargs: *escape_plot_kwargs_default
-    plot_hide_stats: *receptor_plot_hide_stats_default
+    plot_hide_stats: *ACE2_binding_plot_hide_stats_default
     no_antibody_sample: Lib1-230614-no-antibody_control_mediumACE2
     antibody_samples:
       Lib1-230614-monomeric_ACE2_2.88:
@@ -669,9 +669,9 @@ receptor_selections:
   Lib2-230614-monomeric_ACE2:
     neut_standard_name: neut_standard
     prob_escape_filters: *prob_escape_filters_default
-    polyclonal_params: *receptor_polyclonal_params_default
+    polyclonal_params: *ACE2_binding_polyclonal_params_default
     escape_plot_kwargs: *escape_plot_kwargs_default
-    plot_hide_stats: *receptor_plot_hide_stats_default
+    plot_hide_stats: *ACE2_binding_plot_hide_stats_default
     no_antibody_sample: Lib2-230614-no-antibody_control_mediumACE2
     antibody_samples:
       Lib2-230614-monomeric_ACE2_2.88:
@@ -828,7 +828,7 @@ avg_antibody_escape:
       - Lib2-230815-sera-505C_mediumACE2
 
 # Define the receptor affinity experiments to average
-avg_receptor_affinity_default: &avg_receptor_affinity_default
+avg_ACE2_binding_default: &avg_ACE2_binding_default
   <<: *avg_antibody_escape_default
   escape_plot_kwargs:
     <<: *escape_plot_kwargs_default
@@ -840,11 +840,11 @@ avg_receptor_affinity_default: &avg_receptor_affinity_default
     per_model_tooltip: true
   icXX: 50  # IC50
 
-avg_receptor_affinity:
+avg_ACE2_binding:
   monomeric_ACE2:
-    <<: *avg_receptor_affinity_default
-    title: Affinity for monomeric ACE2
-    plot_hide_stats: *receptor_plot_hide_stats_default
+    <<: *avg_ACE2_binding_default
+    title: binding to monomeric ACE2
+    plot_hide_stats: *ACE2_binding_plot_hide_stats_default
     selections:
       - Lib1-230614-monomeric_ACE2
       - Lib2-230614-monomeric_ACE2

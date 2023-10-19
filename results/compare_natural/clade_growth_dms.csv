@@ -1,4 +1,4 @@
-clade,date,spike_muts_from_dms_clade,has_L455F,growth_rate,n_sequences,sera escape,ACE2 affinity,cell entry
+clade,date,spike_muts_from_dms_clade,has_L455F,growth_rate,n_sequences,sera escape,ACE2 binding,cell entry
 XBB,2022-09-17,V252G; P486S,False,-0.93671,1650,-0.1553,-0.6034700000000001,-0.21617999999999998
 XBB.1,2022-10-03,P486S,False,1.2048,17510,-0.2269,-0.5783,-0.247
 XBB.1.1,2022-10-15,P486S,False,-1.5875,1007,-0.2269,-0.5783,-0.247
