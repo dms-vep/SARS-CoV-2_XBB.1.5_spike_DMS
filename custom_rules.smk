@@ -25,6 +25,7 @@ rule escape_at_key_sites:
     """Analyze and make logo plots of escape at key sites."""
     input:
         dms_csv="results/summaries/summary.csv",
+        per_antibody_csv="results/summaries/per_antibody_escape.csv",
         nb="notebooks/escape_at_key_sites.ipynb",
     output:
         nb="results/notebooks/escape_at_key_sites.ipynb",
@@ -33,6 +34,7 @@ rule escape_at_key_sites:
             {
                 "pango_consensus_seqs_json": "https://raw.githubusercontent.com/corneliusroemer/pango-sequences/c64ef05e53debaa9cc65dd56d6eb83e31517179c/data/pango-consensus-sequences_summary.json",
                 "dms_csv": input.dms_csv,
+                "per_antibody_csv": input.per_antibody_csv,
             }
         ),
     log:
