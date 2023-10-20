@@ -77,3 +77,9 @@ results/binding_comparison/*
 results/compare_natural/*
 !results/compare_natural/clade_pair_growth_dms.csv
 !results/compare_natural/clade_growth_dms.csv
+
+!results/key_sites
+results/key_sites/*
+!results/key_sites/logoplots
+results/key_sites/logoplots/*
+!results/key_sites/logoplots/*.svg
