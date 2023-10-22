@@ -21,6 +21,29 @@ rule spatial_distances:
         "scripts/spatial_distances.py"
 
 
+rule binding_vs_escape:
+    """Compare binding and escape at key sites."""
+    input:
+        dms_csv="results/summaries/summary.csv",
+        nb="notebooks/binding_vs_escape.ipynb",
+    output:
+        nb="results/notebooks/binding_vs_escape.ipynb",
+        logoplot_subdir=directory("results/binding_vs_escape/logoplots"),
+    params:
+        yaml=lambda _, input, output: yaml.round_trip_dump(
+            {
+                "dms_csv": input.dms_csv,
+                "logoplot_subdir": output.logoplot_subdir,
+            }
+        ),
+    log:
+        log="results/logs/binding_vs_escape.txt",
+    conda:
+        os.path.join(config["pipeline_path"], "environment.yml")
+    shell:
+        "papermill {input.nb} {output.nb} -y '{params.yaml}' &>> {log}"
+
+
 rule escape_at_key_sites:
     """Analyze and make logo plots of escape at key sites."""
     input:
@@ -306,7 +329,8 @@ rule func_effects_dist:
 # the HTML docs should be added to the nested dict `docs`:
 docs["Additional files and charts"] = {
     "Analysis of escape and other properties at key sites": {
-        "Notebook performing analysis and making logo plots": rules.escape_at_key_sites.output.nb,
+        "Notebook making logo plots of escape at key sites": rules.escape_at_key_sites.output.nb,
+        "Notebook comparing binding vs escape at key sites": rules.binding_vs_escape.output.nb,
     },
     "Analysis of ACE2 binding data and comparison to other experiments": {
         "Interactive charts": {
