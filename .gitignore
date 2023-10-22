@@ -83,3 +83,9 @@ results/key_sites/*
 !results/key_sites/logoplots
 results/key_sites/logoplots/*
 !results/key_sites/logoplots/*.svg
+
+!results/binding_vs_escape
+!results/binding_vs_escape/*
+!results/binding_vs_escape/logoplots
+results/binding_vs_escape/logoplots/*
+!results/binding_vs_escape/logoplots/*.svg
