@@ -41,7 +41,7 @@ rule binding_vs_escape:
     conda:
         os.path.join(config["pipeline_path"], "environment.yml")
     shell:
-        "papermill {input.nb} {output.nb} -y '{params.yaml}' &>> {log}"
+        "papermill {input.nb} {output.nb} -y '{params.yaml}' &> {log}"
 
 
 rule escape_at_key_sites:
@@ -228,6 +228,21 @@ rule pango_consensus_seqs_json:
         "curl {params.pango_consensus_seqs_json} -o {output.json} &> {log}"
 
 
+rule evescape_data:
+    """Get EVEscape data (https://www.nature.com/articles/s41586-023-06617-0)"""
+    params:
+        # supplementary table 6 has EVE escape data
+        zip_url="https://static-content.springer.com/esm/art%3A10.1038%2Fs41586-023-06617-0/MediaObjects/41586_2023_6617_MOESM8_ESM.zip",
+    output:
+        csv="results/evescape/evescape_data.csv",
+    log:
+        "results/logs/evescape_data.txt",
+    conda:
+        os.path.join(config["pipeline_path"], "environment.yml")
+    script:
+        "scripts/evescape_data.py"
+
+
 # sets of measurements to compare to natural evolution
 phenos_compare_natural = {
     "current_dms": {
@@ -241,6 +256,11 @@ phenos_compare_natural = {
             "ACE2 binding": "blue",
             "cell entry": "purple",
         },
+    },
+    "EVEscape": {
+        "input_data": rules.evescape_data.output.csv,
+        "rename_cols": {},
+        "phenotype_colors": {"evescape": "EVEscape"},
     },
 }
 
