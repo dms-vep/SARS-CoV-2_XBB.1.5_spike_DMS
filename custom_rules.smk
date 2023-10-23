@@ -247,6 +247,11 @@ phenos_compare_natural = {
         "rename_cols": {},
         "phenotype_colors": {"EVEscape": "gray"},
     },
+    "rand_EVEscape": {
+        "input_data": "data/rand_EVEscape.csv",
+        "rename_cols": {},
+        "phenotype_colors": {"EVEscape": "gray"},
+    },
     "EVEscape_components": {
         "input_data": "data/EVEscape_XBB_single_mutation_predictions.csv",
         "rename_cols": {},
