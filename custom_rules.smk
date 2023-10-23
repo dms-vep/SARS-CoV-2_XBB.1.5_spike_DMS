@@ -242,18 +242,23 @@ phenos_compare_natural = {
             "cell entry": "purple",
         },
     },
+    "yeast_RBD_DMS": {
+        "input_data": "data/compare_natural_datasets/yeast_RBD_DMS.csv",
+        "rename_cols": {},
+        "phenotype_colors": {"escape": "red", "ACE2 affinity": "blue", "RBD expression": "purple"},
+    },
     "EVEscape": {
-        "input_data": "data/EVEscape_XBB_single_mutation_predictions.csv",
+        "input_data": "data/compare_natural_datasets/EVEscape_XBB_single_mutation_predictions.csv",
         "rename_cols": {},
         "phenotype_colors": {"EVEscape": "gray"},
     },
     "rand_EVEscape": {
-        "input_data": "data/rand_EVEscape.csv",
+        "input_data": "data/compare_natural_datasets/rand_EVEscape.csv",
         "rename_cols": {},
         "phenotype_colors": {"EVEscape": "gray"},
     },
     "EVEscape_components": {
-        "input_data": "data/EVEscape_XBB_single_mutation_predictions.csv",
+        "input_data": "data/compare_natural_datasets/EVEscape_XBB_single_mutation_predictions.csv",
         "rename_cols": {},
         "phenotype_colors": {"fitness_evol_indices": "red", "dissimilarity_charge_hydrophobicity": "blue", "accesibility_wcn": "green"},
     },
