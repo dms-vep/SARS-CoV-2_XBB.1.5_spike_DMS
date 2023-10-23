@@ -48,5 +48,5 @@ The format is explained within the file.
 ## Configuration for summaries across assays
 [summary_config.yml](summary_config.yml) has the configuration for making summaries across assays.
 
-## Other data
-[EVEscape_XBB_single_mutation_predictions.csv](EVEscape_XBB_single_mutation_predictions.csv) is the data for the single mutation effects to XBB as estimated by EVEscape. This is the file downloaded on Oct-22-2023 from [https://evescape.org/data](https://evescape.org/data) for XBB using the `Mutation Data for Omicron(XBB)` box (which is [this download link](https://api.evescape.org/download_variant_data?curr-virus=COVID19&curr-variant-or-id=Omicron(XBB))). The downloaded file was then edited to remove the `mutations` column (which is very long) and rename the `wt`, `pos`, and `mut` columns to be called `wildtype`, `site`, and `mutant`. Then the various metrics (`EVEscape` etc) were averaged across each site / wildtype / mutant.
+## Datasets for comparisons to natural sequences
+[./compare_natural_datasets/](compare_natural_datasets) has datasets for comparing to natural clade growth estimates. See README in that subdirectory for details.
