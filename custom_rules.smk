@@ -247,6 +247,11 @@ phenos_compare_natural = {
         "rename_cols": {},
         "phenotype_colors": {"escape": "red", "ACE2 affinity": "blue", "RBD expression": "purple"},
     },
+    "muts_from_Wuhan-Hu-1": {
+        "input_data": "data/compare_natural_datasets/incremental_Hamming_distance_from_Wuhan-Hu-1.csv",
+        "rename_cols": {"incremental Hamming distance": "mutations from Wuhan-Hu-1"},
+        "phenotype_colors": {"mutations from Wuhan-Hu-1": "gray"},
+    },
     "EVEscape": {
         "input_data": "data/compare_natural_datasets/EVEscape_XBB_single_mutation_predictions.csv",
         "rename_cols": {},
