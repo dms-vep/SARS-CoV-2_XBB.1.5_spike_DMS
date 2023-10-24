@@ -241,31 +241,32 @@ phenos_compare_natural = {
             "ACE2 binding": "blue",
             "cell entry": "purple",
         },
+        "title": "current DMS",
     },
     "yeast_RBD_DMS": {
         "input_data": "data/compare_natural_datasets/yeast_RBD_DMS.csv",
         "rename_cols": {},
         "phenotype_colors": {"escape": "red", "ACE2 affinity": "blue", "RBD expression": "purple"},
+        "title": "yeast RBD DMS",
     },
     "muts_from_Wuhan-Hu-1": {
         "input_data": "data/compare_natural_datasets/incremental_Hamming_distance_from_Wuhan-Hu-1.csv",
         "rename_cols": {"incremental Hamming distance": "mutations from Wuhan-Hu-1"},
         "phenotype_colors": {"mutations from Wuhan-Hu-1": "gray"},
+        "title": "mutations from Wuhan-Hu-1",
     },
     "EVEscape": {
         "input_data": "data/compare_natural_datasets/EVEscape_XBB_single_mutation_predictions.csv",
         "rename_cols": {},
         "phenotype_colors": {"EVEscape": "gray"},
-    },
-    "rand_EVEscape": {
-        "input_data": "data/compare_natural_datasets/rand_EVEscape.csv",
-        "rename_cols": {},
         "phenotype_colors": {"EVEscape": "gray"},
+        "title": "EVEscape",
     },
     "EVEscape_components": {
         "input_data": "data/compare_natural_datasets/EVEscape_XBB_single_mutation_predictions.csv",
         "rename_cols": {},
         "phenotype_colors": {"fitness_evol_indices": "red", "dissimilarity_charge_hydrophobicity": "blue", "accesibility_wcn": "green"},
+        "title": "EVEscape components",
     },
 }
 
@@ -284,7 +285,7 @@ rule compare_natural:
         yaml=lambda wc, input, output: yaml.round_trip_dump(
             {
                 "starting_clades": ["XBB"],  # clades descended from this
-                "muts_to_toggle": ["L455F"],  # epistasis in affinity for L455F in FLiP
+                "exclude_muts": [],  # exclude clades w these mutations
                 "min_sequences": 400,  # require this many sequences per clade to use
                 "split_by_rbd": False,  # whether to treat RBD and non-RBD mutations separately
                 "dms_clade": "XBB.1.5",  # clade used for DMS
@@ -293,9 +294,10 @@ rule compare_natural:
                 "n_random": 100,  # compute P values with this many randomizations of DMS data
                 # rename columns in input data
                 "rename_cols": phenos_compare_natural[wc.pheno]["rename_cols"],
+                "title": phenos_compare_natural[wc.pheno]["title"],
                 # "basic" means not split by RBD, which is done later in code if `split_by_rbd`
                 "phenotype_basic_colors": phenos_compare_natural[wc.pheno]["phenotype_colors"],
-                "exclude_clades": [],
+                "exclude_clades": [],  # exclude these clades
                 "growth_rates_csv": input.growth_rates_csv,
                 "input_data": input.input_data,
                 "pango_consensus_seqs_json": input.pango_consensus_seqs_json,
