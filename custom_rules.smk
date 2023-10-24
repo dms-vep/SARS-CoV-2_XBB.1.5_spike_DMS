@@ -242,18 +242,21 @@ phenos_compare_natural = {
             "cell entry": "purple",
         },
         "title": "current DMS",
+        "missing_muts": "drop",  # drop clades with missing muts
     },
     "yeast_RBD_DMS": {
         "input_data": "data/compare_natural_datasets/yeast_RBD_DMS.csv",
         "rename_cols": {},
         "phenotype_colors": {"escape": "red", "ACE2 affinity": "blue", "RBD expression": "purple"},
         "title": "yeast RBD DMS",
+        "missing_muts": "zero",  # set missing (non-RBD) mutations to zero
     },
     "muts_from_Wuhan-Hu-1": {
         "input_data": "data/compare_natural_datasets/incremental_Hamming_distance_from_Wuhan-Hu-1.csv",
         "rename_cols": {"incremental Hamming distance": "mutations from Wuhan-Hu-1"},
         "phenotype_colors": {"mutations from Wuhan-Hu-1": "gray"},
         "title": "mutations from Wuhan-Hu-1",
+        "missing_muts": "drop",  # drop clades with missing muts
     },
     "EVEscape": {
         "input_data": "data/compare_natural_datasets/EVEscape_XBB_single_mutation_predictions.csv",
@@ -261,12 +264,14 @@ phenos_compare_natural = {
         "phenotype_colors": {"EVEscape": "gray"},
         "phenotype_colors": {"EVEscape": "gray"},
         "title": "EVEscape",
+        "missing_muts": "drop",  # drop clades with missing muts
     },
     "EVEscape_components": {
         "input_data": "data/compare_natural_datasets/EVEscape_XBB_single_mutation_predictions.csv",
         "rename_cols": {},
         "phenotype_colors": {"fitness_evol_indices": "red", "dissimilarity_charge_hydrophobicity": "blue", "accesibility_wcn": "green"},
         "title": "EVEscape components",
+        "missing_muts": "drop",  # drop clades with missing muts
     },
 }
 
@@ -297,6 +302,8 @@ rule compare_natural:
                 "title": phenos_compare_natural[wc.pheno]["title"],
                 # "basic" means not split by RBD, which is done later in code if `split_by_rbd`
                 "phenotype_basic_colors": phenos_compare_natural[wc.pheno]["phenotype_colors"],
+                # "drop" clades with missing mutations, or set missing mutations to "zero"
+                "missing_muts": phenos_compare_natural[wc.pheno]["missing_muts"],
                 "exclude_clades": [],  # exclude these clades
                 "growth_rates_csv": input.growth_rates_csv,
                 "input_data": input.input_data,
