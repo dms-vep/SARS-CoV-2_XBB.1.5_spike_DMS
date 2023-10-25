@@ -47,3 +47,6 @@ The format is explained within the file.
 
 ## Configuration for summaries across assays
 [summary_config.yml](summary_config.yml) has the configuration for making summaries across assays.
+
+## Datasets for comparisons to natural sequences
+[./compare_natural_datasets/](compare_natural_datasets) has datasets for comparing to natural clade growth estimates. See README in that subdirectory for details.

@@ -41,7 +41,7 @@ rule binding_vs_escape:
     conda:
         os.path.join(config["pipeline_path"], "environment.yml")
     shell:
-        "papermill {input.nb} {output.nb} -y '{params.yaml}' &>> {log}"
+        "papermill {input.nb} {output.nb} -y '{params.yaml}' &> {log}"
 
 
 rule escape_at_key_sites:
@@ -57,7 +57,6 @@ rule escape_at_key_sites:
     params:
         yaml=lambda _, input, output: yaml.round_trip_dump(
             {
-                "pango_consensus_seqs_json": "https://raw.githubusercontent.com/corneliusroemer/pango-sequences/c64ef05e53debaa9cc65dd56d6eb83e31517179c/data/pango-consensus-sequences_summary.json",
                 "dms_csv": input.dms_csv,
                 "per_antibody_csv": input.per_antibody_csv,
                 "codon_seq": input.codon_seq,
@@ -215,59 +214,123 @@ rule compare_spike_rbd_escape:
         """
 
 
-rule compare_natural:
-    """Compare DMS measurements to natural sequence evolution."""
-    input:
-        dms_summary_csv="results/summaries/summary.csv",
-        nb="notebooks/compare_natural.ipynb",
-        growth_rates_csv="MultinomialLogisticGrowth/model_fits/rates.csv",
-    output:
-        nb="results/notebooks/compare_natural.ipynb",
-        pango_consensus_seqs_json="results/compare_natural/pango-consensus-sequences_summary.json",
-        pair_growth_dms_csv="results/compare_natural/clade_pair_growth_dms.csv",
-        clade_growth_dms_csv="results/compare_natural/clade_growth_dms.csv",
+rule pango_consensus_seqs_json:
+    """Get JSON with pango consensus seqs."""
     params:
         pango_consensus_seqs_json="https://raw.githubusercontent.com/corneliusroemer/pango-sequences/c64ef05e53debaa9cc65dd56d6eb83e31517179c/data/pango-consensus-sequences_summary.json",
-        yaml=lambda _, input, output: yaml.round_trip_dump(
+    output:
+        json="results/compare_natural/pango-consensus-sequences_summary.json",
+    log:
+        "results/logs/pango_consensus_seqs_json.txt",
+    conda:
+        os.path.join(config["pipeline_path"], "environment.yml")
+    shell:
+        "curl {params.pango_consensus_seqs_json} -o {output.json} &> {log}"
+
+
+# sets of measurements to compare to natural evolution
+phenos_compare_natural = {
+    "current_dms": {
+        "input_data": "results/summaries/summary.csv",
+        "rename_cols": {
+            "human sera escape": "sera escape",
+            "spike mediated entry": "cell entry",
+        },
+        "phenotype_colors": {
+            "sera escape": "red",
+            "ACE2 binding": "blue",
+            "cell entry": "purple",
+        },
+        "title": "XBB.1.5 full-spike DMS phenotypes",
+        "missing_muts": "drop",  # drop clades with missing muts
+    },
+    "yeast_RBD_DMS": {
+        "input_data": "data/compare_natural_datasets/yeast_RBD_DMS.csv",
+        "rename_cols": {},
+        "phenotype_colors": {"escape": "red", "ACE2 affinity": "blue", "RBD expression": "purple"},
+        "title": "yeast RBD DMS phenotypes",
+        "missing_muts": "zero",  # set missing (non-RBD) mutations to zero
+    },
+    "muts_from_Wuhan-Hu-1": {
+        "input_data": "data/compare_natural_datasets/incremental_Hamming_distance_from_Wuhan-Hu-1.csv",
+        "rename_cols": {"incremental Hamming distance": "distance"},
+        "phenotype_colors": {"distance": "gray"},
+        "title": "relative distance from Wuhan-Hu-1",
+        "missing_muts": "drop",  # drop clades with missing muts
+    },
+    "EVEscape": {
+        "input_data": "data/compare_natural_datasets/EVEscape_XBB_single_mutation_predictions.csv",
+        "rename_cols": {},
+        "phenotype_colors": {"EVEscape": "gray"},
+        "phenotype_colors": {"EVEscape": "gray"},
+        "title": "EVEscape",
+        "missing_muts": "drop",  # drop clades with missing muts
+    },
+    "EVEscape_components": {
+        "input_data": "data/compare_natural_datasets/EVEscape_XBB_single_mutation_predictions.csv",
+        "rename_cols": {"fitness_evol_indices": "EVE fitness", "dissimilarity_charge_hydrophobicity": "aa dissimilarity", "accessibility_wcn": "accessibility"},
+        "phenotype_colors": {"EVE fitness": "red", "aa dissimilarity": "blue", "accessibility": "green"},
+        "title": "EVEscape components",
+        "missing_muts": "drop",  # drop clades with missing muts
+    },
+}
+
+rule compare_natural:
+    """Compare DMS (or other) phenotype measurements to natural sequence evolution."""
+    input:
+        input_data=lambda wc: phenos_compare_natural[wc.pheno]["input_data"],
+        nb="notebooks/compare_natural.ipynb",
+        growth_rates_csv="MultinomialLogisticGrowth/model_fits/rates.csv",
+        pango_consensus_seqs_json=rules.pango_consensus_seqs_json.output.json,
+    output:
+        nb="results/notebooks/{pheno}_compare_natural.ipynb",
+        pair_growth_dms_csv="results/compare_natural/{pheno}_clade_pair_growth.csv",
+        clade_growth_dms_csv="results/compare_natural/{pheno}_clade_growth.csv",
+        pair_corr_html="results/compare_natural/{pheno}_clade_pair_growth.html",
+        clade_corr_html="results/compare_natural/{pheno}_clade_growth.html",
+        pair_ols_html="results/compare_natural/{pheno}_ols_clade_pair_growth.html",
+    params:
+        yaml=lambda wc, input, output: yaml.round_trip_dump(
             {
                 "starting_clades": ["XBB"],  # clades descended from this
-                "muts_to_toggle": ["L455F"],  # epistasis in affinity for L455F in FLiP
+                "exclude_muts": [],  # exclude clades w these mutations
                 "min_sequences": 400,  # require this many sequences per clade to use
                 "split_by_rbd": False,  # whether to treat RBD and non-RBD mutations separately
                 "dms_clade": "XBB.1.5",  # clade used for DMS
                 "pair_min_spike_muts": 1,  # require clade pairs to have >= this many spike mutations
                 "pair_max_spike_muts": None,  # require clade pairs to have <= this many spike mutations
                 "n_random": 100,  # compute P values with this many randomizations of DMS data
-                "phenotype_basic_colors": {
-                    # define phenotypes and their colors. "basic" means not split by RBD, which is done
-                    # later in code if `split_by_rbd`
-                    "sera escape": "red",
-                    "ACE2 binding": "blue",
-                    "cell entry": "purple",
-                },
-                "exclude_clades": [],
+                # rename columns in input data
+                "rename_cols": phenos_compare_natural[wc.pheno]["rename_cols"],
+                "title": phenos_compare_natural[wc.pheno]["title"],
+                # "basic" means not split by RBD, which is done later in code if `split_by_rbd`
+                "phenotype_basic_colors": phenos_compare_natural[wc.pheno]["phenotype_colors"],
+                # "drop" clades with missing mutations, or set missing mutations to "zero"
+                "missing_muts": phenos_compare_natural[wc.pheno]["missing_muts"],
+                "exclude_clades": [],  # exclude these clades
                 "growth_rates_csv": input.growth_rates_csv,
-                "dms_summary_csv": input.dms_summary_csv,
-                "pango_consensus_seqs_json": output.pango_consensus_seqs_json,
+                "input_data": input.input_data,
+                "pango_consensus_seqs_json": input.pango_consensus_seqs_json,
                 "pair_growth_dms_csv": output.pair_growth_dms_csv,
                 "clade_growth_dms_csv": output.clade_growth_dms_csv,
+                "pair_corr_html": output.pair_corr_html,
+                "clade_corr_html": output.clade_corr_html,
+                "pair_ols_html": output.pair_ols_html,
             }
         ),
     log:
-        log="results/logs/compare_natural.txt",
+        log="results/logs/{pheno}_compare_natural.txt",
     conda:
         os.path.join(config["pipeline_path"], "environment.yml")
     shell:
-        """
-        curl {params.pango_consensus_seqs_json} -o {output.pango_consensus_seqs_json} &> {log}
-        papermill {input.nb} {output.nb} -y '{params.yaml}' &>> {log}
-        """
+        "papermill {input.nb} {output.nb} -y '{params.yaml}' &> {log}"
+
 
 rule non_rbd_binding_natural:
     """Look at non-RBD mutation effects on ACE2 binding in natural viruses."""
     input:
         dms_summary_csv="results/summaries/summary.csv",
-        pango_consensus_seqs_json=rules.compare_natural.output.pango_consensus_seqs_json,
+        pango_consensus_seqs_json=rules.pango_consensus_seqs_json.output.json,
         nb="notebooks/non_rbd_binding_natural.ipynb",
     output:
         nb="results/notebooks/non_rbd_binding_natural.ipynb",
@@ -285,7 +348,7 @@ rule non_rbd_binding_natural:
     conda:
         os.path.join(config["pipeline_path"], "environment.yml")
     shell:
-        "papermill {input.nb} {output.nb} -y '{params.yaml}' &>> {log}"
+        "papermill {input.nb} {output.nb} -y '{params.yaml}' &> {log}"
 
 
 rule func_effects_dist:
@@ -357,12 +420,21 @@ docs["Additional files and charts"] = {
             rules.compare_spike_rbd_escape.output.dist_chart,
     },
     "DMS measurements versus clade growth": {
-        "Notebook comparing change in clade growth to change in DMS phenotype":
-            rules.compare_natural.output.nb,
-        "CSV with data for comparison of changes in growth vs DMS phenotype for clade pairs":
-            rules.compare_natural.output.pair_growth_dms_csv,
-        "CSV with DMS phenotypes and growth for all individual clades":
-            rules.compare_natural.output.clade_growth_dms_csv,
+        f"Comparison for {pheno}": {
+            "Correlation of change in clade growth versus phenotype for clade pairs":
+                rules.compare_natural.output.pair_corr_html.format(pheno=pheno),
+            "OLS change in clade growth versus phenotype for clade pairs":
+                rules.compare_natural.output.pair_ols_html.format(pheno=pheno),
+            "Correlation of absolute clade growth versus phenotype":
+                rules.compare_natural.output.clade_corr_html.format(pheno=pheno),
+            "Notebook comparing change in clade growth to change in phenotype":
+                rules.compare_natural.output.nb.format(pheno=pheno),
+            "CSV with data for comparison of changes in growth vs phenotype for clade pairs":
+                rules.compare_natural.output.pair_growth_dms_csv.format(pheno=pheno),
+            "CSV with phenotypes and growth for all individual clades":
+                rules.compare_natural.output.clade_growth_dms_csv.format(pheno=pheno),
+        }
+        for pheno in phenos_compare_natural
     },
     "Analysis of mutational effects on cell entry": {
         "Correlation of cell entry effects among strains": rules.func_effects_dist.output.strain_corr,
