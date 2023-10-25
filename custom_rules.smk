@@ -241,21 +241,21 @@ phenos_compare_natural = {
             "ACE2 binding": "blue",
             "cell entry": "purple",
         },
-        "title": "current DMS",
+        "title": "XBB.1.5 full-spike DMS phenotypes",
         "missing_muts": "drop",  # drop clades with missing muts
     },
     "yeast_RBD_DMS": {
         "input_data": "data/compare_natural_datasets/yeast_RBD_DMS.csv",
         "rename_cols": {},
         "phenotype_colors": {"escape": "red", "ACE2 affinity": "blue", "RBD expression": "purple"},
-        "title": "yeast RBD DMS",
+        "title": "yeast RBD DMS phenotypes",
         "missing_muts": "zero",  # set missing (non-RBD) mutations to zero
     },
     "muts_from_Wuhan-Hu-1": {
         "input_data": "data/compare_natural_datasets/incremental_Hamming_distance_from_Wuhan-Hu-1.csv",
-        "rename_cols": {"incremental Hamming distance": "mutations from Wuhan-Hu-1"},
-        "phenotype_colors": {"mutations from Wuhan-Hu-1": "gray"},
-        "title": "mutations from Wuhan-Hu-1",
+        "rename_cols": {"incremental Hamming distance": "distance"},
+        "phenotype_colors": {"distance": "gray"},
+        "title": "relative distance from Wuhan-Hu-1",
         "missing_muts": "drop",  # drop clades with missing muts
     },
     "EVEscape": {
@@ -268,8 +268,8 @@ phenos_compare_natural = {
     },
     "EVEscape_components": {
         "input_data": "data/compare_natural_datasets/EVEscape_XBB_single_mutation_predictions.csv",
-        "rename_cols": {},
-        "phenotype_colors": {"fitness_evol_indices": "red", "dissimilarity_charge_hydrophobicity": "blue", "accesibility_wcn": "green"},
+        "rename_cols": {"fitness_evol_indices": "EVE fitness", "dissimilarity_charge_hydrophobicity": "aa dissimilarity", "accessibility_wcn": "accessibility"},
+        "phenotype_colors": {"EVE fitness": "red", "aa dissimilarity": "blue", "accessibility": "green"},
         "title": "EVEscape components",
         "missing_muts": "drop",  # drop clades with missing muts
     },
@@ -286,6 +286,9 @@ rule compare_natural:
         nb="results/notebooks/{pheno}_compare_natural.ipynb",
         pair_growth_dms_csv="results/compare_natural/{pheno}_clade_pair_growth.csv",
         clade_growth_dms_csv="results/compare_natural/{pheno}_clade_growth.csv",
+        pair_corr_html="results/compare_natural/{pheno}_clade_pair_growth.html",
+        clade_corr_html="results/compare_natural/{pheno}_clade_growth.html",
+        pair_ols_html="results/compare_natural/{pheno}_ols_clade_pair_growth.html",
     params:
         yaml=lambda wc, input, output: yaml.round_trip_dump(
             {
@@ -310,6 +313,9 @@ rule compare_natural:
                 "pango_consensus_seqs_json": input.pango_consensus_seqs_json,
                 "pair_growth_dms_csv": output.pair_growth_dms_csv,
                 "clade_growth_dms_csv": output.clade_growth_dms_csv,
+                "pair_corr_html": output.pair_corr_html,
+                "clade_corr_html": output.clade_corr_html,
+                "pair_ols_html": output.pair_ols_html,
             }
         ),
     log:
@@ -415,6 +421,12 @@ docs["Additional files and charts"] = {
     },
     "DMS measurements versus clade growth": {
         f"Comparison for {pheno}": {
+            "Correlation of change in clade growth versus phenotype for clade pairs":
+                rules.compare_natural.output.pair_corr_html.format(pheno=pheno),
+            "OLS change in clade growth versus phenotype for clade pairs":
+                rules.compare_natural.output.pair_ols_html.format(pheno=pheno),
+            "Correlation of absolute clade growth versus phenotype":
+                rules.compare_natural.output.clade_corr_html.format(pheno=pheno),
             "Notebook comparing change in clade growth to change in phenotype":
                 rules.compare_natural.output.nb.format(pheno=pheno),
             "CSV with data for comparison of changes in growth vs phenotype for clade pairs":

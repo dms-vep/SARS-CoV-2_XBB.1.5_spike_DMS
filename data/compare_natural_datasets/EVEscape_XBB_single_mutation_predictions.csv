@@ -1,4 +1,4 @@
-fitness_evol_indices,voc_relative_singles,wildtype,site,mutant,is_reversion,dissimilarity_charge_hydrophobicity,accesibility_wcn,EVEscape
+fitness_evol_indices,voc_relative_singles,wildtype,site,mutant,is_reversion,dissimilarity_charge_hydrophobicity,accessibility_wcn,EVEscape
 -13.161,M1A,M,1,A,0,-2.1435,1.7365,2.5673
 -12.554,M1C,M,1,C,0,-1.7566,1.7365,2.6892
 -12.731,M1D,M,1,D,0,1.4357,1.7365,3.167
