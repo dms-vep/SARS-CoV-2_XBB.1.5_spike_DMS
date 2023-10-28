@@ -228,6 +228,27 @@ rule pango_consensus_seqs_json:
         "curl {params.pango_consensus_seqs_json} -o {output.json} &> {log}"
 
 
+rule muts_per_clade:
+    """Plot mutations per clade."""
+    input:
+        json=rules.pango_consensus_seqs_json.output.json,
+        nb="notebooks/muts_per_clade.ipynb",
+    output:
+        nb="results/notebooks/muts_per_clade.ipynb",
+        chart="results/compare_natural/muts_per_clade.html",
+    log:
+        "results/logs/muts_per_clade.txt",
+    conda:
+        os.path.join(config["pipeline_path"], "environment.yml")
+    shell:
+        """
+        papermill {input.nb} {output.nb} \
+            -p chart_html {output.chart} \
+            -p pango_consensus_seqs_json {input.json} \
+            &> {log}
+        """
+
+
 # sets of measurements to compare to natural evolution
 phenos_compare_natural = {
     "current_dms": {
