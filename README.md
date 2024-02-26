@@ -24,6 +24,10 @@ You can also make changes to the [dms-vep-pipeline-3](https://github.com/dms-vep
 ### Additional steps specific to this pipeline
 In addition to the main [dms-vep-pipeline-3](https://github.com/dms-vep/dms-vep-pipeline-3), there are some custom `snakemake` rules in [custom_rules.smk](custom_rules.smk) and the associated notebooks in [./notebooks/](notebooks) that run some rules and analyses specific to this repo.
 
+### `SARS2-spike-predictor-phenos` submodule
+For comparison of the deep mutational scanning with the evolution of natural SARS-CoV-2 sequences, the [https://github.com/jbloomlab/SARS2-spike-predictor-phenos](https://github.com/jbloomlab/SARS2-spike-predictor-phenos) repository is added as a git submodule.
+This submodule collates phenotypic predictors from other studies as well as Pango clade definitions and growth rate estimates from the Bedford lab.
+
 ### Multinomial logistic clade growth data
 An analysis by Ben Murrell of SARS-CoV-2 clade growth using multinomial logistic models in the repo at [https://github.com/MurrellGroup/MultinomialLogisticGrowth](https://github.com/MurrellGroup/MultinomialLogisticGrowth) is added as a submodule in this repo, and is used in some of the analyses.
 

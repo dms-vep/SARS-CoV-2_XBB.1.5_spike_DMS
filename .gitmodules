@@ -4,3 +4,6 @@
 [submodule "MultinomialLogisticGrowth"]
 	path = MultinomialLogisticGrowth
 	url = https://github.com/MurrellGroup/MultinomialLogisticGrowth
+[submodule "SARS2-spike-predictor-phenos"]
+	path = SARS2-spike-predictor-phenos
+	url = https://github.com/jbloomlab/SARS2-spike-predictor-phenos
