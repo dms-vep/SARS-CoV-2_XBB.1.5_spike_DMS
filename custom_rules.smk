@@ -213,6 +213,59 @@ rule compare_spike_rbd_escape:
             &> {log}
         """
 
+# read the default SARS2-spike-predictor phenos YAML file and make replacements
+sars2_spike_predictor_phenos_config_yaml = "SARS2-spike-predictor-phenos/config.yaml"
+with open(sars2_spike_predictor_phenos_config_yaml) as f:
+    sars2_spike_predictor_phenos_config = yaml.safe_load(f)
+# specify specific versions of Pango clade data for reproducibility
+sars2_spike_predictor_phenos_config["pango_json"] = "https://raw.githubusercontent.com/corneliusroemer/pango-sequences/main/data/pango-consensus-sequences_summary.json"
+sars2_spike_predictor_phenos_config["pango_growth_json"] = "https://data.nextstrain.org/files/workflows/forecasts-ncov/gisaid/pango_lineages/global/mlr/2024-02-25_results.json"
+sars2_spike_predictor_phenos_outfiles = [
+    "mutation_phenotypes_csv",
+    "mutation_phenotypes_randomized_csv",
+    "clade_phenotypes_csv",
+    "clade_phenotypes_randomized_csv",
+    "clade_phenotype_chart",
+]
+for sars2_spike_predictor_phenos_outfile in sars2_spike_predictor_phenos_outfiles:
+    assert sars2_spike_predictor_phenos_outfile in sars2_spike_predictor_phenos_config
+    sars2_spike_predictor_phenos_config[sars2_spike_predictor_phenos_outfile] = os.path.join(
+        "results/SARS2-spike-predictor-phenos",
+        os.path.basename(sars2_spike_predictor_phenos_config[sars2_spike_predictor_phenos_outfile])
+    ) 
+sars2_spike_predictor_phenos_infiles = []
+for ref_clade_d in sars2_spike_predictor_phenos_config["mutation_phenotype_csvs"].values():
+    for phenotype_d in ref_clade_d.values():
+        csv_file = os.path.join("SARS2-spike-predictor-phenos", phenotype_d["csv"])
+        phenotype_d["csv"] = csv_file
+        sars2_spike_predictor_phenos_infiles.append(csv_file)
+
+rule run_SARS2_spike_predictor_phenos:
+    """Run the ``SARS2-spike-predictor-phenos`` submodule."""
+    input:
+        sars2_spike_predictor_phenos_infiles,
+        nb="SARS2-spike-predictor-phenos/SARS2-spike-predictor-phenos.ipynb",
+    params:
+        config_yaml=yaml.round_trip_dump(sars2_spike_predictor_phenos_config),
+    output:
+        nb="results/SARS2-spike-predictor-phenos/SARS2-spike-predictor-phenos.ipynb",
+        config_yaml="results/SARS2-spike-predictor-phenos/config.yaml",
+        **{
+            outfile: sars2_spike_predictor_phenos_config[outfile]
+            for outfile in sars2_spike_predictor_phenos_outfiles
+        },
+    conda:
+        "SARS2-spike-predictor-phenos/environment.yml",
+    log:
+        log="results/logs/run_SARS2_spike_predictor_phenos.txt",
+    shell:
+        """
+        echo "{params.config_yaml}" > {output.config_yaml} 2> {log}
+        papermill -p config_yaml {output.config_yaml} {input.nb} {output.nb} &>> {log}
+        """
+
+other_target_files += rules.run_SARS2_spike_predictor_phenos.output
+
 
 rule pango_consensus_seqs_json:
     """Get JSON with pango consensus seqs."""
