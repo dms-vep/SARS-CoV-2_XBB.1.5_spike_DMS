@@ -218,8 +218,8 @@ sars2_spike_predictor_phenos_config_yaml = "SARS2-spike-predictor-phenos/config.
 with open(sars2_spike_predictor_phenos_config_yaml) as f:
     sars2_spike_predictor_phenos_config = yaml.safe_load(f)
 # specify specific versions of Pango clade data for reproducibility
-sars2_spike_predictor_phenos_config["pango_json"] = "https://raw.githubusercontent.com/corneliusroemer/pango-sequences/main/data/pango-consensus-sequences_summary.json"
-sars2_spike_predictor_phenos_config["pango_growth_json"] = "https://data.nextstrain.org/files/workflows/forecasts-ncov/gisaid/pango_lineages/global/mlr/2024-02-25_results.json"
+sars2_spike_predictor_phenos_config["pango_json"] = "https://raw.githubusercontent.com/corneliusroemer/pango-sequences/71f1c4f249e2a6bc1d2a6b91a310ac1b610cd776/data/pango-consensus-sequences_summary.json"
+sars2_spike_predictor_phenos_config["pango_growth_json"] = "https://data.nextstrain.org/files/workflows/forecasts-ncov/gisaid/pango_lineages/global/mlr/2024-02-27_results.json"
 sars2_spike_predictor_phenos_outfiles = [
     "mutation_phenotypes_csv",
     "mutation_phenotypes_randomized_csv",
@@ -265,20 +265,6 @@ rule run_SARS2_spike_predictor_phenos:
         """
 
 other_target_files += rules.run_SARS2_spike_predictor_phenos.output
-
-
-rule pango_consensus_seqs_json:
-    """Get JSON with pango consensus seqs."""
-    params:
-        pango_consensus_seqs_json="https://raw.githubusercontent.com/corneliusroemer/pango-sequences/c64ef05e53debaa9cc65dd56d6eb83e31517179c/data/pango-consensus-sequences_summary.json",
-    output:
-        json="results/compare_natural/pango-consensus-sequences_summary.json",
-    log:
-        "results/logs/pango_consensus_seqs_json.txt",
-    conda:
-        os.path.join(config["pipeline_path"], "environment.yml")
-    shell:
-        "curl {params.pango_consensus_seqs_json} -o {output.json} &> {log}"
 
 
 # sets of measurements to compare to natural evolution
@@ -334,7 +320,7 @@ rule compare_natural:
         input_data=lambda wc: phenos_compare_natural[wc.pheno]["input_data"],
         nb="notebooks/compare_natural.ipynb",
         growth_rates_csv="MultinomialLogisticGrowth/model_fits/rates.csv",
-        pango_consensus_seqs_json=rules.pango_consensus_seqs_json.output.json,
+        pango_consensus_seqs_json="results/compare_natural/pango-consensus-sequences_summary.json",
     output:
         nb="results/notebooks/{pheno}_compare_natural.ipynb",
         pair_growth_dms_csv="results/compare_natural/{pheno}_clade_pair_growth.csv",
@@ -383,14 +369,15 @@ rule non_rbd_binding_natural:
     """Look at non-RBD mutation effects on ACE2 binding in natural viruses."""
     input:
         dms_summary_csv="results/summaries/summary.csv",
-        pango_consensus_seqs_json=rules.pango_consensus_seqs_json.output.json,
         nb="notebooks/non_rbd_binding_natural.ipynb",
     output:
         nb="results/notebooks/non_rbd_binding_natural.ipynb",
+        pango_consensus_seqs_json="results/non_rbd_binding_natural/pango-consensus-sequences_summary.json",
     params:
-        yaml=lambda wc, input: yaml.round_trip_dump(
+        pango_consensus_seqs_json="https://raw.githubusercontent.com/corneliusroemer/pango-sequences/71f1c4f249e2a6bc1d2a6b91a310ac1b610cd776/data/pango-consensus-sequences_summary.json",
+        yaml=lambda wc, input, output: yaml.round_trip_dump(
             {
-                "pango_consensus_seqs_json": input.pango_consensus_seqs_json,
+                "pango_consensus_seqs_json": output.pango_consensus_seqs_json,
                 "xbb15_dms_csv": input.dms_summary_csv,
                 "ba2_dms_csv":
                     "https://raw.githubusercontent.com/dms-vep/SARS-CoV-2_Omicron_BA.2_spike_ACE2_binding/main/results/summaries/summary.csv",
@@ -401,7 +388,10 @@ rule non_rbd_binding_natural:
     conda:
         os.path.join(config["pipeline_path"], "environment.yml")
     shell:
-        "papermill {input.nb} {output.nb} -y '{params.yaml}' &> {log}"
+        """
+        curl {params.pango_consensus_seqs_json} -o {output.pango_consensus_seqs_json} &> {log}
+        papermill {input.nb} {output.nb} -y '{params.yaml}' &>> {log}
+        """
 
 
 rule func_effects_dist:
