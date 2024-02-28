@@ -217,7 +217,7 @@ rule compare_spike_rbd_escape:
 rule pango_consensus_seqs_json:
     """Get JSON with pango consensus seqs."""
     params:
-        pango_consensus_seqs_json="https://raw.githubusercontent.com/corneliusroemer/pango-sequences/c64ef05e53debaa9cc65dd56d6eb83e31517179c/data/pango-consensus-sequences_summary.json",
+        pango_consensus_seqs_json="https://raw.githubusercontent.com/corneliusroemer/pango-sequences/1adc6fd31a1e40229f776a54e51a26f2d0a88462/data/pango-consensus-sequences_summary.json",
     output:
         json="results/compare_natural/pango-consensus-sequences_summary.json",
     log:

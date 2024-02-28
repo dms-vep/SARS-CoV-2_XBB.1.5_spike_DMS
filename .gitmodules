@@ -3,4 +3,4 @@
 	url = https://github.com/dms-vep/dms-vep-pipeline-3
 [submodule "MultinomialLogisticGrowth"]
 	path = MultinomialLogisticGrowth
-	url = https://github.com/MurrellGroup/MultinomialLogisticGrowth
+	url = https://github.com/MurrellGroup/MultinomialLogisticGrowth.git
