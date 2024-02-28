@@ -6,6 +6,7 @@ _*
 !.gitignore
 !.gitmodules
 
+sra_upload/*
 results/*
 
 !results/gene_sequence
