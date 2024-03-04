@@ -347,6 +347,47 @@ rule compare_natural:
         "papermill {input.nb} {output.nb} -y '{params.yaml}' &> {log}"
 
 
+rule compare_ba_2_86:
+    """Compare predicted phenotypes of actual and randomized sequences related to BA.2.86."""
+    input:
+        clade_phenotypes_csv="SARS2-spike-predictor-phenos/results/clade_phenotypes.csv",
+        mutation_phenotypes_csv="SARS2-spike-predictor-phenos/results/mutation_phenotypes.csv",
+        gisaid_mutation_counts_csv="data/GISAID_alignment_counts_2024-01-27.csv",
+        nb="notebooks/compare_BA.2.86.ipynb",
+    params:
+        yaml=lambda _, input: yaml.round_trip_dump(
+            {
+                "gisaid_min_counts": 50,  # draw random mutations from those with >= this many GISAID counts
+                "nrandom": 1000,  # number randomized sequences, for descendants it is 10x less
+                "linear_models": {  # weights of phenotypes in linear model
+                    "spike pseudovirus DMS (combined phenotypes)":
+                        {
+                            "spike pseudovirus DMS human sera escape": 38,
+                            "spike pseudovirus DMS ACE2 binding": 2,
+                            "spike pseudovirus DMS spike mediated entry": 16,
+                        },
+                    "RBD yeast-display DMS (combined phenotypes)":
+                        {
+                            "RBD yeast-display DMS ACE2 affinity": 19,
+                            "RBD yeast-display DMS RBD expression": 20,
+                            "RBD yeast-display DMS escape": 27,
+                        },
+                },
+                "clade_phenotypes_csv": input.clade_phenotypes_csv,
+                "mutation_phenotypes_csv": input.mutation_phenotypes_csv,
+                "gisaid_mutation_counts_csv": input.gisaid_mutation_counts_csv,
+            }
+        ),
+    output:
+        nb="results/notebooks/compare_BA.2.86.ipynb",
+    log:
+        log="results/logs/compare_BA.2.86.txt",
+    conda:
+        os.path.join(config["pipeline_path"], "environment.yml"),
+    shell:
+        "papermill {input.nb} {output.nb} -y '{params.yaml}' &> {log}"
+
+
 rule non_rbd_binding_natural:
     """Look at non-RBD mutation effects on ACE2 binding in natural viruses."""
     input:
@@ -456,6 +497,10 @@ docs["Additional files and charts"] = {
                 rules.compare_natural.output.clade_growth_dms_csv.format(pheno=pheno),
         }
         for pheno in phenos_compare_natural
+    },
+    "Comparison to BA.2.86 evolution": {
+        "Notebook comparing phenotypes to BA.2.86 evolution":
+            rules.compare_ba_2_86.output.nb,
     },
     "Analysis of mutational effects on cell entry": {
         "Correlation of cell entry effects among strains": rules.func_effects_dist.output.strain_corr,
