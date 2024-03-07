@@ -450,6 +450,80 @@ rule func_effects_dist:
         "papermill {input.nb} {output.nb} -y '{params.yaml}' &>> {log}"
 
 
+rule escape_by_prior_infections:
+    """Escape stratified by prior infections."""
+    # somewhat hackily copied from the pipeline summary plot
+    input:
+        **dict(rules.summary.input),
+    output:
+        chart_overlaid="results/escape_by_prior_infections/summary_overlaid_nolegend.html",
+        chart_faceted="results/escape_by_prior_infections/summary_faceted_nolegend.html",
+        csv="results/escape_by_prior_infections/summary.csv",
+        per_antibody_escape_csv="results/escape_by_prior_infections/per_antibody_escape.csv",
+        nb="results/notebooks/escape_by_prior_infections.ipynb",
+    params:
+        yaml=lambda _, input: yaml.round_trip_dump(
+            {
+                "config": (
+                    {
+                        key: val
+                        for (key, val) in summary_config.items()
+                        if key not in ["title", "legend", "antibody_escape"]
+                    }
+                    | {
+                        "antibody_escape" : {
+                            "one infection": {
+                                "stat": "escape_median",
+                                "positive_color": "#56B4E9",
+                                "negative_color": "#E69F00",
+                                "max_at_least": 1,
+                                "min_at_least": -1,
+                                "le_filters": {"escape_std": 1.5},
+                                "antibody_list": {
+                                    "sera_493C_mediumACE2": "serum 493C",
+                                    "sera_498C_mediumACE2": "serum 498C",
+                                    "sera_500C_mediumACE2": "serum 500C",
+                                    "sera_501C_mediumACE2": "serum 501C",
+                                    "sera_503C_mediumACE2": "serum 503C",
+                                    "sera_505C_mediumACE2": "serum 505C",
+                                },
+                            },
+                            "multiple infections": {
+                                "stat": "escape_median",
+                                "positive_color": "#56B4E9",
+                                "negative_color": "#E69F00",
+                                "max_at_least": 1,
+                                "min_at_least": -1,
+                                "le_filters": {"escape_std": 1.5},
+                                "antibody_list": {
+                                    "sera_287C_mediumACE2": "serum 287C",
+                                    "sera_288C_mediumACE2": "serum 288C",
+                                    "sera_343C_mediumACE2": "serum 343C",
+                                    "sera_497C_mediumACE2": "serum 497C",
+                                },
+                            },
+                        },
+                    }
+                ),
+                "input_csvs": dict(input),
+            }
+        ),
+    conda:
+        os.path.join(config["pipeline_path"], "environment.yml")
+    log:
+        "results/logs/escape_by_prior_infections.txt",
+    shell:
+        """
+        papermill {input.nb} {output.nb} \
+            -p site_numbering_map_csv {input.site_numbering_map_csv} \
+            -p chart_faceted {output.chart_faceted} \
+            -p chart_overlaid {output.chart_overlaid} \
+            -p output_csv_file {output.csv} \
+            -p per_antibody_escape_csv {output.per_antibody_escape_csv} \
+            -y "{params.yaml}" \
+            &> {log}
+        """
+
 # Files (Jupyter notebooks, HTML plots, or CSVs) that you want included in
 # the HTML docs should be added to the nested dict `docs`:
 docs["Additional files and charts"] = {
@@ -501,6 +575,10 @@ docs["Additional files and charts"] = {
     "Comparison to BA.2.86 evolution": {
         "Notebook comparing phenotypes to BA.2.86 evolution":
             rules.compare_ba_2_86.output.nb,
+    },
+    "Escape stratified by one or multiple prior infections": {
+        "Notebook plotting escape with one versus multiple prior infections": 
+            rules.escape_by_prior_infections.output.nb,
     },
     "Analysis of mutational effects on cell entry": {
         "Correlation of cell entry effects among strains": rules.func_effects_dist.output.strain_corr,
