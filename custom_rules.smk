@@ -347,6 +347,63 @@ rule compare_natural:
         "papermill {input.nb} {output.nb} -y '{params.yaml}' &> {log}"
 
 
+rule compare_natural_ba2_ba5_xbb:
+    """Compare DMS (or other) phenotype measurements to natural sequence evolution.
+    
+    Differs from `compare_natural` by using all BA.2, BA.5, and XBB-descended clades.
+    But written as separate rule to preserve backward compatibility with file-naming
+    used in repo for original version.
+
+    """
+    input:
+        input_data=lambda wc: phenos_compare_natural[wc.pheno]["input_data"],
+        nb="notebooks/compare_natural.ipynb",
+        growth_rates_csv="MultinomialLogisticGrowth/model_fits/rates.csv",
+        pango_consensus_seqs_json=rules.pango_consensus_seqs_json.output.json,
+    output:
+        nb="results/notebooks/{pheno}_compare_natural_ba2_ba5_xbb.ipynb",
+        pair_growth_dms_csv="results/compare_natural/{pheno}_clade_pair_growth_ba2_ba5_xbb.csv",
+        clade_growth_dms_csv="results/compare_natural/{pheno}_clade_growth_ba2_ba5_xbb.csv",
+        pair_corr_html="results/compare_natural/{pheno}_clade_pair_growth_ba2_ba5_xbb.html",
+        clade_corr_html="results/compare_natural/{pheno}_clade_growth_ba2_ba5_xbb.html",
+        pair_ols_html="results/compare_natural/{pheno}_ols_clade_pair_growth_ba2_ba5_xbb.html",
+    params:
+        yaml=lambda wc, input, output: yaml.round_trip_dump(
+            {
+                "starting_clades": ["BA.2", "BA.5", "XBB"],  # clades descended from this
+                "exclude_muts": [],  # exclude clades w these mutations
+                "min_sequences": 400,  # require this many sequences per clade to use
+                "split_by_rbd": False,  # whether to treat RBD and non-RBD mutations separately
+                "dms_clade": "XBB.1.5",  # clade used for DMS
+                "pair_min_spike_muts": 1,  # require clade pairs to have >= this many spike mutations
+                "pair_max_spike_muts": None,  # require clade pairs to have <= this many spike mutations
+                "n_random": 100,  # compute P values with this many randomizations of DMS data
+                # rename columns in input data
+                "rename_cols": phenos_compare_natural[wc.pheno]["rename_cols"],
+                "title": phenos_compare_natural[wc.pheno]["title"],
+                # "basic" means not split by RBD, which is done later in code if `split_by_rbd`
+                "phenotype_basic_colors": phenos_compare_natural[wc.pheno]["phenotype_colors"],
+                # "drop" clades with missing mutations, or set missing mutations to "zero"
+                "missing_muts": phenos_compare_natural[wc.pheno]["missing_muts"],
+                "exclude_clades": [],  # exclude these clades
+                "growth_rates_csv": input.growth_rates_csv,
+                "input_data": input.input_data,
+                "pango_consensus_seqs_json": input.pango_consensus_seqs_json,
+                "pair_growth_dms_csv": output.pair_growth_dms_csv,
+                "clade_growth_dms_csv": output.clade_growth_dms_csv,
+                "pair_corr_html": output.pair_corr_html,
+                "clade_corr_html": output.clade_corr_html,
+                "pair_ols_html": output.pair_ols_html,
+            }
+        ),
+    log:
+        log="results/logs/{pheno}_compare_natural_ba2_ba5_xbb.txt",
+    conda:
+        os.path.join(config["pipeline_path"], "environment.yml")
+    shell:
+        "papermill {input.nb} {output.nb} -y '{params.yaml}' &> {log}"
+
+
 rule compare_ba_2_86:
     """Compare predicted phenotypes of actual and randomized sequences related to BA.2.86."""
     input:
@@ -555,8 +612,8 @@ docs["Additional files and charts"] = {
         "Distributions of escape by RBD and non-RBD mutations in spike scan":
             rules.compare_spike_rbd_escape.output.dist_chart,
     },
-    "DMS measurements versus clade growth": {
-        f"Comparison for {pheno}": {
+    "DMS measurements versus clade growth (XBB clades)": {
+        f"Comparison for {pheno} (XBB clades)": {
             "Correlation of change in clade growth versus phenotype for clade pairs":
                 rules.compare_natural.output.pair_corr_html.format(pheno=pheno),
             "OLS change in clade growth versus phenotype for clade pairs":
@@ -569,6 +626,23 @@ docs["Additional files and charts"] = {
                 rules.compare_natural.output.pair_growth_dms_csv.format(pheno=pheno),
             "CSV with phenotypes and growth for all individual clades":
                 rules.compare_natural.output.clade_growth_dms_csv.format(pheno=pheno),
+        }
+        for pheno in phenos_compare_natural
+    },
+    "DMS measurements versus clade growth (BA.2, BA.5, and XBB clades)": {
+        f"Comparison for {pheno} (BA.2, BA.5, and XBB clades)": {
+            "Correlation of change in clade growth versus phenotype for clade pairs":
+                rules.compare_natural_ba2_ba5_xbb.output.pair_corr_html.format(pheno=pheno),
+            "OLS change in clade growth versus phenotype for clade pairs":
+                rules.compare_natural_ba2_ba5_xbb.output.pair_ols_html.format(pheno=pheno),
+            "Correlation of absolute clade growth versus phenotype":
+                rules.compare_natural_ba2_ba5_xbb.output.clade_corr_html.format(pheno=pheno),
+            "Notebook comparing change in clade growth to change in phenotype":
+                rules.compare_natural_ba2_ba5_xbb.output.nb.format(pheno=pheno),
+            "CSV with data for comparison of changes in growth vs phenotype for clade pairs":
+                rules.compare_natural_ba2_ba5_xbb.output.pair_growth_dms_csv.format(pheno=pheno),
+            "CSV with phenotypes and growth for all individual clades":
+                rules.compare_natural_ba2_ba5_xbb.output.clade_growth_dms_csv.format(pheno=pheno),
         }
         for pheno in phenos_compare_natural
     },
