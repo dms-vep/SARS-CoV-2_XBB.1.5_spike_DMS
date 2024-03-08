@@ -581,6 +581,33 @@ rule escape_by_prior_infections:
             &> {log}
         """
 
+
+rule compare_murrell_bedford_growth_rates:
+    """Compare growth rates estimated by Murrell and Bedford."""
+    input:
+        murrell_rates_csv="MultinomialLogisticGrowth/model_fits/rates.csv",
+        pango_json=rules.pango_consensus_seqs_json.output.json,
+        nb="notebooks/compare_murrell_bedford_growth_rates.ipynb",
+    params:
+        bedford_rates_url="https://data.nextstrain.org/files/workflows/forecasts-ncov/gisaid/pango_lineages/global/mlr/2023-10-02_results.json",
+        first_date_str="2023-01-01",
+    output:
+        nb="results/notebooks/compare_murrell_bedford_growth_rates.ipynb",
+    conda:
+        os.path.join(config["pipeline_path"], "environment.yml")
+    log:
+        "results/logs/compare_murrell_bedford_growth_rates.txt",
+    shell:
+        """
+        papermill {input.nb} {output.nb} \
+            -p murrell_rates_csv {input.murrell_rates_csv} \
+            -p pango_json {input.pango_json} \
+            -p bedford_rates_url {params.bedford_rates_url} \
+            -p first_date_str {params.first_date_str} \
+            &> {log}
+        """
+
+
 # Files (Jupyter notebooks, HTML plots, or CSVs) that you want included in
 # the HTML docs should be added to the nested dict `docs`:
 docs["Additional files and charts"] = {
@@ -645,6 +672,10 @@ docs["Additional files and charts"] = {
                 rules.compare_natural_ba2_ba5_xbb.output.clade_growth_dms_csv.format(pheno=pheno),
         }
         for pheno in phenos_compare_natural
+    },
+    "Comparison of growth rates estimated by Murrell and Bedford groups": {
+        "Notebook comparing Murrell and Bedford growth rates":
+            rules.compare_murrell_bedford_growth_rates.output.nb,
     },
     "Comparison to BA.2.86 evolution": {
         "Notebook comparing phenotypes to BA.2.86 evolution":
