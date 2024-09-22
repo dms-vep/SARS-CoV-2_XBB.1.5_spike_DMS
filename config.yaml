@@ -23,7 +23,7 @@ github_blob_url: https://github.com/dms-vep/SARS-CoV-2_XBB.1.5_spike_DMS/blob/ma
 # Some descriptions and metadata about the analysis.
 description: Deep mutational scanning of SARS-CoV-2 XBB.1.5 spike using a barcoded lentiviral platform
 year: 2023
-authors: "[Dadonaite et al, bioRxiv, DOI 10.1101/2023.11.13.566961](https://doi.org/10.1101/2023.11.13.566961)"
+authors: "[Dadonaite et al, Nature (2024)](https://www.nature.com/articles/s41586-024-07636-1)"
 
 # ----------------------------------------------------------------------------
 # Site numbering, mutation classification, and neut standards

@@ -1,6 +1,6 @@
 # Deep mutational scanning of SARS-CoV-2 XBB.1.5 spike 
-See [Dadonaite et al, bioRxiv, DOI 10.1101/2023.11.13.566961 (2023)](https://doi.org/10.1101/2023.11.13.566961
-) for the paper describing this study.
+See [Dadonaite et al, Nature (2024)](https://www.nature.com/articles/s41586-024-07636-1)
+for the paper describing this study.
 
 For documentation of the analysis, see [https://dms-vep.github.io/SARS-CoV-2_XBB.1.5_spike_DMS/](https://dms-vep.github.io/SARS-CoV-2_XBB.1.5_spike_DMS/)
 
